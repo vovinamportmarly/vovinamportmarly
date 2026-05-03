@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VDST Port-Marly — Vovinam Việt Võ Đạo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bleu:        #1B3A8C;
+    --bleu-clair:  #2E5BB8;
+    --bleu-pale:   #EEF3FB;
+    --bleu-mid:    #D6E2F5;
+    --rouge:       #C8102E;
+    --jaune:       #F5C518;
+    --blanc:       #FFFFFF;
+    --texte:       #1A2645;
+    --texte-mid:   #3D5080;
+    --texte-muted: #7A8BAD;
+    --gris-fond:   #F7F9FD;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--blanc);
+    color: var(--texte);
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 60px;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(14px);
+    border-bottom: 2px solid var(--bleu-mid);
+    box-shadow: 0 2px 20px rgba(27,58,140,0.08);
+    transition: padding 0.3s;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+  .nav-logo img { width: 46px; height: 46px; object-fit: contain; border-radius: 50%; }
+  .nav-logo-text strong { font-family: 'Bebas Neue'; font-size: 1.2rem; letter-spacing: .1em; color: var(--bleu); display: block; line-height: 1.1; }
+  .nav-logo-text span { font-family: 'Space Mono'; font-size: .48rem; letter-spacing: .22em; color: var(--rouge); text-transform: uppercase; }
+  .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+  .nav-links a { font-family: 'Space Mono'; font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; color: var(--texte-mid); text-decoration: none; transition: color .2s; position: relative; padding-bottom: 3px; }
+  .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--rouge); transition: width .3s; }
+  .nav-links a:hover { color: var(--bleu); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta { font-family: 'Space Mono' !important; font-size: .56rem !important; color: var(--blanc) !important; background: var(--rouge); padding: 10px 20px; border-radius: 2px; transition: background .2s, transform .2s !important; }
+  .nav-cta:hover { background: #a50d25 !important; transform: translateY(-1px); }
+  .nav-cta::after { display: none !important; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--bleu) 0%, var(--bleu-clair) 55%, #4A72C8 100%);
+    display: grid; grid-template-columns: 1fr 1fr;
+    position: relative; overflow: hidden; padding-top: 78px;
+  }
+  .hero::before, .hero::after {
+    content: ''; position: absolute; border-radius: 50%; pointer-events: none;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+  .hero::before { width: 650px; height: 650px; top: -220px; right: -180px; }
+  .hero::after  { width: 450px; height: 450px; bottom: -130px; left: 35%; }
+
+  .hero-left {
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 80px 48px 80px 80px; position: relative; z-index: 2;
+  }
+  .hero-eyebrow {
+    font-family: 'Space Mono'; font-size: .56rem; letter-spacing: .28em;
+    text-transform: uppercase; color: var(--jaune); margin-bottom: 18px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .hero-eyebrow::before { content: ''; width: 26px; height: 2px; background: var(--jaune); flex-shrink: 0; }
+  .hero h1 { font-family: 'Bebas Neue'; font-size: clamp(3rem,5.8vw,5.8rem); line-height: .9; letter-spacing: .04em; color: var(--blanc); }
+  .hero h1 em { font-style: normal; color: var(--jaune); display: block; }
+  .hero h1 .sub { font-size: .42em; color: rgba(255,255,255,.5); letter-spacing: .12em; display: block; margin-top: 6px; }
+  .hero-desc { font-size: 1.05rem; color: rgba(255,255,255,.72); max-width: 400px; margin: 26px 0 38px; font-style: italic; line-height: 1.75; }
+  .hero-actions { display: flex; gap: 13px; flex-wrap: wrap; }
+  .btn-jaune { display: inline-block; font-family: 'Space Mono'; font-size: .6rem; letter-spacing: .16em; text-transform: uppercase; color: var(--bleu); background: var(--jaune); padding: 13px 28px; text-decoration: none; font-weight: 700; border-radius: 2px; border: 2px solid var(--jaune); transition: all .2s; }
+  .btn-jaune:hover { background: #d4a814; border-color: #d4a814; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+  .btn-outline-blanc { display: inline-block; font-family: 'Space Mono'; font-size: .6rem; letter-spacing: .16em; text-transform: uppercase; color: var(--blanc); border: 2px solid rgba(255,255,255,.35); padding: 13px 28px; text-decoration: none; border-radius: 2px; transition: all .2s; }
+  .btn-outline-blanc:hover { border-color: var(--blanc); background: rgba(255,255,255,.1); }
+  .hero-stats { display: flex; gap: 32px; margin-top: 48px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,.15); }
+  .hero-stat-num { font-family: 'Bebas Neue'; font-size: 2.1rem; color: var(--jaune); line-height: 1; display: block; }
+  .hero-stat-label { font-family: 'Space Mono'; font-size: .48rem; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,.45); display: block; margin-top: 4px; }
+
+  .hero-right { display: flex; align-items: center; justify-content: center; padding: 80px 80px 80px 40px; position: relative; z-index: 2; }
+  .hero-card { background: rgba(255,255,255,.13); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,.25); border-radius: 4px; padding: 34px 38px; width: 100%; max-width: 340px; }
+  .hero-card-logo { display: flex; align-items: center; gap: 13px; margin-bottom: 26px; padding-bottom: 22px; border-bottom: 1px solid rgba(255,255,255,.2); }
+  .hero-card-logo img { width: 54px; height: 54px; object-fit: contain; border-radius: 50%; border: 2px solid rgba(255,255,255,.3); }
+  .hero-card-logo strong { font-family: 'Bebas Neue'; font-size: 1.15rem; letter-spacing: .08em; color: var(--blanc); display: block; line-height: 1; }
+  .hero-card-logo span { font-family: 'Space Mono'; font-size: .48rem; letter-spacing: .18em; color: var(--jaune); text-transform: uppercase; }
+  .hero-card-title { font-family: 'Space Mono'; font-size: .52rem; letter-spacing: .22em; text-transform: uppercase; color: var(--jaune); margin-bottom: 14px; }
+  .sched-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.1); }
+  .sched-row:last-of-type { border-bottom: none; }
+  .sched-cat { font-family: 'Crimson Pro'; font-style: italic; font-size: .98rem; color: var(--blanc); }
+  .sched-time { font-family: 'Space Mono'; font-size: .52rem; color: rgba(255,255,255,.5); }
+  .hero-cta { margin-top: 22px; display: block; text-align: center; font-family: 'Space Mono'; font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; color: var(--bleu); background: var(--jaune); padding: 13px; text-decoration: none; border-radius: 2px; font-weight: 700; transition: all .2s; }
+  .hero-cta:hover { background: #d4a814; transform: translateY(-1px); }
+
+  /* SECTION COMMONS */
+  .sec { padding: 96px 80px; }
+  .sec-label { font-family: 'Space Mono'; font-size: .54rem; letter-spacing: .26em; text-transform: uppercase; color: var(--rouge); display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .sec-label::before { content: ''; width: 20px; height: 2px; background: var(--rouge); flex-shrink: 0; }
+  .sec-title { font-family: 'Bebas Neue'; font-size: clamp(2rem,3.2vw,3.4rem); letter-spacing: .04em; line-height: .95; color: var(--bleu); margin-bottom: 16px; }
+  .btn-rouge { display: inline-block; font-family: 'Space Mono'; font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; color: var(--blanc); background: var(--rouge); padding: 12px 26px; text-decoration: none; border-radius: 2px; border: 2px solid var(--rouge); transition: all .2s; }
+  .btn-rouge:hover { background: #a50d25; border-color: #a50d25; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(200,16,46,.25); }
+  .btn-outline-bleu { display: inline-block; font-family: 'Space Mono'; font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; color: var(--bleu); border: 2px solid var(--bleu-mid); padding: 12px 26px; text-decoration: none; border-radius: 2px; transition: all .2s; }
+  .btn-outline-bleu:hover { border-color: var(--bleu); background: var(--bleu-pale); }
+  .btn-helloasso { display: inline-flex; align-items: center; gap: 8px; font-family: 'Space Mono'; font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; color: var(--blanc); background: #6CB86A; padding: 12px 26px; text-decoration: none; border-radius: 2px; border: 2px solid #6CB86A; font-weight: 700; transition: all .2s; }
+  .btn-helloasso:hover { background: #58a056; border-color: #58a056; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(108,184,106,.3); }
+  .btn-helloasso svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+  /* IMG PLACEHOLDERS */
+  .img-ph { background: var(--bleu-pale); border: 2px dashed var(--bleu-mid); border-radius: 4px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px; color: var(--texte-muted); transition: border-color .2s, background .2s; }
+  .img-ph:hover { border-color: var(--bleu-clair); background: var(--bleu-mid); }
+  .img-ph .ic { font-size: 2rem; opacity: .3; }
+  .img-ph p { font-family: 'Space Mono'; font-size: .48rem; letter-spacing: .15em; text-transform: uppercase; opacity: .45; text-align: center; }
+
+  /* PRÉSENTATION */
+  #vovinam { background: var(--blanc); display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+  .vovinam-imgs { display: flex; flex-direction: column; gap: 8px; }
+  .vovinam-imgs .img-ph.main { aspect-ratio: 4/3; position: relative; }
+  .logo-badge { position: absolute; bottom: -18px; right: 18px; width: 72px; height: 72px; background: var(--blanc); border-radius: 50%; box-shadow: 0 4px 16px rgba(27,58,140,.15); display: flex; align-items: center; justify-content: center; padding: 5px; }
+  .logo-badge img { width: 100%; height: 100%; object-fit: contain; border-radius: 50%; }
+  .img-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .img-ph.sm { aspect-ratio: 1; }
+  .img-ph.sm .ic { font-size: 1.5rem; }
+  .vovinam-text p { color: var(--texte-mid); margin-bottom: 16px; font-size: 1.02rem; }
+
+  /* PILIERS */
+  #piliers { background: var(--gris-fond); }
+  .piliers-top { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: end; margin-bottom: 48px; }
+  .piliers-intro { font-size: 1rem; color: var(--texte-mid); font-style: italic; }
+  .pillars { display: grid; grid-template-columns: repeat(3,1fr); gap: 3px; }
+  .pillar { background: var(--blanc); padding: 28px 24px; border-top: 3px solid transparent; transition: all .25s; }
+  .pillar:hover { border-top-color: var(--rouge); transform: translateY(-3px); box-shadow: 0 8px 28px rgba(27,58,140,.1); }
+  .pillar-icon { font-size: 1.7rem; margin-bottom: 10px; display: block; }
+  .pillar-name { font-family: 'Bebas Neue'; font-size: 1.25rem; letter-spacing: .06em; color: var(--bleu); margin-bottom: 7px; }
+  .pillar-desc { font-size: .9rem; color: var(--texte-muted); line-height: 1.55; }
+
+  /* GALERIE */
+  #galerie { background: var(--blanc); }
+  .gal-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 260px 260px; gap: 8px; margin-top: 44px; }
+  .gal-cell { position: relative; overflow: hidden; }
+  .gal-cell:first-child { grid-row: 1/3; }
+  .gal-cell .img-ph { width: 100%; height: 100%; border-radius: 3px; }
+  .gal-label { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(0deg,rgba(27,58,140,.7),transparent); padding: 18px 14px 10px; font-family: 'Space Mono'; font-size: .46rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.65); opacity: 0; transition: opacity .2s; border-radius: 0 0 3px 3px; }
+  .gal-cell:hover .gal-label { opacity: 1; }
+
+  /* HORAIRES */
+  #horaires { background: var(--bleu); position: relative; overflow: hidden; }
+  #horaires::before { content: 'HORAIRES'; font-family: 'Bebas Neue'; font-size: 18vw; color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,.04); position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none; white-space: nowrap; user-select: none; }
+  #horaires .sec-label { color: var(--jaune); }
+  #horaires .sec-label::before { background: var(--jaune); }
+  #horaires .sec-title { color: var(--blanc); }
+  .hor-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 3px; margin-top: 44px; position: relative; z-index: 1; }
+  .hor-card { background: rgba(255,255,255,.09); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,.16); border-radius: 3px; padding: 32px 26px; transition: all .25s; }
+  .hor-card:hover { background: rgba(255,255,255,.15); transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,.2); }
+  .hor-public { font-family: 'Bebas Neue'; font-size: 1.8rem; letter-spacing: .06em; color: var(--blanc); margin-bottom: 3px; }
+  .hor-age { font-family: 'Space Mono'; font-size: .5rem; letter-spacing: .2em; color: var(--jaune); text-transform: uppercase; margin-bottom: 22px; }
+  .hor-slot { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.1); }
+  .hor-slot:last-of-type { border-bottom: none; }
+  .hor-day { font-family: 'Space Mono'; font-size: .52rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.42); margin-bottom: 2px; }
+  .hor-time { font-family: 'Crimson Pro'; font-size: 1.1rem; color: var(--blanc); font-style: italic; }
+  .hor-lieu { margin-top: 22px; padding-top: 14px; border-top: 1px solid rgba(245,197,24,.22); font-size: .86rem; color: rgba(255,255,255,.52); font-style: italic; }
+
+  /* TARIFS */
+  #tarifs { background: var(--blanc); }
+  .tar-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 3px; margin-top: 44px; }
+  .tar-card { background: var(--gris-fond); border: 1px solid var(--bleu-mid); border-radius: 3px; padding: 32px 26px; position: relative; transition: all .25s; }
+  .tar-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(27,58,140,.12); }
+  .tar-card.feat { background: var(--bleu); border-color: var(--bleu); }
+  .tar-card.feat .tar-cat { color: var(--jaune); }
+  .tar-card.feat .tar-price, .tar-card.feat .tar-per { color: rgba(255,255,255,.9); }
+  .tar-card.feat .tar-item { color: rgba(255,255,255,.72); }
+  .tar-card.feat .tar-item::before { color: var(--jaune); }
+  .tar-card.feat .tar-div { background: rgba(255,255,255,.15); }
+  .feat-badge { position: absolute; top: -1px; right: 18px; background: var(--rouge); color: var(--blanc); font-family: 'Space Mono'; font-size: .46rem; letter-spacing: .16em; text-transform: uppercase; padding: 5px 11px; border-radius: 0 0 3px 3px; }
+  .tar-cat { font-family: 'Space Mono'; font-size: .56rem; letter-spacing: .2em; text-transform: uppercase; color: var(--rouge); margin-bottom: 16px; }
+  .tar-price { font-family: 'Bebas Neue'; font-size: 3.6rem; color: var(--bleu); line-height: 1; display: flex; align-items: flex-start; gap: 3px; }
+  .tar-price sup { font-size: 1.4rem; margin-top: 7px; }
+  .tar-per { font-family: 'Space Mono'; font-size: .5rem; color: var(--texte-muted); letter-spacing: .1em; margin-top: 4px; margin-bottom: 22px; }
+  .tar-div { height: 1px; background: var(--bleu-mid); margin: 18px 0; }
+  .tar-list { list-style: none; }
+  .tar-item { font-size: .93rem; color: var(--texte-mid); padding: 5px 0; display: flex; align-items: flex-start; gap: 7px; }
+  .tar-item::before { content: '→'; color: var(--rouge); flex-shrink: 0; font-size: .82rem; margin-top: 2px; }
+
+  /* PHILOSOPHIE */
+  #philosophie { background: var(--gris-fond); display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+  .philo-quote { padding-left: 28px; border-left: 3px solid var(--rouge); }
+  blockquote { font-family: 'Crimson Pro'; font-size: clamp(1.2rem,1.8vw,1.75rem); font-style: italic; color: var(--texte); line-height: 1.55; margin-bottom: 14px; }
+  .philo-src { font-family: 'Space Mono'; font-size: .52rem; letter-spacing: .2em; text-transform: uppercase; color: var(--rouge); }
+  .philo-p { margin-top: 26px; font-size: .98rem; color: var(--texte-mid); font-style: italic; line-height: 1.7; }
+  .philo-vals { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; }
+  .pval { background: var(--blanc); border: 1px solid var(--bleu-mid); border-radius: 3px; padding: 22px 20px; transition: all .2s; }
+  .pval:hover { border-color: var(--bleu); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(27,58,140,.1); }
+  .pval:last-child { grid-column: 1/-1; display: flex; align-items: center; gap: 14px; }
+  .pval-viet { font-family: 'Bebas Neue'; font-size: 1.7rem; color: var(--bleu); line-height: 1; display: block; margin-bottom: 5px; }
+  .pval:last-child .pval-viet { margin-bottom: 0; }
+  .pval-fr { font-family: 'Space Mono'; font-size: .5rem; letter-spacing: .16em; text-transform: uppercase; color: var(--texte-muted); display: block; margin-bottom: 7px; }
+  .pval:last-child .pval-fr { margin-bottom: 0; min-width: 90px; }
+  .pval-ex { font-size: .86rem; color: var(--texte-mid); font-style: italic; line-height: 1.5; }
+
+  /* ESSAI */
+  .essai { background: var(--rouge); padding: 56px 80px; display: flex; align-items: center; justify-content: space-between; gap: 36px; flex-wrap: wrap; position: relative; overflow: hidden; }
+  .essai::after { content: ''; position: absolute; right: -80px; top: -80px; width: 260px; height: 260px; border-radius: 50%; border: 1px solid rgba(255,255,255,.12); pointer-events: none; }
+  .essai h3 { font-family: 'Bebas Neue'; font-size: 2.3rem; letter-spacing: .05em; color: var(--blanc); line-height: 1; margin-bottom: 5px; }
+  .essai p { font-style: italic; color: rgba(255,255,255,.72); font-size: .97rem; }
+  .btn-blanc { display: inline-block; font-family: 'Space Mono'; font-size: .6rem; letter-spacing: .14em; text-transform: uppercase; color: var(--rouge); background: var(--blanc); padding: 15px 34px; text-decoration: none; font-weight: 700; border-radius: 2px; transition: all .2s; white-space: nowrap; flex-shrink: 0; position: relative; z-index: 1; }
+  .btn-blanc:hover { background: var(--jaune); transform: translateY(-2px); }
+
+  /* CONTACT */
+  #contact { background: var(--blanc); display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+  .ci { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 22px; }
+  .ci-icon { width: 40px; height: 40px; background: var(--bleu-pale); border: 1px solid var(--bleu-mid); border-radius: 3px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1rem; }
+  .ci-text strong { display: block; font-family: 'Space Mono'; font-size: .5rem; letter-spacing: .16em; text-transform: uppercase; color: var(--rouge); margin-bottom: 3px; font-weight: 400; }
+  .ci-text p { font-size: .95rem; color: var(--texte-mid); font-style: italic; line-height: 1.5; }
+  .fg { margin-bottom: 16px; }
+  .fg label { display: block; font-family: 'Space Mono'; font-size: .5rem; letter-spacing: .16em; text-transform: uppercase; color: var(--texte-muted); margin-bottom: 6px; }
+  .fg input, .fg textarea, .fg select { width: 100%; background: var(--gris-fond); border: 1.5px solid var(--bleu-mid); color: var(--texte); padding: 11px 14px; font-family: 'Crimson Pro'; font-size: .98rem; outline: none; border-radius: 2px; transition: border-color .2s, background .2s; appearance: none; }
+  .fg input:focus, .fg textarea:focus, .fg select:focus { border-color: var(--bleu); background: var(--blanc); }
+  .fg textarea { height: 110px; resize: vertical; }
+  .fg input::placeholder, .fg textarea::placeholder { color: var(--texte-muted); font-style: italic; }
+
+  /* FOOTER */
+  footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; border-top: 3px solid var(--jaune); }
+  .ft-brand { display: flex; align-items: center; gap: 13px; text-decoration: none; }
+  .ft-brand img { width: 50px; height: 50px; object-fit: contain; border-radius: 50%; border: 2px solid rgba(255,255,255,.2); }
+  .ft-brand strong { font-family: 'Bebas Neue'; font-size: 1.1rem; letter-spacing: .1em; color: var(--blanc); display: block; line-height: 1; }
+  .ft-brand span { font-family: 'Space Mono'; font-size: .46rem; letter-spacing: .2em; color: var(--jaune); text-transform: uppercase; margin-top: 3px; display: block; }
+  .ft-title { font-family: 'Space Mono'; font-size: .5rem; letter-spacing: .22em; text-transform: uppercase; color: var(--jaune); margin-bottom: 14px; }
+  .ft-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .ft-list a { font-family: 'Crimson Pro'; font-size: .93rem; color: rgba(255,255,255,.55); text-decoration: none; font-style: italic; transition: color .2s; }
+  .ft-list a:hover { color: var(--blanc); }
+  .ft-copy { font-family: 'Space Mono'; font-size: .46rem; letter-spacing: .1em; color: rgba(255,255,255,.28); margin-top: 22px; line-height: 1.8; }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:translateY(0); } }
+  .anim { opacity:0; animation: fadeUp .65s ease forwards; }
+  .anim:nth-child(1){animation-delay:.08s}.anim:nth-child(2){animation-delay:.2s}.anim:nth-child(3){animation-delay:.32s}.anim:nth-child(4){animation-delay:.44s}.anim:nth-child(5){animation-delay:.56s}
+
+  /* MOBILE */
+  @media(max-width:900px){
+    nav{padding:11px 18px;}
+    .nav-links{display:none;}
+    .hero{grid-template-columns:1fr;}
+    .hero-left{padding:36px 22px 44px;}
+    .hero-right{display:none;}
+    .sec{padding:60px 22px;}
+    #vovinam,#philosophie,#contact{grid-template-columns:1fr;gap:36px;padding:60px 22px;}
+    #piliers,#galerie,#horaires,#tarifs{padding:60px 22px;}
+    .pillars,.hor-grid,.tar-grid{grid-template-columns:1fr;}
+    .gal-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto;}
+    .gal-cell:first-child{grid-row:auto;}
+    .gal-cell .img-ph{aspect-ratio:4/3;}
+    footer{grid-template-columns:1fr;padding:36px 22px;}
+    .essai{padding:36px 22px;flex-direction:column;}
+    .piliers-top{grid-template-columns:1fr;gap:16px;}
+    .pval:last-child{flex-direction:column;align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#accueil" class="nav-logo">
+    <img src="logo-vdst.png" alt="Logo VDST Port-Marly">
+    <div class="nav-logo-text">
+      <strong>VDST Port-Marly</strong>
+      <span>Vovinam Việt Võ Đạo · 78560</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#vovinam">Le Vovinam</a></li>
+    <li><a href="#galerie">Galerie</a></li>
+    <li><a href="#horaires">Horaires</a></li>
+    <li><a href="#tarifs">Tarifs</a></li>
+    <li><a href="#philosophie">Philosophie</a></li>
+    <li><a href="#contact" class="nav-cta">Essai gratuit</a></li>
+    <li><a href="https://www.helloasso.com" target="_blank" rel="noopener" class="btn-helloasso" style="padding:9px 16px;font-size:.52rem;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:13px;height:13px;"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Devenir membre</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="accueil">
+  <div class="hero-left">
+    <p class="hero-eyebrow anim">Art martial vietnamien — Le Port-Marly (78)</p>
+    <h1 class="anim">VDST<em>PORT-MARLY</em><span class="sub">Vovinam Việt Võ Đạo</span></h1>
+    <p class="hero-desc anim">Frapper, projeter, maîtriser. L'art martial vietnamien le plus complet — pieds-poings, armes, ciseaux volants, combat. Pour tous niveaux, à partir de 6 ans.</p>
+    <div class="hero-actions anim">
+      <a href="#contact" class="btn-jaune">Séance d'essai gratuite</a>
+      <a href="#vovinam" class="btn-outline-blanc">Découvrir le Vovinam</a>
+    </div>
+    <div class="hero-stats anim">
+      <div><span class="hero-stat-num">6+</span><span class="hero-stat-label">Ans pour débuter</span></div>
+      <div><span class="hero-stat-num">60+</span><span class="hero-stat-label">Ans de Vovinam</span></div>
+      <div><span class="hero-stat-num">2025</span><span class="hero-stat-label">Saison en cours</span></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-card">
+      <div class="hero-card-logo">
+        <img src="logo-vdst.png" alt="Logo VDST">
+        <div><strong>VDST Port-Marly</strong><span>Le Port-Marly · 78560</span></div>
+      </div>
+      <div class="hero-card-title">— Planning des cours</div>
+      <div class="sched-row"><span class="sched-cat">Enfants 6–9 ans</span><span class="sched-time">Mer · Sam</span></div>
+      <div class="sched-row"><span class="sched-cat">Cadets 10–14 ans</span><span class="sched-time">Mer · Sam</span></div>
+      <div class="sched-row"><span class="sched-cat">Adultes 15 ans +</span><span class="sched-time">Mar · Ven</span></div>
+      <div class="sched-row"><span class="sched-cat">Compétition</span><span class="sched-time">Sur planning</span></div>
+      <a href="#contact" class="hero-cta">Réserver mon essai gratuit →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRÉSENTATION -->
+<section id="vovinam" class="sec">
+  <div class="vovinam-imgs">
+    <div class="img-ph main" style="aspect-ratio:4/3;position:relative;">
+      <span class="ic">📸</span><p>Photo principale du club</p>
+      <div class="logo-badge"><img src="logo-vdst.png" alt="Logo"></div>
+    </div>
+    <div class="img-duo">
+      <div class="img-ph sm"><span class="ic">🥋</span><p>Cours adultes</p></div>
+      <div class="img-ph sm"><span class="ic">👦</span><p>Cours enfants</p></div>
+    </div>
+  </div>
+  <div>
+    <div class="sec-label">L'art martial</div>
+    <h2 class="sec-title">UN ART<br>COMPLET</h2>
+    <p style="color:var(--texte-mid);margin-bottom:16px;font-size:1.02rem;">Fondé par le Maître Nguyễn Lộc en 1938, le Vovinam Việt Võ Đạo est la synthèse des arts martiaux traditionnels du Vietnam. Sa particularité : l'équilibre entre puissance martiale et philosophie humaniste.</p>
+    <p style="color:var(--texte-mid);margin-bottom:24px;font-size:1.02rem;">Au club VDST Port-Marly, vous progresserez du niveau débutant jusqu'à la compétition nationale — dans une ambiance familiale et exigeante, au cœur des Yvelines.</p>
+    <div style="display:flex;gap:13px;flex-wrap:wrap;">
+      <a href="#contact" class="btn-rouge">Venir à l'essai</a>
+      <a href="#piliers" class="btn-outline-bleu">Les techniques →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PILIERS -->
+<section id="piliers" class="sec">
+  <div class="piliers-top">
+    <div>
+      <div class="sec-label">Techniques</div>
+      <h2 class="sec-title">CE QUE<br>VOUS APPRENDREZ</h2>
+    </div>
+    <p class="piliers-intro">Le Vovinam couvre l'ensemble des disciplines — frappe, projection, armes, self-défense. Un seul art martial pour tout maîtriser.</p>
+  </div>
+  <div class="pillars">
+    <div class="pillar"><span class="pillar-icon">👊</span><div class="pillar-name">Frappe</div><p class="pillar-desc">Pieds, poings, coudes, genoux — percussion complète et travail des enchaînements</p></div>
+    <div class="pillar"><span class="pillar-icon">🤼</span><div class="pillar-name">Projection</div><p class="pillar-desc">Clés articulaires, lutte vietnamienne, travail au sol et contrôle</p></div>
+    <div class="pillar"><span class="pillar-icon">✂️</span><div class="pillar-name">Ciseaux</div><p class="pillar-desc">La technique emblématique du Vovinam — coups de pieds sautés spectaculaires</p></div>
+    <div class="pillar"><span class="pillar-icon">⚔️</span><div class="pillar-name">Armes</div><p class="pillar-desc">Sabre, couteau, bâton, hallebarde — les armes traditionnelles vietnamiennes</p></div>
+    <div class="pillar"><span class="pillar-icon">🛡️</span><div class="pillar-name">Self-défense</div><p class="pillar-desc">Techniques réelles face à saisies, étranglements et agressions armées</p></div>
+    <div class="pillar"><span class="pillar-icon">🏆</span><div class="pillar-name">Compétition</div><p class="pillar-desc">Combat codifié, quyền (katas), préparation aux compétitions nationales</p></div>
+  </div>
+</section>
+
+<!-- GALERIE -->
+<section id="galerie" class="sec">
+  <div class="sec-label">Photos & vidéos</div>
+  <h2 class="sec-title">LA VIE<br>DU CLUB</h2>
+  <div class="gal-grid">
+    <div class="gal-cell"><div class="img-ph" style="width:100%;height:100%;"><span class="ic">📸</span><p>Compétition / démonstration</p></div><span class="gal-label">Compétition nationale</span></div>
+    <div class="gal-cell"><div class="img-ph" style="width:100%;height:100%;"><span class="ic">📸</span><p>Cours adultes</p></div><span class="gal-label">Cours adultes</span></div>
+    <div class="gal-cell"><div class="img-ph" style="width:100%;height:100%;"><span class="ic">📸</span><p>Cours enfants</p></div><span class="gal-label">Cours enfants</span></div>
+    <div class="gal-cell"><div class="img-ph" style="width:100%;height:100%;"><span class="ic">📸</span><p>Ciseaux volants</p></div><span class="gal-label">Techniques de ciseaux</span></div>
+    <div class="gal-cell"><div class="img-ph" style="width:100%;height:100%;"><span class="ic">📸</span><p>Stage / événement</p></div><span class="gal-label">Stage national</span></div>
+  </div>
+</section>
+
+<!-- HORAIRES -->
+<section id="horaires" class="sec">
+  <div class="sec-label">Planning</div>
+  <h2 class="sec-title">HORAIRES<br>& LIEUX</h2>
+  <div class="hor-grid">
+    <div class="hor-card">
+      <div class="hor-public">Enfants</div><div class="hor-age">6 – 9 ans</div>
+      <div class="hor-slot"><div class="hor-day">Mercredi</div><div class="hor-time">17h00 – 18h30</div></div>
+      <div class="hor-slot"><div class="hor-day">Samedi</div><div class="hor-time">10h00 – 11h30</div></div>
+      <div class="hor-lieu">📍 Gymnase municipal — Le Port-Marly</div>
+    </div>
+    <div class="hor-card">
+      <div class="hor-public">Cadets</div><div class="hor-age">10 – 14 ans</div>
+      <div class="hor-slot"><div class="hor-day">Mercredi</div><div class="hor-time">18h30 – 20h00</div></div>
+      <div class="hor-slot"><div class="hor-day">Samedi</div><div class="hor-time">11h30 – 13h00</div></div>
+      <div class="hor-lieu">📍 Gymnase municipal — Le Port-Marly</div>
+    </div>
+    <div class="hor-card">
+      <div class="hor-public">Adultes</div><div class="hor-age">15 ans et +</div>
+      <div class="hor-slot"><div class="hor-day">Mardi</div><div class="hor-time">20h00 – 21h30</div></div>
+      <div class="hor-slot"><div class="hor-day">Vendredi</div><div class="hor-time">19h00 – 21h00</div></div>
+      <div class="hor-lieu">📍 Gymnase municipal — Le Port-Marly</div>
+    </div>
+  </div>
+</section>
+
+<!-- TARIFS -->
+<section id="tarifs" class="sec">
+  <div class="sec-label">Inscription</div>
+  <h2 class="sec-title">TARIFS<br>2025–2026</h2>
+  <div class="tar-grid">
+    <div class="tar-card">
+      <div class="tar-cat">Enfants & Cadets</div>
+      <div class="tar-price"><sup>€</sup>180</div>
+      <div class="tar-per">/ saison complète</div>
+      <hr class="tar-div">
+      <ul class="tar-list">
+        <li class="tar-item">Cours enfants 6–14 ans</li>
+        <li class="tar-item">Licence fédérale incluse</li>
+        <li class="tar-item">Assurance incluse</li>
+        <li class="tar-item">Premier mois d'essai offert</li>
+      </ul>
+    </div>
+    <div class="tar-card feat">
+      <span class="feat-badge">Le plus populaire</span>
+      <div class="tar-cat">Adultes</div>
+      <div class="tar-price"><sup>€</sup>220</div>
+      <div class="tar-per">/ saison complète</div>
+      <hr class="tar-div">
+      <ul class="tar-list">
+        <li class="tar-item">Cours adultes illimités</li>
+        <li class="tar-item">Licence fédérale incluse</li>
+        <li class="tar-item">Assurance incluse</li>
+        <li class="tar-item">Premier mois d'essai offert</li>
+      </ul>
+    </div>
+    <div class="tar-card">
+      <div class="tar-cat">Famille</div>
+      <div class="tar-price"><sup>€</sup>380</div>
+      <div class="tar-per">/ saison · 2 membres</div>
+      <hr class="tar-div">
+      <ul class="tar-list">
+        <li class="tar-item">2 membres du même foyer</li>
+        <li class="tar-item">Licences fédérales incluses</li>
+        <li class="tar-item">Assurances incluses</li>
+        <li class="tar-item">Réduction sur 3e membre</li>
+      </ul>
+    </div>
+  </div>
+  <p style="margin-top:18px;font-style:italic;color:var(--texte-muted);font-size:.88rem;">* Tarifs indicatifs à confirmer à l'inscription. Chèques ANCV et coupons sport acceptés.</p>
+  <div style="margin-top:36px;padding:32px;background:var(--bleu-pale);border:1px solid var(--bleu-mid);border-radius:3px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+    <div>
+      <p style="font-family:'Bebas Neue';font-size:1.5rem;letter-spacing:.05em;color:var(--bleu);line-height:1;margin-bottom:6px;">Prêt à vous inscrire ?</p>
+      <p style="font-size:.95rem;color:var(--texte-mid);font-style:italic;">Adhésion en ligne rapide et sécurisée via HelloAsso — paiement par carte ou chèque.</p>
+    </div>
+    <a href="https://www.helloasso.com" target="_blank" rel="noopener" class="btn-helloasso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:14px;height:14px;"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Devenir membre sur HelloAsso</a>
+  </div>
+</section>
+
+<!-- PHILOSOPHIE -->
+<section id="philosophie" class="sec">
+  <div>
+    <div class="sec-label">La voie du guerrier</div>
+    <h2 class="sec-title">PHILOSOPHIE<br>& VALEURS</h2>
+    <div class="philo-quote" style="margin-top:26px;">
+      <blockquote>« Être fort pour être utile, non pour dominer. Forger le corps pour élever l'esprit. »</blockquote>
+      <p class="philo-src">— Nguyễn Lộc, Maître fondateur (1912–1960)</p>
+    </div>
+    <p class="philo-p">Le Vovinam ne se limite pas au combat. Chaque cours est une occasion de développer sa rigueur, son respect des autres et sa confiance en soi. Une philosophie transmise de génération en génération, du Vietnam jusqu'à Port-Marly.</p>
+  </div>
+  <div>
+    <div class="sec-label" style="margin-bottom:18px;">Les 5 vertus</div>
+    <div class="philo-vals">
+      <div class="pval"><span class="pval-viet">Nhân</span><span class="pval-fr">Bienveillance</span><p class="pval-ex">Agir avec empathie, aider sans attendre</p></div>
+      <div class="pval"><span class="pval-viet">Nghĩa</span><span class="pval-fr">Loyauté</span><p class="pval-ex">Tenir sa parole, rester fidèle à ses engagements</p></div>
+      <div class="pval"><span class="pval-viet">Lễ</span><span class="pval-fr">Respect</span><p class="pval-ex">Saluer, écouter, honorer maîtres et partenaires</p></div>
+      <div class="pval"><span class="pval-viet">Trí</span><span class="pval-fr">Sagesse</span><p class="pval-ex">Réfléchir avant d'agir, apprendre de chaque erreur</p></div>
+      <div class="pval"><span class="pval-viet">Tín</span><span class="pval-fr">Intégrité</span><p class="pval-ex">Être honnête avec soi-même et avec les autres, en toute circonstance</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ESSAI BANNER -->
+<div class="essai">
+  <div><h3>Première séance offerte</h3><p>Venez tester sans engagement — tenue souple suffit, aucun équipement requis.</p></div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1;">
+    <a href="#contact" class="btn-blanc">Je réserve mon essai →</a>
+    <a href="https://www.helloasso.com" target="_blank" rel="noopener" class="btn-helloasso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:14px;height:14px;"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Devenir membre</a>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="sec">
+  <div>
+    <div class="sec-label">Nous trouver</div>
+    <h2 class="sec-title">CONTACT<br>& INFOS</h2>
+    <div style="margin-top:28px;">
+      <div class="ci"><div class="ci-icon">📍</div><div class="ci-text"><strong>Lieu d'entraînement</strong><p>Gymnase municipal<br>Le Port-Marly, 78560</p></div></div>
+      <div class="ci"><div class="ci-icon">📧</div><div class="ci-text"><strong>Email</strong><p>contact@vovinamportmarly.fr</p></div></div>
+      <div class="ci"><div class="ci-icon">📱</div><div class="ci-text"><strong>Téléphone / WhatsApp</strong><p>À renseigner</p></div></div>
+      <div class="ci"><div class="ci-icon">🏛️</div><div class="ci-text"><strong>Association affiliée</strong><p>TCHL France — Vovinam Việt Võ Đạo</p></div></div>
+    </div>
+  </div>
+  <div>
+    <div class="sec-label">Formulaire</div>
+    <h3 style="font-family:'Bebas Neue';font-size:1.9rem;letter-spacing:.05em;color:var(--bleu);margin-bottom:22px;margin-top:4px;">ÉCRIVEZ-NOUS</h3>
+    <div class="fg"><label>Prénom et nom</label><input type="text" placeholder="Jean Dupont"></div>
+    <div class="fg"><label>Email</label><input type="email" placeholder="jean@exemple.fr"></div>
+    <div class="fg"><label>Objet</label><select><option value="">— Choisir —</option><option>Cours d'essai gratuit</option><option>Inscription 2025–2026</option><option>Renseignements tarifs</option><option>Autre question</option></select></div>
+    <div class="fg"><label>Message</label><textarea placeholder="Décrivez votre demande…"></textarea></div>
+    <button type="button" class="btn-rouge" style="cursor:pointer;border:none;width:100%;padding:15px;font-size:.64rem;">Envoyer le message</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#accueil" class="ft-brand"><img src="logo-vdst.png" alt="Logo"><div><strong>VDST Port-Marly</strong><span>Vovinam Việt Võ Đạo · 78560</span></div></a>
+  <div>
+    <p class="ft-title">Navigation</p>
+    <ul class="ft-list">
+      <li><a href="#vovinam">Le Vovinam</a></li>
+      <li><a href="#horaires">Horaires & Lieux</a></li>
+      <li><a href="#tarifs">Tarifs</a></li>
+      <li><a href="#galerie">Galerie</a></li>
+      <li><a href="#philosophie">Philosophie</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div>
+    <p class="ft-title">Liens utiles</p>
+    <ul class="ft-list">
+      <li><a href="https://www.helloasso.com" target="_blank" rel="noopener" style="color:var(--jaune);font-weight:700;">🟢 Devenir membre — HelloAsso</a></li>
+      <li><a href="#">TCHL France</a></li>
+      <li><a href="#">Union Vovinam France</a></li>
+      <li><a href="#">HelloAsso — Adhésion</a></li>
+      <li><a href="#">Mentions légales</a></li>
+    </ul>
+    <p class="ft-copy">© 2025 VDST Port-Marly<br>vovinamportmarly.fr</p>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.querySelector('nav').style.padding =
+      window.scrollY > 60 ? '10px 60px' : '14px 60px';
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (en.isIntersecting) {
+        en.target.style.opacity = '1';
+        en.target.style.transform = 'translateY(0)';
+        obs.unobserve(en.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.pillar,.hor-card,.tar-card,.pval,.gal-cell').forEach((el, i) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(16px)';
+    el.style.transition = `opacity .5s ease ${i*.06}s, transform .5s ease ${i*.06}s`;
+    obs.observe(el);
+  });
+</script>
+</body>
+</html>
