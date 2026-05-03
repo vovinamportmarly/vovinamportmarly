@@ -79,7 +79,7 @@
     display: flex; align-items: center; gap: 10px;
   }
   .hero-eyebrow::before { content: ''; width: 26px; height: 2px; background: var(--jaune); flex-shrink: 0; }
-  .hero h1 { font-family: 'Be Vietnam Pro', sans-serif; font-size: clamp(3rem,5.8vw,5.8rem); line-height: .9; letter-spacing: .02em; color: var(--blanc); font-weight: 900; }
+  .hero h1 { font-family: 'Be Vietnam Pro', sans-serif; font-size: clamp(2.2rem,4.2vw,4.2rem); line-height: .9; letter-spacing: .02em; color: var(--blanc); font-weight: 900; }
   .hero h1 em { font-style: normal; color: var(--jaune); display: block; font-weight: 900; }
   .hero h1 .sub { font-size: 0.28em; color: rgba(255,255,255,.8); letter-spacing: .18em; display: block; margin-top: 12px; font-family: 'Be Vietnam Pro', sans-serif; font-weight: 600; text-transform: uppercase; line-height: 1.5; }
   .hero-desc { font-size: 1.05rem; color: rgba(255,255,255,.72); max-width: 400px; margin: 26px 0 38px; font-style: italic; line-height: 1.75; }
@@ -128,12 +128,9 @@
   /* PRÉSENTATION */
   #vovinam { background: var(--blanc); display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
   .vovinam-imgs { display: flex; flex-direction: column; gap: 8px; }
-  .vovinam-imgs .img-ph.main { aspect-ratio: 4/3; position: relative; }
   .logo-badge { position: absolute; bottom: -18px; right: 18px; width: 72px; height: 72px; background: var(--blanc); border-radius: 50%; box-shadow: 0 4px 16px rgba(27,58,140,.15); display: flex; align-items: center; justify-content: center; padding: 5px; }
   .logo-badge img { width: 100%; height: 100%; object-fit: contain; border-radius: 50%; }
   .img-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-  .img-ph.sm { aspect-ratio: 1; }
-  .img-ph.sm .ic { font-size: 1.5rem; }
   .vovinam-text p { color: var(--texte-mid); margin-bottom: 16px; font-size: 1.02rem; }
 
   /* PILIERS */
@@ -296,15 +293,15 @@
   <div class="hero-left">
     <p class="hero-eyebrow anim">Art martial vietnamien — Le Port-Marly (78)</p>
     <h1 class="anim">VDST<em>PORT-MARLY</em><span class="sub">Vovinam Việt Võ Đạo</span></h1>
-    <p class="hero-desc anim">Frapper, projeter, maîtriser. L'art martial vietnamien le plus complet — pieds-poings, armes, ciseaux volants, combat. Pour tous niveaux, à partir de 6 ans.</p>
+    <p class="hero-desc anim">Se défendre, se maîtriser, se renforcer.<br>Uart martial vietnamien complet : pieds-poings,projections, armes, ciseaux volants, combat.<br>Pour tous niveaux, à partir de 5 ans.</p>
     <div class="hero-actions anim">
       <a href="#contact" class="btn-jaune">Séance d'essai gratuite</a>
       <a href="#vovinam" class="btn-outline-blanc">Découvrir le Vovinam</a>
     </div>
     <div class="hero-stats anim">
-      <div><span class="hero-stat-num">6+</span><span class="hero-stat-label">Ans pour débuter</span></div>
-      <div><span class="hero-stat-num">60+</span><span class="hero-stat-label">Ans de Vovinam</span></div>
-      <div><span class="hero-stat-num">2025</span><span class="hero-stat-label">Saison en cours</span></div>
+      <div><span class="hero-stat-num">5+</span><span class="hero-stat-label">Ans pour débuter</span></div>
+      <div><span class="hero-stat-num">80+</span><span class="hero-stat-label">Ans de Vovinam</span></div>
+      <div><span class="hero-stat-num">2025-26</span><span class="hero-stat-label">Saison en cours</span></div>
     </div>
   </div>
   <div class="hero-right">
@@ -314,10 +311,9 @@
         <div><strong>VDST Port-Marly</strong><span>Le Port-Marly · 78560</span></div>
       </div>
       <div class="hero-card-title">— Planning des cours</div>
-      <div class="sched-row"><span class="sched-cat">Enfants 6–9 ans</span><span class="sched-time">Mer · Sam</span></div>
-      <div class="sched-row"><span class="sched-cat">Cadets 10–14 ans</span><span class="sched-time">Mer · Sam</span></div>
-      <div class="sched-row"><span class="sched-cat">Adultes 15 ans +</span><span class="sched-time">Mar · Ven</span></div>
-      <div class="sched-row"><span class="sched-cat">Compétition</span><span class="sched-time">Sur planning</span></div>
+      <div class="sched-row"><span class="sched-cat">Enfants 5–7 ans</span><span class="sched-time">Mardi 17h</span></div>
+      <div class="sched-row"><span class="sched-cat">Enfants 8–11 ans</span><span class="sched-time">Vendredi 17h</span></div>
+      <div class="sched-row"><span class="sched-cat">Ados 12 ans et +</span><span class="sched-time">Vendredi 18h</span></div>
       <a href="#contact" class="hero-cta">Réserver mon essai gratuit →</a>
     </div>
   </div>
@@ -343,8 +339,9 @@
     <div class="sec-label">Le Vovinam Việt Võ Đạo</div>
     <h2 class="sec-title">UN ART<br>COMPLET</h2>
     <p style="color:var(--texte-mid);margin-bottom:16px;font-size:1.02rem;">Le Vovinam Việt Võ Đạo est un art martial vietnamien fondé en 1938 par le Maître Fondateur Nguyễn Lộc. Il est une synthèse des arts martiaux traditionnels et millénaires du Vietnam.</p>
-    <p style="color:var(--texte-mid);margin-bottom:16px;font-size:1.02rem;">Le Vovinam est un art martial très complet qui comprend notamment des techniques de percussion (coups de pieds, coups de poings, coups de coude, coups de genoux, tranchants de la main...). Le Vovinam ce sont aussi des techniques de self-défense (se défendre contre un étranglement, une saisie au corps, une saisie des poignets...), des projections (qui peuvent faire penser au Judo), de lutte vietnamienne, de clés articulaires ou encore de ciseaux (coups de pieds sautés ou saisies au corps et à la tête avec les jambes).</p>
-    <p style="color:var(--texte-mid);margin-bottom:16px;font-size:1.02rem;">Nous pratiquons également des armes courantes comme le couteau ou le pistolet et des armes traditionnelles comme le sabre long, le sabre large, le bâton, la hallebarde, la règle ou l'éventail.</p>
+    <p style="color:var(--texte-mid);margin-bottom:16px;font-size:1.02rem;">Le Vovinam est un art martial très complet qui comprend notamment des techniques de percussion (coups de pieds, coups de poings, coups de coude, coups de genoux, tranchants de la main...). </p>
+    <p style="color:var(--texte-mid);margin-bottom:16px;font-size:1.02rem;">Le Vovinam c'est aussi des techniques de self-défense (se défendre contre un étranglement, une saisie au corps, une saisie des poignets...), des projections (qui peuvent faire penser au Judo), de lutte vietnamienne, de clés articulaires (de bras de jambes) ou encore de ciseaux (coups de pieds sautés ou saisies au corps et à la tête avec les jambes).</p>
+    <p style="color:var(--texte-mid);margin-bottom:16px;font-size:1.02rem;">Nous pratiquons également des armes courantes comme le couteau poignard (đao găm) ou le pistolet (súng ngắn) et des armes traditionnelles comme l'épée (kiếm), le sabre large (Đao), le bâton long (Côn), la hallebarde (Đại Đao), la règle en bois (tay thước) ou l'éventail(Quật)...</p>
     <p style="color:var(--texte-mid);margin-bottom:24px;font-size:1.02rem;">Le Vovinam Việt Võ Đạo est aussi un sport avec ses compétitions techniques et combat nationales et internationales. Les combats sont réglementés et autorisent notamment les pieds-poings, les balayages, les projections et les ciseaux. Le club participe aux compétitions Vovinam et AMV de la fédération de karaté (FFK) qui est la fédération délégataire.</p>
     <div style="display:flex;gap:13px;flex-wrap:wrap;">
       <a href="#contact" class="btn-rouge">Venir à l'essai</a>
@@ -360,15 +357,16 @@
       <div class="sec-label">Techniques</div>
       <h2 class="sec-title">CE QUE<br>VOUS APPRENDREZ</h2>
     </div>
-    <p class="piliers-intro">Le Vovinam couvre l'ensemble des disciplines — frappe, projection, armes, self-défense. Un seul art martial pour tout maîtriser.</p>
+    <p class="piliers-intro">Le Vovinam combine de la technique, du combat et de la théorie — Technique de base, Enchaînement seul, Enchaînement à deux, Combat pied-poing, Force physique, Philosophie. Un seul art martial pour tout maîtriser.</p>
   </div>
   <div class="pillars">
-    <div class="pillar"><span class="pillar-icon">👊</span><div class="pillar-name">Frappe</div><p class="pillar-desc">Pieds, poings, coudes, genoux — percussion complète et travail des enchaînements</p></div>
-    <div class="pillar"><span class="pillar-icon">🤼</span><div class="pillar-name">Projection</div><p class="pillar-desc">Clés articulaires, lutte vietnamienne, travail au sol et contrôle</p></div>
-    <div class="pillar"><span class="pillar-icon">✂️</span><div class="pillar-name">Ciseaux</div><p class="pillar-desc">La technique emblématique du Vovinam — coups de pieds sautés spectaculaires</p></div>
-    <div class="pillar"><span class="pillar-icon">⚔️</span><div class="pillar-name">Armes</div><p class="pillar-desc">Sabre, couteau, bâton, hallebarde — les armes traditionnelles vietnamiennes</p></div>
-    <div class="pillar"><span class="pillar-icon">🛡️</span><div class="pillar-name">Self-défense</div><p class="pillar-desc">Techniques réelles face à saisies, étranglements et agressions armées</p></div>
-    <div class="pillar"><span class="pillar-icon">🏆</span><div class="pillar-name">Compétition</div><p class="pillar-desc">Combat codifié, quyền (katas), préparation aux compétitions nationales</p></div>
+    <div class="pillar"><span class="pillar-icon">👊</span><div class="pillar-name">Technique de base (Đòn căn bản)</div><p class="pillar-desc">Seul ou à deux ces techniques sont la base du Vovinam. Elles doivent être répétées jusqu’à les maîtriser parfaitement.</p>
+    </div>
+    <div class="pillar"><span class="pillar-icon">🤼</span><div class="pillar-name">Enchaînement seul(Đòn Luyện)</div><p class="pillar-desc">Ces enchaînements, destinés à être pratiqués seul(e), permettent de perfectionner ses mouvements et de garder les techniques de base en mémoire.</p></div>
+    <div class="pillar"><span class="pillar-icon">✂️</span><div class="pillar-name">Enchaînement à deux(Song Luyện)</div><p class="pillar-desc">Ces enchaînements ont pour but de mettre en situation concrète les techniques de base assimilées.</p></div>
+    <div class="pillar"><span class="pillar-icon">⚔️</span><div class="pillar-name">Combat pied-poing</div><p class="pillar-desc">Les percussions du Vovinam couvrent l'ensemble des frappes : poings, pieds, coudes, genoux, tranchants de main — travaillés sur pao et pattes d'ours pour développer vitesse et puissance.</p></div>
+    <div class="pillar"><span class="pillar-icon">🛡️</span><div class="pillar-name">Force physique</div><p class="pillar-desc">Pompes vietnamiennes, roulade, projection, renforcement musculaire, assouplissement</p></div>
+    <div class="pillar"><span class="pillar-icon">🏆</span><div class="pillar-name">Armes</div><p class="pillar-desc">Couteau, épée, bâton long, hallebarde, sabre large... </p></div>
   </div>
 </section>
 
@@ -391,22 +389,22 @@
   <h2 class="sec-title">HORAIRES<br>& LIEUX</h2>
   <div class="hor-grid">
     <div class="hor-card">
-      <div class="hor-public">Enfants</div><div class="hor-age">6 – 9 ans</div>
-      <div class="hor-slot"><div class="hor-day">Mercredi</div><div class="hor-time">17h00 – 18h30</div></div>
-      <div class="hor-slot"><div class="hor-day">Samedi</div><div class="hor-time">10h00 – 11h30</div></div>
-      <div class="hor-lieu">📍 Gymnase municipal — Le Port-Marly</div>
+      <div class="hor-public">Enfants</div><div class="hor-age">5 – 7 ans</div>
+      <div class="hor-slot"><div class="hor-day">Mardi</div><div class="hor-time">17h00 – 18h00</div></div>
+      
+      <div class="hor-lieu">📍 Complexe Sportif d'Artagnan — Le Port-Marly</div>
     </div>
     <div class="hor-card">
-      <div class="hor-public">Cadets</div><div class="hor-age">10 – 14 ans</div>
-      <div class="hor-slot"><div class="hor-day">Mercredi</div><div class="hor-time">18h30 – 20h00</div></div>
-      <div class="hor-slot"><div class="hor-day">Samedi</div><div class="hor-time">11h30 – 13h00</div></div>
-      <div class="hor-lieu">📍 Gymnase municipal — Le Port-Marly</div>
+      <div class="hor-public">Enfants</div><div class="hor-age">8 – 11 ans</div>
+      <div class="hor-slot"><div class="hor-day">Vendredi</div><div class="hor-time">17h00 – 18h00</div></div>
+      
+      <div class="hor-lieu">📍 Complexe Sportif d'Artagnan — Le Port-Marly</div>
     </div>
     <div class="hor-card">
-      <div class="hor-public">Adultes</div><div class="hor-age">15 ans et +</div>
-      <div class="hor-slot"><div class="hor-day">Mardi</div><div class="hor-time">20h00 – 21h30</div></div>
-      <div class="hor-slot"><div class="hor-day">Vendredi</div><div class="hor-time">19h00 – 21h00</div></div>
-      <div class="hor-lieu">📍 Gymnase municipal — Le Port-Marly</div>
+      <div class="hor-public">Adolescents</div><div class="hor-age">12 ans et +</div>
+      <div class="hor-slot"><div class="hor-day">Vendredi</div><div class="hor-time">18h00 – 19h00</div></div>
+      
+      <div class="hor-lieu">📍 Complexe Sportif d'Artagnan — Le Port-Marly</div>
     </div>
   </div>
 </section>
@@ -414,36 +412,36 @@
 <!-- TARIFS -->
 <section id="tarifs" class="sec">
   <div class="sec-label">Inscription</div>
-  <h2 class="sec-title">TARIFS<br>2025–2026</h2>
+  <h2 class="sec-title">TARIFS<br>2026</h2>
   <div class="tar-grid">
     <div class="tar-card">
-      <div class="tar-cat">Enfants & Cadets</div>
-      <div class="tar-price"><sup>€</sup>180</div>
+      <div class="tar-cat">Enfants et Ados</div>
+      <div class="tar-price"><sup>€</sup>Infos à venir</div>
       <div class="tar-per">/ saison complète</div>
       <hr class="tar-div">
       <ul class="tar-list">
-        <li class="tar-item">Cours enfants 6–14 ans</li>
+        <li class="tar-item">1 Cours / semaine</li>
         <li class="tar-item">Licence fédérale incluse</li>
         <li class="tar-item">Assurance incluse</li>
-        <li class="tar-item">Premier mois d'essai offert</li>
+       
       </ul>
     </div>
     <div class="tar-card feat">
-      <span class="feat-badge">Le plus populaire</span>
+      
       <div class="tar-cat">Adultes</div>
-      <div class="tar-price"><sup>€</sup>220</div>
+      <div class="tar-price"><sup>€</sup>infos à venir</div>
       <div class="tar-per">/ saison complète</div>
       <hr class="tar-div">
       <ul class="tar-list">
-        <li class="tar-item">Cours adultes illimités</li>
+        <li class="tar-item">infos à venir</li>
         <li class="tar-item">Licence fédérale incluse</li>
         <li class="tar-item">Assurance incluse</li>
-        <li class="tar-item">Premier mois d'essai offert</li>
+        
       </ul>
     </div>
     <div class="tar-card">
       <div class="tar-cat">Famille</div>
-      <div class="tar-price"><sup>€</sup>380</div>
+      <div class="tar-price"><sup>€</sup>Infos à venir</div>
       <div class="tar-per">/ saison · 2 membres</div>
       <hr class="tar-div">
       <ul class="tar-list">
@@ -458,7 +456,7 @@
   <div style="margin-top:36px;padding:32px;background:var(--bleu-pale);border:1px solid var(--bleu-mid);border-radius:3px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
     <div>
       <p style="font-family:'Be Vietnam Pro',sans-serif;font-size:1.3rem;letter-spacing:.02em;color:var(--bleu);line-height:1;margin-bottom:6px;font-weight:900;text-transform:uppercase;">Prêt à vous inscrire ?</p>
-      <p style="font-size:.95rem;color:var(--texte-mid);font-style:italic;">Adhésion en ligne rapide et sécurisée via HelloAsso — paiement par carte ou chèque.</p>
+      <p style="font-size:.95rem;color:var(--texte-mid);font-style:italic;">Adhésion en ligne rapide et sécurisée via HelloAsso — paiement par carte.</p>
     </div>
     <a href="https://www.helloasso.com" target="_blank" rel="noopener" class="btn-helloasso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:14px;height:14px;"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Devenir membre sur HelloAsso</a>
   </div>
@@ -476,7 +474,7 @@
     <p class="philo-p">Le Vovinam ne se limite pas au combat. Chaque cours est une occasion de développer sa rigueur, son respect des autres et sa confiance en soi. Une philosophie transmise de génération en génération, du Vietnam jusqu'à Port-Marly.</p>
   </div>
   <div>
-    <div class="sec-label" style="margin-bottom:18px;">Les 5 vertus</div>
+    <div class="sec-label" style="margin-bottom:18px;">Les 5 vertues</div>
     <div class="philo-vals">
       <div class="pval"><span class="pval-viet">Nhân</span><span class="pval-fr">Bienveillance</span><p class="pval-ex">Agir avec empathie, aider sans attendre</p></div>
       <div class="pval"><span class="pval-viet">Nghĩa</span><span class="pval-fr">Loyauté</span><p class="pval-ex">Tenir sa parole, rester fidèle à ses engagements</p></div>
@@ -489,7 +487,7 @@
 
 <!-- ESSAI BANNER -->
 <div class="essai">
-  <div><h3>Première séance offerte</h3><p>Venez tester sans engagement — tenue souple suffit, aucun équipement requis.</p></div>
+  <div><h3>Première séance offerte</h3><p>Venez tester sans engagement — tenue souple de sport et une bouteille d'eau suffisent, aucun équipement requis.</p></div>
   <div style="display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1;">
     <a href="#contact" class="btn-blanc">Je réserve mon essai →</a>
     <a href="https://www.helloasso.com" target="_blank" rel="noopener" class="btn-helloasso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:14px;height:14px;"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Devenir membre</a>
