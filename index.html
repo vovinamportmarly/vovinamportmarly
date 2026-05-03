@@ -79,7 +79,7 @@
     display: flex; align-items: center; gap: 10px;
   }
   .hero-eyebrow::before { content: ''; width: 26px; height: 2px; background: var(--jaune); flex-shrink: 0; }
-  .hero h1 { font-family: 'Be Vietnam Pro', sans-serif; font-size: clamp(2.2rem,4.2vw,4.2rem); line-height: .9; letter-spacing: .02em; color: var(--blanc); font-weight: 900; }
+  .hero h1 { font-family: 'Be Vietnam Pro', sans-serif; font-size: clamp(3rem,5.8vw,5.8rem); line-height: .9; letter-spacing: .02em; color: var(--blanc); font-weight: 900; }
   .hero h1 em { font-style: normal; color: var(--jaune); display: block; font-weight: 900; }
   .hero h1 .sub { font-size: 0.28em; color: rgba(255,255,255,.8); letter-spacing: .18em; display: block; margin-top: 12px; font-family: 'Be Vietnam Pro', sans-serif; font-weight: 600; text-transform: uppercase; line-height: 1.5; }
   .hero-desc { font-size: 1.05rem; color: rgba(255,255,255,.72); max-width: 400px; margin: 26px 0 38px; font-style: italic; line-height: 1.75; }
@@ -296,15 +296,15 @@
   <div class="hero-left">
     <p class="hero-eyebrow anim">Art martial vietnamien — Le Port-Marly (78)</p>
     <h1 class="anim">VDST<em>PORT-MARLY</em><span class="sub">Vovinam Việt Võ Đạo</span></h1>
-    <p class="hero-desc anim">Se défendre, se maîtriser, se renforcer.<br>L'art martial vietnamien le plus complet — pieds-poings,projections, armes, ciseaux volants, combat.<br>Pour tous niveaux, à partir de 5 ans.</p>
+    <p class="hero-desc anim">Frapper, projeter, maîtriser. L'art martial vietnamien le plus complet — pieds-poings, armes, ciseaux volants, combat. Pour tous niveaux, à partir de 6 ans.</p>
     <div class="hero-actions anim">
       <a href="#contact" class="btn-jaune">Séance d'essai gratuite</a>
       <a href="#vovinam" class="btn-outline-blanc">Découvrir le Vovinam</a>
     </div>
     <div class="hero-stats anim">
-      <div><span class="hero-stat-num">5+</span><span class="hero-stat-label">Ans pour débuter</span></div>
-      <div><span class="hero-stat-num">80+</span><span class="hero-stat-label">Ans de Vovinam</span></div>
-      <div><span class="hero-stat-num">2025-26</span><span class="hero-stat-label">Saison en cours</span></div>
+      <div><span class="hero-stat-num">6+</span><span class="hero-stat-label">Ans pour débuter</span></div>
+      <div><span class="hero-stat-num">60+</span><span class="hero-stat-label">Ans de Vovinam</span></div>
+      <div><span class="hero-stat-num">2025</span><span class="hero-stat-label">Saison en cours</span></div>
     </div>
   </div>
   <div class="hero-right">
@@ -314,9 +314,10 @@
         <div><strong>VDST Port-Marly</strong><span>Le Port-Marly · 78560</span></div>
       </div>
       <div class="hero-card-title">— Planning des cours</div>
-      <div class="sched-row"><span class="sched-cat">Enfants 5–7 ans</span><span class="sched-time">Mardi 17h</span></div>
-      <div class="sched-row"><span class="sched-cat">Enfants 8–11 ans</span><span class="sched-time">Vendredi 17h</span></div>
-      <div class="sched-row"><span class="sched-cat">Ados 11 ans et +</span><span class="sched-time">Vendredi 18h</span></div>
+      <div class="sched-row"><span class="sched-cat">Enfants 6–9 ans</span><span class="sched-time">Mer · Sam</span></div>
+      <div class="sched-row"><span class="sched-cat">Cadets 10–14 ans</span><span class="sched-time">Mer · Sam</span></div>
+      <div class="sched-row"><span class="sched-cat">Adultes 15 ans +</span><span class="sched-time">Mar · Ven</span></div>
+      <div class="sched-row"><span class="sched-cat">Compétition</span><span class="sched-time">Sur planning</span></div>
       <a href="#contact" class="hero-cta">Réserver mon essai gratuit →</a>
     </div>
   </div>
@@ -325,22 +326,25 @@
 <!-- PRÉSENTATION -->
 <section id="vovinam" class="sec">
   <div class="vovinam-imgs">
-    <div class="img-ph main" style="aspect-ratio:4/3;position:relative;">
-      <span class="ic">📸</span><p>Photo principale du club</p>
+    <div style="position:relative;aspect-ratio:4/3;border-radius:4px;overflow:hidden;">
+      <img src="photo-principale.jpg" alt="Vovinam Port-Marly — ciseaux volants" style="width:100%;height:100%;object-fit:cover;display:block;">
       <div class="logo-badge"><img src="logo-vdst.png" alt="Logo"></div>
     </div>
     <div class="img-duo">
-      <div class="img-ph sm"><span class="ic">🥋</span><p>Cours adultes</p></div>
-      <div class="img-ph sm"><span class="ic">👦</span><p>Cours enfants</p></div>
+      <div style="aspect-ratio:1;border-radius:3px;overflow:hidden;">
+        <img src="photo-adultes.jpg" alt="Cours adultes — bâton" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div style="aspect-ratio:1;border-radius:3px;overflow:hidden;">
+        <img src="photo-enfants.jpg" alt="Cours enfants — combat" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
     </div>
   </div>
   <div>
     <div class="sec-label">Le Vovinam Việt Võ Đạo</div>
     <h2 class="sec-title">UN ART<br>COMPLET</h2>
     <p style="color:var(--texte-mid);margin-bottom:16px;font-size:1.02rem;">Le Vovinam Việt Võ Đạo est un art martial vietnamien fondé en 1938 par le Maître Fondateur Nguyễn Lộc. Il est une synthèse des arts martiaux traditionnels et millénaires du Vietnam.</p>
-    <p style="color:var(--texte-mid);margin-bottom:16px;font-size:1.02rem;">Le Vovinam est un art martial très complet qui comprend notamment des techniques de percussion (coups de pieds, coups de poings, coups de coude, coups de genoux, tranchants de la main...). </p>
-    <p style="color:var(--texte-mid);margin-bottom:16px;font-size:1.02rem;">Le Vovinam c’est aussi des techniques de self-défense (se défendre contre un étranglement, une saisie au corps, une saisie des poignets...), des projections (qui peuvent faire penser au Judo), de lutte vietnamienne, de clés articulaires (de bras de jambes) ou encore de ciseaux (coups de pieds sautés ou saisies au corps et à la tête avec les jambes).</p>
-    <p style="color:var(--texte-mid);margin-bottom:16px;font-size:1.02rem;">Nous pratiquons également des armes courantes comme le couteau poignard (đao găm) ou le pistolet (súng ngắn) et des armes traditionnelles comme l’épée (kiếm), le sabre large (Đao), le bâton long (Côn), la hallebarde (Đại Đao), la règle en bois (tay thước) ou l'éventail(Quật)...</p>
+    <p style="color:var(--texte-mid);margin-bottom:16px;font-size:1.02rem;">Le Vovinam est un art martial très complet qui comprend notamment des techniques de percussion (coups de pieds, coups de poings, coups de coude, coups de genoux, tranchants de la main...). Le Vovinam ce sont aussi des techniques de self-défense (se défendre contre un étranglement, une saisie au corps, une saisie des poignets...), des projections (qui peuvent faire penser au Judo), de lutte vietnamienne, de clés articulaires ou encore de ciseaux (coups de pieds sautés ou saisies au corps et à la tête avec les jambes).</p>
+    <p style="color:var(--texte-mid);margin-bottom:16px;font-size:1.02rem;">Nous pratiquons également des armes courantes comme le couteau ou le pistolet et des armes traditionnelles comme le sabre long, le sabre large, le bâton, la hallebarde, la règle ou l'éventail.</p>
     <p style="color:var(--texte-mid);margin-bottom:24px;font-size:1.02rem;">Le Vovinam Việt Võ Đạo est aussi un sport avec ses compétitions techniques et combat nationales et internationales. Les combats sont réglementés et autorisent notamment les pieds-poings, les balayages, les projections et les ciseaux. Le club participe aux compétitions Vovinam et AMV de la fédération de karaté (FFK) qui est la fédération délégataire.</p>
     <div style="display:flex;gap:13px;flex-wrap:wrap;">
       <a href="#contact" class="btn-rouge">Venir à l'essai</a>
