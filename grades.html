@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Système de Grades — VDST Port-Marly · Vovinam Việt Võ Đạo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bleu: #1B3A8C;
+  --bleu-clair: #2E5BB8;
+  --bleu-pale: #EEF3FB;
+  --bleu-mid: #D6E2F5;
+  --rouge: #C8102E;
+  --jaune: #F5C518;
+  --blanc: #FFFFFF;
+  --texte: #1A2645;
+  --texte-mid: #3D5080;
+  --texte-muted: #7A8BAD;
+  --gris-fond: #F7F9FD;
+
+  /* Belt colors */
+  --ceinture-ao: #EEF3FB;
+  --ceinture-xanh: #1B3A8C;
+  --ceinture-lam: #1B3A8C;
+  --ceinture-hoang: #F5C518;
+  --ceinture-hong: #C8102E;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--blanc);
+  color: var(--texte);
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 60px;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(14px);
+  border-bottom: 2px solid var(--bleu-mid);
+  box-shadow: 0 2px 20px rgba(27,58,140,0.08);
+}
+
+.nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+.nav-logo-text strong { font-size: 1.2rem; letter-spacing: .1em; color: var(--bleu); display: block; line-height: 1.1; }
+.nav-logo-text span { font-size: .5rem; letter-spacing: .15em; color: var(--rouge); text-transform: uppercase; font-weight: 500; }
+.nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+.nav-links a { font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; color: var(--texte-mid); text-decoration: none; transition: color .2s; position: relative; padding-bottom: 3px; }
+.nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--rouge); transition: width .3s; }
+.nav-links a:hover { color: var(--bleu); }
+.nav-links a:hover::after { width: 100%; }
+.nav-links a.active { color: var(--bleu); font-weight: 700; }
+.nav-links a.active::after { width: 100%; }
+.nav-cta { font-size: .56rem !important; color: var(--blanc) !important; background: var(--rouge); padding: 10px 20px; border-radius: 2px; }
+.nav-cta::after { display: none !important; }
+
+/* HERO BANNER */
+.page-hero {
+  padding-top: 78px;
+  background: linear-gradient(135deg, var(--bleu) 0%, var(--bleu-clair) 55%, #4A72C8 100%);
+  position: relative; overflow: hidden;
+  min-height: 280px;
+  display: flex; align-items: center;
+}
+
+.page-hero::before {
+  content: ''; position: absolute;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.06);
+  top: -200px; right: -100px;
+  pointer-events: none;
+}
+.page-hero::after {
+  content: ''; position: absolute;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.06);
+  bottom: -100px; left: 10%;
+  pointer-events: none;
+}
+
+.page-hero-inner {
+  max-width: 1200px; margin: 0 auto; padding: 60px 60px;
+  position: relative; z-index: 2;
+}
+
+.page-hero-eyebrow {
+  font-size: .56rem; letter-spacing: .28em;
+  text-transform: uppercase; color: var(--jaune); margin-bottom: 14px;
+  display: flex; align-items: center; gap: 10px;
+}
+.page-hero-eyebrow::before { content: ''; width: 26px; height: 2px; background: var(--jaune); flex-shrink: 0; }
+
+.page-hero h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 900;
+  color: var(--blanc);
+  line-height: 1;
+  letter-spacing: .02em;
+}
+.page-hero h1 em {
+  font-style: normal;
+  color: var(--jaune);
+}
+.page-hero-sub {
+  font-size: 1rem; color: rgba(255,255,255,.72);
+  margin-top: 14px; font-style: italic;
+  max-width: 560px;
+}
+
+.breadcrumb {
+  margin-top: 28px;
+  display: flex; gap: 8px; align-items: center;
+  font-size: .55rem; letter-spacing: .12em; text-transform: uppercase;
+  color: rgba(255,255,255,.5);
+}
+.breadcrumb a { color: rgba(255,255,255,.65); text-decoration: none; }
+.breadcrumb a:hover { color: var(--jaune); }
+.breadcrumb .sep { color: rgba(255,255,255,.3); }
+.breadcrumb .current { color: var(--jaune); }
+
+/* MAIN CONTENT */
+.main { max-width: 1200px; margin: 0 auto; padding: 70px 60px 100px; }
+
+/* INTRO */
+.intro-section {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 56px;
+  margin-bottom: 70px;
+  padding-bottom: 70px;
+  border-bottom: 1px solid var(--bleu-mid);
+}
+.intro-text h2 {
+  font-size: 1.8rem; font-weight: 900; color: var(--bleu);
+  line-height: 1.1; margin-bottom: 20px; letter-spacing: -.01em;
+}
+.intro-text h2 span { color: var(--rouge); }
+.intro-text p { color: var(--texte-mid); font-size: .97rem; margin-bottom: 14px; }
+.intro-belt-legend {
+  display: flex; flex-direction: column; gap: 12px;
+  justify-content: center;
+}
+.belt-legend-title {
+  font-size: .55rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--texte-muted); margin-bottom: 6px;
+}
+.belt-item {
+  display: flex; align-items: center; gap: 14px;
+  padding: 12px 18px;
+  background: var(--gris-fond);
+  border-left: 4px solid transparent;
+  border-radius: 3px;
+}
+.belt-swatch {
+  width: 54px; height: 18px; border-radius: 2px;
+  flex-shrink: 0; position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+.belt-swatch.ao { background: #c8d8e8; border: 1px solid #aac; }
+.belt-swatch.xanh-dam { background: var(--bleu); }
+.belt-swatch.lam { background: var(--bleu); }
+.belt-swatch.lam::after { content: ''; position: absolute; right: 4px; width: 6px; height: 100%; background: #F5C518; border-radius: 1px; }
+.belt-swatch.hoang { background: var(--jaune); }
+.belt-swatch.hoang.stripe::after { content: ''; position: absolute; right: 4px; width: 6px; height: 100%; background: var(--rouge); border-radius: 1px; }
+.belt-swatch.hong { background: var(--rouge); }
+.belt-swatch.hong.stripe::after { content: ''; position: absolute; right: 4px; width: 6px; height: 100%; background: #fff; border-radius: 1px; }
+.belt-label { font-size: .85rem; font-weight: 700; color: var(--texte); }
+.belt-sub { font-size: .75rem; color: var(--texte-muted); }
+
+/* SECTION TITRE */
+.section-header {
+  display: flex; align-items: center; gap: 16px;
+  margin-bottom: 32px;
+}
+.section-header::before {
+  content: ''; width: 5px; height: 44px;
+  background: linear-gradient(to bottom, var(--rouge), var(--jaune));
+  border-radius: 3px; flex-shrink: 0;
+}
+.section-header h2 {
+  font-size: 1.5rem; font-weight: 900; color: var(--bleu);
+  letter-spacing: -.01em; line-height: 1;
+}
+.section-header h2 span { color: var(--rouge); }
+.section-header p { font-size: .82rem; color: var(--texte-muted); margin-top: 3px; }
+
+/* GRADE GROUPS */
+.grade-group { margin-bottom: 64px; }
+
+.group-banner {
+  padding: 16px 28px;
+  margin-bottom: 20px;
+  display: flex; align-items: center; gap: 18px;
+  border-radius: 4px;
+}
+.group-banner.ceinture-depart { background: #EEF3FB; border-left: 5px solid #aabbd8; }
+.group-banner.ceinture-lam { background: linear-gradient(90deg, #1B3A8C, #2E5BB8); border-left: 5px solid var(--jaune); }
+.group-banner.ceinture-hoang { background: linear-gradient(90deg, #c8930a, #F5C518); border-left: 5px solid var(--rouge); }
+.group-banner.ceinture-hong { background: linear-gradient(90deg, #a50d25, #C8102E); border-left: 5px solid #fff; }
+
+.group-belt-visual {
+  width: 60px; height: 22px; border-radius: 3px; flex-shrink: 0;
+}
+.group-banner.ceinture-depart .group-belt-visual { background: #c8d8e8; border: 1px solid #99b; }
+.group-banner.ceinture-lam .group-belt-visual { background: #fff; opacity: .15; }
+.group-banner.ceinture-hoang .group-belt-visual { background: rgba(255,255,255,.3); }
+.group-banner.ceinture-hong .group-belt-visual { background: rgba(255,255,255,.2); }
+
+.group-banner-title {
+  font-weight: 900; font-size: 1.1rem; line-height: 1;
+}
+.group-banner.ceinture-depart .group-banner-title { color: var(--bleu); }
+.group-banner.ceinture-lam .group-banner-title { color: var(--blanc); }
+.group-banner.ceinture-hoang .group-banner-title { color: var(--bleu); }
+.group-banner.ceinture-hong .group-banner-title { color: var(--blanc); }
+
+.group-banner-sub { font-size: .7rem; letter-spacing: .08em; margin-top: 2px; opacity: .75; }
+.group-banner.ceinture-depart .group-banner-sub { color: var(--texte-mid); }
+.group-banner.ceinture-lam .group-banner-sub { color: var(--blanc); }
+.group-banner.ceinture-hoang .group-banner-sub { color: var(--bleu); }
+.group-banner.ceinture-hong .group-banner-sub { color: var(--blanc); }
+
+/* GRADE CARDS */
+.grades-grid { display: flex; flex-direction: column; gap: 16px; }
+
+.grade-card {
+  background: var(--blanc);
+  border: 1px solid var(--bleu-mid);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: box-shadow .25s, transform .2s;
+  animation: fadeSlideUp .5s ease both;
+}
+.grade-card:hover {
+  box-shadow: 0 8px 32px rgba(27,58,140,0.12);
+  transform: translateY(-2px);
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.grade-card-header {
+  display: grid;
+  grid-template-columns: 180px 140px 100px 1fr;
+  gap: 0;
+  background: var(--gris-fond);
+  border-bottom: 1px solid var(--bleu-mid);
+  align-items: center;
+}
+
+.grade-cell {
+  padding: 14px 20px;
+  border-right: 1px solid var(--bleu-mid);
+}
+.grade-cell:last-child { border-right: none; }
+
+.label-xs {
+  font-size: .48rem; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--texte-muted); display: block; margin-bottom: 4px;
+}
+
+.grade-niveau {
+  font-weight: 900; font-size: .95rem; color: var(--bleu);
+  letter-spacing: .03em; text-transform: uppercase; line-height: 1;
+}
+
+/* Belt visual in card */
+.belt-display {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 6px;
+}
+.belt-bar {
+  height: 16px; border-radius: 2px;
+  display: flex; align-items: center;
+  position: relative; overflow: hidden;
+}
+.belt-bar.ao { background: #c8d8e8; border: 1px solid #aabbd8; width: 80px; }
+.belt-bar.xanh-dam { background: var(--bleu); width: 80px; }
+.belt-bar.lam-1v { background: var(--bleu); width: 80px; }
+.belt-bar.lam-1v::after, .belt-bar.lam-2v::before { content: ''; position: absolute; right: 6px; width: 5px; height: 100%; background: #F5C518; }
+.belt-bar.lam-2v { background: var(--bleu); width: 80px; }
+.belt-bar.lam-2v::after { content: ''; position: absolute; right: 6px; width: 5px; height: 100%; background: #F5C518; }
+.belt-bar.lam-2v::before { content: ''; position: absolute; right: 14px; width: 5px; height: 100%; background: #F5C518; }
+.belt-bar.lam-3v { background: var(--bleu); width: 80px; position: relative; }
+.belt-bar.lam-3v::after { content: ''; position: absolute; right: 0; width: 24px; height: 100%; background: repeating-linear-gradient(90deg, #F5C518 0,#F5C518 5px, var(--bleu) 5px, var(--bleu) 10px); }
+.belt-bar.hoang { background: var(--jaune); width: 80px; }
+.belt-bar.hoang-1r { background: var(--jaune); width: 80px; }
+.belt-bar.hoang-1r::after { content: ''; position: absolute; right: 6px; width: 5px; height: 100%; background: var(--rouge); }
+.belt-bar.hoang-2r { background: var(--jaune); width: 80px; }
+.belt-bar.hoang-2r::after { content: ''; position: absolute; right: 6px; width: 5px; height: 100%; background: var(--rouge); }
+.belt-bar.hoang-2r::before { content: ''; position: absolute; right: 14px; width: 5px; height: 100%; background: var(--rouge); }
+.belt-bar.hoang-3r { background: var(--jaune); width: 80px; }
+.belt-bar.hoang-3r::after { content: ''; position: absolute; right: 0; width: 24px; height: 100%; background: repeating-linear-gradient(90deg, var(--rouge) 0, var(--rouge) 5px, var(--jaune) 5px, var(--jaune) 10px); }
+.belt-bar.hong { background: var(--rouge); width: 80px; }
+.belt-bar.hong-vv { background: var(--rouge); width: 80px; }
+.belt-bar.hong-vv::after { content: ''; position: absolute; right: 0; width: 24px; height: 100%; background: repeating-linear-gradient(90deg, #FFD700 0, #FFD700 5px, var(--rouge) 5px, var(--rouge) 10px); }
+.belt-bar.hong-1b { background: var(--rouge); width: 80px; }
+.belt-bar.hong-1b::after { content: ''; position: absolute; right: 6px; width: 5px; height: 100%; background: var(--blanc); }
+.belt-bar.hong-2b { background: var(--rouge); width: 80px; }
+.belt-bar.hong-2b::after { content: ''; position: absolute; right: 6px; width: 5px; height: 100%; background: var(--blanc); }
+.belt-bar.hong-2b::before { content: ''; position: absolute; right: 14px; width: 5px; height: 100%; background: var(--blanc); }
+
+.belt-name { font-size: .72rem; font-weight: 700; color: var(--texte-mid); line-height: 1; }
+
+.duree-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: var(--bleu-pale); color: var(--bleu);
+  padding: 5px 12px; border-radius: 20px;
+  font-size: .7rem; font-weight: 700; letter-spacing: .05em;
+}
+.duree-badge svg { flex-shrink: 0; }
+
+/* Card body */
+.grade-card-body {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.grade-col {
+  padding: 20px 22px;
+  border-right: 1px solid var(--bleu-mid);
+}
+.grade-col:last-child { border-right: none; }
+
+.col-title {
+  font-size: .5rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--texte-muted); margin-bottom: 10px;
+  display: flex; align-items: center; gap: 7px;
+}
+.col-title::before { content: ''; width: 14px; height: 2px; background: var(--rouge); }
+
+.techniques-list { list-style: none; }
+.techniques-list li {
+  font-size: .82rem; color: var(--texte-mid);
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(214,226,245,0.5);
+  display: flex; align-items: flex-start; gap: 8px;
+  line-height: 1.4;
+}
+.techniques-list li:last-child { border-bottom: none; }
+.techniques-list li::before {
+  content: '▸'; color: var(--rouge); font-size: .65rem;
+  flex-shrink: 0; margin-top: 3px;
+}
+
+.forms-list { display: flex; flex-wrap: wrap; gap: 6px; }
+.form-tag {
+  background: var(--bleu-pale); color: var(--bleu);
+  font-size: .67rem; font-weight: 600; padding: 4px 10px;
+  border-radius: 20px; border: 1px solid var(--bleu-mid);
+  letter-spacing: .02em;
+  transition: background .2s;
+}
+.form-tag:hover { background: var(--bleu-mid); }
+.form-tag.principal { background: linear-gradient(135deg, var(--rouge), #e8103a); color: var(--blanc); border-color: var(--rouge); }
+
+/* Special styling for Hoàng Đai and Hồng Đai */
+.grade-card.hoang-dai .grade-card-header { background: linear-gradient(90deg, #fef9e7, #fffbe8); }
+.grade-card.hoang-dai .grade-niveau { color: #8a6500; }
+.grade-card.hoang-dai .duree-badge { background: #fef9e7; color: #8a6500; }
+.grade-card.hoang-dai .col-title::before { background: #c8930a; }
+
+.grade-card.hong-dai .grade-card-header { background: linear-gradient(90deg, #fff0f2, #fff5f6); }
+.grade-card.hong-dai .grade-niveau { color: var(--rouge); }
+.grade-card.hong-dai .duree-badge { background: #fff0f2; color: var(--rouge); }
+.grade-card.hong-dai .col-title::before { background: var(--rouge); }
+.grade-card.hong-dai .form-tag { background: #fff0f2; color: var(--rouge); border-color: #f9cdd3; }
+
+/* TIMELINE */
+.timeline-section { margin-bottom: 64px; }
+.timeline {
+  display: flex; align-items: flex-start; gap: 0;
+  overflow-x: auto; padding-bottom: 12px;
+}
+.timeline-track {
+  display: flex; align-items: center; gap: 0; width: 100%;
+}
+.timeline-item {
+  display: flex; flex-direction: column; align-items: center;
+  flex: 1; min-width: 80px;
+}
+.timeline-dot {
+  width: 40px; height: 40px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .6rem; font-weight: 900; color: var(--blanc);
+  position: relative; z-index: 1; flex-shrink: 0;
+}
+.timeline-dot.ao { background: #aabbd8; color: var(--bleu); }
+.timeline-dot.lam { background: var(--bleu); }
+.timeline-dot.hoang { background: var(--jaune); color: #7a5800; }
+.timeline-dot.hong { background: var(--rouge); }
+.timeline-label {
+  font-size: .55rem; font-weight: 700; text-align: center;
+  color: var(--texte-mid); margin-top: 8px; letter-spacing: .03em;
+  line-height: 1.3; max-width: 70px;
+}
+.timeline-duration {
+  font-size: .5rem; color: var(--texte-muted);
+  margin-top: 3px;
+}
+.timeline-connector {
+  flex: 1; height: 3px; background: var(--bleu-mid);
+  position: relative; top: -30px;
+  min-width: 20px;
+}
+
+/* FOOTER */
+footer {
+  background: var(--bleu);
+  padding: 40px 60px;
+  text-align: center;
+}
+.footer-inner { max-width: 1200px; margin: 0 auto; }
+.footer-text { font-size: .7rem; color: rgba(255,255,255,.55); letter-spacing: .08em; }
+.footer-text a { color: var(--jaune); text-decoration: none; }
+.footer-logo-text { font-size: 1rem; font-weight: 900; color: var(--blanc); margin-bottom: 8px; letter-spacing: .08em; }
+.footer-logo-text em { color: var(--jaune); font-style: normal; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  nav { padding: 14px 24px; }
+  .nav-links { display: none; }
+  .page-hero-inner { padding: 50px 24px; }
+  .main { padding: 50px 20px 80px; }
+  .intro-section { grid-template-columns: 1fr; gap: 36px; }
+  .grade-card-header { grid-template-columns: 1fr 1fr; }
+  .grade-card-body { grid-template-columns: 1fr; }
+  .grade-col { border-right: none; border-bottom: 1px solid var(--bleu-mid); }
+  .grade-col:last-child { border-bottom: none; }
+  footer { padding: 36px 24px; }
+}
+
+@media (max-width: 600px) {
+  .grade-card-header { grid-template-columns: 1fr; }
+  .grade-cell { border-right: none; border-bottom: 1px solid var(--bleu-mid); }
+  .grade-cell:last-child { border-bottom: none; }
+  .group-banner { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-text">
+      <strong>VDST PORT-MARLY</strong>
+      <span>Vovinam Việt Võ Đạo</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="index.html#vovinam">Le Vovinam</a></li>
+    <li><a href="index.html#cours">Cours</a></li>
+    <li><a href="grades.html" class="active">Grades</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-eyebrow">Chương Trình Huấn Luyện</div>
+    <h1>Système de <em>Grades</em></h1>
+    <p class="page-hero-sub">
+      Du débutant au maître — découvrez le parcours complet de progression technique du Vovinam Việt Võ Đạo.
+    </p>
+    <div class="breadcrumb">
+      <a href="index.html">Accueil</a>
+      <span class="sep">›</span>
+      <span class="current">Système de Grades</span>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN -->
+<main class="main">
+
+  <!-- INTRO -->
+  <div class="intro-section">
+    <div class="intro-text">
+      <h2>Un parcours<br><span>structuré et progressif</span></h2>
+      <p>
+        Le Vovinam Việt Võ Đạo organise sa progression en ceintures colorées, chacune représentant une étape de maîtrise technique et de développement personnel. Ce système reflète la philosophie du fondateur Nguyễn Lộc : <em>corps d'acier, cœur de bonté</em>.
+      </p>
+      <p>
+        Chaque grade est obtenu après une durée minimale de pratique et la maîtrise du programme associé (đòn căn bản, quyền, song luyện…). Le chemin jusqu'au Hồng Đai représente plus de <strong>20 années</strong> de pratique assidue.
+      </p>
+    </div>
+    <div class="intro-belt-legend">
+      <div class="belt-legend-title">Les familles de ceintures</div>
+      <div class="belt-item" style="border-left-color:#aabbd8">
+        <div class="belt-swatch ao"></div>
+        <div>
+          <div class="belt-label">Ceintures de départ</div>
+          <div class="belt-sub">Đai Màu Áo · Đai Xanh Đậm</div>
+        </div>
+      </div>
+      <div class="belt-item" style="border-left-color:var(--bleu)">
+        <div class="belt-swatch lam"></div>
+        <div>
+          <div class="belt-label">Lam Đai — Ceinture bleue</div>
+          <div class="belt-sub">1 à 3 raies jaunes · 18 mois</div>
+        </div>
+      </div>
+      <div class="belt-item" style="border-left-color:var(--jaune)">
+        <div class="belt-swatch hoang"></div>
+        <div>
+          <div class="belt-label">Hoàng Đai — Ceinture jaune</div>
+          <div class="belt-sub">0 à 3 raies rouges · 5–9 ans</div>
+        </div>
+      </div>
+      <div class="belt-item" style="border-left-color:var(--rouge)">
+        <div class="belt-swatch hong"></div>
+        <div>
+          <div class="belt-label">Hồng Đai — Ceinture rouge</div>
+          <div class="belt-sub">Grades de maîtrise · 20+ ans</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GRADES -->
+
+  <!-- CEINTURES DE DÉPART -->
+  <div class="grade-group">
+    <div class="section-header">
+      <div>
+        <h2>Ceintures de <span>Départ</span></h2>
+        <p>Premiers pas dans la pratique · Fondations techniques</p>
+      </div>
+    </div>
+    <div class="grades-grid">
+
+      <!-- TỰ VỆ -->
+      <div class="grade-card">
+        <div class="grade-card-header">
+          <div class="grade-cell">
+            <span class="label-xs">Trình Độ</span>
+            <div class="grade-niveau">Tự Vệ</div>
+          </div>
+          <div class="grade-cell">
+            <span class="label-xs">Màu Đai</span>
+            <div class="belt-display">
+              <div class="belt-bar ao"></div>
+              <span class="belt-name">Đai Màu Áo</span>
+            </div>
+          </div>
+          <div class="grade-cell">
+            <span class="label-xs">Thời Gian</span>
+            <div class="duree-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              03 mois
+            </div>
+          </div>
+          <div class="grade-cell">
+            <span class="label-xs">Niveau</span>
+            <span style="font-size:.75rem;color:var(--texte-muted)">Autodéfense de base — Introduction au Vovinam</span>
+          </div>
+        </div>
+        <div class="grade-card-body">
+          <div class="grade-col">
+            <div class="col-title">Đòn Căn Bản</div>
+            <ul class="techniques-list">
+              <li>10 thế Khóa gỡ (techniques de dégagement)</li>
+              <li>2 thế Khóa tay đất (1+2)</li>
+              <li>5 thế Chiến lược (từ 1 đến 5)</li>
+            </ul>
+          </div>
+          <div class="grade-col">
+            <div class="col-title">Đơn Luyện · Song Luyện</div>
+            <div class="forms-list">
+              <span class="form-tag principal">Khởi Quyền</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NHẬP MÔN -->
+      <div class="grade-card">
+        <div class="grade-card-header">
+          <div class="grade-cell">
+            <span class="label-xs">Trình Độ</span>
+            <div class="grade-niveau">Nhập Môn</div>
+          </div>
+          <div class="grade-cell">
+            <span class="label-xs">Màu Đai</span>
+            <div class="belt-display">
+              <div class="belt-bar xanh-dam"></div>
+              <span class="belt-name">Đai Xanh Đậm</span>
+            </div>
+          </div>
+          <div class="grade-cell">
+            <span class="label-xs">Thời Gian</span>
+            <div class="duree-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              03 mois
+            </div>
+          </div>
+          <div class="grade-cell">
+            <span class="label-xs">Niveau</span>
+            <span style="font-size:.75rem;color:var(--texte-muted)">Entrée officielle dans la discipline</span>
+          </div>
+        </div>
+        <div class="grade-card-body">
+          <div class="grade-col">
+            <div class="col-title">Đòn Căn Bản</div>
+            <ul class="techniques-list">
+              <li>5 thế Chiến lược (từ 6 đến 10)</li>
+              <li>12 thế phản đòn Đâm trình độ 1</li>
+            </ul>
+          </div>
+          <div class="grade-col">
+            <div class="col-title">Đơn Luyện · Song Luyện</div>
+            <div class="forms-list">
+              <span class="form-tag principal">Nhập Môn Quyền</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- LAM ĐAI -->
+  <div class="grade-group">
+    <div class="group-banner ceinture-lam">
+      <div>
+        <div class="group-banner-title">LAM ĐAI — Ceinture Bleue</div>
+        <div class="group-banner-sub">3 niveaux · 18 mois minimum</div>
+      </div>
+    </div>
+    <div class="grades-grid">
+
+      <!-- LAM NHẤT -->
+      <div class="grade-card">
+        <div class="grade-card-header">
+          <div class="grade-cell">
+            <span class="label-xs">Trình Độ</span>
+            <div class="grade-niveau">Lam Đai Nhất</div>
+          </div>
+          <div class="grade-cell">
+            <span class="label-xs">Màu Đai</span>
+            <div class="belt-display">
+              <div class="belt-bar lam-1v"></div>
+              <span class="belt-name">Đai Xanh Đậm — 1 raie jaune</span>
+            </div>
+          </div>
+          <div class="grade-cell">
+            <span class="label-xs">Thời Gian</span>
+            <div class="duree-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              06 mois
+            </div>
+          </div>
+          <div class="grade-cell"></div>
+        </div>
+        <div class="grade-card-body">
+          <div class="grade-col">
+            <div class="col-title">Đòn Căn Bản</div>
+            <ul class="techniques-list">
+              <li>10 thế Khóa gỡ</li>
+              <li>2 thế Khóa tay đất (3+4)</li>
+              <li>4 thế phản đòn Đá trình độ 1</li>
+              <li>4 Đòn chân tấn công (từ 1 đến 4)</li>
+              <li>5 thế Chiến lược (từ 11 đến 15)</li>
+            </ul>
+          </div>
+          <div class="grade-col">
+            <div class="col-title">Đơn Luyện · Song Luyện</div>
+            <div class="forms-list">
+              <span class="form-tag principal">Thập Tứ Quyền</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LAM NHỊ -->
+      <div class="grade-card">
+        <div class="grade-card-header">
+          <div class="grade-cell">
+            <span class="label-xs">Trình Độ</span>
+            <div class="grade-niveau">Lam Đai Nhị</div>
+          </div>
+          <div class="grade-cell">
+            <span class="label-xs">Màu Đai</span>
+            <div class="belt-display">
+              <div class="belt-bar lam-2v"></div>
+              <span class="belt-name">Đai Xanh Đậm — 2 raies jaunes</span>
+            </div>
+          </div>
+          <div class="grade-cell">
+            <span class="label-xs">Thời Gian</span>
+            <div class="duree-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              06 mois
+            </div>
+          </div>
+          <div class="grade-cell"></div>
+        </div>
+        <div class="grade-card-body">
+          <div class="grade-col">
+            <div class="col-title">Đòn Căn Bản</div>
+            <ul class="techniques-list">
+              <li>2 đòn Xô ấn (1+2)</li>
+              <li>2 Đòn chân (5+6)</li>
+              <li>2 thế Khóa tay đất (5+6)</li>
+              <li>5 thế Chiến lược (từ 16 đến 20)</li>
+            </ul>
+          </div>
+          <div class="grade-col">
+            <div class="col-title">Đơn Luyện · Song Luyện</div>
+            <div class="forms-list">
+              <span class="form-tag principal">Long Hổ Quyền</span>
+              <span class="form-tag">Song Luyện số 1</span>
+              <span class="form-tag">Liên Hoàn Đối Luyện 1</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LAM TAM -->
+      <div class="grade-card">
+        <div class="grade-card-header">
+          <div class="grade-cell">
+            <span class="label-xs">Trình Độ</span>
+            <div class="grade-niveau">Lam Đai Tam</div>
+          </div>
+          <div class="grade-cell">
+            <span class="label-xs">Màu Đai</span>
+            <div class="belt-display">
+              <div class="belt-bar lam-3v"></div>
+              <span class="belt-name">Đai Xanh Đậm — 3 raies jaunes</span>
+            </div>
+          </div>
+          <div class="grade-cell">
+            <span class="label-xs">Thời Gian</span>
+            <div class="duree-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              06 mois
+            </div>
+          </div>
+          <div class="grade-cell"></div>
+        </div>
+        <div class="grade-card-body">
+          <div class="grade-col">
+            <div class="col-title">Đòn Căn Bản</div>
+            <ul class="techniques-list">
+              <li>16 thế phản đòn trình độ 2 (Đấm + Đá)</li>
+              <li>3 Đòn chân tấn công (7+8+9)</li>
+              <li>10 thế Vật cơ bản (từ 1 đến 10)</li>
+            </ul>
+          </div>
+          <div class="grade-col">
+            <div class="col-title">Đơn Luyện · Song Luyện</div>
+            <div class="forms-list">
+              <span class="form-tag principal">Tứ Trụ Quyền</span>
+              <span class="form-tag">Bài Đấu Vật 1</span>
+              <span class="form-tag">Liên Hoàn Đối Luyện 2</span>
+              <span class="form-tag principal">Nhu Khí Công Quyền 1</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- HOÀNG ĐAI -->
+  <div class="grade-group">
+    <div class="group-banner ceinture-hoang">
+      <div>
+        <div class="group-banner-title">HOÀNG ĐAI — Ceinture Jaune</div>
+        <div class="group-banner-sub">4 niveaux · 9 années minimum</div>
+      </div>
+    </div>
+    <div class="grades-grid">
+
+      <!-- HOÀNG ĐAI -->
+      <div class="grade-card hoang-dai">
+        <div class="grade-card-header">
+          <div class="grade-cell">
+            <span class="label-xs">Trình Độ</span>
+            <div class="grade-niveau">Hoàng Đai</div>
+          </div>
+          <div class="grade-cell">
+            <span class="label-xs">Màu Đai</span>
+            <div class="belt-display">
+              <div class="belt-bar hoang"></div>
+              <span class="belt-name">Đai Vàng</span>
+            </div>
+          </div>
+          <div class="grade-cell">
+            <span class="label-xs">Thời Gian</span>
+            <div class="duree-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              24 mois
+            </div>
+          </div>
+          <div class="grade-cell"></div>
+        </div>
+        <div class="grade-card-body">
+          <div class="grade-col">
+            <div class="col-title">Đòn Căn Bản</div>
+            <ul class="techniques-list">
+              <li>15 thế phản đòn tay trình độ 3 (thẳng, móc, mỏ 2 tay từ 3 - 7)</li>
+              <li>5 thế Chiến lược (từ 21 đến 25)</li>
+              <li>12 thế đoạt dao găm</li>
+            </ul>
+          </div>
+          <div class="grade-col">
+            <div class="col-title">Đơn Luyện · Song Luyện</div>
+            <div class="forms-list">
+              <span class="form-tag principal">Ngũ Môn Quyền</span>
+              <span class="form-tag">Song Dao Pháp</span>
+              <span class="form-tag">Song Luyện 2</span>
+              <span class="form-tag">Song Luyện Dao</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOÀNG ĐAI NHẤT -->
+      <div class="grade-card hoang-dai">
+        <div class="grade-card-header">
+          <div class="grade-cell">
+            <span class="label-xs">Trình Độ</span>
+            <div class="grade-niveau">Hoàng Đai Nhất</div>
+          </div>
+          <div class="grade-cell">
+            <span class="label-xs">Màu Đai</span>
+            <div class="belt-display">
+              <div class="belt-bar hoang-1r"></div>
+              <span class="belt-name">Đai Vàng — 1 raie rouge</span>
+            </div>
+          </div>
+          <div class="grade-cell">
+            <span class="label-xs">Thời Gian</span>
+            <div class="duree-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              24 mois
+            </div>
+          </div>
+          <div class="grade-cell"></div>
+        </div>
+        <div class="grade-card-body">
+          <div class="grade-col">
+            <div class="col-title">Đòn Căn Bản</div>
+            <ul class="techniques-list">
+              <li>15 thế Kiếm thực dụng</li>
+              <li>5 Đòn chân (từ 10 đến 14)</li>
+              <li>5 thế Chiến lược (từ 26 đến 30)</li>
+              <li>Các lối khóa gỡ</li>
+            </ul>
+          </div>
+          <div class="grade-col">
+            <div class="col-title">Đơn Luyện · Song Luyện</div>
+            <div class="forms-list">
+              <span class="form-tag principal">Viên Phương Quyền</span>
+              <span class="form-tag">Nhu Khí Công Quyền 2</span>
+              <span class="form-tag">Tinh Hoa Lưỡng Nghi Kiếm Pháp</span>
+              <span class="form-tag">Song Luyện 3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOÀNG ĐAI NHỊ -->
+      <div class="grade-card hoang-dai">
+        <div class="grade-card-header">
+          <div class="grade-cell">
+            <span class="label-xs">Trình Độ</span>
+            <div class="grade-niveau">Hoàng Đai Nhị</div>
+          </div>
+          <div class="grade-cell">
+            <span class="label-xs">Màu Đai</span>
+            <div class="belt-display">
+              <div class="belt-bar hoang-2r"></div>
+              <span class="belt-name">Đai Vàng — 2 raies rouges</span>
+            </div>
+          </div>
+          <div class="grade-cell">
+            <span class="label-xs">Thời Gian</span>
+            <div class="duree-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              36 mois
+            </div>
+          </div>
+          <div class="grade-cell"></div>
+        </div>
+        <div class="grade-card-body">
+          <div class="grade-col">
+            <div class="col-title">Đòn Căn Bản</div>
+            <ul class="techniques-list">
+              <li>7 Đòn chân (từ 15 đến 21)</li>
+              <li>8 thế Vật (từ 11 đến 18)</li>
+              <li>12 thế Tay Thước thực dụng</li>
+            </ul>
+          </div>
+          <div class="grade-col">
+            <div class="col-title">Đơn Luyện · Song Luyện</div>
+            <div class="forms-list">
+              <span class="form-tag principal">Thập Thế Bát Thức Quyền</span>
+              <span class="form-tag">Lão Mai Quyền</span>
+              <span class="form-tag">Bài Đấu Vật số 2</span>
+              <span class="form-tag">Song Luyện Kiếm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOÀNG ĐAI TAM -->
+      <div class="grade-card hoang-dai">
+        <div class="grade-card-header">
+          <div class="grade-cell">
+            <span class="label-xs">Trình Độ</span>
+            <div class="grade-niveau">Hoàng Đai Tam</div>
+          </div>
+          <div class="grade-cell">
+            <span class="label-xs">Màu Đai</span>
+            <div class="belt-display">
+              <div class="belt-bar hoang-3r"></div>
+              <span class="belt-name">Đai Vàng — 3 raies rouges</span>
+            </div>
+          </div>
+          <div class="grade-cell">
+            <span class="label-xs">Thời Gian</span>
+            <div class="duree-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              48 mois
+            </div>
+          </div>
+          <div class="grade-cell"></div>
+        </div>
+        <div class="grade-card-body">
+          <div class="grade-col">
+            <div class="col-title">Đòn Căn Bản</div>
+            <ul class="techniques-list">
+              <li>12 thế Côn thực dụng</li>
+              <li>9 thế tay không đoạt Súng trường</li>
+              <li>4 thế tay không đoạt Súng ngắn</li>
+            </ul>
+          </div>
+          <div class="grade-col">
+            <div class="col-title">Đơn Luyện · Song Luyện</div>
+            <div class="forms-list">
+              <span class="form-tag principal">Việt Võ Đạo Quyền</span>
+              <span class="form-tag">Tứ Tượng Côn Pháp</span>
+              <span class="form-tag">Mộc Bản Pháp (Tay Thước)</span>
+              <span class="form-tag">Song Luyện 4</span>
+              <span class="form-tag">Song Luyện Côn</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- HỒNG ĐAI -->
+  <div class="grade-group">
+    <div class="group-banner ceinture-hong">
+      <div>
+        <div class="group-banner-title">HỒNG ĐAI — Grades de Maîtrise</div>
+        <div class="group-banner-sub">Chuẩn Hồng Đai · Hồng Đai Nhất · Hồng Đai Nhị · et au-delà</div>
+      </div>
+    </div>
+    <div class="grades-grid">
+
+      <!-- CHUẨN HỒNG ĐAI -->
+      <div class="grade-card hong-dai">
+        <div class="grade-card-header">
+          <div class="grade-cell">
+            <span class="label-xs">Trình Độ</span>
+            <div class="grade-niveau">Chuẩn Hồng Đai</div>
+          </div>
+          <div class="grade-cell">
+            <span class="label-xs">Màu Đai</span>
+            <div class="belt-display">
+              <div class="belt-bar hong-vv"></div>
+              <span class="belt-name">Đai Đỏ — Viền Vàng</span>
+            </div>
+          </div>
+          <div class="grade-cell">
+            <span class="label-xs">Thời Gian</span>
+            <div class="duree-badge" style="background:#fff0f2;color:var(--rouge)">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              60 mois
+            </div>
+          </div>
+          <div class="grade-cell">
+            <span style="font-size:.75rem;color:var(--rouge);font-weight:700">Grade de Maître</span>
+          </div>
+        </div>
+        <div class="grade-card-body">
+          <div class="grade-col">
+            <div class="col-title" style="--rouge:#C8102E">Đòn Căn Bản</div>
+            <ul class="techniques-list">
+              <li>12 thế tay không đoạt Búa Rìu</li>
+              <li>9 thế tấn công bằng Súng trường</li>
+              <li>Xà Quyền</li>
+              <li>Ngọc Trần Quyền</li>
+              <li>Thương Lê Pháp</li>
+              <li>Nhu Khí Công Quyền 3</li>
+            </ul>
+          </div>
+          <div class="grade-col">
+            <div class="col-title">Đơn Luyện · Song Luyện</div>
+            <div class="forms-list">
+              <span class="form-tag principal">Bài Song Đấu Búa Rìu</span>
+              <span class="form-tag">Liên Hoàn Đối Luyện 3</span>
+              <span class="form-tag">Nhật Nguyệt Đại Đao Pháp</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HỒNG ĐAI NHẤT -->
+      <div class="grade-card hong-dai">
+        <div class="grade-card-header">
+          <div class="grade-cell">
+            <span class="label-xs">Trình Độ</span>
+            <div class="grade-niveau">Hồng Đai Nhất</div>
+          </div>
+          <div class="grade-cell">
+            <span class="label-xs">Màu Đai</span>
+            <div class="belt-display">
+              <div class="belt-bar hong-1b"></div>
+              <span class="belt-name">Đai Đỏ — 1 raie blanche</span>
+            </div>
+          </div>
+          <div class="grade-cell">
+            <span class="label-xs">Thời Gian</span>
+            <div class="duree-badge" style="background:#fff0f2;color:var(--rouge)">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              60 mois
+            </div>
+          </div>
+          <div class="grade-cell">
+            <span style="font-size:.75rem;color:var(--rouge);font-weight:700">1er Đẳng</span>
+          </div>
+        </div>
+        <div class="grade-card-body">
+          <div class="grade-col">
+            <div class="col-title">Đòn Căn Bản</div>
+            <ul class="techniques-list">
+              <li>12 thế tay không đoạt Mã Tấu</li>
+              <li>10 thế Vật cơ bản (từ 19 đến 28)</li>
+              <li>Bài Đấu Vật 3</li>
+              <li>Hạc Quyền</li>
+              <li>Thái Cực Đơn Đao Pháp</li>
+            </ul>
+          </div>
+          <div class="grade-col">
+            <div class="col-title">Đơn Luyện · Song Luyện</div>
+            <div class="forms-list">
+              <span class="form-tag principal">Tiên Long Song Kiếm</span>
+              <span class="form-tag">Bài Song Đấu Mã Tấu</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HỒNG ĐAI NHỊ -->
+      <div class="grade-card hong-dai">
+        <div class="grade-card-header">
+          <div class="grade-cell">
+            <span class="label-xs">Trình Độ</span>
+            <div class="grade-niveau">Hồng Đai Nhị</div>
+          </div>
+          <div class="grade-cell">
+            <span class="label-xs">Màu Đai</span>
+            <div class="belt-display">
+              <div class="belt-bar hong-2b"></div>
+              <span class="belt-name">Đai Đỏ — 2 raies blanches</span>
+            </div>
+          </div>
+          <div class="grade-cell">
+            <span class="label-xs">Thời Gian</span>
+            <div class="duree-badge" style="background:#fff0f2;color:var(--rouge)">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              60 mois
+            </div>
+          </div>
+          <div class="grade-cell">
+            <span style="font-size:.75rem;color:var(--rouge);font-weight:700">2ème Đẳng</span>
+          </div>
+        </div>
+        <div class="grade-card-body">
+          <div class="grade-col">
+            <div class="col-title">Đòn Căn Bản</div>
+            <ul class="techniques-list">
+              <li>Phân thế 12 thế Quạt</li>
+              <li>Phân thế các bài Quyền : Tay không - Vũ khí…</li>
+              <li>Âm Dương Hồ Điệp Phiến</li>
+              <li>Mã Tấu Pháp</li>
+              <li>Bát Quái Song Dao Pháp</li>
+              <li>Việt Điều Kiếm Pháp</li>
+            </ul>
+          </div>
+          <div class="grade-col">
+            <div class="col-title">Đơn Luyện · Song Luyện</div>
+            <div class="forms-list">
+              <span class="form-tag principal">Nhu Khí Công Quyền 4</span>
+              <span class="form-tag">Liên Hoàn Đối Luyện 4</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- NOTE DE BAS -->
+  <div style="background:var(--bleu-pale);border-left:4px solid var(--bleu);padding:22px 28px;border-radius:4px;margin-top:16px">
+    <div style="font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--texte-muted);margin-bottom:8px">Note importante</div>
+    <p style="font-size:.88rem;color:var(--texte-mid);line-height:1.7">
+      Les durées indiquées sont des <strong>minimums requis</strong> entre chaque passage de grade. La progression dépend aussi de la régularité de l'entraînement, de la maîtrise technique et de l'engagement personnel du pratiquant. Les passages de grade sont organisés lors d'examens officiels encadrés par des gradés qualifiés.
+    </p>
+    <p style="font-size:.88rem;color:var(--texte-mid);margin-top:10px">
+      Pour toute question sur votre progression, contactez votre enseignant ou <a href="index.html#contact" style="color:var(--bleu);font-weight:700">notre club à Port-Marly</a>.
+    </p>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo-text">VDST PORT-MARLY · <em>Vovinam Việt Võ Đạo</em></div>
+    <p class="footer-text">
+      Le Port-Marly (78560) · <a href="index.html">Retour à l'accueil</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+// Animation au scroll
+const cards = document.querySelectorAll('.grade-card');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      entry.target.style.animationDelay = (i * 0.07) + 's';
+      entry.target.style.opacity = '1';
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.05 });
+
+cards.forEach(card => {
+  card.style.opacity = '0';
+  observer.observe(card);
+});
+</script>
+
+</body>
+</html>
