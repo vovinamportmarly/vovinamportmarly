@@ -261,6 +261,36 @@
   .anim { opacity:0; animation: fadeUp .65s ease forwards; }
   .anim:nth-child(1){animation-delay:.08s}.anim:nth-child(2){animation-delay:.2s}.anim:nth-child(3){animation-delay:.32s}.anim:nth-child(4){animation-delay:.44s}.anim:nth-child(5){animation-delay:.56s}
 
+  /* PROFESSEUR */
+  #professeur { background: var(--gris-fond); display: grid; grid-template-columns: 320px 1fr; gap: 72px; align-items: start; }
+  .prof-photo img { width: 100%; border-radius: 4px; display: block; object-fit: cover; }
+  .prof-photo-ph { width: 100%; aspect-ratio: 3/4; background: var(--bleu-pale); border: 2px dashed var(--bleu-mid); border-radius: 4px; display: flex; align-items: center; justify-content: center; }
+  .prof-photo-ph span { font-family: 'Be Vietnam Pro', sans-serif; font-size: 3.5rem; font-weight: 900; color: var(--bleu-clair); opacity: .35; letter-spacing: .05em; }
+  .prof-name { font-family: 'Be Vietnam Pro', sans-serif; font-size: 2.2rem; font-weight: 900; color: var(--bleu); margin-bottom: 8px; line-height: 1.05; }
+  .prof-grade { font-family: 'Be Vietnam Pro', sans-serif; font-size: .56rem; letter-spacing: .16em; text-transform: uppercase; color: var(--rouge); margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+  .prof-grade::before { content: ''; width: 16px; height: 2px; background: var(--rouge); flex-shrink: 0; }
+  .prof-diplome { font-family: 'Be Vietnam Pro', sans-serif; font-size: .9rem; color: var(--texte-muted); margin-bottom: 26px; font-style: italic; }
+  .prof-bio { color: var(--texte-mid); font-size: 1rem; line-height: 1.75; margin-bottom: 22px; }
+  .prof-vision { background: var(--bleu-pale); border-left: 3px solid var(--bleu); padding: 18px 22px; border-radius: 0 3px 3px 0; margin-bottom: 28px; font-style: italic; color: var(--bleu); font-size: .96rem; line-height: 1.72; }
+  .prof-accordion { border: 1px solid var(--bleu-mid); border-radius: 3px; margin-bottom: 10px; overflow: hidden; }
+  .prof-acc-btn { width: 100%; background: var(--blanc); border: none; padding: 14px 18px; display: flex; align-items: center; justify-content: space-between; font-family: 'Be Vietnam Pro', sans-serif; font-size: .58rem; letter-spacing: .16em; text-transform: uppercase; color: var(--bleu); font-weight: 700; cursor: pointer; transition: background .2s; }
+  .prof-acc-btn:hover { background: var(--bleu-pale); }
+  .prof-acc-btn svg { transition: transform .3s; flex-shrink: 0; }
+  .prof-acc-btn.open svg { transform: rotate(180deg); }
+  .prof-acc-body { display: none; padding: 4px 18px 18px; background: var(--blanc); }
+  .prof-acc-body.open { display: block; }
+  .prof-group { margin-bottom: 14px; }
+  .prof-group:last-child { margin-bottom: 0; }
+  .prof-group-title { font-family: 'Be Vietnam Pro', sans-serif; font-size: .58rem; letter-spacing: .12em; text-transform: uppercase; color: var(--bleu); font-weight: 700; margin-bottom: 6px; padding-top: 12px; border-top: 1px solid var(--bleu-mid); }
+  .prof-group:first-child .prof-group-title { border-top: none; padding-top: 0; }
+  .prof-items { list-style: none; }
+  .prof-items li { font-size: .9rem; color: var(--texte-mid); padding: 3px 0; display: flex; align-items: baseline; gap: 8px; }
+  .prof-items li::before { content: '→'; color: var(--rouge); font-size: .78rem; flex-shrink: 0; }
+  .prof-dip-list { list-style: none; }
+  .prof-dip-list li { font-size: .9rem; color: var(--texte-mid); padding: 6px 0; border-bottom: 1px solid var(--bleu-mid); display: flex; gap: 16px; align-items: baseline; }
+  .prof-dip-list li:last-child { border-bottom: none; }
+  .prof-dip-year { font-weight: 700; color: var(--bleu); min-width: 38px; flex-shrink: 0; font-size: .85rem; }
+
   /* MOBILE */
   @media(max-width:900px){
     nav{padding:11px 18px;}
@@ -279,6 +309,7 @@
     .essai{padding:36px 22px;flex-direction:column;}
     .piliers-top{grid-template-columns:1fr;gap:16px;}
     .pval:last-child{flex-direction:column;align-items:flex-start;}
+    #professeur{grid-template-columns:1fr;gap:36px;padding:60px 22px;}
   }
 </style>
 </head>
@@ -297,6 +328,7 @@
     <li><a href="#vovinam">Le Vovinam</a></li>
     <li><a href="#galerie">Galerie</a></li>
     <li><a href="#horaires">Horaires</a></li>
+    <li><a href="#professeur">Le Professeur</a></li>
     <li><a href="#tarifs">Tarifs</a></li>
     <li><a href="#philosophie">Philosophie</a></li>
     <li><a href="#contact" class="nav-cta">Essai gratuit</a></li>
@@ -338,6 +370,121 @@
       <div class="sched-row"><span class="sched-cat">Ados 11 ans et +</span><span class="sched-time">Vendredi 18h</span></div>
       <div class="sched-row"><span class="sched-cat">Adultes 15 ans et +</span><span class="sched-time">Infos à venir</span></div>
       <a href="#contact" class="hero-cta">Réserver mon essai gratuit →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROFESSEUR -->
+<section id="professeur" class="sec">
+  <div class="prof-photo">
+    <img src="professeur.jpg" alt="Grégory Foiry"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+    <div class="prof-photo-ph" style="display:none;"><span>GF</span></div>
+  </div>
+  <div class="prof-text">
+    <div class="sec-label">Le Professeur</div>
+    <h2 class="prof-name">Grégory Foiry</h2>
+    <div class="prof-grade">Hồng Đai Đệ Nhất Cấp — 5e Đẳng / 4e Dan d'état</div>
+    <p class="prof-diplome">DEJEPS Karaté et disciplines associées</p>
+    <p class="prof-bio">Grégory débute le Vovinam en 1995 à Emerainville sous la direction de Maître Albert Gouillon (6e Đẳng). Il se rend plusieurs fois au Vietnam pour se former auprès de Maître Nguyen Van Sen (9e Đẳng). Fondateur de l'association IVVP à Paris en 2007, il ouvre le club VDST Port-Marly pour transmettre le Vovinam tel qu'il lui a été enseigné. Multiple champion de France technique, il apporte à l'enseignement ses connaissances en anatomie, biomécanique et pédagogie.</p>
+    <blockquote class="prof-vision">«&nbsp;30 ans de pratique m'ont appris une chose : la technique sans les valeurs ne tient pas. Mon objectif est que chaque élève, petit ou grand, progresse à son rythme, prenne confiance en lui et reparte avec les deux. Le Vovinam m'a énormément apporté. Je prends soin de le transmettre avec la même exigence et le même respect.&nbsp;»</blockquote>
+
+    <!-- Accordéon Palmarès -->
+    <div class="prof-accordion">
+      <button class="prof-acc-btn" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+        Palmarès compétition
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="prof-acc-body">
+        <div class="prof-group">
+          <div class="prof-group-title">Coupe de France Technique 2004</div>
+          <ul class="prof-items">
+            <li>Quyen mains nues — <strong>1er</strong></li>
+            <li>Bai Vu Khi — <strong>2e</strong></li>
+            <li>Song Luyện Kiếm — <strong>1er</strong></li>
+          </ul>
+        </div>
+        <div class="prof-group">
+          <div class="prof-group-title">Coupe de France Technique 2005</div>
+          <ul class="prof-items">
+            <li>Song Dao Phap — <strong>2e</strong></li>
+            <li>Song Luyện Dao — <strong>2e</strong></li>
+          </ul>
+        </div>
+        <div class="prof-group">
+          <div class="prof-group-title">Coupe de Saint-Berthevin 2005</div>
+          <ul class="prof-items">
+            <li>Viên Phương Quyền — <strong>2e</strong></li>
+            <li>Song Luyện Ba — <strong>2e</strong></li>
+            <li>Song Luyện Kiếm — <strong>1er</strong></li>
+            <li>Song Dao Phap — <strong>1er</strong></li>
+          </ul>
+        </div>
+        <div class="prof-group">
+          <div class="prof-group-title">Challenge National Technique 2006</div>
+          <ul class="prof-items">
+            <li>Song Dao Chap — <strong>1er</strong></li>
+            <li>Song Luyện Kiếm — <strong>1er</strong></li>
+            <li>Viêu Phương Quyền — <strong>1er</strong></li>
+          </ul>
+        </div>
+        <div class="prof-group">
+          <div class="prof-group-title">Challenge National Vovinam 2007</div>
+          <ul class="prof-items">
+            <li>Song Dao Phap — <strong>1er</strong></li>
+            <li>Song Luyện Kiếm — <strong>1er</strong></li>
+            <li>Song Luyện Côn — <strong>1er</strong></li>
+          </ul>
+        </div>
+        <div class="prof-group">
+          <div class="prof-group-title">Challenge National Vovinam 2008</div>
+          <ul class="prof-items">
+            <li>Tu Tuong Côn Phap — <strong>3e</strong></li>
+            <li>Song Dao Phap — <strong>2e</strong></li>
+          </ul>
+        </div>
+        <div class="prof-group">
+          <div class="prof-group-title">Championnat de France Technique 2010</div>
+          <ul class="prof-items">
+            <li>Song Dao Phap — <strong>1er</strong></li>
+            <li>Song Luyện Ba — <strong>2e</strong></li>
+            <li>Song Luyện Kiếm — <strong>2e</strong></li>
+            <li>Thap The Bat Thuc Quyền — <strong>3e</strong></li>
+            <li>Da Luyện Nam — <strong>2e</strong></li>
+            <li>Da Luyện Nữ — <strong>1er</strong></li>
+          </ul>
+        </div>
+        <div class="prof-group">
+          <div class="prof-group-title">Championnat de France Technique 2011</div>
+          <ul class="prof-items">
+            <li>Quyền Mains Nues — <strong>2e</strong></li>
+            <li>Song Luyện Mains Nues — <strong>3e</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Accordéon Diplômes -->
+    <div class="prof-accordion">
+      <button class="prof-acc-btn" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+        Formations &amp; diplômes
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="prof-acc-body">
+        <ul class="prof-dip-list">
+          <li><span class="prof-dip-year">2002</span>Attestation de formation aux premiers secours</li>
+          <li><span class="prof-dip-year">2003</span>Attestation de formation complémentaire aux premiers secours</li>
+          <li><span class="prof-dip-year">2003</span>1er Dan d'état</li>
+          <li><span class="prof-dip-year">2005</span>2e Dan d'état</li>
+          <li><span class="prof-dip-year">2005</span>BEES 1er degré — Métiers de la forme</li>
+          <li><span class="prof-dip-year">2006</span>Diplôme d'instructeur fédéral FFKAMA</li>
+          <li><span class="prof-dip-year">2007</span>BEES 1er degré — Karaté et affinitaires</li>
+          <li><span class="prof-dip-year">2010</span>3e Dan d'état</li>
+          <li><span class="prof-dip-year">2013</span>DEJEPS Karaté et disciplines associées</li>
+          <li><span class="prof-dip-year">2017</span>4e Dan d'état AMV</li>
+          <li><span class="prof-dip-year">2025</span>Hồng Đai Đệ Nhất Cấp (5e Đẳng) — HĐVSCQMP</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -688,6 +835,7 @@
     <ul class="ft-list">
       <li><a href="#vovinam">Le Vovinam</a></li>
       <li><a href="#horaires">Horaires & Lieux</a></li>
+      <li><a href="#professeur">Le Professeur</a></li>
       <li><a href="#tarifs">Tarifs</a></li>
       <li><a href="#galerie">Galerie</a></li>
       <li><a href="#philosophie">Philosophie</a></li>
