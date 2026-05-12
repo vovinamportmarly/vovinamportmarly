@@ -58,7 +58,9 @@
   /* HERO */
   .hero {
     min-height: 100vh;
-    background: linear-gradient(135deg, var(--bleu) 0%, var(--bleu-clair) 55%, #4A72C8 100%);
+    background: linear-gradient(135deg, rgba(27,58,140,0.82) 0%, rgba(46,91,184,0.72) 55%, rgba(74,114,200,0.65) 100%), url('Groupe enfant.jpg');
+    background-size: cover;
+    background-position: center top;
     display: grid; grid-template-columns: 1fr 1fr;
     position: relative; overflow: hidden; padding-top: 78px;
   }
@@ -81,7 +83,7 @@
   .hero-eyebrow::before { content: ''; width: 26px; height: 2px; background: var(--jaune); flex-shrink: 0; }
   .hero h1 { font-family: 'Be Vietnam Pro', sans-serif; font-size: clamp(2.2rem,4.2vw,4.2rem); line-height: .9; letter-spacing: .02em; color: var(--blanc); font-weight: 900; }
   .hero h1 em { font-style: normal; color: var(--jaune); display: block; font-weight: 900; }
-  .hero h1 .sub { font-size: 0.28em; color: rgba(255,255,255,.8); letter-spacing: .18em; display: block; margin-top: 12px; font-family: 'Be Vietnam Pro', sans-serif; font-weight: 600; text-transform: uppercase; line-height: 1.5; }
+  .hero h1 .sub { font-size: 0.42em; color: rgba(255,255,255,.8); letter-spacing: .18em; display: block; margin-top: 12px; font-family: 'Be Vietnam Pro', sans-serif; font-weight: 600; text-transform: uppercase; line-height: 1.5; }
   .hero-desc { font-size: 1.05rem; color: rgba(255,255,255,.72); max-width: 400px; margin: 26px 0 38px; font-style: italic; line-height: 1.75; }
   .hero-actions { display: flex; gap: 13px; flex-wrap: wrap; }
   .btn-jaune { display: inline-block; font-family: 'Be Vietnam Pro', sans-serif; font-size: .6rem; letter-spacing: .16em; text-transform: uppercase; color: var(--bleu); background: var(--jaune); padding: 13px 28px; text-decoration: none; font-weight: 700; border-radius: 2px; border: 2px solid var(--jaune); transition: all .2s; }
@@ -128,13 +130,25 @@
   /* PRÉSENTATION */
   #vovinam { background: var(--blanc); display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
   .vovinam-imgs { display: flex; flex-direction: column; gap: 8px; }
-  .logo-badge { position: absolute; bottom: -18px; right: 18px; width: 72px; height: 72px; background: var(--blanc); border-radius: 50%; box-shadow: 0 4px 16px rgba(27,58,140,.15); display: flex; align-items: center; justify-content: center; padding: 5px; }
+  .logo-badge { position: absolute; bottom: 18px; right: 18px; width: 72px; height: 72px; background: var(--blanc); border-radius: 50%; box-shadow: 0 4px 16px rgba(27,58,140,.15); display: flex; align-items: center; justify-content: center; padding: 5px; }
   .logo-badge img { width: 100%; height: 100%; object-fit: contain; border-radius: 50%; }
   .img-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
   .vovinam-text p { color: var(--texte-mid); margin-bottom: 16px; font-size: 1.02rem; }
 
   /* PILIERS */
-  #piliers { background: var(--gris-fond); }
+  #piliers {
+    background: linear-gradient(135deg, rgba(27,58,140,0.82) 0%, rgba(46,91,184,0.72) 55%, rgba(74,114,200,0.65) 100%), url('Groupe adulte.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  #piliers .sec-label { color: var(--jaune); }
+  #piliers .sec-label::before { background: var(--jaune); }
+  #piliers .sec-title { color: var(--blanc); }
+  #piliers .piliers-intro { color: rgba(255,255,255,0.85); }
+  #piliers .pillar { background: rgba(255,255,255,0.12); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.2); }
+  #piliers .pillar:hover { border-top-color: var(--jaune); }
+  #piliers .pillar-name { color: var(--blanc); }
+  #piliers .pillar-desc { color: rgba(255,255,255,0.75); }
   .piliers-top { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: end; margin-bottom: 48px; }
   .piliers-intro { font-size: 1rem; color: var(--texte-mid); font-style: italic; }
   .pillars { display: grid; grid-template-columns: repeat(3,1fr); gap: 3px; }
@@ -154,8 +168,12 @@
   .gal-cell:hover .gal-label { opacity: 1; }
 
   /* HORAIRES */
-  #horaires { background: var(--bleu); position: relative; overflow: hidden; }
-  #horaires::before { content: 'HORAIRES'; font-family: 'Be Vietnam Pro', sans-serif; font-size: 18vw; color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,.04); position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none; white-space: nowrap; user-select: none; }
+  #horaires {
+    background: linear-gradient(135deg, rgba(27,58,140,0.88) 0%, rgba(46,91,184,0.78) 55%, rgba(74,114,200,0.72) 100%), url('Complexe sportif PM.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative; overflow: hidden;
+  }
   #horaires .sec-label { color: var(--jaune); }
   #horaires .sec-label::before { background: var(--jaune); }
   #horaires .sec-title { color: var(--blanc); }
@@ -192,7 +210,7 @@
   .tar-item::before { content: '→'; color: var(--rouge); flex-shrink: 0; font-size: .82rem; margin-top: 2px; }
 
   /* PHILOSOPHIE */
-  #philosophie { background: var(--gris-fond); display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+  #philosophie { background: var(--gris-fond); display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; padding-bottom: 32px; }
   .philo-quote { padding-left: 28px; border-left: 3px solid var(--rouge); }
   blockquote { font-family: 'Be Vietnam Pro'; font-size: clamp(1.2rem,1.8vw,1.75rem); font-style: italic; color: var(--texte); line-height: 1.55; margin-bottom: 14px; }
   .philo-src { font-family: 'Be Vietnam Pro', sans-serif; font-size: .52rem; letter-spacing: .2em; text-transform: uppercase; color: var(--rouge); }
@@ -200,11 +218,8 @@
   .philo-vals { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; }
   .pval { background: var(--blanc); border: 1px solid var(--bleu-mid); border-radius: 3px; padding: 22px 20px; transition: all .2s; }
   .pval:hover { border-color: var(--bleu); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(27,58,140,.1); }
-  .pval:last-child { grid-column: 1/-1; display: block; }
   .pval-viet { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1.4rem; color: var(--bleu); line-height: 1; display: block; margin-bottom: 5px; font-weight: 900; }
-  .pval:last-child .pval-viet { margin-bottom: 5px; }
   .pval-fr { font-family: 'Be Vietnam Pro', sans-serif; font-size: .5rem; letter-spacing: .16em; text-transform: uppercase; color: var(--texte-muted); display: block; margin-bottom: 7px; }
-  .pval:last-child .pval-fr { margin-bottom: 7px; min-width: auto; }
   .pval-ex { font-size: .86rem; color: var(--texte-mid); font-style: italic; line-height: 1.5; }
 
   /* ESSAI */
@@ -299,16 +314,15 @@
 <!-- HERO -->
 <section class="hero" id="accueil">
   <div class="hero-left">
-    <p class="hero-eyebrow anim">Art martial vietnamien — Le Port-Marly (78)</p>
+    <p class="hero-eyebrow anim">Association sportive — Loi 1901</p>
     <h1 class="anim">VDST<em>PORT-MARLY</em><span class="sub">Vovinam Việt Võ Đạo</span></h1>
-    <p class="hero-desc anim">Se défendre, se maîtriser, se renforcer.<br>Un art martial vietnamien complet :<br>pieds-poings,projections, armes, ciseaux volants, souplesse et respiration, combat et lutte.<br>Pour tous niveaux, à partir de 5 ans.</p>
+    <p class="hero-desc anim">Un art martial vietnamien complet !<br>Des techniques de self-défense, des frappes pieds-poings, des projections, des chutes, de la lutte, du maniement d'armes (couteau, épée, bâton…), des enchaînements seul et à plusieurs.<br>Pour tous niveaux, à partir de 7 ans.<br>Viens essayer !</p>
     <div class="hero-actions anim">
       <a href="#contact" class="btn-jaune">Séance d'essai gratuite</a>
       <a href="#vovinam" class="btn-outline-blanc">Découvrir le Vovinam</a>
     </div>
     <div class="hero-stats anim">
-      <div><span class="hero-stat-num">5+</span><span class="hero-stat-label">Ans pour débuter</span></div>
-      <div><span class="hero-stat-num">80+</span><span class="hero-stat-label">Ans de Vovinam</span></div>
+      <div><span class="hero-stat-num">7+</span><span class="hero-stat-label">Ans pour débuter</span></div>
       <div><span class="hero-stat-num">2025-26</span><span class="hero-stat-label">Saison en cours</span></div>
     </div>
   </div>
@@ -365,16 +379,16 @@
       <div class="sec-label">Techniques</div>
       <h2 class="sec-title">CE QUE<br>VOUS APPRENDREZ</h2>
     </div>
-    <p class="piliers-intro">Le Vovinam combine de la technique, du combat et de la théorie — Technique de base, Enchaînement seul, Enchaînement à deux, Combat pied-poing, Force physique, Philosophie. Un seul art martial pour tout maîtriser.</p>
+    <p class="piliers-intro">Techniques de base, enchaînements codifiés, combat, lutte, renforcement, étirements, acrobaties et une philosophie.<br>Le Vovinam Việt Võ Đạo forme le corps autant qu'il forge l'esprit, à travers des valeurs morales transmises dès les premiers cours.</p>
   </div>
   <div class="pillars">
-    <div class="pillar"><span class="pillar-icon">👊</span><div class="pillar-name">Technique de base<br>(Đòn căn bản)</div><p class="pillar-desc">Seul ou à deux ces techniques sont la base du Vovinam. Elles doivent être répétées jusqu’à les maîtriser parfaitement.</p>
+    <div class="pillar"><div class="pillar-name">Les bases<br>(Đòn căn bản)</div><p class="pillar-desc">Elles constituent le fondement technique de l’art.<br><br>Elles regroupent les frappes de poing (direct, crochet, javelot, montant), les tranchants de main, les coups de pied (direct, giflé, latéral, écrasé), les coups de coude et de genou, chacun décliné en plusieurs variantes numérotées.<br><br>À cela s’ajoutent de nombreuses positions, de la position centrale (Trung bình tấn) à la position du serpent (Xà tấn) ou de la grue (Hạc tấn).<br><br>Travaillées seul ou face à un partenaire, elles sont répétées méthodiquement jusqu’à l’automatisme.</p>
     </div>
-    <div class="pillar"><span class="pillar-icon">🥋</span><div class="pillar-name">Enchaînement seul<br>(Đòn Luyện)</div><p class="pillar-desc">Ces enchaînements, destinés à être pratiqués seul(e), permettent de perfectionner ses mouvements et de garder les techniques de base en mémoire.</p></div>
-    <div class="pillar"><span class="pillar-icon">👬</span><div class="pillar-name">Enchaînement à deux<br>(Song Luyện)</div><p class="pillar-desc">Ces enchaînements ont pour but de mettre en situation concrète les techniques de base assimilées.</p></div>
-    <div class="pillar"><span class="pillar-icon">🤼</span><div class="pillar-name">Combat pied-poing</div><p class="pillar-desc">Les percussions du Vovinam couvrent l'ensemble des frappes : poings, pieds, coudes, genoux, tranchants de main — travaillés sur pao et pattes d'ours pour développer vitesse et puissance.</p></div>
-    <div class="pillar"><span class="pillar-icon">💪</span><div class="pillar-name">Force physique<br>(Thành Lực)</div><p class="pillar-desc">Pompes vietnamiennes, roulade, projection, renforcement musculaire, assouplissement</p></div>
-    <div class="pillar"><span class="pillar-icon">⚔️</span><div class="pillar-name">Armes</div><p class="pillar-desc">Couteau, épée, bâton long, hallebarde, sabre large... </p></div>
+    <div class="pillar"><div class="pillar-name">Les techniques de bases<br>(Thế căn bản)</div><p class="pillar-desc">Elles couvrent 3 domaines : mains nues, défense contre armes et maniement d'armes.<br><br>• Mains nues : self-défense, clés de bras, ciseaux, contre-attaques et lutte.<br>• Face à une arme : le pratiquant apprend à se défendre contre un couteau, une hache, une machette ou un fusil baïonnette.<br>• Avec une arme : épée, bâton, règle ou éventail.<br><br>Plus de 300 techniques au total, travaillées seul ou à deux jusqu'à la maîtrise complète.</p></div>
+    <div class="pillar"><div class="pillar-name">Les formes seul et à deux<br>(Đòn Luyện et Song Luyện)</div><p class="pillar-desc">Les formes se divisent en deux catégories.<br><br>• Les formes seules (Đòn Luyện) : 12 formes à mains nues, 4 formes de souplesse et respiration et 12 formes aux armes. Chaque enchaînement codifié permet de fixer les techniques en mémoire et de perfectionner ses mouvements.<br><br>• Les formes à deux (Song Luyện) mettent ces mêmes techniques en situation réelle face à un partenaire : 4 enchaînements à mains nues, 3 sans chutes (Đối Luyện), 3 de lutte vietnamienne et 5 aux armes (dao, kiếm, côn, búa, mã tấu).</p></div>
+    <div class="pillar"><div class="pillar-name">Combat pied-poing et Lutte vietnamienne</div><p class="pillar-desc">Le combat pied-poing se pratique en contact contrôlé (les frappes doivent être maîtrisées) et avec des protections (casque, protège-tibias, protège-pieds, coquille, gants de boxe...).<br>Les techniques autorisées incluent coups de pied, coups de poing, balayages, projections et ciseaux, les coups de coude et de genou au corps étant réservés aux seniors.<br>À l’entraînement, paos, raquettes et pattes d’ours sont très utilisés en complément des assauts libres.<br><br>La lutte vietnamienne (Thế Vật) est une discipline à part entière, enracinée dans la tradition populaire vietnamienne.<br>Pour l’emporter, il faut projeter l’adversaire et lui faire toucher le dos au sol (dos à terre, ventre au ciel).<br>Au Vovinam, elle se pratique à travers des techniques codifiées de saisie, projection, clés et mise au sol.<br>Travaillées d’abord en enchaînements progressifs, elles s’appliquent ensuite en situation libre.</p></div>
+    <div class="pillar"><div class="pillar-name">Force physique<br>(Thành Lực)</div><p class="pillar-desc">La pratique du Vovinam exige un corps solide et mobile.<br>Chaque séance intègre du renforcement musculaire global et des assouplissements de tous les groupes musculaires (deux piliers indissociables pour exécuter les techniques avec puissance et précision).<br><br>Les chutes et roulades sont enseignées dès les premiers cours. Appréhender le sol et tomber sans se blesser sont des compétences fondamentales, autant que frapper ou esquiver.<br>Les projections et acrobaties complètent la préparation physique : sauts, sauts de mains... des mouvements qui demandent coordination, explosivité et engagement total. Ces éléments se construisent progressivement à l'entraînement, en fonction du niveau de chaque pratiquant.</p></div>
+    <div class="pillar"><div class="pillar-name">Théorie / Philosophie<br>(Võ Đạo)</div><p class="pillar-desc">Le Võ Đạo (littéralement "la voie martiale") est la dimension philosophique du Vovinam. Ce n'est pas un simple code de conduite affiché sur un mur : c'est un enseignement transmis progressivement, grade après grade, tout au long du parcours du pratiquant.<br><br>On y aborde la conception des arts martiaux, les valeurs du pratiquant, les relations avec soi-même, la famille, l'école martiale et les autres.<br><br>Plus loin dans le parcours, le pratiquant explore la vision de l'être humain selon le Vovinam, la place des arts martiaux vietnamiens dans l'histoire mondiale, et l'idéal du "combattant humaniste" que le fondateur Nguyễn Lộc a voulu construire.<br><br>Le Võ Đạo ne s'apprend pas en un cours. Il se construit dans la durée, par la pratique, la réflexion et le respect des principes transmis par les maîtres qui ont précédé.</p></div>
   </div>
 </section>
 
@@ -481,6 +495,12 @@
         <li class="tar-item">Réduction si plusieurs de la même famille<br>(nous contacter)</li>
       </ul>
     </div>
+    <div class="tar-card" style="grid-column:1/-1; text-align:center;">
+      <div class="tar-cat" style="font-size:1.1rem; font-weight:900;">Réduction familiale</div>
+      <hr class="tar-div" style="margin:10px auto 14px;">
+      <p style="font-size:.95rem;color:var(--texte-mid);margin-bottom:8px;">−30 € sur la cotisation de chaque membre supplémentaire du même foyer fiscal.</p>
+      <p style="font-size:.9rem;color:var(--texte-muted);font-style:italic;">Ex : 1 enfant (300 €) + 1 ado (170 €) = 470 € – 30 € = 440 €</p>
+    </div>
   </div>
   <p style="margin-top:18px;font-style:italic;color:var(--texte-muted);font-size:.88rem;">* Tarifs indicatifs à confirmer à l'inscription. Paiement en 3x sans frais possible. Chèques ANCV et coupons sport acceptés.</p>
   <div style="margin-top:36px;padding:32px;background:var(--bleu-pale);border:1px solid var(--bleu-mid);border-radius:3px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
@@ -518,10 +538,6 @@
   <div>
     <div class="sec-label" style="margin-bottom:18px;">Les essentiels</div>
     <div class="philo-vals">
-      <div class="pval"><span class="pval-viet">Le salut</span><span class="pval-fr">Nghiêm lễ</span><p class="pval-ex">Une main d'acier sur un coeur de bonté</p></div>
-      <div class="pval"><span class="pval-viet">Le but</span><span class="pval-fr">-</span><p class="pval-ex">La formation de l’homme vrai sans aucune connotation quelle soit religieuse, politique ou raciale.</p></div>
-      <div class="pval"><span class="pval-viet">Le principe de base</span><span class="pval-fr">-</span><p class="pval-ex">L’harmonie entre toutes les choses. On retrouve ici le principe du Yin et du Yang ou Am et Duong qui suggère que chaque élément est indispensable. (La force est inutile sans la souplesse)</p></div>
-      <div class="pval"><span class="pval-viet">Le symbole</span><span class="pval-fr">-</span><p class="pval-ex">Le bambou qui représente la droiture et la souplesse. Il est la représentation direct de l’Am et du Duong dans le réel. Ceci fait donc de lui le symbole le plus expressif de notre art martial.</p></div>
     <div class="pval" style="grid-column:1/-1;">
   <span class="pval-viet">L'écusson et le drapeau</span>
   <span class="pval-fr" style="display:block;margin-bottom:14px;">-</span>
@@ -538,8 +554,14 @@
   <em>La forme du Drapeau :</em><br>le fond est jaune,<br>la largeur est égale à 3/5 de la longueur,<br>le cercle au centre est égale 1/3 de la taille.<br><br>
   Sur l'écusson et le drapeau on retrouve le petit cercle bleu-rouge représentant le am duong. Le cercle blanc représente le Dao (ou l'harmonie).</p>
 </div>
-  
+
 </section>
+<div style="grid-column:1/-1; display:grid; grid-template-columns:repeat(4,1fr); gap:14px; padding: 0 80px 60px; background: var(--gris-fond);">
+  <div class="pval"><span class="pval-viet">Le salut</span><span class="pval-fr">Nghiêm lễ</span><p class="pval-ex">Une main d'acier sur un coeur de bonté</p></div>
+  <div class="pval"><span class="pval-viet">Le but</span><span class="pval-fr">-</span><p class="pval-ex">La formation de l'homme vrai sans aucune connotation quelle soit religieuse, politique ou raciale.</p></div>
+  <div class="pval"><span class="pval-viet">Le principe de base</span><span class="pval-fr">-</span><p class="pval-ex">L'harmonie entre toutes les choses. On retrouve ici le principe du Yin et du Yang ou Am et Duong qui suggère que chaque élément est indispensable. (La force est inutile sans la souplesse)</p></div>
+  <div class="pval"><span class="pval-viet">Le symbole</span><span class="pval-fr">-</span><p class="pval-ex">Le bambou qui représente la droiture et la souplesse. Il est la représentation direct de l'Am et du Duong dans le réel. Ceci fait donc de lui le symbole le plus expressif de notre art martial.</p></div>
+</div>
 
 <!-- ESSAI BANNER -->
 <div class="essai">

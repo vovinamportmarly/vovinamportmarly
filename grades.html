@@ -59,22 +59,21 @@ nav {
 /* HERO BANNER */
 .page-hero {
   padding-top: 78px;
-  background: linear-gradient(135deg, var(--bleu) 0%, var(--bleu-clair) 55%, #4A72C8 100%);
+  background: url('photo-grades.jpg') center center / cover no-repeat;
   position: relative; overflow: hidden;
   min-height: 280px;
   display: flex; align-items: center;
 }
 .page-hero::before {
-  content: ''; position: absolute;
-  width: 500px; height: 500px; border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.06);
-  top: -200px; right: -100px; pointer-events: none;
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(27,58,140,0.72) 0%, rgba(27,58,140,0.45) 60%, rgba(27,58,140,0.3) 100%);
+  pointer-events: none;
 }
 .page-hero::after {
   content: ''; position: absolute;
-  width: 300px; height: 300px; border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.06);
-  bottom: -100px; left: 10%; pointer-events: none;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.25) 100%);
+  pointer-events: none;
 }
 .page-hero-inner { max-width: 1200px; margin: 0 auto; padding: 60px 60px; position: relative; z-index: 2; }
 .page-hero-eyebrow {
@@ -198,10 +197,11 @@ nav {
 @keyframes fadeSlideUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
 
 .grade-card-header {
-  display: grid; grid-template-columns: 180px 140px 100px 1fr;
+  display: grid; grid-template-columns: 240px 220px 170px 1fr;
   gap: 0; background: var(--gris-fond); border-bottom: 1px solid var(--bleu-mid); align-items: center;
 }
 .grade-cell { padding: 14px 20px; border-right: 1px solid var(--bleu-mid); }
+.grade-cell:has(.duree-badge) { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
 .grade-cell:last-child { border-right: none; }
 .label-xs { font-size: .48rem; letter-spacing: .18em; text-transform: uppercase; color: var(--texte-muted); display: block; margin-bottom: 4px; }
 .grade-niveau { font-weight: 900; font-size: .95rem; color: var(--bleu); letter-spacing: .03em; text-transform: uppercase; line-height: 1; }
@@ -249,10 +249,10 @@ nav {
 .belt-bar.hong-5b::after { content: ''; position: absolute; right: 0; width: 41px; height: 100%; background: repeating-linear-gradient(90deg,#fff 0,#fff 5px,var(--rouge) 5px,var(--rouge) 9px); }
 .belt-bar.hong-6b { background: var(--rouge); width: 80px; position: relative; }
 .belt-bar.hong-6b::after { content: ''; position: absolute; right: 0; width: 50px; height: 100%; background: repeating-linear-gradient(90deg,#fff 0,#fff 5px,var(--rouge) 5px,var(--rouge) 9px); }
-.belt-bar.bach-cqm { background: #f0f0f0; border: 1px solid #ccc; width: 80px; position: relative; }
-.belt-bar.bach-cqm::after { content: ''; position: absolute; left: 50%; transform: translateX(-50%); width: 12px; height: 100%; background: linear-gradient(to right, var(--bleu) 33%, var(--jaune) 33% 66%, var(--rouge) 66%); }
-.belt-bar.bach-cm { background: #f0f0f0; border: 1px solid #ccc; width: 80px; position: relative; }
-.belt-bar.bach-cm::after { content: ''; position: absolute; left: 8px; right: 8px; height: 100%; background: repeating-linear-gradient(90deg, var(--bleu) 0,var(--bleu) 4px,#f0f0f0 4px,#f0f0f0 8px, var(--jaune) 8px,var(--jaune) 12px,#f0f0f0 12px,#f0f0f0 16px, var(--rouge) 16px,var(--rouge) 20px,#f0f0f0 20px,#f0f0f0 100%); }
+.belt-bar.bach-cqm { width: 80px; height: 20px; position: relative; border: none; background: linear-gradient(to bottom, var(--rouge) 40%, var(--jaune) 40% 60%, var(--bleu) 60%); }
+.belt-bar.bach-cqm::after { display: none; }
+.belt-bar.bach-cm { width: 80px; height: 24px; border: 1px solid #ccc; position: relative; background: linear-gradient(to bottom, #f0f0f0 8%, var(--bleu) 8% 28%, #f0f0f0 28% 33%, #222 33% 53%, #f0f0f0 53% 58%, var(--jaune) 58% 78%, #f0f0f0 78% 83%, var(--rouge) 83% 96%, #f0f0f0 96%); }
+.belt-bar.bach-cm::after { display: none; }
 .belt-name { font-size: .72rem; font-weight: 700; color: var(--texte-mid); line-height: 1; }
 
 /* Duration badge */
@@ -278,6 +278,10 @@ nav {
 .form-tag { background: var(--bleu-pale); color: var(--bleu); font-size: .67rem; font-weight: 600; padding: 4px 10px; border-radius: 20px; border: 1px solid var(--bleu-mid); letter-spacing: .02em; transition: background .2s; }
 .form-tag:hover { background: var(--bleu-mid); }
 .form-tag.principal { background: linear-gradient(135deg, var(--rouge), #e8103a); color: var(--blanc); border-color: var(--rouge); }
+.form-tag.grade { background: #FFD700; color: var(--bleu); border-color: #e6c200; }
+.form-tag.avance { background: var(--bleu); color: var(--blanc); border-color: var(--bleu); }
+.form-tag.song { background: #fef9e7; color: #8a6500; border-color: #e8d58a; }
+.form-tag.duel { background: #fff0f2; color: var(--rouge); border-color: #f9cdd3; }
 .form-note { font-size: .75rem; color: var(--texte-muted); font-style: italic; margin-top: 8px; }
 
 /* Hoàng Đai styling */
@@ -291,7 +295,6 @@ nav {
 .grade-card.hong-dai .grade-niveau { color: var(--rouge); }
 .grade-card.hong-dai .duree-badge { background: #fff0f2; color: var(--rouge); }
 .grade-card.hong-dai .col-title::before { background: var(--rouge); }
-.grade-card.hong-dai .form-tag { background: #fff0f2; color: var(--rouge); border-color: #f9cdd3; }
 
 /* Bạch Đai styling */
 .grade-card.bach-dai .grade-card-header { background: linear-gradient(90deg, #f5f5f5, #fff); }
@@ -470,25 +473,25 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
         <div class="couleur-bar"></div>
         <div class="couleur-nom">Bleu — Xanh</div>
         <div class="couleur-viet">Ceintures de départ &amp; Lam Đai</div>
-        <p class="couleur-desc">Symbolise <strong style="color:#fff">l'espoir et la mer</strong>. Le pratiquant nourrit l'espoir de progresser dans les arts martiaux et de cultiver l'esprit du Võ Đạo. C'est l'étape des fondations, du dévouement et de la découverte.</p>
+        <p class="couleur-desc">Symbolise la couleur de l'espoir et de l'océan immense, avec le sens que le pratiquant nourrit en lui l'espoir d'avancer en profondeur dans le domaine des arts martiaux et de cultiver l'esprit de la voie martiale.</p>
       </div>
       <div class="couleur-card c-jaune">
         <div class="couleur-bar"></div>
         <div class="couleur-nom">Jaune — Vàng</div>
         <div class="couleur-viet">Hoàng Đai</div>
-        <p class="couleur-desc">Symbolise <strong>la couleur royale de l'Orient</strong>. Les arts martiaux et l'esprit du Võ Đạo commencent à imprégner en profondeur le corps et l'âme du pratiquant. C'est l'étape de l'affirmation technique.</p>
+        <p class="couleur-desc">Symbolise la couleur de la Voie Royale de l'Orient, avec le sens que les arts martiaux et l'esprit de la voie martiale ont commencé à s'imprégner dans la chair et l'âme du disciple.</p>
       </div>
       <div class="couleur-card c-rouge">
         <div class="couleur-bar"></div>
         <div class="couleur-nom">Rouge — Đỏ</div>
         <div class="couleur-viet">Hồng Đai</div>
-        <p class="couleur-desc">Symbolise <strong style="color:#fff">le sang et le feu</strong> — la vie vaillante et résolue. Les arts martiaux et l'esprit du Võ Đạo ont pénétré le sang du pratiquant et circulent désormais dans tout son être. Grade de Maître.</p>
+        <p class="couleur-desc">Symbolise la couleur du sang, couleur du feu de vie héroïque et inébranlable, avec le sens que les arts martiaux et l'esprit de la voie martiale se sont imprégnés dans le sang vital et circulent désormais dans le corps du disciple.</p>
       </div>
       <div class="couleur-card c-blanc">
         <div class="couleur-bar"></div>
         <div class="couleur-nom">Blanc — Trắng</div>
         <div class="couleur-viet">Bạch Đai</div>
-        <p class="couleur-desc">Symbolise <strong>l'os et la moelle</strong>. Les arts martiaux et l'esprit du Võ Đạo ont pénétré jusqu'au plus profond de l'être, transformant le pratiquant en incarnation vivante de l'essence de l'école.</p>
+        <p class="couleur-desc">Symbolise la couleur de l'os ; avec le sens que les arts martiaux et l'esprit de la voie martiale se sont infiltrés profondément jusqu'à la moelle des os, transformant la nature fondamentale de l'être humain — incarnant ainsi la quintessence de l'école martiale.</p>
       </div>
     </div>
   </div>
@@ -510,13 +513,13 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
         <div class="grade-card-header">
           <div class="grade-cell">
             <span class="label-xs">Niveau — Trình Độ</span>
-            <div class="grade-niveau">Tự Vệ</div>
+            <div class="grade-niveau">Lớp Tự Vệ</div>
           </div>
           <div class="grade-cell">
             <span class="label-xs">Ceinture — Màu Đai</span>
             <div class="belt-display">
               <div class="belt-bar ao"></div>
-              <span class="belt-name">Đai Màu Áo — Bleu clair</span>
+              <span class="belt-name">Đai Màu Áo<br>Bleu clair</span>
             </div>
           </div>
           <div class="grade-cell">
@@ -531,7 +534,6 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
             <div class="titre-info">
               <span class="titre-fr">Élève</span>
               <span class="titre-viet">Võ Sinh</span>
-              <span class="titre-note">Autodéfense de base — Introduction au Vovinam</span>
             </div>
           </div>
         </div>
@@ -540,23 +542,22 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
             <div class="col-title">Techniques de base — Đòn Căn Bản</div>
             <ul class="techniques-list">
               <li>10 techniques de dégagement (Khóa gỡ)</li>
-              <li>2 techniques de clé au sol (Khóa tay đất n°1 et 2)</li>
+              <li>2 techniques de Clé de bras avec déplacement contrôlé (Khóa tay đất n°1 et 2)</li>
               <li>5 stratégies de combat (Chiến lược n°1 à 5)</li>
             </ul>
           </div>
           <div class="grade-col">
-            <div class="col-title">Enchaînements — Đơn Luyện · Song Luyện</div>
+            <div class="col-title">Enchaînement seul — Đơn Luyện</div>
             <div class="forms-list">
-              <span class="form-tag principal">Khởi Quyền</span>
+              <span class="form-tag avance">Khởi Quyền</span>
             </div>
-            <p class="form-note">Enchaînement d'entrée — travaillé seul</p>
           </div>
         </div>
         <div class="grade-card-vodao">
           <div class="vodao-title">Võ Đạo — Formation philosophique</div>
           <ul class="vodao-list">
             <li>Qu'est-ce que le Vovinam ? Origines et histoire</li>
-            <li>Signification du salut : «&nbsp;Main d'acier, cœur de bonté&nbsp;» (Bàn Tay Thép — Trái Tim Từ Ái)</li>
+            <li>Signification du salut Vovinam : "La Main d'Acier, le Cœur Bienveillant" (Bàn Tay Thép — Trái Tim Từ Ái)</li>
             <li>Mémorisation des 10 principes fondamentaux et compréhension générale</li>
           </ul>
         </div>
@@ -567,13 +568,13 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
         <div class="grade-card-header">
           <div class="grade-cell">
             <span class="label-xs">Niveau — Trình Độ</span>
-            <div class="grade-niveau">Nhập Môn</div>
+            <div class="grade-niveau">Lớp Nhập Môn</div>
           </div>
           <div class="grade-cell">
             <span class="label-xs">Ceinture — Màu Đai</span>
             <div class="belt-display">
               <div class="belt-bar xanh-dam"></div>
-              <span class="belt-name">Đai Xanh Đậm — Bleu foncé</span>
+              <span class="belt-name">Đai Xanh Đậm<br>Bleu foncé</span>
             </div>
           </div>
           <div class="grade-cell">
@@ -597,15 +598,14 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
             <div class="col-title">Techniques de base — Đòn Căn Bản</div>
             <ul class="techniques-list">
               <li>5 stratégies de combat (Chiến lược n°6 à 10)</li>
-              <li>12 contre-attaques aux coups de poing (niveau 1)</li>
+              <li>12 techniques de base de contre-attaques aux coups de poing (niveau 1)</li>
             </ul>
           </div>
           <div class="grade-col">
             <div class="col-title">Enchaînements — Đơn Luyện · Song Luyện</div>
             <div class="forms-list">
-              <span class="form-tag principal">Nhập Môn Quyền</span>
+              <span class="form-tag avance">Nhập Môn Quyền</span>
             </div>
-            <p class="form-note">Enchaînement d'initiation — travaillé seul</p>
           </div>
         </div>
         <div class="grade-card-vodao">
@@ -638,13 +638,13 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
         <div class="grade-card-header">
           <div class="grade-cell">
             <span class="label-xs">Niveau — Trình Độ</span>
-            <div class="grade-niveau">Lam Đai Nhất</div>
+            <div class="grade-niveau">Lam Đai Đệ Nhất Cấp</div>
           </div>
           <div class="grade-cell">
             <span class="label-xs">Ceinture — Màu Đai</span>
             <div class="belt-display">
               <div class="belt-bar lam-1v"></div>
-              <span class="belt-name">Bleu foncé — 1 barrette jaune</span>
+              <span class="belt-name"><span style="color:var(--texte-muted)">Đai Xanh Đậm 1 Vạch Vàng</span><br>Bleu foncé — 1 barrette jaune</span>
             </div>
           </div>
           <div class="grade-cell">
@@ -657,7 +657,7 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
           <div class="grade-cell">
             <span class="label-xs">Titre — Danh Xưng</span>
             <div class="titre-info">
-              <span class="titre-fr">Disciple</span>
+              <span class="titre-fr">Disciple — 1er Cấp</span>
               <span class="titre-viet">Môn Sinh</span>
               <span class="titre-note">1er niveau de la ceinture bleue</span>
             </div>
@@ -668,18 +668,17 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
             <div class="col-title">Techniques de base — Đòn Căn Bản</div>
             <ul class="techniques-list">
               <li>10 techniques de dégagement (Khóa gỡ)</li>
-              <li>2 techniques de clé au sol (n°3 et 4)</li>
-              <li>4 contre-attaques aux coups de pied (niveau 1)</li>
-              <li>4 coups de pied offensifs (n°1 à 4)</li>
+              <li>2 techniques de Clé de bras avec déplacement contrôlé (Khóa tay đất n°3 et 4)</li>
+              <li>4 techniques de contre-attaques aux coups de pied (niveau 1)</li>
+              <li>4 techniques d'attaque de jambe (N°1 à 4)</li>
               <li>5 stratégies de combat (Chiến lược n°11 à 15)</li>
             </ul>
           </div>
           <div class="grade-col">
             <div class="col-title">Enchaînements — Đơn Luyện · Song Luyện</div>
             <div class="forms-list">
-              <span class="form-tag principal">Thập Tứ Quyền</span>
+              <span class="form-tag avance">Thập Tứ Quyền</span>
             </div>
-            <p class="form-note">Enchaînement des 14 postures — travaillé seul</p>
           </div>
         </div>
         <div class="grade-card-vodao">
@@ -699,13 +698,13 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
         <div class="grade-card-header">
           <div class="grade-cell">
             <span class="label-xs">Niveau — Trình Độ</span>
-            <div class="grade-niveau">Lam Đai Nhị</div>
+            <div class="grade-niveau">Lam Đai Đệ Nhị Cấp</div>
           </div>
           <div class="grade-cell">
             <span class="label-xs">Ceinture — Màu Đai</span>
             <div class="belt-display">
               <div class="belt-bar lam-2v"></div>
-              <span class="belt-name">Bleu foncé — 2 barrettes jaunes</span>
+              <span class="belt-name">Bleu foncé<br>2 barrettes jaunes</span>
             </div>
           </div>
           <div class="grade-cell">
@@ -718,7 +717,7 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
           <div class="grade-cell">
             <span class="label-xs">Titre — Danh Xưng</span>
             <div class="titre-info">
-              <span class="titre-fr">Disciple</span>
+              <span class="titre-fr">Disciple — 2e Cấp</span>
               <span class="titre-viet">Môn Sinh</span>
               <span class="titre-note">2e niveau de la ceinture bleue</span>
             </div>
@@ -730,14 +729,14 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
             <ul class="techniques-list">
               <li>2 poussées-pressions (Đòn Xô ấn n°1 et 2)</li>
               <li>2 coups de pied (n°5 et 6)</li>
-              <li>2 clés de sol (n°5 et 6)</li>
+              <li>2 techniques de Clé de bras avec déplacement contrôlé (Khóa tay đất n°5 et 6)</li>
               <li>5 stratégies de combat (Chiến lược n°16 à 20)</li>
             </ul>
           </div>
           <div class="grade-col">
             <div class="col-title">Enchaînements — Đơn Luyện · Song Luyện</div>
             <div class="forms-list">
-              <span class="form-tag principal">Long Hổ Quyền</span>
+              <span class="form-tag avance">Long Hổ Quyền</span>
               <span class="form-tag">Song Luyện n°1</span>
               <span class="form-tag">Liên Hoàn Đối Luyện 1</span>
             </div>
@@ -760,13 +759,13 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
         <div class="grade-card-header">
           <div class="grade-cell">
             <span class="label-xs">Niveau — Trình Độ</span>
-            <div class="grade-niveau">Lam Đai Tam</div>
+            <div class="grade-niveau">Lam Đai Đệ Tam Cấp</div>
           </div>
           <div class="grade-cell">
             <span class="label-xs">Ceinture — Màu Đai</span>
             <div class="belt-display">
               <div class="belt-bar lam-3v"></div>
-              <span class="belt-name">Bleu foncé — 3 barrettes jaunes</span>
+              <span class="belt-name">Bleu foncé<br>3 barrettes jaunes</span>
             </div>
           </div>
           <div class="grade-cell">
@@ -779,7 +778,7 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
           <div class="grade-cell">
             <span class="label-xs">Titre — Danh Xưng</span>
             <div class="titre-info">
-              <span class="titre-fr">Disciple</span>
+              <span class="titre-fr">Disciple — 3e Cấp</span>
               <span class="titre-viet">Môn Sinh</span>
               <span class="titre-note">3e niveau — dernier de la ceinture bleue</span>
             </div>
@@ -797,8 +796,8 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
           <div class="grade-col">
             <div class="col-title">Enchaînements — Đơn Luyện · Song Luyện</div>
             <div class="forms-list">
-              <span class="form-tag principal">Tứ Trụ Quyền</span>
-              <span class="form-tag principal">Nhu Khí Công Quyền 1</span>
+              <span class="form-tag avance">Tứ Trụ Quyền</span>
+              <span class="form-tag avance">Nhu Khí Công Quyền 1</span>
               <span class="form-tag">Bài Đấu Vật 1</span>
               <span class="form-tag">Liên Hoàn Đối Luyện 2</span>
             </div>
@@ -842,7 +841,7 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
             <span class="label-xs">Ceinture — Màu Đai</span>
             <div class="belt-display">
               <div class="belt-bar hoang"></div>
-              <span class="belt-name">Đai Vàng — Jaune unie</span>
+              <span class="belt-name">Đai Vàng<br>Jaune unie</span>
             </div>
           </div>
           <div class="grade-cell">
@@ -873,10 +872,10 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
           <div class="grade-col">
             <div class="col-title">Enchaînements — Đơn Luyện · Song Luyện</div>
             <div class="forms-list">
-              <span class="form-tag principal">Ngũ Môn Quyền</span>
-              <span class="form-tag principal">Song Dao Pháp</span>
-              <span class="form-tag">Song Luyện n°2</span>
-              <span class="form-tag">Song Luyện Dao</span>
+              <span class="form-tag grade">Ngũ Môn Quyền</span>
+              <span class="form-tag grade">Song Dao Pháp</span>
+              <span class="form-tag song">Song Luyện n°2</span>
+              <span class="form-tag song">Song Luyện Dao</span>
             </div>
           </div>
         </div>
@@ -895,13 +894,13 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
         <div class="grade-card-header">
           <div class="grade-cell">
             <span class="label-xs">Niveau — Trình Độ</span>
-            <div class="grade-niveau">Hoàng Đai Nhất</div>
+            <div class="grade-niveau">Hoàng Đai Đệ Nhất Cấp</div>
           </div>
           <div class="grade-cell">
             <span class="label-xs">Ceinture — Màu Đai</span>
             <div class="belt-display">
               <div class="belt-bar hoang-1r"></div>
-              <span class="belt-name">Jaune — 1 barrette rouge</span>
+              <span class="belt-name">Jaune<br>1 barrette rouge</span>
             </div>
           </div>
           <div class="grade-cell">
@@ -914,7 +913,7 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
           <div class="grade-cell">
             <span class="label-xs">Titre — Danh Xưng</span>
             <div class="titre-info">
-              <span class="titre-fr">Moniteur</span>
+              <span class="titre-fr">Moniteur — 1er Đẳng</span>
               <span class="titre-viet">Hướng Dẫn Viên</span>
               <span class="titre-note">Peut guider les débutants</span>
             </div>
@@ -933,10 +932,10 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
           <div class="grade-col">
             <div class="col-title">Enchaînements — Đơn Luyện · Song Luyện</div>
             <div class="forms-list">
-              <span class="form-tag principal">Viên Phương Quyền</span>
-              <span class="form-tag principal">Tinh Hoa Lưỡng Nghi Kiếm Pháp</span>
-              <span class="form-tag principal">Nhu Khí Công Quyền 2</span>
-              <span class="form-tag">Song Luyện n°3</span>
+              <span class="form-tag grade">Viên Phương Quyền</span>
+              <span class="form-tag grade">Nhu Khí Công Quyền 2</span>
+              <span class="form-tag grade">Tinh Hoa Lưỡng Nghi Kiếm Pháp</span>
+              <span class="form-tag song">Song Luyện n°3</span>
             </div>
           </div>
         </div>
@@ -954,13 +953,13 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
         <div class="grade-card-header">
           <div class="grade-cell">
             <span class="label-xs">Niveau — Trình Độ</span>
-            <div class="grade-niveau">Hoàng Đai Nhị</div>
+            <div class="grade-niveau">Hoàng Đai Đệ Nhị Cấp</div>
           </div>
           <div class="grade-cell">
             <span class="label-xs">Ceinture — Màu Đai</span>
             <div class="belt-display">
               <div class="belt-bar hoang-2r"></div>
-              <span class="belt-name">Jaune — 2 barrettes rouges</span>
+              <span class="belt-name">Jaune<br>2 barrettes rouges</span>
             </div>
           </div>
           <div class="grade-cell">
@@ -973,7 +972,7 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
           <div class="grade-cell">
             <span class="label-xs">Titre — Danh Xưng</span>
             <div class="titre-info">
-              <span class="titre-fr">Instructeur</span>
+              <span class="titre-fr">Instructeur — 2e Đẳng</span>
               <span class="titre-viet">Huấn Luyện Viên</span>
               <span class="titre-note">Enseigne les cours de manière autonome</span>
             </div>
@@ -991,10 +990,10 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
           <div class="grade-col">
             <div class="col-title">Enchaînements — Đơn Luyện · Song Luyện</div>
             <div class="forms-list">
-              <span class="form-tag principal">Thập Thế Bát Thức Quyền</span>
-              <span class="form-tag principal">Lão Mai Quyền</span>
-              <span class="form-tag">Bài Đấu Vật n°2</span>
-              <span class="form-tag">Song Luyện Kiếm</span>
+              <span class="form-tag grade">Thập Thế Bát Thức Quyền</span>
+              <span class="form-tag grade">Lão Mai Quyền</span>
+              <span class="form-tag song">Bài Đấu Vật n°2</span>
+              <span class="form-tag song">Song Luyện Kiếm</span>
             </div>
           </div>
         </div>
@@ -1018,7 +1017,7 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
             <span class="label-xs">Ceinture — Màu Đai</span>
             <div class="belt-display">
               <div class="belt-bar hoang-3r"></div>
-              <span class="belt-name">Jaune — 3 barrettes rouges</span>
+              <span class="belt-name">Jaune<br>3 barrettes rouges</span>
             </div>
           </div>
           <div class="grade-cell">
@@ -1031,7 +1030,7 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
           <div class="grade-cell">
             <span class="label-xs">Titre — Danh Xưng</span>
             <div class="titre-info">
-              <span class="titre-fr">Instructeur</span>
+              <span class="titre-fr">Instructeur — 3e Đẳng</span>
               <span class="titre-viet">Huấn Luyện Viên</span>
               <span class="titre-note">3e niveau — dernier de la ceinture jaune</span>
             </div>
@@ -1049,11 +1048,11 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
           <div class="grade-col">
             <div class="col-title">Enchaînements — Đơn Luyện · Song Luyện</div>
             <div class="forms-list">
-              <span class="form-tag principal">Việt Võ Đạo Quyền</span>
-              <span class="form-tag principal">Tứ Tượng Côn Pháp</span>
-              <span class="form-tag principal">Mộc Bản Pháp (Tay Thước)</span>
-              <span class="form-tag">Song Luyện n°4</span>
-              <span class="form-tag">Song Luyện Côn</span>
+              <span class="form-tag grade">Việt Võ Đạo Quyền</span>
+              <span class="form-tag grade">Tứ Tượng Côn Pháp</span>
+              <span class="form-tag grade">Mộc Bản Pháp (Tay Thước)</span>
+              <span class="form-tag song">Song Luyện n°4</span>
+              <span class="form-tag song">Song Luyện Côn</span>
             </div>
           </div>
         </div>
@@ -1092,7 +1091,7 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
             <span class="label-xs">Ceinture — Màu Đai</span>
             <div class="belt-display">
               <div class="belt-bar hong-vv"></div>
-              <span class="belt-name">Rouge — liseré or</span>
+              <span class="belt-name">Rouge<br>liseré or</span>
             </div>
           </div>
           <div class="grade-cell">
@@ -1105,7 +1104,7 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
           <div class="grade-cell">
             <span class="label-xs">Titre — Danh Xưng</span>
             <div class="titre-info">
-              <span class="titre-fr rouge">Maître</span>
+              <span class="titre-fr rouge">Maître — 4e Đẳng</span>
               <span class="titre-viet">Võ Sư (Chuẩn Cao Đẳng)</span>
               <span class="titre-note">Maître — niveau préparatoire</span>
             </div>
@@ -1124,11 +1123,11 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
             <div class="forms-list">
               <span class="form-tag principal">Xà Quyền</span>
               <span class="form-tag principal">Ngọc Trần Quyền</span>
-              <span class="form-tag principal">Thương Lê Pháp</span>
               <span class="form-tag principal">Nhu Khí Công Quyền 3</span>
-              <span class="form-tag">Bài Song Đấu Búa Rìu</span>
-              <span class="form-tag">Liên Hoàn Đối Luyện 3</span>
-              <span class="form-tag">Nhật Nguyệt Đại Đao Pháp</span>
+              <span class="form-tag principal">Thương Lê Pháp</span>
+              <span class="form-tag principal">Nhật Nguyệt Đại Đao Pháp</span>
+              <span class="form-tag duel">Bài Song Đấu Búa Rìu</span>
+              <span class="form-tag duel">Liên Hoàn Đối Luyện 3</span>
             </div>
           </div>
         </div>
@@ -1153,7 +1152,7 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
             <span class="label-xs">Ceinture — Màu Đai</span>
             <div class="belt-display">
               <div class="belt-bar hong-1b"></div>
-              <span class="belt-name">Rouge — 1 barrette blanche</span>
+              <span class="belt-name">Rouge<br>1 barrette blanche</span>
             </div>
           </div>
           <div class="grade-cell">
@@ -1166,7 +1165,7 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
           <div class="grade-cell">
             <span class="label-xs">Titre — Danh Xưng</span>
             <div class="titre-info">
-              <span class="titre-fr rouge">Maître · 1er Đẳng</span>
+              <span class="titre-fr rouge">Maître — 5e Đẳng</span>
               <span class="titre-viet">Võ Sư</span>
               <span class="titre-note">1er degré de la ceinture rouge</span>
             </div>
@@ -1178,16 +1177,16 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
             <ul class="techniques-list">
               <li>12 désarmements à mains nues contre sabre court (Mã Tấu)</li>
               <li>10 techniques de lutte (Vật n°19 à 28)</li>
-              <li>Bài Đấu Vật 3 — combat de lutte n°3</li>
-              <li>Hạc Quyền — enchaînement de la grue</li>
-              <li>Thái Cực Đơn Đao Pháp — techniques de sabre court</li>
             </ul>
           </div>
           <div class="grade-col">
             <div class="col-title">Enchaînements — Đơn Luyện · Song Luyện</div>
             <div class="forms-list">
+              <span class="form-tag principal">Hạc Quyền</span>
+              <span class="form-tag principal">Thái Cực Đơn Đao Pháp</span>
               <span class="form-tag principal">Tiên Long Song Kiếm</span>
-              <span class="form-tag">Bài Song Đấu Mã Tấu</span>
+              <span class="form-tag duel">Bài Đấu Vật 3</span>
+              <span class="form-tag duel">Bài Song Đấu Mã Tấu</span>
             </div>
           </div>
         </div>
@@ -1212,7 +1211,7 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
             <span class="label-xs">Ceinture — Màu Đai</span>
             <div class="belt-display">
               <div class="belt-bar hong-2b"></div>
-              <span class="belt-name">Rouge — 2 barrettes blanches</span>
+              <span class="belt-name">Rouge<br>2 barrettes blanches</span>
             </div>
           </div>
           <div class="grade-cell">
@@ -1237,17 +1236,17 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
             <ul class="techniques-list">
               <li>Analyse des 12 techniques d'éventail (Quạt)</li>
               <li>Analyse des enchaînements : à mains nues et armes</li>
-              <li>Âm Dương Hồ Điệp Phiến — éventail papillon</li>
-              <li>Mã Tấu Pháp — techniques de sabre</li>
-              <li>Bát Quái Song Dao Pháp — doubles couteaux</li>
-              <li>Việt Điều Kiếm Pháp — techniques d'épée</li>
             </ul>
           </div>
           <div class="grade-col">
             <div class="col-title">Enchaînements — Đơn Luyện · Song Luyện</div>
             <div class="forms-list">
+              <span class="form-tag principal">Âm Dương Hồ Điệp Phiến</span>
+              <span class="form-tag principal">Mã Tấu Pháp</span>
+              <span class="form-tag principal">Bát Quái Song Dao Pháp</span>
+              <span class="form-tag principal">Việt Điều Kiếm Pháp</span>
               <span class="form-tag principal">Nhu Khí Công Quyền 4</span>
-              <span class="form-tag">Liên Hoàn Đối Luyện 4</span>
+              <span class="form-tag duel">Liên Hoàn Đối Luyện 4</span>
             </div>
           </div>
         </div>
@@ -1272,7 +1271,7 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
             <span class="label-xs">Ceinture — Màu Đai</span>
             <div class="belt-display">
               <div class="belt-bar hong-3b"></div>
-              <span class="belt-name">Rouge — 3 barrettes blanches</span>
+              <span class="belt-name">Rouge<br>3 barrettes blanches</span>
             </div>
           </div>
           <div class="grade-cell">
@@ -1311,7 +1310,7 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
             <span class="label-xs">Ceinture — Màu Đai</span>
             <div class="belt-display">
               <div class="belt-bar hong-4b"></div>
-              <span class="belt-name">Rouge — 4 barrettes blanches</span>
+              <span class="belt-name">Rouge<br>4 barrettes blanches</span>
             </div>
           </div>
           <div class="grade-cell">
@@ -1350,7 +1349,7 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
             <span class="label-xs">Ceinture — Màu Đai</span>
             <div class="belt-display">
               <div class="belt-bar hong-5b"></div>
-              <span class="belt-name">Rouge — 5 barrettes blanches</span>
+              <span class="belt-name">Rouge<br>5 barrettes blanches</span>
             </div>
           </div>
           <div class="grade-cell">
@@ -1389,7 +1388,7 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
             <span class="label-xs">Ceinture — Màu Đai</span>
             <div class="belt-display">
               <div class="belt-bar hong-6b"></div>
-              <span class="belt-name">Rouge — 6 barrettes blanches</span>
+              <span class="belt-name">Rouge<br>6 barrettes blanches</span>
             </div>
           </div>
           <div class="grade-cell">
@@ -1450,7 +1449,7 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
             <span class="label-xs">Ceinture — Màu Đai</span>
             <div class="belt-display">
               <div class="belt-bar bach-cqm"></div>
-              <span class="belt-name">Blanche — chỉ tri-sắc au centre</span>
+              <span class="belt-name">Blanche<br>chỉ tri-sắc au centre</span>
             </div>
           </div>
           <div class="grade-cell">
@@ -1489,7 +1488,7 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
             <span class="label-xs">Ceinture — Màu Đai</span>
             <div class="belt-display">
               <div class="belt-bar bach-cm"></div>
-              <span class="belt-name">Blanche — 3 fils tricolores répartis</span>
+              <span class="belt-name">Blanche<br>4 fils tricolores répartis</span>
             </div>
           </div>
           <div class="grade-cell">
@@ -1504,7 +1503,7 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
             <div class="titre-info">
               <span class="titre-fr gris">Grand Maître Patriarche</span>
               <span class="titre-viet">Võ Sư Chưởng Môn</span>
-              <span class="titre-note">Ceinture blanche avec 3 fils tricolores (bleu-jaune-rouge) répartis uniformément sur toute la ceinture</span>
+              <span class="titre-note">Ceinture blanche avec 4 fils tricolores (bleu-noir-jaune-rouge) répartis uniformément sur toute la ceinture</span>
             </div>
           </div>
         </div>
