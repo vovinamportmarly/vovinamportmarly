@@ -57,6 +57,60 @@ nav {
 .nav-cta { font-size: .56rem !important; color: var(--blanc) !important; background: var(--rouge); padding: 10px 20px; border-radius: 2px; }
 .nav-cta::after { display: none !important; }
 
+/* BURGER BUTTON */
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px; height: 18px;
+  cursor: pointer;
+  background: none; border: none; padding: 0;
+  z-index: 101;
+}
+.nav-burger span {
+  display: block; width: 100%; height: 2px;
+  background: var(--texte-mid);
+  border-radius: 2px;
+  transition: transform .3s ease, opacity .3s ease;
+}
+.nav-burger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-burger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+/* MOBILE DROPDOWN MENU */
+.nav-mobile {
+  display: none;
+  position: fixed;
+  top: 50px; left: 0; right: 0;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(14px);
+  border-bottom: 2px solid var(--bleu-mid);
+  box-shadow: 0 6px 24px rgba(27,58,140,0.1);
+  z-index: 98;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease;
+}
+.nav-mobile.open { max-height: 400px; }
+.nav-mobile ul { list-style: none; margin: 0; padding: 8px 0 16px; }
+.nav-mobile ul li a {
+  display: flex; align-items: center;
+  padding: 0 28px; min-height: 48px;
+  font-size: .58rem; letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--texte-mid); text-decoration: none;
+  transition: color .2s, background .2s;
+}
+.nav-mobile ul li a:hover { color: var(--bleu); background: var(--bleu-pale); }
+.nav-mobile ul li a.active { color: var(--bleu); font-weight: 700; background: var(--bleu-pale); }
+.nav-mobile ul li a.nav-cta {
+  margin: 8px 28px 0; padding: 0 20px;
+  min-height: 48px; border-radius: 2px;
+  background: var(--rouge); color: var(--blanc) !important;
+  justify-content: center; letter-spacing: .12em;
+}
+.nav-mobile ul li a.nav-cta:hover { background: #a30000; }
+
 /* HERO BANNER */
 .page-hero {
   padding-top: 78px;
@@ -202,7 +256,7 @@ nav {
   gap: 0; background: var(--gris-fond); border-bottom: 1px solid var(--bleu-mid); align-items: center;
 }
 .grade-cell { padding: 14px 20px; border-right: 1px solid var(--bleu-mid); }
-.grade-cell:has(.duree-badge) { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.grade-cell:has(.duree-badge) { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; text-align: left; }
 .grade-cell:last-child { border-right: none; }
 .label-xs { font-size: .48rem; letter-spacing: .18em; text-transform: uppercase; color: var(--texte-muted); display: block; margin-bottom: 4px; }
 .grade-niveau { font-weight: 900; font-size: .95rem; color: var(--bleu); letter-spacing: .03em; text-transform: uppercase; line-height: 1; }
@@ -348,7 +402,6 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
 /* RESPONSIVE */
 @media (max-width: 900px) {
   nav { padding: 14px 24px; }
-  .nav-links { display: none; }
   .page-hero-inner { padding: 50px 24px; }
   .main { padding: 50px 20px 80px; }
   .intro-section { grid-template-columns: 1fr; gap: 36px; }
@@ -358,6 +411,11 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
   .grade-col { border-right: none; border-bottom: 1px solid var(--bleu-mid); }
   .grade-col:last-child { border-bottom: none; }
   footer { padding: 36px 24px; }
+}
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-burger { display: flex; }
+  .nav-mobile { display: block; }
 }
 @media (max-width: 600px) {
   .couleurs-grid { grid-template-columns: 1fr; }
@@ -385,7 +443,19 @@ footer { background: var(--bleu); padding: 40px 60px; text-align: center; }
     <li><a href="grades.html" class="active">Grades</a></li>
     <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
   </ul>
+  <button class="nav-burger" id="navBurger" aria-label="Ouvrir le menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="nav-mobile" id="navMobile" aria-hidden="true">
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="index.html#vovinam">Le Vovinam</a></li>
+    <li><a href="index.html#horaires">Cours</a></li>
+    <li><a href="grades.html" class="active">Grades</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</div>
 
 <!-- HERO -->
 <section class="page-hero">
@@ -1555,6 +1625,41 @@ const observer = new IntersectionObserver((entries) => {
 cards.forEach(card => {
   card.style.opacity = '0';
   observer.observe(card);
+});
+
+// BURGER MENU
+const burger = document.getElementById('navBurger');
+const mobileMenu = document.getElementById('navMobile');
+
+function openMenu() {
+  burger.classList.add('open');
+  mobileMenu.classList.add('open');
+  burger.setAttribute('aria-expanded', 'true');
+  mobileMenu.setAttribute('aria-hidden', 'false');
+}
+
+function closeMenu() {
+  burger.classList.remove('open');
+  mobileMenu.classList.remove('open');
+  burger.setAttribute('aria-expanded', 'false');
+  mobileMenu.setAttribute('aria-hidden', 'true');
+}
+
+burger.addEventListener('click', (e) => {
+  e.stopPropagation();
+  mobileMenu.classList.contains('open') ? closeMenu() : openMenu();
+});
+
+// Fermer au clic sur un lien
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', closeMenu);
+});
+
+// Fermer au clic en dehors
+document.addEventListener('click', (e) => {
+  if (mobileMenu.classList.contains('open') && !mobileMenu.contains(e.target)) {
+    closeMenu();
+  }
 });
 </script>
 
