@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Histoire du Vovinam Việt Võ Đạo — VDST Port-Marly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bleu:        #1B3A8C;
+    --bleu-clair:  #2E5BB8;
+    --bleu-pale:   #EEF3FB;
+    --bleu-mid:    #D6E2F5;
+    --rouge:       #C8102E;
+    --jaune:       #F5C518;
+    --blanc:       #FFFFFF;
+    --texte:       #1A2645;
+    --texte-mid:   #3D5080;
+    --texte-muted: #7A8BAD;
+    --gris-fond:   #F7F9FD;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--blanc); color: var(--texte); font-family: 'Be Vietnam Pro', sans-serif; font-size: 16px; line-height: 1.65; overflow-x: hidden; }
+
+  /* NAV — copié exactement du site principal */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 14px 60px; background: rgba(255,255,255,0.96); backdrop-filter: blur(14px); border-bottom: 2px solid var(--bleu-mid); box-shadow: 0 2px 20px rgba(27,58,140,0.08); transition: padding 0.3s; }
+  .nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+  .nav-logo img { width: 46px; height: 46px; object-fit: contain; border-radius: 50%; }
+  .nav-logo-text strong { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1.2rem; letter-spacing: .1em; color: var(--bleu); display: block; line-height: 1.1; }
+  .nav-logo-text span { font-family: 'Be Vietnam Pro', sans-serif; font-size: .93rem; letter-spacing: .08em; color: var(--rouge); text-transform: uppercase; font-weight: 500; }
+  .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+  .nav-links a { font-family: 'Be Vietnam Pro', sans-serif; font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; color: var(--texte-mid); text-decoration: none; transition: color .2s; position: relative; padding-bottom: 3px; }
+  .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--rouge); transition: width .3s; }
+  .nav-links a:hover { color: var(--bleu); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta { font-family: 'Be Vietnam Pro', sans-serif !important; font-size: .56rem !important; color: var(--blanc) !important; background: var(--rouge); padding: 10px 20px; border-radius: 2px; transition: background .2s, transform .2s !important; }
+  .nav-cta:hover { background: #a50d25 !important; transform: translateY(-1px); }
+  .nav-cta::after { display: none !important; }
+  .btn-helloasso { display: inline-flex; align-items: center; gap: 8px; font-family: 'Be Vietnam Pro', sans-serif; font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; color: var(--blanc); background: #6CB86A; padding: 12px 26px; text-decoration: none; border-radius: 2px; border: 2px solid #6CB86A; font-weight: 700; transition: all .2s; }
+  .btn-helloasso:hover { background: #58a056; border-color: #58a056; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(108,184,106,.3); }
+  .btn-helloasso svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+  /* HERO PAGE */
+  .page-hero { min-height: 54vh; background: linear-gradient(135deg, var(--bleu) 0%, var(--bleu-clair) 55%, #4A72C8 100%); display: flex; flex-direction: column; justify-content: flex-end; padding-top: 78px; position: relative; overflow: hidden; }
+  .page-hero::before, .page-hero::after { content: ''; position: absolute; border-radius: 50%; pointer-events: none; border: 1px solid rgba(255,255,255,0.06); }
+  .page-hero::before { width: 650px; height: 650px; top: -220px; right: -180px; }
+  .page-hero::after  { width: 450px; height: 450px; bottom: -130px; left: 35%; }
+  .page-hero-inner { padding: 60px 80px 50px; position: relative; z-index: 2; }
+  .breadcrumb { display: flex; align-items: center; gap: 8px; font-family: 'Be Vietnam Pro', sans-serif; font-size: .5rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.38); margin-bottom: 22px; }
+  .breadcrumb a { color: rgba(255,255,255,.38); text-decoration: none; transition: color .2s; }
+  .breadcrumb a:hover { color: var(--jaune); }
+  .hero-eyebrow { font-family: 'Be Vietnam Pro', sans-serif; font-size: .56rem; letter-spacing: .28em; text-transform: uppercase; color: var(--jaune); margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
+  .hero-eyebrow::before { content: ''; width: 26px; height: 2px; background: var(--jaune); flex-shrink: 0; }
+  .page-hero h1 { font-family: 'Be Vietnam Pro', sans-serif; font-size: clamp(2.2rem,4.2vw,4.6rem); line-height: .9; letter-spacing: .02em; color: var(--blanc); font-weight: 900; text-transform: uppercase; margin-bottom: 18px; }
+  .page-hero h1 em { font-style: normal; color: var(--jaune); display: block; }
+  .page-hero-desc { font-size: 1.05rem; color: rgba(255,255,255,.68); max-width: 540px; font-style: italic; line-height: 1.75; }
+
+  /* Barre chapitres */
+  .chap-bar { display: flex; border-top: 1px solid rgba(255,255,255,.13); position: relative; z-index: 2; }
+  .chap-item { flex: 1; padding: 16px 22px; text-decoration: none; border-right: 1px solid rgba(255,255,255,.1); transition: background .2s; }
+  .chap-item:last-child { border-right: none; }
+  .chap-item:hover { background: rgba(255,255,255,.08); }
+  .chap-num { font-family: 'Be Vietnam Pro', sans-serif; font-size: .44rem; letter-spacing: .22em; text-transform: uppercase; color: var(--jaune); display: block; margin-bottom: 3px; }
+  .chap-label { font-family: 'Be Vietnam Pro'; font-size: .8rem; color: rgba(255,255,255,.55); font-style: italic; display: block; line-height: 1.3; }
+
+  /* SECTION COMMUNES */
+  .sec-label { font-family: 'Be Vietnam Pro', sans-serif; font-size: .54rem; letter-spacing: .26em; text-transform: uppercase; color: var(--rouge); display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .sec-label::before { content: ''; width: 20px; height: 2px; background: var(--rouge); flex-shrink: 0; }
+  .sec-title { font-family: 'Be Vietnam Pro', sans-serif; font-size: clamp(2rem,3.2vw,3.2rem); letter-spacing: .02em; line-height: 1; color: var(--bleu); margin-bottom: 8px; font-weight: 900; text-transform: uppercase; }
+  .sec-sub { font-family: 'Be Vietnam Pro', sans-serif; font-size: .52rem; letter-spacing: .18em; text-transform: uppercase; color: var(--texte-muted); margin-bottom: 32px; }
+
+  /* TEXTE */
+  .hist-text p { color: var(--texte-mid); font-size: 1.02rem; line-height: 1.8; margin-bottom: 18px; }
+  .hist-text p:last-child { margin-bottom: 0; }
+  .hist-text em { font-style: italic; color: var(--texte); }
+  .hist-text strong { font-weight: 700; color: var(--bleu); }
+
+  /* CITATION */
+  .hist-quote { margin: 28px 0; padding: 22px 26px; border-left: 3px solid var(--jaune); background: var(--bleu-pale); border-radius: 0 3px 3px 0; }
+  .hist-quote blockquote { font-family: 'Be Vietnam Pro'; font-style: italic; font-size: 1.1rem; color: var(--bleu); line-height: 1.6; margin-bottom: 8px; }
+  .hist-quote cite { font-family: 'Be Vietnam Pro', sans-serif; font-size: .46rem; letter-spacing: .18em; text-transform: uppercase; color: var(--rouge); font-style: normal; }
+
+  /* TIMELINE */
+  .hist-timeline { margin-top: 36px; padding-top: 26px; border-top: 1px solid var(--bleu-mid); }
+  .hist-tl-title { font-family: 'Be Vietnam Pro', sans-serif; font-size: .52rem; letter-spacing: .22em; text-transform: uppercase; color: var(--texte-muted); margin-bottom: 16px; }
+  .hist-tl-item { display: flex; gap: 18px; align-items: flex-start; padding: 11px 0; border-bottom: 1px solid var(--bleu-mid); }
+  .hist-tl-item:last-child { border-bottom: none; }
+  .hist-tl-year { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1rem; color: var(--bleu); font-weight: 900; min-width: 50px; line-height: 1.3; }
+  .hist-tl-text { font-size: .92rem; color: var(--texte-mid); font-style: italic; line-height: 1.55; }
+
+  /* PORTRAIT */
+  .portrait-wrap { position: sticky; top: 104px; }
+  .portrait-img { border-radius: 4px 4px 0 0; overflow: hidden; border: 2px solid var(--bleu-mid); border-bottom: none; aspect-ratio: 3/4; }
+  .portrait-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+  .portrait-caption { background: var(--bleu); padding: 14px 16px; border-radius: 0 0 4px 4px; border: 2px solid var(--bleu); border-top: none; }
+  .portrait-name { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1rem; letter-spacing: .04em; color: var(--blanc); font-weight: 800; text-transform: uppercase; display: block; line-height: 1.1; }
+  .portrait-role { font-family: 'Be Vietnam Pro', sans-serif; font-size: .46rem; letter-spacing: .18em; text-transform: uppercase; color: var(--jaune); display: block; margin-top: 4px; }
+  .portrait-dates { font-family: 'Be Vietnam Pro', sans-serif; font-size: .44rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.4); display: block; margin-top: 3px; }
+
+  /* PHOTO ANCIENNE PLACEHOLDER */
+  .photo-ancienne { position: sticky; top: 104px; }
+  .photo-ancienne-frame { border-radius: 4px 4px 0 0; overflow: hidden; border: 2px solid var(--bleu-mid); border-bottom: none; aspect-ratio: 3/4; background: var(--bleu-pale); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; }
+  .photo-ancienne-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .photo-ancienne-frame .ph-ic { font-size: 2.8rem; opacity: .18; }
+  .photo-ancienne-frame .ph-txt { font-family: 'Be Vietnam Pro', sans-serif; font-size: .46rem; letter-spacing: .16em; text-transform: uppercase; color: var(--texte-muted); text-align: center; padding: 0 22px; opacity: .6; line-height: 1.6; }
+  .photo-ancienne-caption { background: var(--bleu-mid); padding: 11px 16px; border-radius: 0 0 4px 4px; border: 2px solid var(--bleu-mid); border-top: none; }
+  .photo-ancienne-caption span { font-family: 'Be Vietnam Pro', sans-serif; font-size: .46rem; letter-spacing: .16em; text-transform: uppercase; color: var(--texte-muted); font-style: italic; }
+
+  /* SECTIONS */
+  #origines   { padding: 88px 80px; background: var(--blanc); }
+  #fondation  { padding: 88px 80px; background: var(--gris-fond); }
+  #le-sang    { padding: 88px 80px; background: var(--blanc); }
+  #international { padding: 88px 80px; background: var(--gris-fond); }
+
+  .origines-grid   { display: grid; grid-template-columns: 300px 1fr; gap: 64px; align-items: start; }
+  .fondation-grid  { display: grid; grid-template-columns: 1fr 280px; gap: 64px; align-items: start; }
+  .lesang-grid     { display: grid; grid-template-columns: 280px 1fr; gap: 64px; align-items: start; }
+
+  /* FÉDÉRATIONS */
+  .fed-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; margin-top: 40px; }
+  .fed-card { background: var(--blanc); border: 1px solid var(--bleu-mid); border-top: 3px solid var(--bleu); border-radius: 3px; padding: 24px 22px; transition: all .25s; }
+  .fed-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(27,58,140,.1); border-top-color: var(--rouge); }
+  .fed-annee { font-family: 'Be Vietnam Pro', sans-serif; font-size: .46rem; letter-spacing: .2em; text-transform: uppercase; color: var(--rouge); margin-bottom: 6px; }
+  .fed-nom { font-family: 'Be Vietnam Pro', sans-serif; font-size: .98rem; color: var(--bleu); font-weight: 800; text-transform: uppercase; letter-spacing: .02em; margin-bottom: 8px; line-height: 1.2; }
+  .fed-desc { font-size: .88rem; color: var(--texte-muted); font-style: italic; line-height: 1.55; }
+
+  /* BOUTONS */
+  .btn-rouge { display: inline-block; font-family: 'Be Vietnam Pro', sans-serif; font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; color: var(--blanc); background: var(--rouge); padding: 12px 26px; text-decoration: none; border-radius: 2px; border: 2px solid var(--rouge); transition: all .2s; }
+  .btn-rouge:hover { background: #a50d25; border-color: #a50d25; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(200,16,46,.25); }
+  .btn-outline-bleu { display: inline-block; font-family: 'Be Vietnam Pro', sans-serif; font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; color: var(--bleu); border: 2px solid var(--bleu-mid); padding: 12px 26px; text-decoration: none; border-radius: 2px; transition: all .2s; }
+  .btn-outline-bleu:hover { border-color: var(--bleu); background: var(--bleu-pale); }
+
+  /* ESSAI */
+  .essai { background: var(--rouge); padding: 56px 80px; display: flex; align-items: center; justify-content: space-between; gap: 36px; flex-wrap: wrap; position: relative; overflow: hidden; }
+  .essai::after { content: ''; position: absolute; right: -80px; top: -80px; width: 260px; height: 260px; border-radius: 50%; border: 1px solid rgba(255,255,255,.12); pointer-events: none; }
+  .essai h3 { font-family: 'Be Vietnam Pro', sans-serif; font-size: 2.3rem; letter-spacing: .05em; color: var(--blanc); line-height: 1; margin-bottom: 5px; font-weight: 900; }
+  .essai p { font-style: italic; color: rgba(255,255,255,.72); font-size: .97rem; }
+  .btn-blanc { display: inline-block; font-family: 'Be Vietnam Pro', sans-serif; font-size: .6rem; letter-spacing: .14em; text-transform: uppercase; color: var(--rouge); background: var(--blanc); padding: 15px 34px; text-decoration: none; font-weight: 700; border-radius: 2px; transition: all .2s; white-space: nowrap; flex-shrink: 0; position: relative; z-index: 1; }
+  .btn-blanc:hover { background: var(--jaune); transform: translateY(-2px); }
+
+  /* FOOTER — copié exactement du site principal */
+  footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; border-top: 3px solid var(--jaune); }
+  .ft-brand { display: flex; align-items: center; gap: 13px; text-decoration: none; }
+  .ft-brand img { width: 50px; height: 50px; object-fit: contain; border-radius: 50%; border: 2px solid rgba(255,255,255,.2); }
+  .ft-brand strong { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1.1rem; letter-spacing: .1em; color: var(--blanc); display: block; line-height: 1; }
+  .ft-brand span { font-family: 'Be Vietnam Pro', sans-serif; font-size: .85rem; letter-spacing: .08em; color: var(--jaune); text-transform: uppercase; margin-top: 3px; display: block; }
+  .ft-title { font-family: 'Be Vietnam Pro', sans-serif; font-size: .5rem; letter-spacing: .22em; text-transform: uppercase; color: var(--jaune); margin-bottom: 14px; }
+  .ft-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .ft-list a { font-family: 'Be Vietnam Pro'; font-size: .93rem; color: rgba(255,255,255,.55); text-decoration: none; font-style: italic; transition: color .2s; }
+  .ft-list a:hover { color: var(--blanc); }
+  .ft-copy { font-family: 'Be Vietnam Pro', sans-serif; font-size: .7rem; letter-spacing: .1em; color: rgba(255,255,255,.28); padding-top: 22px; line-height: 1.8; grid-column: 1/-1; text-align: center; border-top: 1px solid rgba(255,255,255,.1); }
+
+  /* MOBILE */
+  @media(max-width:900px){
+    nav{padding:11px 18px;}
+    .nav-links{display:none;}
+    .page-hero-inner{padding:40px 22px 32px;}
+    .chap-bar{display:none;}
+    #origines,#fondation,#le-sang,#international{padding:60px 22px;}
+    .origines-grid,.fondation-grid,.lesang-grid{grid-template-columns:1fr;gap:32px;}
+    .photo-ancienne,.portrait-wrap{position:static;}
+    .fed-grid{grid-template-columns:1fr;}
+    footer{grid-template-columns:1fr;padding:36px 22px;}
+    .essai{padding:36px 22px;flex-direction:column;}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV — identique au site principal -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo-vdst.png" alt="Logo VDST Port-Marly">
+    <div class="nav-logo-text">
+      <strong>VDST Port-Marly</strong>
+      <span>Vovinam Việt Võ Đạo</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#vovinam">Le Vovinam</a></li>
+    <li><a href="index.html#galerie">Galerie</a></li>
+    <li><a href="index.html#horaires">Horaires</a></li>
+    <li><a href="index.html#tarifs">Tarifs</a></li>
+    <li><a href="index.html#philosophie">Philosophie</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Essai gratuit</a></li>
+    <li style="display:flex;gap:10px;align-items:center;">
+      <a href="https://www.facebook.com/vovinamportmarly" target="_blank" rel="noopener" style="color:var(--texte-mid);transition:color .2s;" title="Facebook">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/vovinamportmarly" target="_blank" rel="noopener" style="color:var(--texte-mid);transition:color .2s;" title="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
+    </li>
+    <li><a href="https://www.helloasso.com" target="_blank" rel="noopener" class="btn-helloasso" style="padding:9px 16px;font-size:.52rem;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:13px;height:13px;"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Devenir membre</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero" id="accueil">
+  <div class="page-hero-inner">
+    <p class="hero-eyebrow">Art martial vietnamien — Depuis 1938</p>
+    <h1>L'HISTOIRE DU<em>VOVINAM VIỆT VÕ ĐẠO</em></h1>
+    <p class="page-hero-desc">Des arts martiaux millénaires du Vietnam à une discipline pratiquée dans plus de 60 pays — l'histoire d'un peuple, d'un fondateur et d'une vision.</p>
+  </div>
+  <div class="chap-bar">
+    <a href="#origines" class="chap-item"><span class="chap-num">Chapitre 01</span><span class="chap-label">Origines &amp; Võ cổ truyền</span></a>
+    <a href="#fondation" class="chap-item"><span class="chap-num">Chapitre 02</span><span class="chap-label">Nguyễn Lộc — 1938</span></a>
+    <a href="#le-sang" class="chap-item"><span class="chap-num">Chapitre 03</span><span class="chap-label">Lê Sáng, le successeur</span></a>
+  </div>
+</div>
+
+<!-- ==================== SECTION 1 : ORIGINES ==================== -->
+<section id="origines">
+  <div class="origines-grid">
+
+    <!-- Photo ancienne — à remplacer plus tard -->
+    <div class="photo-ancienne">
+      <div class="photo-ancienne-frame">
+        <img src="Vovinamancien%203%3A4%20copie.jpg" alt="Arts martiaux vietnamiens traditionnels">
+      </div>
+    </div>
+
+    <div>
+      <div class="sec-label">Les racines</div>
+      <h2 class="sec-title">LES ORIGINES DES ARTS<br>MARTIAUX VIETNAMIENS</h2>
+      <p class="sec-sub">Võ cổ truyền — Arts martiaux traditionnels du Vietnam</p>
+      <div class="hist-text">
+        <p>Le Vietnam est un pays qui s'est construit dans la résistance. Face aux invasions chinoises, à la colonisation française et aux guerres du XX<sup>e</sup> siècle, son peuple a développé une culture martiale enracinée dans le quotidien — se battre n'était pas un sport, c'était une nécessité de survie.</p>
+        <p>De cette histoire est né le <em>Võ cổ truyền</em>, l'ensemble des arts martiaux traditionnels vietnamiens. Pas un système unique et centralisé, mais une mosaïque de styles régionaux, transmis de maître à disciple dans la confidentialité, ce qui en fait un patrimoine à la fois riche et diversifié. On y trouve la lutte villageoise, les frappes à mains nues, les projections, et le maniement des armes traditionnelles comme le bâton ou le sabre.</p>
+        <p>La géographie a façonné les styles : au Nord, plus exposé aux invasions, les arts martiaux sont codifiés et travaillés en formes complexes ; au Centre et au Sud, ils sont plus directs, influencés par les cultures Cham et Khmer.</p>
+        <p>Dans ce paysage, la province de <strong>Sơn Tây</strong> occupe une place à part — ancienne capitale royale, carrefour de fleuves et de cultures. C'est là que naît en 1912 Nguyễn Lộc, le fondateur du Vovinam. Il grandit dans un Vietnam sous occupation française depuis le traité de 1884, au sein d'une jeunesse qui cherche à la fois à résister et à se réinventer. C'est sur ce terreau — patrimonial, politique et humain — qu'il va construire un art martial nouveau.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 2 : NGUYỄN LỘC ==================== -->
+<section id="fondation">
+  <div class="fondation-grid">
+    <div>
+      <div class="sec-label">Le Maître Fondateur</div>
+      <h2 class="sec-title">NGUYỄN LỘC ET<br>LA NAISSANCE DU VOVINAM</h2>
+      <p class="sec-sub">1912 – 1960 · Fondateur du Vovinam Việt Võ Đạo</p>
+      <div class="hist-text">
+        <p>Nguyễn Lộc grandit à Hanoï sous occupation française. Il aurait pu, comme beaucoup de jeunes de sa génération, se laisser emporter par l'occidentalisation qui transformait alors la société vietnamienne. Il choisit autre chose. Il appelle ça la <em>Cách mạng tâm thân</em> — la révolution du corps et de l'esprit. Pas une révolution politique, mais une voie personnelle : construire un corps fort et un caractère droit pour servir quelque chose de plus grand que soi.</p>
+        <p>À partir de là, il étudie les arts martiaux existants. Il observe ce qui fonctionne, ce qui correspond à la morphologie et à la psychologie vietnamienne. Il prend les arts martiaux et la lutte traditionnelle vietnamienne comme base, et construit quelque chose de nouveau. En 1938, il juge son système suffisamment abouti pour l'enseigner. Discrètement d'abord, à une poignée d'amis au 65, rue Gia Long à Hanoï.</p>
+        <p>En automne 1939, il sort de l'ombre. Une démonstration publique au Grand Théâtre de Hanoï. Le public est conquis, le bouche-à-oreille fait le reste. Dès le début 1940, les cours s'ouvrent officiellement à l'École normale de Hanoï, à l'invitation du docteur Đặng Vũ Hỷ. Les jeunes affluent — étudiants, fonctionnaires, ouvriers. Le Vovinam leur offre non seulement des techniques efficaces, mais une éthique.</p>
+        <p>En 1942, les autorités coloniales françaises ferment les cours après des affrontements entre étudiants vietnamiens et français. Nguyễn Lộc continue dans la clandestinité, enseigne chez lui rue Chancheaume. En 1945, quand le Japon renverse l'administration française, le Vovinam retrouve sa liberté. Nguyễn Lộc forme des unités de défense nationale, envoie ses élèves dans toutes les provinces du Nord.</p>
+        <p>Après la partition du pays en 1954, il descend à Saïgon avec peu de monde. Il recommence presque à zéro, ouvre un dojo rue Thủ Khoa Huân. La maladie le rattrape fin 1957. Il confie la direction des cours à son premier disciple, Lê Sáng. Le 29 avril 1960, il meurt à 48 ans.</p>
+      </div>
+      <div class="hist-quote">
+        <blockquote>« Continuer à développer le Vovinam, et former une jeunesse animée par les valeurs du võ đạo — non seulement pour le Vietnam, mais pour l'humanité entière. »</blockquote>
+        <cite>Nguyễn Lộc — Sa dernière volonté confié à Lê Sáng</cite>
+      </div>
+      <div class="hist-text">
+        <p>Il n'avait laissé aucun document écrit. Il avait délibérément brûlé tous ses écrits, pour éviter que ses élèves ne les traitent comme une vérité gravée dans le marbre et cessent d'innover.</p>
+      </div>
+      <div class="hist-timeline">
+        <p class="hist-tl-title">Dates clés</p>
+        <div class="hist-tl-item"><span class="hist-tl-year">1912</span><span class="hist-tl-text">Naissance à Sơn Tây</span></div>
+        <div class="hist-tl-item"><span class="hist-tl-year">1938</span><span class="hist-tl-text">Création du Vovinam — premiers cours au 65, rue Gia Long, Hanoï</span></div>
+        <div class="hist-tl-item"><span class="hist-tl-year">1939</span><span class="hist-tl-text">Première démonstration publique au Grand Théâtre de Hanoï</span></div>
+        <div class="hist-tl-item"><span class="hist-tl-year">1942</span><span class="hist-tl-text">Fermeture par l'administration coloniale — enseignement clandestin</span></div>
+        <div class="hist-tl-item"><span class="hist-tl-year">1945</span><span class="hist-tl-text">Réouverture — formation d'unités de défense nationale</span></div>
+        <div class="hist-tl-item"><span class="hist-tl-year">1954</span><span class="hist-tl-text">Descente à Saïgon après la partition du Vietnam</span></div>
+        <div class="hist-tl-item"><span class="hist-tl-year">1960</span><span class="hist-tl-text">Décès à 48 ans — Lê Sáng prend la succession</span></div>
+      </div>
+    </div>
+
+    <div class="portrait-wrap">
+      <div class="portrait-img">
+        <img src="Sang%20To%20Nguyen%20Loc%203%3A4%20copie.jpg" alt="Nguyễn Lộc, Maître Fondateur du Vovinam">
+      </div>
+      <div class="portrait-caption">
+        <span class="portrait-name">Nguyễn Lộc</span>
+        <span class="portrait-role">Maître Fondateur du Vovinam</span>
+        <span class="portrait-dates">1912 — 1960</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 3 : LÊ SÁNG ==================== -->
+<section id="le-sang">
+  <div class="lesang-grid">
+    <div class="portrait-wrap">
+      <div class="portrait-img">
+        <img src="VSCM%20Le%20Sang%203%3A4%20copie.jpg" alt="Lê Sáng, Maître Patriarche du Vovinam">
+      </div>
+      <div class="portrait-caption">
+        <span class="portrait-name">Lê Sáng</span>
+        <span class="portrait-role">Maître Patriarche — Chưởng môn</span>
+        <span class="portrait-dates">1920 — 2010</span>
+      </div>
+    </div>
+
+    <div>
+      <div class="sec-label">Le Maître Patriarche</div>
+      <h2 class="sec-title">LÊ SÁNG,<br>LE SUCCESSEUR</h2>
+      <p class="sec-sub">1920 – 2010 · Chưởng môn du Vovinam Việt Võ Đạo</p>
+      <div class="hist-text">
+        <p>Lê Sáng est né en 1920 à Hanoï, d'une famille originaire de Thanh Hóa. Enfant, il a des problèmes aux jambes. Sa mère lui conseille de pratiquer un art martial pour se renforcer. En 1940, il entre dans la classe de Nguyễn Lộc à l'École normale. Il a du talent, de la régularité, et une capacité de travail peu commune. En quelques années, il devient le principal assistant de son maître.</p>
+        <p>Après la mort de Nguyễn Lộc, il prend les rênes. Ce n'est pas une succession facile. Entre 1961 et 1963, le régime de Ngô Đình Diệm interdit toutes les écoles d'arts martiaux. Lê Sáng survit en se cachant dans des salles de classe privées, gérant une plantation de caoutchouc à Buôn Ma Thuột en attendant que les conditions changent. Quand le régime tombe en novembre 1963, il revient immédiatement à Saïgon.</p>
+        <p>En 1964, il rouvre le Centre de formation Vovinam (<em>Trung tâm Huấn luyện Vovinam</em>) au 61, rue Vĩnh Viễn. Il rédige le Règlement de la discipline (<em>Qui lệ</em>), structure le programme de formation sur plusieurs niveaux, définit un système de grades par couleur de ceinture, et formule les <strong>Dix principes (<em>điều tâm niệm</em>) du pratiquant</strong> qui sont des engagements moraux aussi importants que les techniques.</p>
+        <p>À partir de 1966, il obtient du ministère de l'Éducation l'introduction du Vovinam dans les lycées publics de Saïgon dans le cadre du programme <em>Học đường mới</em>. En quelques années, des dizaines d'établissements dans tout le Sud ouvrent des sections.</p>
+        <p>Après 1975, le pays unifié traverse des années difficiles. Lê Sáng reprend le travail dans des conditions bien plus contraintes, reconstituant les clubs un par un, formant de nouvelles générations. Il vivra seul, sans famille propre, consacrant tout à la discipline. Il écrit, compose des poèmes — une âme d'artiste dans un corps de combattant. Il révise et enrichit le système technique jusqu'à un âge avancé.</p>
+        <p>Le 31 mars 2010, quelques mois avant sa disparition, Chưởng môn Lê Sáng prit soin d'assurer la continuité et la gouvernance du Vovinam en instituant deux organes distincts.</p>
+        <p>D'un côté, le <em>Hội Đồng Võ Sư Tương Trợ Hải Ngoại</em> (Conseil des Maîtres d'Entraide à l'Étranger), composé de maîtres établis hors du Vietnam, avec pour mission de maintenir le lien entre les communautés Vovinam de la diaspora, de soutenir l'enseignement technique et de favoriser les promotions de grades à l'étranger.</p>
+        <p>De l'autre, le <em>Hội Đồng Võ Sư Chưởng Quản</em> (Conseil des Maîtres Dirigeants de l'École), annoncé publiquement le 24 août 2010 au <em>Tổ đường</em>. Cet organe assume la direction spirituelle et administrative du style au Vietnam.</p>
+        <p>En créant ces deux structures complémentaires avant de rejoindre le fondateur Nguyễn Lộc dans la voie de l'éternité, Chưởng môn Lê Sáng garantissait que ni la diaspora ni le pays d'origine ne seraient laissés sans cadre directeur légitime.</p>
+        <p>Le 27 septembre 2010, il meurt à 91 ans, quelques semaines avant que le Vovinam fasse son entrée aux Jeux d'Asie du Sud-Est à Jakarta.</p>
+      </div>
+      <div class="hist-timeline">
+        <p class="hist-tl-title">Dates clés</p>
+        <div class="hist-tl-item"><span class="hist-tl-year">1920</span><span class="hist-tl-text">Naissance à Hanoï</span></div>
+        <div class="hist-tl-item"><span class="hist-tl-year">1940</span><span class="hist-tl-text">Entre dans la classe de Nguyễn Lộc à l'École normale de Hanoï</span></div>
+        <div class="hist-tl-item"><span class="hist-tl-year">1960</span><span class="hist-tl-text">Reprend la direction du Vovinam après le décès du fondateur</span></div>
+        <div class="hist-tl-item"><span class="hist-tl-year">1964</span><span class="hist-tl-text">Rédige les Dix préceptes — structure le système de grades</span></div>
+        <div class="hist-tl-item"><span class="hist-tl-year">1966</span><span class="hist-tl-text">Introduction du Vovinam dans les lycées publics de Saïgon</span></div>
+        <div class="hist-tl-item"><span class="hist-tl-year">1973</span><span class="hist-tl-text">Premiers pratiquants en France — début de l'internationalisation</span></div>
+        <div class="hist-tl-item"><span class="hist-tl-year">2010</span><span class="hist-tl-text">31 mars — Création officielle du Hội Đồng Võ Sư Tương Trợ Hải Ngoại (diaspora) et annonce du Hội Đồng Võ Sư Chưởng Quản (Vietnam) le 24 août</span></div>
+        <div class="hist-tl-item"><span class="hist-tl-year">2010</span><span class="hist-tl-text">27 septembre — Décès à 91 ans, quelques semaines avant les SEA Games de Jakarta</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESSAI BANNER — identique au site principal -->
+<div class="essai">
+  <div><h3>Première séance offerte</h3><p>Venez tester sans engagement — tenue souple de sport et une bouteille d'eau suffisent, aucun équipement requis.</p></div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1;">
+    <a href="index.html#contact" class="btn-blanc">Je réserve mon essai →</a>
+    <a href="https://www.helloasso.com" target="_blank" rel="noopener" class="btn-helloasso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:14px;height:14px;"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Devenir membre</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <a href="index.html" class="ft-brand"><img src="logo-vdst.png" alt="Logo"><div><strong>VDST Port-Marly</strong><span>Vovinam Việt Võ Đạo</span></div></a>
+    <div style="display:flex;gap:14px;margin-top:16px;align-items:center;">
+      <a href="https://www.facebook.com/vovinamportmarly" target="_blank" rel="noopener" style="color:rgba(255,255,255,.55);transition:color .2s;" title="Facebook">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/vovinamportmarly" target="_blank" rel="noopener" style="color:rgba(255,255,255,.55);transition:color .2s;" title="Instagram">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://www.youtube.com/@vovinamportmarly" target="_blank" rel="noopener" style="color:rgba(255,255,255,.55);transition:color .2s;" title="YouTube">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+      </a>
+    </div>
+  </div>
+  <div>
+    <p class="ft-title">Navigation</p>
+    <ul class="ft-list">
+      <li><a href="index.html#vovinam">Le Vovinam</a></li>
+      <li><a href="index.html#horaires">Horaires & Lieux</a></li>
+      <li><a href="index.html#professeur">Le Professeur</a></li>
+      <li><a href="index.html#tarifs">Tarifs</a></li>
+      <li><a href="index.html#galerie">Galerie</a></li>
+      <li><a href="index.html#philosophie">Philosophie</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div>
+    <p class="ft-title">Liens utiles</p>
+    <ul class="ft-list">
+      <li><a href="https://www.helloasso.com" target="_blank" rel="noopener" style="color:var(--jaune);font-weight:700;">🟢 Devenir membre — HelloAsso</a></li>
+      <li><a href="https://www.vdst.fr">VDST France</a></li>
+      <li><a href="https://www.vovinam-france.org">TCHL France</a></li>
+      <li><a href="https://www.ffkarate.fr/arts-martiaux-vietnamiens/">FFKDA-AMV</a></li>
+      <li><a href="#">HelloAsso — Adhésion</a></li>
+      <li><a href="#">Mentions légales</a></li>
+    </ul>
+  </div>
+  <p class="ft-copy">© 2026 VDST Port-Marly — vovinamportmarly.fr</p>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.querySelector('nav').style.padding =
+      window.scrollY > 60 ? '10px 60px' : '14px 60px';
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (en.isIntersecting) {
+        en.target.style.opacity = '1';
+        en.target.style.transform = 'translateY(0)';
+        obs.unobserve(en.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fed-card,.hist-tl-item,.hist-quote').forEach((el, i) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(16px)';
+    el.style.transition = `opacity .5s ease ${i*.06}s, transform .5s ease ${i*.06}s`;
+    obs.observe(el);
+  });
+</script>
+</body>
+</html>
