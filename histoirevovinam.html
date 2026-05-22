@@ -152,16 +152,29 @@
   .ft-list a:hover { color: var(--blanc); }
   .ft-copy { font-family: 'Be Vietnam Pro', sans-serif; font-size: .7rem; letter-spacing: .1em; color: rgba(255,255,255,.28); padding-top: 22px; line-height: 1.8; grid-column: 1/-1; text-align: center; border-top: 1px solid rgba(255,255,255,.1); }
 
+  /* BURGER */
+  .burger-btn { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 6px; z-index: 200; }
+  .burger-btn span { display: block; width: 24px; height: 2px; background: var(--bleu); border-radius: 2px; transition: all .3s; }
+  .burger-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .burger-btn.open span:nth-child(2) { opacity: 0; }
+  .burger-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(27,58,140,0.97); z-index: 150; flex-direction: column; align-items: center; justify-content: center; gap: 0; }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1.2rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--blanc); text-decoration: none; padding: 22px 40px; border-bottom: 1px solid rgba(255,255,255,.1); width: 100%; text-align: center; transition: color .2s, background .2s; }
+  .mobile-menu a:first-child { border-top: 1px solid rgba(255,255,255,.1); }
+  .mobile-menu a:hover { background: rgba(255,255,255,.08); color: var(--jaune); }
+  .mobile-menu .menu-num { display: block; font-size: .5rem; letter-spacing: .22em; color: var(--jaune); margin-bottom: 4px; }
+
   /* MOBILE */
   @media(max-width:900px){
     nav{padding:11px 18px;}
     .nav-links{display:none;}
+    .burger-btn{display:flex;}
     .page-hero-inner{padding:40px 22px 32px;}
     .chap-bar{display:none;}
-    #origines,#fondation,#le-sang,#international{padding:60px 22px;}
+    #origines,#fondation,#le-sang{padding:60px 22px;}
     .origines-grid,.fondation-grid,.lesang-grid{grid-template-columns:1fr;gap:32px;}
     .photo-ancienne,.portrait-wrap{position:static;}
-    .fed-grid{grid-template-columns:1fr;}
     footer{grid-template-columns:1fr;padding:36px 22px;}
     .essai{padding:36px 22px;flex-direction:column;}
   }
@@ -195,7 +208,17 @@
     </li>
     <li><a href="https://www.helloasso.com" target="_blank" rel="noopener" class="btn-helloasso" style="padding:9px 16px;font-size:.52rem;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:13px;height:13px;"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Devenir membre</a></li>
   </ul>
+  <button class="burger-btn" id="burgerBtn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- MENU MOBILE -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#origines" class="mobile-menu-link"><span class="menu-num">Chapitre 01</span>Les origines</a>
+  <a href="#fondation" class="mobile-menu-link"><span class="menu-num">Chapitre 02</span>Le Fondateur Nguyễn Lộc</a>
+  <a href="#le-sang" class="mobile-menu-link"><span class="menu-num">Chapitre 03</span>Le Patriarche Lê Sáng</a>
+</div>
 
 <!-- HERO -->
 <div class="page-hero" id="accueil">
@@ -379,6 +402,22 @@
 </footer>
 
 <script>
+  // Burger menu
+  const burgerBtn = document.getElementById('burgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  burgerBtn.addEventListener('click', () => {
+    burgerBtn.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+  document.querySelectorAll('.mobile-menu-link').forEach(a => {
+    a.addEventListener('click', () => {
+      burgerBtn.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+
   window.addEventListener('scroll', () => {
     document.querySelector('nav').style.padding =
       window.scrollY > 60 ? '10px 60px' : '14px 60px';
