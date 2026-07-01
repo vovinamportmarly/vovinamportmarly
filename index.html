@@ -192,7 +192,7 @@
   #horaires .sec-label { color: var(--jaune); }
   #horaires .sec-label::before { background: var(--jaune); }
   #horaires .sec-title { color: var(--blanc); }
-  .hor-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 3px; margin-top: 44px; position: relative; z-index: 1; }
+  .hor-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 3px; margin-top: 44px; position: relative; z-index: 1; }
   .hor-card { background: rgba(255,255,255,.09); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,.16); border-radius: 3px; padding: 32px 26px; transition: all .25s; }
   .hor-card:hover { background: rgba(255,255,255,.15); transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,.2); }
   .hor-public { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1.8rem; letter-spacing: .02em; color: var(--blanc); margin-bottom: 3px; font-weight: 900; text-transform: uppercase; }
@@ -205,7 +205,7 @@
 
   /* TARIFS */
   #tarifs { background: var(--blanc); }
-  .tar-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 3px; margin-top: 44px; }
+  .tar-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 3px; margin-top: 44px; }
   .tar-card { background: var(--gris-fond); border: 1px solid var(--bleu-mid); border-radius: 3px; padding: 32px 26px; position: relative; transition: all .25s; display: flex; flex-direction: column; min-width: 0; }
   .tar-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(27,58,140,.12); }
   .tar-card.feat { background: var(--bleu); border-color: var(--bleu); }
@@ -437,6 +437,7 @@
     .tar-bottom-left,.tar-bottom-right{padding:22px 20px;}
     #professeur{grid-template-columns:1fr;gap:36px;padding:60px 22px;}
     .actu-grid{grid-template-columns:1fr;}
+    .hor-public{font-size:1.3rem;white-space:nowrap;}
   }
 </style>
 </head>
@@ -786,22 +787,16 @@
   <h2 class="sec-title">HORAIRES<br>& LIEUX</h2>
   <div class="hor-grid">
     <div class="hor-card">
-      <div class="hor-public">Enfants 7-10ans</div><div class="hor-age">Nés en 2019-2018-2017-2016</div>
+      <div class="hor-public">Enfants 7-10 ans</div><div class="hor-age">Nés en 2019-2018-2017-2016</div>
       <div class="hor-slot"><div class="hor-day">Mardi et Vendredi</div><div class="hor-time">17h00 – 18h00</div></div>
       
       <div class="hor-lieu">📍 Complexe Sportif d'Artagnan — Dojo (salle Athos)</div>
     </div>
     <div class="hor-card">
-      <div class="hor-public">Ados 11 ans et +</div><div class="hor-age">Nés en 2015 et avant</div>
+      <div class="hor-public">Ados et Adultes</div><div class="hor-age">Nés en 2015 et avant</div>
       <div class="hor-slot"><div class="hor-day">Vendredi</div><div class="hor-time">18h00 – 19h00</div></div>
       
       <div class="hor-lieu">📍 Complexe Sportif d'Artagnan — Dojo (salle Athos)</div>
-    </div>
-    <div class="hor-card">
-      <div class="hor-public">Adultes</div><div class="hor-age">Nés en ...</div>
-      <div class="hor-slot"><div class="hor-day">Infos à venir</div><div class="hor-time">Infos à Venir</div></div>
-      
-      <div class="hor-lieu">📍 Le Port-Marly</div>
     </div>
   </div>
     <p style="margin-top:18px;font-style:italic;color:var(--bleu-pale);font-size:.88rem;">* Pas de cours pendant les vancances scolaires.</p>
@@ -827,7 +822,7 @@
     </div>
     <div class="tar-card feat">
       
-      <div class="tar-cat">Ados 11ans et +</div>
+      <div class="tar-cat">Ados et Adultes</div>
       <div class="tar-price"><sup>€</sup>170/saison</div>
       <div class="tar-per">Soit 17euros/mois</div>
       <hr class="tar-div">
@@ -836,18 +831,6 @@
         <li class="tar-item">Licence fédérale incluse (40 euros)</li>
         <li class="tar-item">Assurance incluse</li>
          <li class="tar-item">Réduction si plusieurs de la même famille<br>(nous contacter)</li>
-      </ul>
-    </div>
-    <div class="tar-card">
-      <div class="tar-cat">Adultes</div>
-      <div class="tar-price"><sup>€</sup>Infos à venir</div>
-      <div class="tar-per">Infos à venir</div>
-      <hr class="tar-div">
-      <ul class="tar-list">
-        <li class="tar-item">Infos à vneir</li>
-        <li class="tar-item">Licences fédérales incluses</li>
-        <li class="tar-item">Assurances incluses</li>
-        <li class="tar-item">Réduction si plusieurs de la même famille<br>(nous contacter)</li>
       </ul>
     </div>
     <div class="tar-card tar-bottom" style="grid-column:1/-1; background:var(--bleu-pale); border-color:var(--bleu-mid);">
