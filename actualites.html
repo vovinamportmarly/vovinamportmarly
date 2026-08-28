@@ -160,6 +160,7 @@
   .actu-card { background: var(--blanc); border: 1px solid var(--bleu-mid); border-radius: 3px; overflow: hidden; display: flex; flex-direction: column; transition: all .25s; }
   .actu-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(27,58,140,.12); }
   .actu-img-ph { width: 100%; aspect-ratio: 16/9; background: var(--bleu-pale); display: flex; align-items: center; justify-content: center; }
+  .actu-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
   .actu-body { padding: 20px 22px 24px; flex: 1; display: flex; flex-direction: column; }
   .actu-tag { font-family: 'Be Vietnam Pro', sans-serif; font-size: .46rem; letter-spacing: .18em; text-transform: uppercase; color: var(--rouge); font-weight: 700; margin-bottom: 8px; }
   .actu-title { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1.05rem; font-weight: 900; color: var(--bleu); line-height: 1.25; margin-bottom: 10px; }
@@ -258,9 +259,7 @@
 
       <!-- Article 1 -->
       <div class="actu-card">
-        <div class="actu-img-ph">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#b0bcd4" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        </div>
+        <img src="marlyportain-couverture.jpg" alt="Couverture du magazine Le Marlyportain n°89, septembre 2026" class="actu-img" style="object-position: top;">
         <div class="actu-body">
           <div class="actu-tag">Presse</div>
           <h3 class="actu-title">Le club dans le magazine de la ville de Port-Marly</h3>
