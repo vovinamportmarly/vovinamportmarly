@@ -176,6 +176,17 @@
   .actu-lire { font-family: 'Be Vietnam Pro', sans-serif; font-size: .52rem; letter-spacing: .12em; text-transform: uppercase; color: var(--bleu); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 5px; transition: gap .2s; }
   .actu-lire:hover { gap: 9px; color: var(--rouge); }
   .actu-more { margin-top: 40px; text-align: center; }
+
+  /* CALENDRIER */
+  #calendrier { background: var(--blanc); }
+  .cal-intro { font-size: 1rem; color: var(--texte-mid); font-style: italic; margin-top: 44px; margin-bottom: 28px; max-width: 760px; }
+  .cal-card { display: flex; align-items: center; gap: 26px; background: var(--gris-fond); border: 1px solid var(--bleu-mid); border-radius: 6px; padding: 34px 38px; box-shadow: 0 8px 28px rgba(27,58,140,.06); }
+  .cal-card-icon { width: 64px; height: 64px; border-radius: 50%; background: var(--bleu-pale); color: var(--bleu); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .cal-card-body { flex: 1; min-width: 0; }
+  .cal-card-title { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1.15rem; font-weight: 800; color: var(--bleu); margin-bottom: 6px; }
+  .cal-card-desc { font-size: .92rem; color: var(--texte-mid); line-height: 1.55; }
+  .cal-card-btn { flex-shrink: 0; }
+  .cal-source { margin-top: 16px; font-size: .82rem; color: var(--texte-muted); font-style: italic; }
   .gal-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 260px 260px; gap: 8px; margin-top: 44px; }
   .gal-cell { position: relative; overflow: hidden; }
   .gal-cell:first-child { grid-row: 1/3; }
@@ -442,6 +453,8 @@
     #professeur{grid-template-columns:1fr;gap:36px;padding:60px 22px;}
     .actu-grid{grid-template-columns:1fr;}
     .hor-public{font-size:1.3rem;white-space:nowrap;}
+    .cal-card{flex-direction:column;text-align:center;padding:28px 22px;}
+    .cal-card-btn{width:100%;justify-content:center;}
   }
 </style>
 </head>
@@ -462,6 +475,7 @@
     <li><a href="#professeur">Le Professeur</a></li>
     <li><a href="#galerie">Galerie</a></li>
     <li><a href="#actualites">Actualités</a></li>
+    <li><a href="#calendrier">Calendrier</a></li>
     <li><a href="#philosophie">Philosophie</a></li>
     <li><a href="#contact" class="nav-cta">Essai gratuit</a></li>
     <li style="display:flex;gap:10px;align-items:center;">
@@ -472,7 +486,6 @@
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
   </a>
 </li>
-    <li><a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener" class="btn-helloasso" style="padding:9px 16px;font-size:.52rem;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:13px;height:13px;"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Devenir membre</a></li>
   </ul>
   <button class="burger-btn" id="burger-btn" aria-label="Ouvrir le menu" aria-expanded="false">
     <span></span>
@@ -487,6 +500,7 @@
     <li><a href="#professeur">Le Professeur</a></li>
     <li><a href="#galerie">Galerie</a></li>
     <li><a href="#actualites">Actualités</a></li>
+    <li><a href="#calendrier">Calendrier</a></li>
     <li><a href="#philosophie">Philosophie</a></li>
     <li><a href="#contact" class="nm-cta">Essai gratuit</a></li>
     <li><a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener" class="nm-membre">Devenir membre</a></li>
@@ -784,6 +798,23 @@
   <div class="actu-more">
     <a href="actualites.html" class="btn-outline-bleu">Voir toutes les actualités →</a>
   </div>
+</section>
+<!-- CALENDRIER -->
+<section id="calendrier" class="sec">
+  <div class="sec-label">Compétitions et stages</div>
+  <h2 class="sec-title">CALENDRIER AMV</h2>
+  <p class="cal-intro">Retrouvez le calendrier officiel des compétitions et stages Arts Martiaux Vietnamiens (AMV) de la FFKDA. Il est géré directement par la fédération et toujours à jour.</p>
+  <div class="cal-card">
+    <div class="cal-card-icon">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    </div>
+    <div class="cal-card-body">
+      <p class="cal-card-title">Calendrier officiel FFKDA — AMV</p>
+      <p class="cal-card-desc">Compétitions, stages et championnats de la discipline, mis à jour en direct par la fédération sur ffkarate.fr.</p>
+    </div>
+    <a href="https://www.ffkarate.fr/calendrier/?cat_id%5B%5D=8" target="_blank" rel="noopener" class="btn-helloasso cal-card-btn">Voir le calendrier ↗</a>
+  </div>
+  <p class="cal-source">Source : Fédération Française de Karaté et disciplines associées (FFKDA)</p>
 </section>
 <!-- HORAIRES -->
 <section id="horaires" class="sec">
