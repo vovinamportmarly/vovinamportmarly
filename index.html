@@ -144,28 +144,6 @@
   .hist-portrait figcaption span, .hist-caption span { display: block; margin-top: 2px; font-weight: 600; font-size: .64rem; letter-spacing: .12em; text-transform: uppercase; color: var(--jaune); }
   .vovinam-text p { color: var(--texte-mid); margin-bottom: 16px; font-size: 1.02rem; }
 
-  /* PILIERS */
-  #piliers {
-    background: linear-gradient(135deg, rgba(27,58,140,0.82) 0%, rgba(46,91,184,0.72) 55%, rgba(74,114,200,0.65) 100%), url('Groupe adulte.jpg');
-    background-size: cover;
-    background-position: center;
-  }
-  #piliers .sec-label { color: var(--jaune); }
-  #piliers .sec-label::before { background: var(--jaune); }
-  #piliers .sec-title { color: var(--blanc); }
-  #piliers .piliers-intro { color: rgba(255,255,255,0.85); }
-  #piliers .pillar { background: rgba(10,20,55,0.55); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.22); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
-  #piliers .pillar:hover { border-top-color: var(--jaune); }
-  #piliers .pillar-name { color: var(--blanc); }
-  #piliers .pillar-desc { color: rgba(255,255,255,0.8); }
-  .piliers-top { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: end; margin-bottom: 48px; }
-  .piliers-intro { font-size: 1rem; color: var(--texte-mid); font-style: italic; }
-  .pillars { display: grid; grid-template-columns: repeat(2,1fr); gap: 28px; }
-  .pillar { background: var(--blanc); padding: 36px 34px; border-top: 3px solid transparent; border-radius: 6px; transition: all .25s; }
-  .pillar:hover { border-top-color: var(--rouge); transform: translateY(-3px); box-shadow: 0 8px 28px rgba(27,58,140,.1); }
-  .pillar-icon { font-size: 1.7rem; margin-bottom: 10px; display: block; }
-  .pillar-name { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1.25rem; letter-spacing: .02em; color: var(--bleu); margin-bottom: 7px; font-weight: 800; text-transform: uppercase; }
-  .pillar-desc { font-size: .9rem; color: var(--texte-muted); line-height: 1.55; }
 
   /* GALERIE */
   #galerie { background: var(--blanc); }
@@ -502,21 +480,18 @@
     .hero-right{display:none;}
     .sec{padding:60px 22px;}
     #vovinam,#philosophie,#contact{grid-template-columns:1fr;gap:36px;padding:60px 22px;}
-    #piliers,#galerie,#tarifs{padding:60px 22px;}
+    #galerie,#tarifs{padding:60px 22px;}
     .tar-cta-title{font-size:1rem !important;}
     .nav-logo-text strong{font-size:.85rem;}
     .nav-logo-text span{white-space:nowrap;font-size:.6rem;}
     .tar-price{font-size:2.6rem;}
     .tar-card{padding:24px 20px;}
-    .pillars,.tar-grid{grid-template-columns:1fr;}
-    .pillars{gap:20px;}
-    .pillar{padding:28px 24px;}
+    .tar-grid{grid-template-columns:1fr;}
     .gal-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto;}
     .gal-cell:first-child{grid-row:auto;}
     .gal-cell .img-ph{aspect-ratio:4/3;}
     footer{grid-template-columns:1fr;padding:36px 22px;}
     .essai{padding:36px 22px;flex-direction:column;}
-    .piliers-top{grid-template-columns:1fr;gap:16px;}
     .pval-grid{padding:0 22px 48px;grid-template-columns:repeat(2,1fr);}
     .tar-bottom{grid-template-columns:1fr;}
     .tar-bottom-sep{width:100%;height:1px;margin:0;}
@@ -667,8 +642,7 @@
     </div>
   </div>
   <div class="facet-more">
-    <!-- À remplacer plus tard par le lien de la page « Ce que vous apprendrez » -->
-    <a href="#piliers" class="btn-rouge">Découvrir tout ce que vous apprendrez</a>
+    <a href="techniques.html" class="btn-rouge">Découvrir tout ce que vous apprendrez</a>
   </div>
 </section>
 
@@ -701,33 +675,11 @@
     <p style="color:var(--texte-mid);margin-bottom:24px;font-size:1.02rem;">Le Vovinam Việt Võ Đạo est aussi un sport avec ses compétitions techniques et combat nationales et internationales. Les combats sont réglementés et autorisent notamment les pieds-poings, les balayages, les projections et les ciseaux. Le club participe aux compétitions Vovinam et AMV de la fédération de karaté (FFK) qui est la fédération délégataire.</p>
     <div style="display:flex;gap:13px;flex-wrap:wrap;">
       <a href="histoirevovinam.html" class="btn-rouge">L'histoire du Vovinam</a>
-      <a href="grades.html" class="btn-outline-bleu">Le système de grade →</a>
+      <a href="grades.html" class="btn-outline-bleu">Le programme par ceinture →</a>
     </div>
     <div style="margin-top:13px;">
       <a href="professeur.html" class="btn-bleu">Notre professeur Thầy Grégory</a>
     </div>
-  </div>
-</section>
-
-<!-- PILIERS -->
-<section id="piliers" class="sec">
-  <div class="piliers-top">
-    <div>
-      <div class="sec-label">Techniques</div>
-      <h2 class="sec-title">CE QUE<br>VOUS APPRENDREZ</h2>
-    </div>
-    <p class="piliers-intro">Techniques de base, enchaînements codifiés, combat, lutte, renforcement, étirements, acrobaties et une philosophie.<br>Le Vovinam Việt Võ Đạo forme le corps autant qu'il forge l'esprit, à travers des valeurs morales transmises dès les premiers cours.</p>
-  </div>
-  <div class="pillars">
-    <div class="pillar"><div class="pillar-name">Les bases<br>(Đòn căn bản)</div><p class="pillar-desc">Elles constituent le fondement technique de l’art.<br><br>Elles regroupent les frappes de poing (direct, crochet, javelot, montant), les tranchants de main, les coups de pied (direct, giflé, latéral, écrasé), les coups de coude et de genou, chacun décliné en plusieurs variantes numérotées.<br><br>À cela s’ajoutent de nombreuses positions, de la position centrale (Trung bình tấn) à la position du serpent (Xà tấn) ou de la grue (Hạc tấn).<br><br>Travaillées seul ou face à un partenaire, elles sont répétées méthodiquement jusqu’à l’automatisme.</p>
-    </div>
-    <div class="pillar"><div class="pillar-name">Les techniques de bases<br>(Thế căn bản)</div><p class="pillar-desc">Elles couvrent 3 domaines : mains nues, défense contre armes et maniement d'armes.<br><br>• Mains nues : self-défense, clés de bras, ciseaux, contre-attaques et lutte.<br>• Face à une arme : le pratiquant apprend à se défendre contre un couteau, une hache, une machette ou un fusil baïonnette.<br>• Avec une arme : épée, bâton, règle ou éventail.<br><br>Plus de 300 techniques au total, travaillées seul ou à deux jusqu'à la maîtrise complète.</p></div>
-    <div class="pillar"><div class="pillar-name">Les formes seul<br>(Đòn Luyện)</div><p class="pillar-desc">Les formes seules (Đòn Luyện) : 12 formes à mains nues, 4 formes de souplesse et respiration et 12 formes aux armes.<br><br>Chaque enchaînement codifié permet de fixer les techniques en mémoire et de perfectionner ses mouvements.</p></div>
-    <div class="pillar"><div class="pillar-name">Les formes à deux<br>(Song Luyện)</div><p class="pillar-desc">Les formes à deux (Song Luyện) mettent ces mêmes techniques en situation réelle face à un partenaire : 4 enchaînements à mains nues, 3 sans chutes (Đối Luyện), 3 de lutte vietnamienne et 5 aux armes (dao, kiếm, côn, búa, mã tấu).</p></div>
-    <div class="pillar"><div class="pillar-name">Combat Pied-Poing<br>(Đối kháng)</div><p class="pillar-desc">Le combat pied-poing se pratique en contact contrôlé (les frappes doivent être maîtrisées) et avec des protections (casque, protège-tibias, protège-pieds, coquille, gants de boxe...).<br><br>Les techniques autorisées incluent coups de pied, coups de poing, balayages, projections et ciseaux, les coups de coude et de genou au corps étant réservés aux seniors.<br><br>À l'entraînement, paos, raquettes et pattes d'ours sont très utilisés en complément des assauts libres.</p></div>
-    <div class="pillar"><div class="pillar-name">Lutte Vietnamienne<br>(Vật)</div><p class="pillar-desc">La lutte vietnamienne (Thế Vật) est une discipline à part entière, enracinée dans la tradition populaire vietnamienne.<br><br>Pour l'emporter, il faut projeter l'adversaire et lui faire toucher le dos au sol (dos à terre, ventre au ciel).<br><br>Au Vovinam, elle se pratique à travers des techniques codifiées de saisie, projection, clés et mise au sol. Travaillées d'abord en enchaînements progressifs, elles s'appliquent ensuite en situation libre.</p></div>
-    <div class="pillar"><div class="pillar-name">Force physique<br>(Thành Lực)</div><p class="pillar-desc">La pratique du Vovinam exige un corps solide et mobile.<br>Chaque séance intègre du renforcement musculaire global et des assouplissements de tous les groupes musculaires (deux piliers indissociables pour exécuter les techniques avec puissance et précision).<br><br>Les chutes et roulades sont enseignées dès les premiers cours. Appréhender le sol et tomber sans se blesser sont des compétences fondamentales, autant que frapper ou esquiver.<br>Les projections et acrobaties complètent la préparation physique : sauts, sauts de mains... des mouvements qui demandent coordination, explosivité et engagement total. Ces éléments se construisent progressivement à l'entraînement, en fonction du niveau de chaque pratiquant.</p></div>
-    <div class="pillar"><div class="pillar-name">Théorie / Philosophie<br>(Võ Đạo)</div><p class="pillar-desc">Le Võ Đạo (littéralement "la voie martiale") est la dimension philosophique du Vovinam. Ce n'est pas un simple code de conduite affiché sur un mur : c'est un enseignement transmis progressivement, grade après grade, tout au long du parcours du pratiquant.<br><br>On y aborde la conception des arts martiaux, les valeurs du pratiquant, les relations avec soi-même, la famille, l'école martiale et les autres.<br><br>Plus loin dans le parcours, le pratiquant explore la vision de l'être humain selon le Vovinam, la place des arts martiaux vietnamiens dans l'histoire mondiale, et l'idéal du "combattant humaniste" que le fondateur Nguyễn Lộc a voulu construire.<br><br>Le Võ Đạo ne s'apprend pas en un cours. Il se construit dans la durée, par la pratique, la réflexion et le respect des principes transmis par les maîtres qui ont précédé.</p></div>
   </div>
 </section>
 
@@ -1254,7 +1206,7 @@
       }
     });
   }, { threshold: 0.1 });
-  document.querySelectorAll('.pillar,.tar-card,.pval,.gal-cell,.facet,.public-card,.why-card').forEach((el, i) => {
+  document.querySelectorAll('.tar-card,.pval,.gal-cell,.facet,.public-card,.why-card').forEach((el, i) => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(16px)';
     el.style.transition = `opacity .5s ease ${i*.06}s, transform .5s ease ${i*.06}s`;
