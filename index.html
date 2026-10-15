@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VDST Port-Marly — Vovinam Việt Võ Đạo</title>
+<title>Vovinam Việt Võ Đạo à Port-Marly — Art martial vietnamien | VDST Port-Marly</title>
+<meta name="description" content="Vovinam Việt Võ Đạo à Port-Marly (78560) : cours d'art martial vietnamien pour enfants dès 7 ans, ados et adultes. Self-défense, combat, armes traditionnelles. Première séance offerte.">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500&display=swap" rel="stylesheet">
@@ -59,7 +60,7 @@
   /* HERO */
   .hero {
     min-height: 100vh;
-    background: linear-gradient(135deg, rgba(27,58,140,0.82) 0%, rgba(46,91,184,0.72) 55%, rgba(74,114,200,0.65) 100%), url('Groupe enfant.jpg');
+    background: linear-gradient(100deg, rgba(14,30,84,0.90) 0%, rgba(27,58,140,0.74) 46%, rgba(46,91,184,0.34) 100%), url('Groupe enfant.jpg');
     background-size: cover;
     background-position: center top;
     display: grid; grid-template-columns: 1fr 1fr;
@@ -82,10 +83,11 @@
     display: flex; align-items: center; gap: 10px;
   }
   .hero-eyebrow::before { content: ''; width: 26px; height: 2px; background: var(--jaune); flex-shrink: 0; }
-  .hero h1 { font-family: 'Be Vietnam Pro', sans-serif; font-size: clamp(2.2rem,4.2vw,4.2rem); line-height: .9; letter-spacing: .02em; color: var(--blanc); font-weight: 900; }
-  .hero h1 em { font-style: normal; color: var(--jaune); display: block; font-weight: 900; }
+  .hero h1 { font-family: 'Be Vietnam Pro', sans-serif; font-size: clamp(2.2rem,4.2vw,4.2rem); line-height: 1.06; letter-spacing: .02em; color: var(--blanc); font-weight: 900; }
+  .hero h1 em { font-style: normal; color: var(--jaune); display: block; font-weight: 900; font-size: .85em; }
+  .hero h1 .h1-top { display: block; white-space: nowrap; margin-bottom: 8px; font-size: min(2.8rem, calc((50vw - 128px) / 15.6)); }
   .hero h1 .sub { font-size: 0.42em; color: rgba(255,255,255,.8); letter-spacing: .18em; display: block; margin-top: 12px; font-family: 'Be Vietnam Pro', sans-serif; font-weight: 600; text-transform: uppercase; line-height: 1.5; }
-  .hero-desc { font-size: 1.05rem; color: rgba(255,255,255,.72); max-width: 400px; margin: 26px 0 38px; font-style: italic; line-height: 1.75; }
+  .hero-desc { font-size: 1.08rem; color: rgba(255,255,255,.9); max-width: 520px; margin: 26px 0 34px; line-height: 1.7; }
   .hero-actions { display: flex; gap: 13px; flex-wrap: wrap; }
   .btn-jaune { display: inline-block; font-family: 'Be Vietnam Pro', sans-serif; font-size: .6rem; letter-spacing: .16em; text-transform: uppercase; color: var(--bleu); background: var(--jaune); padding: 13px 28px; text-decoration: none; font-weight: 700; border-radius: 2px; border: 2px solid var(--jaune); transition: all .2s; }
   .btn-jaune:hover { background: #d4a814; border-color: #d4a814; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
@@ -118,6 +120,8 @@
   .btn-rouge:hover { background: #a50d25; border-color: #a50d25; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(200,16,46,.25); }
   .btn-outline-bleu { display: inline-block; font-family: 'Be Vietnam Pro', sans-serif; font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; color: var(--bleu); border: 2px solid var(--bleu-mid); padding: 12px 26px; text-decoration: none; border-radius: 2px; transition: all .2s; }
   .btn-outline-bleu:hover { border-color: var(--bleu); background: var(--bleu-pale); }
+  .btn-bleu { display: inline-block; font-family: 'Be Vietnam Pro', sans-serif; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--blanc); background: var(--bleu); padding: 15px 30px; text-decoration: none; border-radius: 8px; border: 2px solid var(--bleu); font-weight: 700; transition: all .2s; }
+  .btn-bleu:hover { background: var(--bleu-clair); border-color: var(--bleu-clair); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(27,58,140,.25); }
   .btn-helloasso { display: inline-flex; align-items: center; gap: 8px; font-family: 'Be Vietnam Pro', sans-serif; font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; color: var(--blanc); background: #6CB86A; padding: 12px 26px; text-decoration: none; border-radius: 2px; border: 2px solid #6CB86A; font-weight: 700; transition: all .2s; }
   .btn-helloasso:hover { background: #58a056; border-color: #58a056; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(108,184,106,.3); }
   .btn-helloasso svg { width: 14px; height: 14px; flex-shrink: 0; }
@@ -134,6 +138,10 @@
   .logo-badge { position: absolute; bottom: 18px; right: 18px; width: 72px; height: 72px; background: var(--blanc); border-radius: 50%; box-shadow: 0 4px 16px rgba(27,58,140,.15); display: flex; align-items: center; justify-content: center; padding: 5px; }
   .logo-badge img { width: 100%; height: 100%; object-fit: contain; border-radius: 50%; }
   .img-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .hist-portrait { position: relative; margin: 0; aspect-ratio: 3/4; border-radius: 3px; overflow: hidden; background: #111; }
+  .hist-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center 18%; display: block; }
+  .hist-portrait figcaption, .hist-caption { position: absolute; left: 0; right: 0; bottom: 0; padding: 38px 14px 12px; background: linear-gradient(to top, rgba(10,20,55,.92), rgba(10,20,55,0)); color: var(--blanc); font-family: 'Be Vietnam Pro', sans-serif; font-weight: 800; font-size: .98rem; line-height: 1.2; }
+  .hist-portrait figcaption span, .hist-caption span { display: block; margin-top: 2px; font-weight: 600; font-size: .64rem; letter-spacing: .12em; text-transform: uppercase; color: var(--jaune); }
   .vovinam-text p { color: var(--texte-mid); margin-bottom: 16px; font-size: 1.02rem; }
 
   /* PILIERS */
@@ -178,7 +186,9 @@
   .actu-more { margin-top: 40px; text-align: center; }
 
   /* CALENDRIER */
-  #calendrier { background: var(--blanc); }
+  #calendrier { position: relative; overflow: hidden; background-color: var(--blanc); background-image: url('logo-amv-ffk.jpg'); background-repeat: no-repeat; background-size: 236px auto; background-position: right 80px top 36px; }
+  #calendrier::before { content: none; }
+  #calendrier > * { position: relative; z-index: 1; }
   .cal-intro { font-size: 1rem; color: var(--texte-mid); font-style: italic; margin-top: 44px; margin-bottom: 28px; max-width: 760px; }
   .cal-card { display: flex; align-items: center; gap: 26px; background: var(--gris-fond); border: 1px solid var(--bleu-mid); border-radius: 6px; padding: 34px 38px; box-shadow: 0 8px 28px rgba(27,58,140,.06); }
   .cal-card-icon { width: 64px; height: 64px; border-radius: 50%; background: var(--bleu-pale); color: var(--bleu); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
@@ -186,7 +196,24 @@
   .cal-card-title { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1.15rem; font-weight: 800; color: var(--bleu); margin-bottom: 6px; }
   .cal-card-desc { font-size: .92rem; color: var(--texte-mid); line-height: 1.55; }
   .cal-card-btn { flex-shrink: 0; }
+  .cal-list { display: flex; flex-direction: column; gap: 16px; }
+  .cal-level { display: inline-block; font-family: 'Be Vietnam Pro', sans-serif; font-size: .6rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--blanc); background: var(--rouge); padding: 4px 12px; border-radius: 999px; margin-bottom: 8px; }
   .cal-source { margin-top: 16px; font-size: .82rem; color: var(--texte-muted); font-style: italic; }
+
+  /* sous-partie : calendrier du TCHL France */
+  .tchl { margin-top: 64px; padding-top: 48px; border-top: 1px solid var(--bleu-mid); display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: start; }
+  .tchl-title { font-family: 'Be Vietnam Pro', sans-serif; font-size: clamp(1.5rem, 2.4vw, 2.1rem); font-weight: 900; color: var(--bleu); text-transform: uppercase; line-height: 1.1; margin-bottom: 16px; }
+  .tchl-text { color: var(--texte-mid); font-size: 1rem; line-height: 1.75; max-width: 760px; }
+  .tchl-dates { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 26px; max-width: 880px; }
+  .tchl-date { background: var(--bleu-pale); border: 1px solid var(--bleu-mid); border-radius: 12px; padding: 16px 18px; }
+  .tchl-date b { display: block; font-family: 'Be Vietnam Pro', sans-serif; font-size: .6rem; letter-spacing: .14em; text-transform: uppercase; color: var(--rouge); margin-bottom: 6px; }
+  .tchl-date span { display: block; color: var(--bleu); font-weight: 800; font-size: 1rem; line-height: 1.3; }
+  .tchl-date small { display: block; color: var(--texte-muted); font-size: .82rem; margin-top: 3px; }
+  .tchl-note { margin-top: 14px; font-size: .82rem; color: var(--texte-muted); font-style: italic; }
+  .tchl-logo { margin-top: -30px; }
+  .tchl-logo img { width: 240px; height: auto; display: block; }
+  .br-mobile { display: none; }
+  .tchl-date .btn-helloasso { margin-top: 12px; padding: 9px 16px; font-size: .62rem; }
   .gal-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 260px 260px; gap: 8px; margin-top: 44px; }
   .gal-cell { position: relative; overflow: hidden; }
   .gal-cell:first-child { grid-row: 1/3; }
@@ -194,30 +221,9 @@
   .gal-label { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(0deg,rgba(27,58,140,.7),transparent); padding: 18px 14px 10px; font-family: 'Be Vietnam Pro', sans-serif; font-size: .46rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.65); opacity: 0; transition: opacity .2s; border-radius: 0 0 3px 3px; }
   .gal-cell:hover .gal-label { opacity: 1; }
 
-  /* HORAIRES */
-  #horaires {
-    background: linear-gradient(135deg, rgba(27,58,140,0.88) 0%, rgba(46,91,184,0.78) 55%, rgba(74,114,200,0.72) 100%), url('Complexe sportif PM.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative; overflow: hidden;
-  }
-  #horaires .sec-label { color: var(--jaune); }
-  #horaires .sec-label::before { background: var(--jaune); }
-  #horaires .sec-title { color: var(--blanc); }
-  .hor-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 3px; margin-top: 44px; position: relative; z-index: 1; }
-  .hor-card { background: rgba(255,255,255,.09); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,.16); border-radius: 3px; padding: 32px 26px; transition: all .25s; }
-  .hor-card:hover { background: rgba(255,255,255,.15); transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,.2); }
-  .hor-public { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1.8rem; letter-spacing: .02em; color: var(--blanc); margin-bottom: 3px; font-weight: 900; text-transform: uppercase; }
-  .hor-age { font-family: 'Be Vietnam Pro', sans-serif; font-size: .5rem; letter-spacing: .2em; color: var(--jaune); text-transform: uppercase; margin-bottom: 22px; }
-  .hor-slot { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.1); }
-  .hor-slot:last-of-type { border-bottom: none; }
-  .hor-day { font-family: 'Be Vietnam Pro', sans-serif; font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.42); margin-bottom: 2px; }
-  .hor-time { font-family: 'Be Vietnam Pro'; font-size: 1.1rem; color: var(--blanc); font-style: italic; }
-  .hor-lieu { margin-top: 22px; padding-top: 14px; border-top: 1px solid rgba(245,197,24,.22); font-size: .86rem; color: rgba(255,255,255,.52); font-style: italic; }
-  .hor-start { margin-top: 8px; font-size: .82rem; color: var(--jaune); font-weight: 600; text-align: center; }
 
   /* TARIFS */
-  #tarifs { background: var(--blanc); }
+  #tarifs { background: var(--gris-fond); }
   .tar-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 3px; margin-top: 44px; }
   .tar-card { background: var(--gris-fond); border: 1px solid var(--bleu-mid); border-radius: 3px; padding: 32px 26px; position: relative; transition: all .25s; display: flex; flex-direction: column; min-width: 0; }
   .tar-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(27,58,140,.12); }
@@ -250,6 +256,16 @@
   .pval-fr { font-family: 'Be Vietnam Pro', sans-serif; font-size: .5rem; letter-spacing: .16em; text-transform: uppercase; color: var(--texte-muted); display: block; margin-bottom: 7px; }
   .pval-ex { font-size: .86rem; color: var(--texte-mid); font-style: italic; line-height: 1.5; }
   .pval-grid { grid-column:1/-1; display:grid; grid-template-columns:repeat(2,1fr); gap:14px; padding: 0 80px 60px; background: var(--gris-fond); }
+  .tarif-grid { margin-top: 40px; }
+  .tarif-price { display: flex; align-items: baseline; gap: 8px; margin: 2px 0 2px; }
+  .tarif-num { font-family: 'Be Vietnam Pro', sans-serif; font-size: 2.8rem; font-weight: 900; color: var(--bleu); line-height: 1; }
+  .tarif-per { font-size: 1rem; color: var(--texte-muted); font-weight: 600; }
+  .tarif-list { margin: 18px 0 0; flex: 1; }
+  .tarif-list li { align-items: flex-start; }
+  .tarif-list svg { margin-top: 3px; }
+  .tarif-card .public-born { margin: 0 0 4px; }
+  .tar-bottom { grid-column: 1 / -1; margin-top: 4px; background: var(--blanc); border: 1px solid var(--bleu-mid); border-radius: 16px; box-shadow: none; }
+  .tar-bottom:hover { transform: none; box-shadow: 0 16px 38px rgba(27,58,140,.10); }
   .tar-bottom { display:grid; grid-template-columns:1fr auto 1fr; gap:0; align-items:center; }
   .tar-bottom-left { padding: 28px 32px; }
   .tar-bottom-sep { width:1px; background:var(--bleu-mid); align-self:stretch; margin: 20px 0; }
@@ -420,6 +436,91 @@
   .nm-socials a { color: var(--texte-mid); transition: color .2s; }
   .nm-socials a:hover { color: var(--bleu); }
 
+  /* ============ REFONTE : ACCUEIL PLUS ATTRACTIF ============ */
+  section[id] { scroll-margin-top: 72px; }
+
+  /* boutons plus lisibles */
+  .btn-jaune, .btn-outline-blanc, .btn-rouge, .btn-outline-bleu, .btn-helloasso, .btn-blanc { font-size: .72rem; letter-spacing: .12em; padding: 15px 30px; border-radius: 8px; font-weight: 700; }
+  .hero-cta { font-size: .7rem; padding: 15px; border-radius: 8px; }
+  .hero-card { border-radius: 14px; }
+
+  /* hero */
+  .hero-checks { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 24px; }
+  .hero-checks li { font-size: .88rem; color: rgba(255,255,255,.92); display: flex; align-items: center; gap: 8px; }
+  .hero-checks li::before { content: '✓'; color: var(--jaune); font-weight: 900; }
+  .hero-stats { margin-top: 36px; padding-top: 26px; }
+
+  /* facettes */
+  #facettes { background: var(--blanc); padding-bottom: 36px; }
+  .facet-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+  .facet { background: var(--gris-fond); border: 1px solid var(--bleu-mid); border-radius: 14px; padding: 34px 30px; transition: all .25s; }
+  .facet:hover { transform: translateY(-5px); box-shadow: 0 14px 34px rgba(27,58,140,.12); border-color: var(--bleu-clair); }
+  .facet h3 { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1.3rem; font-weight: 900; color: var(--bleu); margin-bottom: 10px; text-transform: uppercase; letter-spacing: .02em; }
+  .facet p { font-size: .98rem; color: var(--texte-mid); line-height: 1.65; }
+  /* carte avec photo de fond (self-défense) */
+  .facet-photo { position: relative; border-color: transparent; background-color: #0f2260; background-image: linear-gradient(90deg, rgba(14,30,84,.96) 0%, rgba(14,30,84,.88) 40%, rgba(14,30,84,.18) 100%), url('photo-self-defense-femme.jpg'); background-size: cover, 130% auto; background-position: center, 0% 16%; background-repeat: no-repeat; }
+  .facet-photo-2 { background-image: linear-gradient(90deg, rgba(14,30,84,.96) 0%, rgba(14,30,84,.88) 40%, rgba(14,30,84,.22) 100%), url('photo-techniques-martiales.jpg'); background-size: cover, 120% auto; background-position: center, 0% 65%; }
+  .facet-photo-3 { background-image: linear-gradient(90deg, rgba(14,30,84,.96) 0%, rgba(14,30,84,.88) 40%, rgba(14,30,84,.22) 100%), url('photo-sport-combat.jpg'); background-size: cover, 130% auto; background-position: center, 24% 38%; }
+  .facet-photo-3 p { max-width: 70%; }
+  .facet-more { margin-top: 36px; text-align: center; }
+  .facet-photo:hover { border-color: var(--jaune); }
+  .facet-photo h3 { color: var(--blanc); }
+  .facet-photo p { color: rgba(255,255,255,.93); max-width: 78%; }
+
+  /* pour qui ? */
+  #public { background: var(--gris-fond); }
+  .public-intro { font-size: 1.05rem; color: var(--texte-mid); max-width: 720px; margin-top: 8px; }
+  .public-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-top: 40px; }
+  .public-card { background: var(--blanc); border: 1px solid var(--bleu-mid); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; transition: all .25s; }
+  .public-card:hover { transform: translateY(-5px); box-shadow: 0 16px 38px rgba(27,58,140,.14); }
+  .public-card img { width: 100%; aspect-ratio: 16/10; object-fit: cover; object-position: center 30%; display: block; }
+  .public-body { padding: 28px 30px 32px; display: flex; flex-direction: column; flex: 1; }
+  .public-age { align-self: flex-start; font-family: 'Be Vietnam Pro', sans-serif; font-size: .62rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: var(--blanc); background: var(--rouge); padding: 5px 12px; border-radius: 999px; margin-bottom: 14px; }
+  .public-body h3 { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1.7rem; font-weight: 900; color: var(--bleu); line-height: 1.1; margin-bottom: 6px; text-transform: uppercase; }
+  .public-tags { font-size: .86rem; font-weight: 700; color: var(--rouge); letter-spacing: .04em; margin-bottom: 12px; }
+  .public-body > p:not(.public-tags):not(.public-slot) { color: var(--texte-mid); font-size: .98rem; line-height: 1.65; flex: 1; }
+  .public-slot { display: flex; align-items: center; gap: 9px; margin: 18px 0 20px; padding: 12px 14px; background: var(--bleu-pale); border-radius: 10px; font-size: .92rem; color: var(--bleu); }
+  .public-slot svg { flex-shrink: 0; }
+  .public-born { font-size: .84rem; color: var(--texte-muted); font-style: italic; margin: -2px 0 10px; }
+  .public-info { list-style: none; display: grid; gap: 9px; margin: 0 0 22px; }
+  .public-info li { display: flex; align-items: flex-start; gap: 9px; font-size: .9rem; color: var(--texte-mid); line-height: 1.45; }
+  .public-info svg { flex-shrink: 0; margin-top: 3px; color: var(--rouge); }
+  .public-info strong { color: var(--bleu); }
+  .public-notes { margin-top: 28px; max-width: 900px; }
+  .public-notes p { font-size: .86rem; font-style: italic; color: var(--texte-muted); line-height: 1.6; margin-bottom: 4px; }
+  .public-body .btn-rouge { align-self: flex-start; }
+
+  /* pourquoi le vovinam */
+  #pourquoi { background: linear-gradient(135deg, #0f2260 0%, var(--bleu) 55%, #2a4fa8 100%); }
+  #pourquoi .sec-label { color: var(--jaune); }
+  #pourquoi .sec-label::before { background: var(--jaune); }
+  #pourquoi .sec-title { color: var(--blanc); }
+  .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 40px; }
+  .why-card { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18); border-radius: 14px; padding: 30px 26px; backdrop-filter: blur(6px); transition: all .25s; }
+  .why-card:hover { background: rgba(255,255,255,.14); transform: translateY(-4px); }
+  .why-num { font-family: 'Be Vietnam Pro', sans-serif; font-size: 2.6rem; font-weight: 900; color: var(--jaune); line-height: 1; display: block; margin-bottom: 14px; }
+  .why-card h3 { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--blanc); margin-bottom: 8px; text-transform: uppercase; }
+  .why-card p { font-size: .95rem; color: rgba(255,255,255,.82); line-height: 1.6; }
+  .why-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 44px; }
+
+  /* barre d'actions mobile */
+  .mbar { display: none; }
+
+  /* navigation : largeurs intermédiaires (petits portables, tablettes) */
+  .nav-links a { white-space: nowrap; }
+  @media(max-width:1250px){
+    nav { padding: 12px 28px; }
+    .nav-links { gap: 16px; }
+    .nav-logo-text strong { font-size: 1rem; }
+    .nav-logo-text span { font-size: .66rem; }
+    .nav-cta { padding: 9px 14px; }
+  }
+  @media(min-width:901px) and (max-width:1060px){
+    .nav-links { gap: 11px; }
+    .nav-links a { font-size: .52rem; letter-spacing: .1em; }
+    .nav-logo-text span { display: none; }
+  }
+
   /* MOBILE */
   @media(max-width:900px){
     nav{padding:11px 18px;}
@@ -431,13 +532,13 @@
     .hero-right{display:none;}
     .sec{padding:60px 22px;}
     #vovinam,#philosophie,#contact{grid-template-columns:1fr;gap:36px;padding:60px 22px;}
-    #piliers,#galerie,#horaires,#tarifs{padding:60px 22px;}
+    #piliers,#galerie,#tarifs{padding:60px 22px;}
     .tar-cta-title{font-size:1rem !important;}
     .nav-logo-text strong{font-size:.85rem;}
     .nav-logo-text span{white-space:nowrap;font-size:.6rem;}
     .tar-price{font-size:2.6rem;}
     .tar-card{padding:24px 20px;}
-    .pillars,.hor-grid,.tar-grid{grid-template-columns:1fr;}
+    .pillars,.tar-grid{grid-template-columns:1fr;}
     .pillars{gap:20px;}
     .pillar{padding:28px 24px;}
     .gal-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto;}
@@ -452,9 +553,38 @@
     .tar-bottom-left,.tar-bottom-right{padding:22px 20px;}
     #professeur{grid-template-columns:1fr;gap:36px;padding:60px 22px;}
     .actu-grid{grid-template-columns:1fr;}
-    .hor-public{font-size:1.3rem;white-space:nowrap;}
     .cal-card{flex-direction:column;text-align:center;padding:28px 22px;}
     .cal-card-btn{width:100%;justify-content:center;}
+    body{padding-bottom:70px;}
+    .mbar{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:98;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-top:2px solid var(--bleu-mid);box-shadow:0 -6px 24px rgba(27,58,140,.12);}
+    .mbar a{display:flex;align-items:center;justify-content:center;gap:8px;border-radius:10px;font-family:'Be Vietnam Pro',sans-serif;font-weight:700;text-decoration:none;font-size:.8rem;padding:13px 10px;}
+    .mbar-call{flex:0 0 34%;color:var(--bleu);border:2px solid var(--bleu-mid);background:var(--blanc);}
+    .mbar-cta{flex:1;color:var(--blanc);background:var(--rouge);}
+    .hero-desc{max-width:none;font-size:1rem;}
+    .hero h1 .h1-top{font-size:min(1.7rem,calc((100vw - 44px) / 15.6));}
+    .hero-checks{gap:6px 18px;}
+    .hero-stats{gap:22px;flex-wrap:wrap;}
+    .facet-grid,.public-grid{grid-template-columns:1fr;}
+    .facet-more .btn-rouge{display:block;text-align:center;}
+    #calendrier{background-image:none;}
+    .tchl{grid-template-columns:1fr;gap:24px;margin-top:44px;padding-top:36px;position:relative;}
+    .tchl::before{content:'';position:absolute;inset:0;background:url('logo-tchl-france.png') no-repeat center 24px / 92% auto;opacity:.13;pointer-events:none;z-index:0;}
+    .tchl-body{position:relative;z-index:1;}
+    .tchl-dates{grid-template-columns:1fr;}
+    .tchl-logo{display:none;}
+    .br-mobile{display:inline;}
+    .tchl-date .btn-helloasso{width:100%;justify-content:center;}
+    #calendrier::before{content:'';position:absolute;inset:0;background:url('logo-amv-ffk.jpg') no-repeat center 50px / 100% auto;opacity:.14;pointer-events:none;z-index:0;}
+    .facet-photo-2{background-size:cover,auto 150%;background-position:center,60% 72%;}
+    .facet-photo-3{background-size:cover,auto 125%;background-position:center,62% 18%;}
+    .facet-photo-3 p{max-width:66%;}
+    .why-grid{grid-template-columns:1fr 1fr;gap:14px;}
+    .why-card{padding:22px 18px;}
+    .why-num{font-size:2rem;}
+    .why-cta .btn-jaune,.why-cta .btn-outline-blanc{width:100%;text-align:center;}
+    .public-body{padding:22px 22px 26px;}
+    .public-body .btn-rouge{align-self:stretch;text-align:center;}
+    #facettes,#public,#pourquoi{padding:60px 22px;}
   }
 </style>
 </head>
@@ -470,9 +600,9 @@
     </div>
   </a>
   <ul class="nav-links">
-    <li><a href="#vovinam">Le Vovinam</a></li>
-    <li><a href="#horaires">Horaires&Tarifs</a></li>
-    <li><a href="#professeur">Le Professeur</a></li>
+    <li><a href="#facettes">Le Vovinam</a></li>
+    <li><a href="#public">Horaires</a></li>
+    <li><a href="#tarifs">Tarifs</a></li>
     <li><a href="#galerie">Galerie</a></li>
     <li><a href="#actualites">Actualités</a></li>
     <li><a href="#calendrier">Calendrier</a></li>
@@ -495,9 +625,9 @@
 </nav>
 <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
   <ul>
-    <li><a href="#vovinam">Le Vovinam</a></li>
-    <li><a href="#horaires">Horaires & Tarifs</a></li>
-    <li><a href="#professeur">Le Professeur</a></li>
+    <li><a href="#facettes">Le Vovinam</a></li>
+    <li><a href="#public">Horaires</a></li>
+    <li><a href="#tarifs">Tarifs</a></li>
     <li><a href="#galerie">Galerie</a></li>
     <li><a href="#actualites">Actualités</a></li>
     <li><a href="#calendrier">Calendrier</a></li>
@@ -518,15 +648,20 @@
 <!-- HERO -->
 <section class="hero" id="accueil">
   <div class="hero-left">
-    <p class="hero-eyebrow anim">Association sportive — Loi 1901</p>
-    <h1 class="anim">VDST<em>PORT-MARLY</em><span class="sub">Vovinam Việt Võ Đạo</span></h1>
-    <p class="hero-desc anim">Un art martial vietnamien complet !<br>Des techniques de self-défense, des frappes pieds-poings, des projections, des chutes, de la lutte, du maniement d'armes (couteau, épée, bâton…), des enchaînements seul et à plusieurs.<br>Pour tous niveaux, à partir de 7 ans.<br>Viens essayer !</p>
+    <p class="hero-eyebrow anim">VDST Port-Marly — Association sportive Loi 1901</p>
+    <h1 class="anim"><span class="h1-top">LE VOVINAM – VIỆT VÕ ĐẠO</span><em>À PORT-MARLY</em></h1>
+    <p class="hero-desc anim">L'art martial vietnamien complet&nbsp;: apprenez à vous défendre, canalisez votre énergie et progressez à votre rythme. Self&#8209;défense, frappes pieds&#8209;poings, projections, lutte, armes traditionnelles… pour les enfants dès 7&nbsp;ans, les ados et les adultes, tous niveaux.</p>
     <div class="hero-actions anim">
       <a href="#contact" class="btn-jaune">Séance d'essai gratuite</a>
       <a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener" class="btn-outline-blanc">Devenir membre</a>
     </div>
+    <ul class="hero-checks anim">
+      <li>Aucun équipement requis</li>
+      <li>Professeur diplômé d'État (DEJEPS), 5e Dang</li>
+      <li>Licence et assurance incluses</li>
+      <li>Au complexe sportif d'Artagnan</li>
+    </ul>
     <div class="hero-stats anim">
-      <div><span class="hero-stat-num">7+</span><span class="hero-stat-label">Ans pour débuter</span></div>
       <div><span class="hero-stat-num">2026-27</span><span class="hero-stat-label">Saison en cours</span></div>
     </div>
   </div>
@@ -544,6 +679,183 @@
   </div>
 </section>
 
+<!-- FACETTES -->
+<section id="facettes" class="sec">
+  <div class="sec-label">Le Vovinam, c'est…</div>
+  <h2 class="sec-title">UN ART MARTIAL VIETNAMIEN<br>COMPLET ET IMPRESSIONNANT</h2>
+  <div class="facet-grid">
+    <div class="facet facet-photo">
+      <h3>Self-défense</h3>
+      <p>Apprenez à vous défendre face à une agression : vous dégager d'une saisie ou d'un étranglement, garder votre sang-froid et riposter grâce à des réflexes simples.</p>
+    </div>
+    <div class="facet facet-photo facet-photo-2">
+      <h3>Techniques martiales</h3>
+      <p>Frappes (poings, pieds, coudes, tranchants de main…), positions, blocages, enchaînements codifiés, armes traditionnelles et philosophie : un art qui forge le corps et l'esprit.</p>
+    </div>
+    <div class="facet facet-photo facet-photo-3">
+      <h3>Sport de combat</h3>
+      <p>Combat pieds-poings avec casque et gants, balayages, projections, ciseaux, ou lutte vietnamienne. De quoi plaire à tous, jusqu’à la compétition si on le souhaite.</p>
+    </div>
+  </div>
+  <div class="facet-more">
+    <!-- À remplacer plus tard par le lien de la page « Ce que vous apprendrez » -->
+    <a href="#piliers" class="btn-rouge">Découvrir tout ce que vous apprendrez</a>
+  </div>
+</section>
+
+<!-- PRÉSENTATION -->
+<section id="vovinam" class="sec">
+  <div class="vovinam-imgs">
+    <div class="img-duo">
+      <figure class="hist-portrait">
+        <img src="Sang%20To%20Nguyen%20Loc%203%3A4%20copie.jpg" alt="Nguyễn Lộc, Maître Fondateur du Vovinam">
+        <figcaption>Nguyễn Lộc<span>Maître Fondateur</span></figcaption>
+      </figure>
+      <figure class="hist-portrait">
+        <img src="VSCM%20Le%20Sang%203%3A4%20copie.jpg" alt="Lê Sáng, Maître Patriarche du Vovinam">
+        <figcaption>Lê Sáng<span>Maître Patriarche</span></figcaption>
+      </figure>
+    </div>
+    <div style="position:relative;aspect-ratio:16/10;border-radius:4px;overflow:hidden;">
+      <img src="photo-principale.jpg" alt="Vovinam Port-Marly — ciseaux volants" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <div class="hist-caption">Đòn chân tấn công số 7<span>Technique de jambe n°&nbsp;7</span></div>
+      <div class="logo-badge"><img src="logo-vdst.png" alt="Logo"></div>
+    </div>
+  </div>
+  <div>
+    <div class="sec-label">L'histoire…</div>
+    <h2 class="sec-title">QUI A CRÉÉ<br>LE VOVINAM&nbsp;?</h2>
+    <p style="color:var(--texte-mid);margin-bottom:16px;font-size:1.02rem;">Le Vovinam Việt Võ Đạo est un art martial vietnamien fondé en 1938 par le Maître Fondateur Nguyễn Lộc. Il est une synthèse des arts martiaux traditionnels et millénaires du Vietnam.</p>
+    <p style="color:var(--texte-mid);margin-bottom:16px;font-size:1.02rem;">Le Vovinam est un art martial très complet qui comprend notamment des techniques de percussion (coups de pieds, coups de poings, coups de coude, coups de genoux, tranchants de la main...). </p>
+    <p style="color:var(--texte-mid);margin-bottom:16px;font-size:1.02rem;">Le Vovinam c'est aussi des techniques de self-défense (se défendre contre un étranglement, une saisie au corps, une saisie des poignets...), des projections (qui peuvent faire penser au Judo), de lutte vietnamienne, de clés articulaires (de bras de jambes) ou encore de ciseaux (coups de pieds sautés ou saisies au corps et à la tête avec les jambes).</p>
+    <p style="color:var(--texte-mid);margin-bottom:16px;font-size:1.02rem;">Nous pratiquons également des armes courantes comme le couteau poignard (đao găm) ou le pistolet (súng ngắn) et des armes traditionnelles comme l'épée (kiếm), le sabre large (Đao), le bâton long (Côn), la hallebarde (Đại Đao), la règle en bois (tay thước) ou l'éventail(Quật)...</p>
+    <p style="color:var(--texte-mid);margin-bottom:24px;font-size:1.02rem;">Le Vovinam Việt Võ Đạo est aussi un sport avec ses compétitions techniques et combat nationales et internationales. Les combats sont réglementés et autorisent notamment les pieds-poings, les balayages, les projections et les ciseaux. Le club participe aux compétitions Vovinam et AMV de la fédération de karaté (FFK) qui est la fédération délégataire.</p>
+    <div style="display:flex;gap:13px;flex-wrap:wrap;">
+      <a href="histoirevovinam.html" class="btn-rouge">L'histoire du Vovinam</a>
+      <a href="grades.html" class="btn-outline-bleu">Le système de grade →</a>
+    </div>
+    <div style="margin-top:13px;">
+      <a href="professeur.html" class="btn-bleu">Notre professeur Thầy Grégory</a>
+    </div>
+  </div>
+</section>
+
+<!-- PILIERS -->
+<section id="piliers" class="sec">
+  <div class="piliers-top">
+    <div>
+      <div class="sec-label">Techniques</div>
+      <h2 class="sec-title">CE QUE<br>VOUS APPRENDREZ</h2>
+    </div>
+    <p class="piliers-intro">Techniques de base, enchaînements codifiés, combat, lutte, renforcement, étirements, acrobaties et une philosophie.<br>Le Vovinam Việt Võ Đạo forme le corps autant qu'il forge l'esprit, à travers des valeurs morales transmises dès les premiers cours.</p>
+  </div>
+  <div class="pillars">
+    <div class="pillar"><div class="pillar-name">Les bases<br>(Đòn căn bản)</div><p class="pillar-desc">Elles constituent le fondement technique de l’art.<br><br>Elles regroupent les frappes de poing (direct, crochet, javelot, montant), les tranchants de main, les coups de pied (direct, giflé, latéral, écrasé), les coups de coude et de genou, chacun décliné en plusieurs variantes numérotées.<br><br>À cela s’ajoutent de nombreuses positions, de la position centrale (Trung bình tấn) à la position du serpent (Xà tấn) ou de la grue (Hạc tấn).<br><br>Travaillées seul ou face à un partenaire, elles sont répétées méthodiquement jusqu’à l’automatisme.</p>
+    </div>
+    <div class="pillar"><div class="pillar-name">Les techniques de bases<br>(Thế căn bản)</div><p class="pillar-desc">Elles couvrent 3 domaines : mains nues, défense contre armes et maniement d'armes.<br><br>• Mains nues : self-défense, clés de bras, ciseaux, contre-attaques et lutte.<br>• Face à une arme : le pratiquant apprend à se défendre contre un couteau, une hache, une machette ou un fusil baïonnette.<br>• Avec une arme : épée, bâton, règle ou éventail.<br><br>Plus de 300 techniques au total, travaillées seul ou à deux jusqu'à la maîtrise complète.</p></div>
+    <div class="pillar"><div class="pillar-name">Les formes seul<br>(Đòn Luyện)</div><p class="pillar-desc">Les formes seules (Đòn Luyện) : 12 formes à mains nues, 4 formes de souplesse et respiration et 12 formes aux armes.<br><br>Chaque enchaînement codifié permet de fixer les techniques en mémoire et de perfectionner ses mouvements.</p></div>
+    <div class="pillar"><div class="pillar-name">Les formes à deux<br>(Song Luyện)</div><p class="pillar-desc">Les formes à deux (Song Luyện) mettent ces mêmes techniques en situation réelle face à un partenaire : 4 enchaînements à mains nues, 3 sans chutes (Đối Luyện), 3 de lutte vietnamienne et 5 aux armes (dao, kiếm, côn, búa, mã tấu).</p></div>
+    <div class="pillar"><div class="pillar-name">Combat Pied-Poing<br>(Đối kháng)</div><p class="pillar-desc">Le combat pied-poing se pratique en contact contrôlé (les frappes doivent être maîtrisées) et avec des protections (casque, protège-tibias, protège-pieds, coquille, gants de boxe...).<br><br>Les techniques autorisées incluent coups de pied, coups de poing, balayages, projections et ciseaux, les coups de coude et de genou au corps étant réservés aux seniors.<br><br>À l'entraînement, paos, raquettes et pattes d'ours sont très utilisés en complément des assauts libres.</p></div>
+    <div class="pillar"><div class="pillar-name">Lutte Vietnamienne<br>(Vật)</div><p class="pillar-desc">La lutte vietnamienne (Thế Vật) est une discipline à part entière, enracinée dans la tradition populaire vietnamienne.<br><br>Pour l'emporter, il faut projeter l'adversaire et lui faire toucher le dos au sol (dos à terre, ventre au ciel).<br><br>Au Vovinam, elle se pratique à travers des techniques codifiées de saisie, projection, clés et mise au sol. Travaillées d'abord en enchaînements progressifs, elles s'appliquent ensuite en situation libre.</p></div>
+    <div class="pillar"><div class="pillar-name">Force physique<br>(Thành Lực)</div><p class="pillar-desc">La pratique du Vovinam exige un corps solide et mobile.<br>Chaque séance intègre du renforcement musculaire global et des assouplissements de tous les groupes musculaires (deux piliers indissociables pour exécuter les techniques avec puissance et précision).<br><br>Les chutes et roulades sont enseignées dès les premiers cours. Appréhender le sol et tomber sans se blesser sont des compétences fondamentales, autant que frapper ou esquiver.<br>Les projections et acrobaties complètent la préparation physique : sauts, sauts de mains... des mouvements qui demandent coordination, explosivité et engagement total. Ces éléments se construisent progressivement à l'entraînement, en fonction du niveau de chaque pratiquant.</p></div>
+    <div class="pillar"><div class="pillar-name">Théorie / Philosophie<br>(Võ Đạo)</div><p class="pillar-desc">Le Võ Đạo (littéralement "la voie martiale") est la dimension philosophique du Vovinam. Ce n'est pas un simple code de conduite affiché sur un mur : c'est un enseignement transmis progressivement, grade après grade, tout au long du parcours du pratiquant.<br><br>On y aborde la conception des arts martiaux, les valeurs du pratiquant, les relations avec soi-même, la famille, l'école martiale et les autres.<br><br>Plus loin dans le parcours, le pratiquant explore la vision de l'être humain selon le Vovinam, la place des arts martiaux vietnamiens dans l'histoire mondiale, et l'idéal du "combattant humaniste" que le fondateur Nguyễn Lộc a voulu construire.<br><br>Le Võ Đạo ne s'apprend pas en un cours. Il se construit dans la durée, par la pratique, la réflexion et le respect des principes transmis par les maîtres qui ont précédé.</p></div>
+  </div>
+</section>
+
+<!-- GALERIE -->
+<section id="galerie" class="sec">
+  <div class="sec-label">Photos & vidéos</div>
+  <h2 class="sec-title">LE VOVINAM VIỆT VÕ ĐẠO<br>EN IMAGES</h2>
+  <div class="gal-grid">
+
+    <!-- Grande cellule gauche — 2 lignes -->
+    <div class="gal-cell" style="background:#000;">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/HlyY7O6SBMw?si=ps6-9QEB5p08_m6G" title="Vovinam Port-Marly" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:block;"></iframe>
+    </div>
+
+    <!-- Cellule haut droite 1 -->
+    <div class="gal-cell" style="background:#000;">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZVH49dKJ1uw?si=JSI1pj2sTjzLs60L" title="Vovinam Port-Marly — Cours adultes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:block;"></iframe>
+    </div>
+
+    <!-- Cellule haut droite 2 -->
+    <div class="gal-cell" style="background:#000;">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/k2idDlTaEek?si=giCdtlbSMShDGrme" title="Vovinam Port-Marly — Cours enfants" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:block;"></iframe>
+    </div>
+
+    <!-- Cellule bas droite 1 -->
+    <div class="gal-cell" style="background:#000;">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/QGjnpeMUFz0?si=n1HX7_HPY_E3hnQB" title="Vovinam Port-Marly — Ciseaux volants" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:block;"></iframe>
+    </div>
+
+    <!-- Cellule bas droite 2 -->
+    <div class="gal-cell" style="background:#000;">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/PINP5xlCAF0?si=cWgGzHc1uBHmUuJP" title="Vovinam Port-Marly — Stage national" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:block;"></iframe>
+    </div>
+
+  </div>
+</section>
+<!-- PUBLIC -->
+<section id="public" class="sec">
+  <div class="sec-label">Pour qui ?</div>
+  <h2 class="sec-title">UN COURS<br>POUR CHACUN</h2>
+  <p class="public-intro">Débutant ou confirmé, petit ou grand : le Vovinam est un art martial pour tous les âges. Chacun progresse à son rythme, dans un cadre bienveillant et exigeant.</p>
+  <div class="public-grid">
+    <article class="public-card">
+      <img src="photo-enfants.jpg" alt="Deux enfants en combat de Vovinam, avec casques et protections" loading="lazy">
+      <div class="public-body">
+        <span class="public-age">7 à 10 ans</span>
+        <h3>Enfants</h3>
+        <p class="public-born">Nés en 2016, 2017, 2018 et 2019</p>
+        <p class="public-tags">Motricité · Discipline · Confiance</p>
+        <p>Développer la coordination, le respect et la confiance en soi, dans une ambiance ludique et structurée.</p>
+        <p class="public-slot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><strong>Mardi et Vendredi</strong> · 17h00 – 18h00**</span></p>
+        <ul class="public-info">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span><strong>Début des cours</strong> : Mardi 8 septembre 2026</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Complexe sportif d'Artagnan, dojo (salle Athos)</span></li>
+        </ul>
+        <a href="#contact" class="btn-rouge">Essayer gratuitement</a>
+      </div>
+    </article>
+    <article class="public-card">
+      <img src="photo-adultes.jpg" alt="Deux pratiquants de Vovinam en travail au bâton" loading="lazy">
+      <div class="public-body">
+        <span class="public-age">À partir de 11 ans</span>
+        <h3>Ados et Adultes</h3>
+        <p class="public-born">Nés en 2015 et avant</p>
+        <p class="public-tags">Énergie · Technique · Progression</p>
+        <p>Se dépenser, se dépasser et progresser techniquement, jusqu'à la compétition si l'on le souhaite.</p>
+        <p class="public-slot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><strong>Vendredi</strong> · 18h00 – 19h00</span></p>
+        <ul class="public-info">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span><strong>Début des cours</strong> : Vendredi 11 septembre 2026</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Complexe sportif d'Artagnan, dojo (salle Athos)</span></li>
+        </ul>
+        <a href="#contact" class="btn-rouge">Essayer gratuitement</a>
+      </div>
+    </article>
+  </div>
+  <div class="public-notes">
+    <p>* Pas de cours pendant les vacances scolaires.</p>
+    <p>** Pour les enfants de 7 à 10 ans, ils peuvent être amenés par les animateurs du périscolaire après l'école. Nous contacter pour remplir l'autorisation parentale de sortie.</p>
+  </div>
+</section>
+
+<!-- POURQUOI -->
+<section id="pourquoi" class="sec">
+  <div class="sec-label">Pourquoi le Vovinam ?</div>
+  <h2 class="sec-title">UN ART MARTIAL<br>QUI COUVRE TOUT</h2>
+  <div class="why-grid">
+    <div class="why-card"><span class="why-num">01</span><h3>Complet</h3><p>Frappes, projections, lutte, clés, armes, self-défense : on ne tourne jamais en rond, il y a toujours quelque chose à apprendre.</p></div>
+    <div class="why-card"><span class="why-num">02</span><h3>Accessible</h3><p>Chacun progresse à son rythme, quels que soient son âge et sa condition physique de départ.</p></div>
+    <div class="why-card"><span class="why-num">03</span><h3>Convivial</h3><p>Un club à taille humaine, un professeur à l'écoute et des cours proches de chez vous, au Port-Marly.</p></div>
+    <div class="why-card"><span class="why-num">04</span><h3>Sans risque</h3><p>La première séance est offerte et sans engagement : venez sentir l'ambiance avant de vous décider.</p></div>
+  </div>
+  <div class="why-cta">
+    <a href="#contact" class="btn-jaune">Réserver ma séance d'essai gratuite</a>
+    <a href="#public" class="btn-outline-blanc">Voir les horaires</a>
+  </div>
+</section>
+
 <!-- PROFESSEUR -->
 <section id="professeur" class="sec">
   <div class="prof-photo">
@@ -554,7 +866,7 @@
   <div class="prof-text">
     <div class="sec-label">Le Professeur</div>
     <h2 class="prof-name">Thầy Grégory</h2>
-    <div class="prof-grade">Hồng Đai Đệ Nhất Cấp — 5e Đẳng / 5e Dan d'état</div>
+    <div class="prof-grade">Hồng Đai Đệ Nhất Cấp — 5e Đẳng / 5e Dang d'état</div>
     <p class="prof-diplome">DEJEPS Karaté et disciplines associées - BEES 1er Degré option métier de la forme</p>
     <p class="prof-bio">Grégory débute le Vovinam en 1995 à Emerainville sous la direction de Võ Sư Albert Gouillon (6e Đẳng), assisté de Frédéric Frah.<br>Au départ en retraite de Võ Sư Albert en 2000, c'est Farid Aounallah qui reprend le club, Grégory devient alors son assistant.<br>Il se rend plusieurs fois au Vietnam pour se former auprès de Võ Sư Nguyen Van Sen (9e Đẳng).<br>En 2007, il fonde l'association IVVP à Paris, qu'il ferme en juin 2020.<br>Depuis 2018, il est un membre actif du <a href="https://vovinam-france.org" target="_blank" rel="noopener">TCHL France</a>, dont il est l'un des membres fondateurs, et occupe actuellement le poste de secrétaire général élu au bureau.<br>En 2026, il ouvre le club VDST Port-Marly pour transmettre le Vovinam tel qu'il lui a été enseigné.<br>Coach sportif de profession, il s'appuie sur ses connaissances en anatomie, biomécanique et pédagogie pour offrir un enseignement de qualité.</p>
     <blockquote class="prof-vision">«&nbsp;30 ans de pratique m'ont appris une chose : la technique sans les valeurs ne tient pas. Mon objectif est que chaque élève, petit ou grand, progresse à son rythme, prenne confiance en lui et reparte avec les deux. Le Vovinam m'a énormément apporté. Je prends soin de le transmettre avec la même exigence et le même respect.&nbsp;»</blockquote>
@@ -644,108 +956,78 @@
         <ul class="prof-dip-list">
           <li><span class="prof-dip-year">2002</span>Attestation de formation aux premiers secours</li>
           <li><span class="prof-dip-year">2003</span>Attestation de formation complémentaire aux premiers secours</li>
-          <li><span class="prof-dip-year">2003</span>1er Dan d'état</li>
-          <li><span class="prof-dip-year">2005</span>2e Dan d'état</li>
+          <li><span class="prof-dip-year">2003</span>1er Dang d'état</li>
+          <li><span class="prof-dip-year">2005</span>2e Dang d'état</li>
           <li><span class="prof-dip-year">2005</span>BEES 1er degré — Métiers de la forme</li>
           <li><span class="prof-dip-year">2006</span>Diplôme d'instructeur fédéral FFKAMA</li>
           <li><span class="prof-dip-year">2007</span>BEES 1er degré — Karaté et affinitaires</li>
-          <li><span class="prof-dip-year">2010</span>3e Dan d'état</li>
+          <li><span class="prof-dip-year">2010</span>3e Dang d'état</li>
           <li><span class="prof-dip-year">2013</span>DEJEPS Karaté et disciplines associées</li>
-          <li><span class="prof-dip-year">2017</span>4e Dan d'état AMV</li>
+          <li><span class="prof-dip-year">2017</span>4e Dang d'état AMV</li>
           <li><span class="prof-dip-year">2025</span>Hồng Đai Đệ Nhất Cấp (5e Đẳng) — HĐVSCQMP</li>
-          <li><span class="prof-dip-year">2026</span>5e Dan d'état AMV</li>
+          <li><span class="prof-dip-year">2026</span>5e Dang d'état AMV</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PRÉSENTATION -->
-<section id="vovinam" class="sec">
-  <div class="vovinam-imgs">
-    <div style="position:relative;aspect-ratio:4/3;border-radius:4px;overflow:hidden;">
-      <img src="photo-principale.jpg" alt="Vovinam Port-Marly — ciseaux volants" style="width:100%;height:100%;object-fit:cover;display:block;">
-      <div class="logo-badge"><img src="logo-vdst.png" alt="Logo"></div>
-    </div>
-    <div class="img-duo">
-      <div style="aspect-ratio:1;border-radius:3px;overflow:hidden;">
-        <img src="photo-adultes.jpg" alt="Cours adultes — bâton" style="width:100%;height:100%;object-fit:cover;display:block;">
+<!-- TARIFS -->
+<section id="tarifs" class="sec">
+  <div class="sec-label">Inscription</div>
+  <h2 class="sec-title">TARIFS<br>Saison 2026-2027</h2>
+  <div class="public-grid tarif-grid">
+    <article class="public-card tarif-card">
+      <img src="Groupe%20enfant.jpg" alt="Groupe d'enfants pratiquant le Vovinam" loading="lazy">
+      <div class="public-body">
+        <span class="public-age">7 à 10 ans</span>
+        <h3>Enfants</h3>
+        <p class="tarif-price"><span class="tarif-num">300 €</span><span class="tarif-per">/ saison</span></p>
+        <p class="public-born">Soit 30 € par mois</p>
+        <ul class="public-info tarif-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>2 cours par semaine</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Licence fédérale incluse (40 €)</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Assurance incluse</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Réduction si plusieurs de la même famille (nous contacter)</span></li>
+        </ul>
       </div>
-      <div style="aspect-ratio:1;border-radius:3px;overflow:hidden;">
-        <img src="photo-enfants.jpg" alt="Cours enfants — combat" style="width:100%;height:100%;object-fit:cover;display:block;">
+    </article>
+    <article class="public-card tarif-card">
+      <img src="photo-tarif-adultes.jpg" alt="Groupe d'adultes pratiquant le Vovinam" loading="lazy">
+      <div class="public-body">
+        <span class="public-age">À partir de 11 ans</span>
+        <h3>Ados et Adultes</h3>
+        <p class="tarif-price"><span class="tarif-num">170 €</span><span class="tarif-per">/ saison</span></p>
+        <p class="public-born">Soit 17 € par mois</p>
+        <ul class="public-info tarif-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>1 cours par semaine</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Licence fédérale incluse (40 €)</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Assurance incluse</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Réduction si plusieurs de la même famille (nous contacter)</span></li>
+        </ul>
+      </div>
+    </article>
+    <div class="tar-card tar-bottom">
+      <!-- Colonne gauche : Réduction familiale -->
+      <div class="tar-bottom-left">
+        <div class="tar-cat" style="font-size:1.1rem;font-weight:900;">Réduction familiale</div>
+        <hr class="tar-div" style="margin:10px 0 14px;">
+        <p style="font-size:.95rem;color:var(--texte-mid);margin-bottom:8px;">−30 € sur la cotisation de chaque membre supplémentaire du même foyer fiscal.</p>
+        <p style="font-size:.9rem;color:var(--texte-muted);font-style:italic;">Ex : 1 enfant (300 €) + 1 ado (170 €) = 470 € – 30 € = 440 €</p>
+      </div>
+      <!-- Séparateur vertical -->
+      <div class="tar-bottom-sep"></div>
+      <!-- Colonne droite : Prêt à vous inscrire -->
+      <div class="tar-bottom-right">
+        <p class="tar-cta-title" style="font-family:'Be Vietnam Pro',sans-serif;font-size:1.3rem;letter-spacing:.02em;color:var(--bleu);line-height:1;margin-bottom:8px;font-weight:900;text-transform:uppercase;">Prêt à vous inscrire ?</p>
+        <p style="font-size:.95rem;color:var(--texte-mid);font-style:italic;margin-bottom:20px;">Adhésion en ligne rapide et sécurisée via HelloAsso — paiement par carte.</p>
+        <a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener" class="btn-helloasso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:14px;height:14px;"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Devenir membre sur HelloAsso</a>
       </div>
     </div>
   </div>
-  <div>
-    <div class="sec-label">Le Vovinam Việt Võ Đạo</div>
-    <h2 class="sec-title">UN ART MARTIAL<br>COMPLET</h2>
-    <p style="color:var(--texte-mid);margin-bottom:16px;font-size:1.02rem;">Le Vovinam Việt Võ Đạo est un art martial vietnamien fondé en 1938 par le Maître Fondateur Nguyễn Lộc. Il est une synthèse des arts martiaux traditionnels et millénaires du Vietnam.</p>
-    <p style="color:var(--texte-mid);margin-bottom:16px;font-size:1.02rem;">Le Vovinam est un art martial très complet qui comprend notamment des techniques de percussion (coups de pieds, coups de poings, coups de coude, coups de genoux, tranchants de la main...). </p>
-    <p style="color:var(--texte-mid);margin-bottom:16px;font-size:1.02rem;">Le Vovinam c'est aussi des techniques de self-défense (se défendre contre un étranglement, une saisie au corps, une saisie des poignets...), des projections (qui peuvent faire penser au Judo), de lutte vietnamienne, de clés articulaires (de bras de jambes) ou encore de ciseaux (coups de pieds sautés ou saisies au corps et à la tête avec les jambes).</p>
-    <p style="color:var(--texte-mid);margin-bottom:16px;font-size:1.02rem;">Nous pratiquons également des armes courantes comme le couteau poignard (đao găm) ou le pistolet (súng ngắn) et des armes traditionnelles comme l'épée (kiếm), le sabre large (Đao), le bâton long (Côn), la hallebarde (Đại Đao), la règle en bois (tay thước) ou l'éventail(Quật)...</p>
-    <p style="color:var(--texte-mid);margin-bottom:24px;font-size:1.02rem;">Le Vovinam Việt Võ Đạo est aussi un sport avec ses compétitions techniques et combat nationales et internationales. Les combats sont réglementés et autorisent notamment les pieds-poings, les balayages, les projections et les ciseaux. Le club participe aux compétitions Vovinam et AMV de la fédération de karaté (FFK) qui est la fédération délégataire.</p>
-    <div style="display:flex;gap:13px;flex-wrap:wrap;">
-      <a href="histoirevovinam.html" class="btn-rouge">L'histoire du Vovinam</a>
-      <a href="grades.html" class="btn-outline-bleu">Le système de grade →</a>
-    </div>
-  </div>
+  <p style="margin-top:18px;font-style:italic;color:var(--texte-muted);font-size:.88rem;">* Tarifs indicatifs à confirmer à l'inscription. Paiement en 3x sans frais possible. Chèques ANCV et coupons sport acceptés.</p>
 </section>
 
-<!-- PILIERS -->
-<section id="piliers" class="sec">
-  <div class="piliers-top">
-    <div>
-      <div class="sec-label">Techniques</div>
-      <h2 class="sec-title">CE QUE<br>VOUS APPRENDREZ</h2>
-    </div>
-    <p class="piliers-intro">Techniques de base, enchaînements codifiés, combat, lutte, renforcement, étirements, acrobaties et une philosophie.<br>Le Vovinam Việt Võ Đạo forme le corps autant qu'il forge l'esprit, à travers des valeurs morales transmises dès les premiers cours.</p>
-  </div>
-  <div class="pillars">
-    <div class="pillar"><div class="pillar-name">Les bases<br>(Đòn căn bản)</div><p class="pillar-desc">Elles constituent le fondement technique de l’art.<br><br>Elles regroupent les frappes de poing (direct, crochet, javelot, montant), les tranchants de main, les coups de pied (direct, giflé, latéral, écrasé), les coups de coude et de genou, chacun décliné en plusieurs variantes numérotées.<br><br>À cela s’ajoutent de nombreuses positions, de la position centrale (Trung bình tấn) à la position du serpent (Xà tấn) ou de la grue (Hạc tấn).<br><br>Travaillées seul ou face à un partenaire, elles sont répétées méthodiquement jusqu’à l’automatisme.</p>
-    </div>
-    <div class="pillar"><div class="pillar-name">Les techniques de bases<br>(Thế căn bản)</div><p class="pillar-desc">Elles couvrent 3 domaines : mains nues, défense contre armes et maniement d'armes.<br><br>• Mains nues : self-défense, clés de bras, ciseaux, contre-attaques et lutte.<br>• Face à une arme : le pratiquant apprend à se défendre contre un couteau, une hache, une machette ou un fusil baïonnette.<br>• Avec une arme : épée, bâton, règle ou éventail.<br><br>Plus de 300 techniques au total, travaillées seul ou à deux jusqu'à la maîtrise complète.</p></div>
-    <div class="pillar"><div class="pillar-name">Les formes seul<br>(Đòn Luyện)</div><p class="pillar-desc">Les formes seules (Đòn Luyện) : 12 formes à mains nues, 4 formes de souplesse et respiration et 12 formes aux armes.<br><br>Chaque enchaînement codifié permet de fixer les techniques en mémoire et de perfectionner ses mouvements.</p></div>
-    <div class="pillar"><div class="pillar-name">Les formes à deux<br>(Song Luyện)</div><p class="pillar-desc">Les formes à deux (Song Luyện) mettent ces mêmes techniques en situation réelle face à un partenaire : 4 enchaînements à mains nues, 3 sans chutes (Đối Luyện), 3 de lutte vietnamienne et 5 aux armes (dao, kiếm, côn, búa, mã tấu).</p></div>
-    <div class="pillar"><div class="pillar-name">Combat Pied-Poing<br>(Đối kháng)</div><p class="pillar-desc">Le combat pied-poing se pratique en contact contrôlé (les frappes doivent être maîtrisées) et avec des protections (casque, protège-tibias, protège-pieds, coquille, gants de boxe...).<br><br>Les techniques autorisées incluent coups de pied, coups de poing, balayages, projections et ciseaux, les coups de coude et de genou au corps étant réservés aux seniors.<br><br>À l'entraînement, paos, raquettes et pattes d'ours sont très utilisés en complément des assauts libres.</p></div>
-    <div class="pillar"><div class="pillar-name">Lutte Vietnamienne<br>(Vật)</div><p class="pillar-desc">La lutte vietnamienne (Thế Vật) est une discipline à part entière, enracinée dans la tradition populaire vietnamienne.<br><br>Pour l'emporter, il faut projeter l'adversaire et lui faire toucher le dos au sol (dos à terre, ventre au ciel).<br><br>Au Vovinam, elle se pratique à travers des techniques codifiées de saisie, projection, clés et mise au sol. Travaillées d'abord en enchaînements progressifs, elles s'appliquent ensuite en situation libre.</p></div>
-    <div class="pillar"><div class="pillar-name">Force physique<br>(Thành Lực)</div><p class="pillar-desc">La pratique du Vovinam exige un corps solide et mobile.<br>Chaque séance intègre du renforcement musculaire global et des assouplissements de tous les groupes musculaires (deux piliers indissociables pour exécuter les techniques avec puissance et précision).<br><br>Les chutes et roulades sont enseignées dès les premiers cours. Appréhender le sol et tomber sans se blesser sont des compétences fondamentales, autant que frapper ou esquiver.<br>Les projections et acrobaties complètent la préparation physique : sauts, sauts de mains... des mouvements qui demandent coordination, explosivité et engagement total. Ces éléments se construisent progressivement à l'entraînement, en fonction du niveau de chaque pratiquant.</p></div>
-    <div class="pillar"><div class="pillar-name">Théorie / Philosophie<br>(Võ Đạo)</div><p class="pillar-desc">Le Võ Đạo (littéralement "la voie martiale") est la dimension philosophique du Vovinam. Ce n'est pas un simple code de conduite affiché sur un mur : c'est un enseignement transmis progressivement, grade après grade, tout au long du parcours du pratiquant.<br><br>On y aborde la conception des arts martiaux, les valeurs du pratiquant, les relations avec soi-même, la famille, l'école martiale et les autres.<br><br>Plus loin dans le parcours, le pratiquant explore la vision de l'être humain selon le Vovinam, la place des arts martiaux vietnamiens dans l'histoire mondiale, et l'idéal du "combattant humaniste" que le fondateur Nguyễn Lộc a voulu construire.<br><br>Le Võ Đạo ne s'apprend pas en un cours. Il se construit dans la durée, par la pratique, la réflexion et le respect des principes transmis par les maîtres qui ont précédé.</p></div>
-  </div>
-</section>
-
-<!-- GALERIE -->
-<section id="galerie" class="sec">
-  <div class="sec-label">Photos & vidéos</div>
-  <h2 class="sec-title">LE VOVINAM VIỆT VÕ ĐẠO<br>EN IMAGES</h2>
-  <div class="gal-grid">
-
-    <!-- Grande cellule gauche — 2 lignes -->
-    <div class="gal-cell" style="background:#000;">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/HlyY7O6SBMw?si=ps6-9QEB5p08_m6G" title="Vovinam Port-Marly" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:block;"></iframe>
-    </div>
-
-    <!-- Cellule haut droite 1 -->
-    <div class="gal-cell" style="background:#000;">
-      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZVH49dKJ1uw?si=JSI1pj2sTjzLs60L" title="Vovinam Port-Marly — Cours adultes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:block;"></iframe>
-    </div>
-
-    <!-- Cellule haut droite 2 -->
-    <div class="gal-cell" style="background:#000;">
-      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/k2idDlTaEek?si=giCdtlbSMShDGrme" title="Vovinam Port-Marly — Cours enfants" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:block;"></iframe>
-    </div>
-
-    <!-- Cellule bas droite 1 -->
-    <div class="gal-cell" style="background:#000;">
-      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/QGjnpeMUFz0?si=n1HX7_HPY_E3hnQB" title="Vovinam Port-Marly — Ciseaux volants" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:block;"></iframe>
-    </div>
-
-    <!-- Cellule bas droite 2 -->
-    <div class="gal-cell" style="background:#000;">
-      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/PINP5xlCAF0?si=cWgGzHc1uBHmUuJP" title="Vovinam Port-Marly — Stage national" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:block;"></iframe>
-    </div>
-
-  </div>
-</section>
 <!-- ACTUALITÉS -->
 <section id="actualites" class="sec">
   <div class="sec-label">La vie du club</div>
@@ -801,95 +1083,61 @@
 </section>
 <!-- CALENDRIER -->
 <section id="calendrier" class="sec">
-  <div class="sec-label">Compétitions et stages</div>
-  <h2 class="sec-title">CALENDRIER AMV</h2>
-  <p class="cal-intro">Retrouvez le calendrier officiel des compétitions et stages Arts Martiaux Vietnamiens (AMV) de la FFKDA. Il est géré directement par la fédération et toujours à jour.</p>
-  <div class="cal-card">
-    <div class="cal-card-icon">
-      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-    </div>
-    <div class="cal-card-body">
-      <p class="cal-card-title">Calendrier officiel FFKDA — AMV</p>
-      <p class="cal-card-desc">Compétitions, stages et championnats de la discipline, mis à jour en direct par la fédération sur ffkarate.fr.</p>
-    </div>
-    <a href="https://www.ffkarate.fr/calendrier/?cat_id%5B%5D=8" target="_blank" rel="noopener" class="btn-helloasso cal-card-btn">Voir le calendrier ↗</a>
-  </div>
-  <p class="cal-source">Source : Fédération Française de Karaté et disciplines associées (FFKDA)</p>
-</section>
-<!-- HORAIRES -->
-<section id="horaires" class="sec">
-  <div class="sec-label">Planning</div>
-  <h2 class="sec-title">HORAIRES<br>& LIEUX</h2>
-  <div class="hor-grid">
-    <div class="hor-card">
-      <div class="hor-public">Enfants 7-10 ans</div><div class="hor-age">Nés en 2019-2018-2017-2016</div>
-      <div class="hor-slot"><div class="hor-day">Mardi et Vendredi</div><div class="hor-time">17h00 – 18h00**</div></div>
-      <div class="hor-start">Début des cours<br>Mardi 8 septembre 2026</div>
-      <div class="hor-lieu">📍 Complexe Sportif d'Artagnan — Dojo (salle Athos)</div>
-    </div>
-    <div class="hor-card">
-      <div class="hor-public">Ados et Adultes</div><div class="hor-age">Nés en 2015 et avant</div>
-      <div class="hor-slot"><div class="hor-day">Vendredi</div><div class="hor-time">18h00 – 19h00</div></div>
-      <div class="hor-start">Début des cours<br>Vendredi 11 septembre 2026</div>
-      <div class="hor-lieu">📍 Complexe Sportif d'Artagnan — Dojo (salle Athos)</div>
-    </div>
-  </div>
-    <p style="margin-top:18px;font-style:italic;color:var(--bleu-pale);font-size:.88rem;">* Pas de cours pendant les vancances scolaires.</p>
-    <p style="margin-top:6px;font-style:italic;color:var(--bleu-pale);font-size:.88rem;">** Pour les enfants 7-10 ans, nous pouvons les récupérer à la sortie de l'école, nous contacter pour remplir l'autorisation parentale de sortie</p>
-
-</section>
-
-<!-- TARIFS -->
-<section id="tarifs" class="sec">
-  <div class="sec-label">Inscription</div>
-  <h2 class="sec-title">TARIFS<br>Saison 2026-2027</h2>
-  <div class="tar-grid">
-    <div class="tar-card">
-      <div class="tar-cat">Enfants 7-10ans</div>
-      <div class="tar-price"><sup>€</sup>300/saison</div>
-      <div class="tar-per">Soit 30euros/mois</div>
-      <hr class="tar-div">
-      <ul class="tar-list">
-        <li class="tar-item">2 Cours / semaine</li>
-        <li class="tar-item">Licence fédérale incluse (40 euros)</li>
-        <li class="tar-item">Assurance incluse</li>
-         <li class="tar-item">Réduction si plusieurs de la même famille<br>(nous contacter)</li> 
-      </ul>
-    </div>
-    <div class="tar-card feat">
-      
-      <div class="tar-cat">Ados et Adultes</div>
-      <div class="tar-price"><sup>€</sup>170/saison</div>
-      <div class="tar-per">Soit 17euros/mois</div>
-      <hr class="tar-div">
-      <ul class="tar-list">
-        <li class="tar-item">1 cours/semaine</li>
-        <li class="tar-item">Licence fédérale incluse (40 euros)</li>
-        <li class="tar-item">Assurance incluse</li>
-         <li class="tar-item">Réduction si plusieurs de la même famille<br>(nous contacter)</li>
-      </ul>
-    </div>
-    <div class="tar-card tar-bottom" style="grid-column:1/-1; background:var(--bleu-pale); border-color:var(--bleu-mid);">
-      <!-- Colonne gauche : Réduction familiale -->
-      <div class="tar-bottom-left">
-        <div class="tar-cat" style="font-size:1.1rem;font-weight:900;">Réduction familiale</div>
-        <hr class="tar-div" style="margin:10px 0 14px;">
-        <p style="font-size:.95rem;color:var(--texte-mid);margin-bottom:8px;">−30 € sur la cotisation de chaque membre supplémentaire du même foyer fiscal.</p>
-        <p style="font-size:.9rem;color:var(--texte-muted);font-style:italic;">Ex : 1 enfant (300 €) + 1 ado (170 €) = 470 € – 30 € = 440 €</p>
+  <div class="sec-label">Événements</div>
+  <h2 class="sec-title">LES CALENDRIERS DE LA FFK</h2>
+  <p class="cal-intro">Notre club est affilié à la FFK : retrouvez ici les calendriers officiels des compétitions, stages et autres événements, du département jusqu'au niveau national, voire international. Ils sont gérés directement par les comités et la fédération, et toujours à jour.</p>
+  <div class="cal-list">
+    <div class="cal-card">
+      <div class="cal-card-icon">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
       </div>
-      <!-- Séparateur vertical -->
-      <div class="tar-bottom-sep"></div>
-      <!-- Colonne droite : Prêt à vous inscrire -->
-      <div class="tar-bottom-right">
-        <p class="tar-cta-title" style="font-family:'Be Vietnam Pro',sans-serif;font-size:1.3rem;letter-spacing:.02em;color:var(--bleu);line-height:1;margin-bottom:8px;font-weight:900;text-transform:uppercase;">Prêt à vous inscrire ?</p>
-        <p style="font-size:.95rem;color:var(--texte-mid);font-style:italic;margin-bottom:20px;">Adhésion en ligne rapide et sécurisée via HelloAsso — paiement par carte.</p>
-        <a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener" class="btn-helloasso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:14px;height:14px;"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Devenir membre sur HelloAsso</a>
+      <div class="cal-card-body">
+        <span class="cal-level">Départemental</span>
+        <p class="cal-card-title">Comité des Yvelines (78)</p>
+        <p class="cal-card-desc">Les compétitions, stages et événements organisés dans le département des Yvelines.</p>
       </div>
+      <a href="https://sites.ffkarate.fr/yvelines78/calendrier/" target="_blank" rel="noopener" class="btn-helloasso cal-card-btn">Voir le calendrier ↗</a>
+    </div>
+    <div class="cal-card">
+      <div class="cal-card-icon">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      </div>
+      <div class="cal-card-body">
+        <span class="cal-level">Régional</span>
+        <p class="cal-card-title">Ligue d'Île-de-France</p>
+        <p class="cal-card-desc">Les compétitions, stages et événements de la ligue régionale d'Île-de-France.</p>
+      </div>
+      <a href="https://sites.ffkarate.fr/iledefrance/calendrier/" target="_blank" rel="noopener" class="btn-helloasso cal-card-btn">Voir le calendrier ↗</a>
+    </div>
+    <div class="cal-card">
+      <div class="cal-card-icon">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      </div>
+      <div class="cal-card-body">
+        <span class="cal-level">National</span>
+        <p class="cal-card-title">Calendrier officiel FFKDA — AMV</p>
+        <p class="cal-card-desc">Compétitions, stages et championnats de la discipline, mis à jour en direct par la fédération sur ffkarate.fr.</p>
+      </div>
+      <a href="https://www.ffkarate.fr/calendrier/?cat_id%5B%5D=8" target="_blank" rel="noopener" class="btn-helloasso cal-card-btn">Voir le calendrier ↗</a>
     </div>
   </div>
-  <p style="margin-top:18px;font-style:italic;color:var(--texte-muted);font-size:.88rem;">* Tarifs indicatifs à confirmer à l'inscription. Paiement en 3x sans frais possible. Chèques ANCV et coupons sport acceptés.</p>
-</section>
+  <p class="cal-source">Source : Fédération Française de Karaté et disciplines associées (FFKDA), Comité des Yvelines et Ligue d'Île-de-France. Les calendriers départemental et régional regroupent toutes les disciplines du karaté et disciplines associées.</p>
 
+  <!-- CALENDRIER TCHL FRANCE -->
+  <div class="tchl">
+    <div class="tchl-body">
+      <h3 class="tchl-title">Calendrier du <br class="br-mobile">TCHL France</h3>
+      <p class="tchl-text">Le VDST Port-Marly soutient le TCHL France, l'association qui œuvre au développement du Vovinam Việt Võ Đạo en France.<br>Notre professeur, Grégory Foiry, en est membre fondateur et secrétaire général.<br>Retrouvez ici les rassemblements prévus pour la saison 2026-2027.</p>
+      <ul class="tchl-dates">
+        <li class="tchl-date"><b>Rassemblement d'automne</b><span>21 et 22 novembre 2026</span><small>Angers (49)</small><a href="https://vovinam-france.org/rassemblent-de-printemps-2026/" target="_blank" rel="noopener" class="btn-helloasso">Voir le détail ↗</a></li>
+        <li class="tchl-date"><b>Rassemblement d'hiver</b><span>20 et 21 février 2027</span><small>Pomerol (33)</small></li>
+        <li class="tchl-date"><b>Rassemblement de printemps</b><span>15 et 16 mai 2027</span><small>Les Lilas (93)</small></li>
+      </ul>
+      <p class="tchl-note">Dates et lieux prévisionnels, susceptibles d'évoluer. Source : vovinam-france.org</p>
+    </div>
+    <div class="tchl-logo"><img src="logo-tchl-france.png" alt="Logo du TCHL France — Tổng Cục Huấn Luyện Môn Phái Vovinam Việt Võ Đạo" loading="lazy"></div>
+  </div>
+</section>
 <!-- PHILOSOPHIE -->
 <section id="philosophie" class="sec">
   <div>
@@ -1064,8 +1312,7 @@
     <p class="ft-title">Navigation</p>
     <ul class="ft-list">
       <li><a href="#vovinam">Le Vovinam</a></li>
-      <li><a href="#horaires">Horaires & Lieux</a></li>
-      <li><a href="#professeur">Le Professeur</a></li>
+      <li><a href="#public">Horaires</a></li>
       <li><a href="#tarifs">Tarifs</a></li>
       <li><a href="#galerie">Galerie</a></li>
       <li><a href="#philosophie">Philosophie</a></li>
@@ -1085,6 +1332,12 @@
   </div>
   <p class="ft-copy">© 2026 VDST Port-Marly — vovinamportmarly.fr</p>
 </footer>
+
+<!-- BARRE D'ACTIONS MOBILE -->
+<div class="mbar">
+  <a href="tel:+33661576884" class="mbar-call" aria-label="Appeler le club"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Appeler</a>
+  <a href="#contact" class="mbar-cta">Séance d'essai gratuite</a>
+</div>
 
 <script>
   window.addEventListener('scroll', () => {
@@ -1148,7 +1401,7 @@
       }
     });
   }, { threshold: 0.1 });
-  document.querySelectorAll('.pillar,.hor-card,.tar-card,.pval,.gal-cell').forEach((el, i) => {
+  document.querySelectorAll('.pillar,.tar-card,.pval,.gal-cell,.facet,.public-card,.why-card').forEach((el, i) => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(16px)';
     el.style.transition = `opacity .5s ease ${i*.06}s, transform .5s ease ${i*.06}s`;
