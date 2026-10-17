@@ -170,32 +170,35 @@
   .actu-more { margin-top: 40px; text-align: center; }
 
   /* CALENDRIER */
-  #calendrier { position: relative; overflow: hidden; background-color: var(--blanc); background-image: url('logo-amv-ffk.jpg'); background-repeat: no-repeat; background-size: 236px auto; background-position: right 80px top 36px; }
+  #calendrier { position: relative; overflow: hidden; background-color: var(--blanc); background-image: url('logo-amv-ffk.jpg'); background-repeat: no-repeat; background-size: 236px auto; background-position: right 80px top 90px; }
   #calendrier::before { content: none; }
   #calendrier > * { position: relative; z-index: 1; }
   .cal-intro { font-size: 1rem; color: var(--texte-mid); font-style: italic; margin-top: 44px; margin-bottom: 28px; max-width: 760px; }
-  .cal-card { display: flex; align-items: center; gap: 26px; background: var(--gris-fond); border: 1px solid var(--bleu-mid); border-radius: 6px; padding: 34px 38px; box-shadow: 0 8px 28px rgba(27,58,140,.06); }
-  .cal-card-icon { width: 64px; height: 64px; border-radius: 50%; background: var(--bleu-pale); color: var(--bleu); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .cal-card { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; background: var(--bleu-pale); border: 1px solid var(--bleu-mid); border-radius: 12px; padding: 16px 18px; }
+  .cal-card-icon { display: none; }
   .cal-card-body { flex: 1; min-width: 0; }
-  .cal-card-title { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1.15rem; font-weight: 800; color: var(--bleu); margin-bottom: 6px; }
-  .cal-card-desc { font-size: .92rem; color: var(--texte-mid); line-height: 1.55; }
-  .cal-card-btn { flex-shrink: 0; }
-  .cal-list { display: flex; flex-direction: column; gap: 16px; }
+  .cal-card-title { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1.05rem; font-weight: 800; color: var(--bleu); margin-bottom: 6px; }
+  .cal-card-desc { font-size: .88rem; color: var(--texte-mid); line-height: 1.55; }
+  .cal-card .cal-card-btn { flex-shrink: 0; margin-top: auto; padding: 9px 16px; font-size: .62rem; }
+  .cal-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
   .cal-level { display: inline-block; font-family: 'Be Vietnam Pro', sans-serif; font-size: .6rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--blanc); background: var(--rouge); padding: 4px 12px; border-radius: 999px; margin-bottom: 8px; }
   .cal-source { margin-top: 16px; font-size: .82rem; color: var(--texte-muted); font-style: italic; }
 
   /* sous-partie : calendrier du TCHL France */
-  .tchl { margin-top: 64px; padding-top: 48px; border-top: 1px solid var(--bleu-mid); display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: start; }
-  .tchl-title { font-family: 'Be Vietnam Pro', sans-serif; font-size: clamp(1.5rem, 2.4vw, 2.1rem); font-weight: 900; color: var(--bleu); text-transform: uppercase; line-height: 1.1; margin-bottom: 16px; }
+  .tchl { margin-top: 64px; padding-top: 48px; border-top: 1px solid var(--bleu-mid); position: relative; }
+  .tchl-title { font-family: 'Be Vietnam Pro', sans-serif; font-size: clamp(2rem,3.2vw,3.4rem); letter-spacing: .02em; line-height: 1; color: var(--bleu); margin-bottom: 16px; font-weight: 900; text-transform: uppercase; }
   .tchl-text { color: var(--texte-mid); font-size: 1rem; line-height: 1.75; max-width: 760px; }
-  .tchl-dates { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 26px; max-width: 880px; }
+  .tchl-dates { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 26px; }
   .tchl-date { background: var(--bleu-pale); border: 1px solid var(--bleu-mid); border-radius: 12px; padding: 16px 18px; }
-  .tchl-date b { display: block; font-family: 'Be Vietnam Pro', sans-serif; font-size: .6rem; letter-spacing: .14em; text-transform: uppercase; color: var(--rouge); margin-bottom: 6px; }
-  .tchl-date span { display: block; color: var(--bleu); font-weight: 800; font-size: 1rem; line-height: 1.3; }
-  .tchl-date small { display: block; color: var(--texte-muted); font-size: .82rem; margin-top: 3px; }
+  .tchl-date b { display: inline-block; font-family: 'Be Vietnam Pro', sans-serif; font-size: .6rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--blanc); background: var(--rouge); padding: 4px 12px; border-radius: 999px; margin-bottom: 8px; }
+  .tchl-date span { display: block; color: var(--bleu); font-weight: 800; font-size: .96rem; line-height: 1.3; }
+  .tchl-date small { display: inline; color: var(--texte-muted); font-size: .8rem; font-weight: 500; margin-left: 4px; white-space: nowrap; }
+  .tchl-desc { list-style: none; font-size: .88rem; color: var(--texte-mid); line-height: 1.55; margin-top: 8px; }
+  .tchl-desc li { padding-left: 14px; text-indent: -14px; }
+  .tchl-desc li::before { content: '– '; }
   .tchl-note { margin-top: 14px; font-size: .82rem; color: var(--texte-muted); font-style: italic; }
-  .tchl-logo { margin-top: -30px; }
-  .tchl-logo img { width: 240px; height: auto; display: block; }
+  .tchl-logo { position: absolute; top: 16px; right: 0; }
+  .tchl-logo img { width: 215px; height: auto; display: block; }
   .br-mobile { display: none; }
   .tchl-date .btn-helloasso { margin-top: 12px; padding: 9px 16px; font-size: .62rem; }
   .gal-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 260px 260px; gap: 8px; margin-top: 44px; }
@@ -508,7 +511,7 @@
     .tar-bottom-sep{width:100%;height:1px;margin:0;}
     .tar-bottom-left,.tar-bottom-right{padding:22px 20px;}
     .actu-grid{grid-template-columns:1fr;}
-    .cal-card{flex-direction:column;text-align:center;padding:28px 22px;}
+    .cal-list{grid-template-columns:1fr;gap:12px;}
     .cal-card-btn{width:100%;justify-content:center;}
     body{padding-bottom:70px;}
     .mbar{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:98;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-top:2px solid var(--bleu-mid);box-shadow:0 -6px 24px rgba(27,58,140,.12);}
@@ -525,10 +528,11 @@
     .facet-more{flex-direction:column;}
     .facet-more a{display:block;text-align:center;}
     #calendrier{background-image:none;}
-    .tchl{grid-template-columns:1fr;gap:24px;margin-top:44px;padding-top:36px;position:relative;}
+    .tchl{display:grid;grid-template-columns:1fr;gap:24px;margin-top:44px;padding-top:36px;position:relative;}
     .tchl::before{content:'';position:absolute;inset:0;background:url('logo-tchl-france.png') no-repeat center 24px / 92% auto;opacity:.13;pointer-events:none;z-index:0;}
     .tchl-body{position:relative;z-index:1;}
     .tchl-dates{grid-template-columns:1fr;}
+    .tchl-date small::before{content:'· ';}
     .tchl-logo{display:none;}
     .br-mobile{display:inline;}
     .tchl-date .btn-helloasso{width:100%;justify-content:center;}
@@ -867,7 +871,7 @@
 <!-- CALENDRIER -->
 <section id="calendrier" class="sec">
   <div class="sec-label">Événements</div>
-  <h2 class="sec-title">LES CALENDRIERS DE LA FFKDA</h2>
+  <h2 class="sec-title">CALENDRIERS DE LA FFKDA</h2>
   <p class="cal-intro">Notre club est affilié à la FFKDA : retrouvez ici les calendriers officiels des compétitions, stages et autres événements, du département jusqu'au niveau national, voire international. Ils sont gérés directement par les comités et la fédération, et toujours à jour.</p>
   <div class="cal-list">
     <div class="cal-card">
@@ -912,9 +916,9 @@
       <h3 class="tchl-title">Calendrier du <br class="br-mobile">TCHL France</h3>
       <p class="tchl-text">Le VDST Port-Marly soutient le TCHL France, l'association qui œuvre au développement du Vovinam Việt Võ Đạo en France.<br>Notre professeur, Grégory Foiry, en est membre fondateur et secrétaire général.<br>Retrouvez ici les rassemblements prévus pour la saison 2026-2027.</p>
       <ul class="tchl-dates">
-        <li class="tchl-date"><b>Rassemblement d'automne</b><span>21 et 22 novembre 2026</span><small>Angers (49)</small><a href="https://vovinam-france.org/rassemblent-de-printemps-2026/" target="_blank" rel="noopener" class="btn-helloasso">Voir le détail ↗</a></li>
-        <li class="tchl-date"><b>Rassemblement d'hiver</b><span>20 et 21 février 2027</span><small>Pomerol (33)</small></li>
-        <li class="tchl-date"><b>Rassemblement de printemps</b><span>15 et 16 mai 2027</span><small>Les Lilas (93)</small></li>
+        <li class="tchl-date"><b>Rassemblement d'automne</b><span>21 et 22 novembre 2026 <small>Angers (49)</small></span><ul class="tchl-desc"><li>16e commémoration du Patriarche Lê Sáng</li><li>6 h de session d’entraînement</li><li>Assemblée générale ordinaire</li></ul><a href="https://vovinam-france.org/rassemblent-de-printemps-2026/" target="_blank" rel="noopener" class="btn-helloasso">Voir le détail ↗</a></li>
+        <li class="tchl-date"><b>Rassemblement d'hiver</b><span>20 et 21 février 2027 <small>Pomerol (33)</small></span></li>
+        <li class="tchl-date"><b>Rassemblement de printemps</b><span>15 et 16 mai 2027 <small>Les Lilas (93)</small></span></li>
       </ul>
       <p class="tchl-note">Dates et lieux prévisionnels, susceptibles d'évoluer. Source : vovinam-france.org</p>
     </div>
