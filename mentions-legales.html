@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentions légales — VDST Port-Marly</title>
+<meta name="description" content="Mentions légales, données personnelles et cookies du site de l’association VDST Port-Marly (Vovinam Việt Võ Đạo, Le Port-Marly).">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bleu:        #1B3A8C;
+    --bleu-clair:  #2E5BB8;
+    --bleu-pale:   #EEF3FB;
+    --bleu-mid:    #D6E2F5;
+    --rouge:       #C8102E;
+    --jaune:       #F5C518;
+    --blanc:       #FFFFFF;
+    --texte:       #1A2645;
+    --texte-mid:   #3D5080;
+    --texte-muted: #7A8BAD;
+    --gris-fond:   #F7F9FD;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--blanc); color: var(--texte); font-family: 'Be Vietnam Pro', sans-serif; font-size: 16px; line-height: 1.65; overflow-x: hidden; }
+
+  /* NAV — identique au site principal */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 14px 60px; background: rgba(255,255,255,0.96); backdrop-filter: blur(14px); border-bottom: 2px solid var(--bleu-mid); box-shadow: 0 2px 20px rgba(27,58,140,0.08); transition: padding 0.3s; }
+  .nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+  .nav-logo img { width: 46px; height: 46px; object-fit: contain; border-radius: 50%; }
+  .nav-logo-text strong { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1.2rem; letter-spacing: .1em; color: var(--bleu); display: block; line-height: 1.1; }
+  .nav-logo-text span { font-family: 'Be Vietnam Pro', sans-serif; font-size: .85rem; letter-spacing: .15em; color: var(--rouge); text-transform: uppercase; font-weight: 500; }
+  .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+  .nav-links a { font-family: 'Be Vietnam Pro', sans-serif; font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; color: var(--texte-mid); text-decoration: none; transition: color .2s; position: relative; padding-bottom: 3px; white-space: nowrap; }
+  .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--rouge); transition: width .3s; }
+  .nav-links a:hover { color: var(--bleu); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta { font-family: 'Be Vietnam Pro', sans-serif !important; font-size: .56rem !important; color: var(--blanc) !important; background: var(--rouge); padding: 10px 20px; border-radius: 2px; transition: background .2s, transform .2s !important; }
+  .nav-cta:hover { background: #a50d25 !important; transform: translateY(-1px); }
+  .nav-cta::after { display: none !important; }
+
+  /* BURGER + MENU MOBILE — identiques au site principal */
+  .burger-btn { display: none; background: none; border: none; cursor: pointer; padding: 8px; color: var(--texte-mid); flex-direction: column; gap: 5px; align-items: center; justify-content: center; border-radius: 4px; transition: background .2s; flex-shrink: 0; }
+  .burger-btn:hover { background: var(--bleu-pale); }
+  .burger-btn span { display: block; width: 24px; height: 2px; background: currentColor; border-radius: 2px; transition: transform .3s ease, opacity .3s ease; transform-origin: center; }
+  .burger-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .burger-btn.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .burger-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .nav-mobile { display: none; position: fixed; top: 75px; left: 0; right: 0; z-index: 99; background: rgba(255,255,255,0.97); backdrop-filter: blur(14px); border-bottom: 2px solid var(--bleu-mid); box-shadow: 0 6px 24px rgba(27,58,140,0.13); max-height: 0; overflow: hidden; transition: max-height .35s ease; }
+  .nav-mobile.open { max-height: 640px; }
+  .nav-mobile ul { list-style: none; padding: 8px 0 12px; }
+  .nav-mobile ul li a { display: flex; align-items: center; min-height: 52px; padding: 0 28px; font-family: 'Be Vietnam Pro', sans-serif; font-size: .58rem; letter-spacing: .16em; text-transform: uppercase; color: var(--texte-mid); text-decoration: none; border-bottom: 1px solid var(--bleu-mid); transition: color .2s, background .2s; font-weight: 500; }
+  .nav-mobile ul li:last-child a { border-bottom: none; }
+  .nav-mobile ul li a:hover, .nav-mobile ul li a:active { color: var(--bleu); background: var(--bleu-pale); }
+  .nm-cta { display: flex !important; justify-content: center; margin: 10px 28px 4px !important; border-radius: 2px !important; background: var(--rouge) !important; color: var(--blanc) !important; border-bottom: none !important; font-weight: 700 !important; transition: background .2s !important; }
+  .nm-cta:hover { background: #a50d25 !important; color: var(--blanc) !important; }
+  .nm-membre { display: flex !important; justify-content: center; margin: 4px 28px !important; border-radius: 2px !important; background: var(--bleu-pale) !important; color: var(--bleu) !important; border-bottom: none !important; font-weight: 700 !important; }
+  .nm-socials { display: flex; gap: 20px; padding: 12px 28px 14px; border-top: 1px solid var(--bleu-mid); margin-top: 4px; }
+  .nm-socials a { color: var(--texte-mid); transition: color .2s; }
+  .nm-socials a:hover { color: var(--bleu); }
+
+  /* HERO — même construction que la page Professeur */
+  .hero { min-height: 92vh; background: linear-gradient(100deg, rgba(14,30,84,0.92) 0%, rgba(27,58,140,0.74) 46%, rgba(46,91,184,0.30) 100%), url('photo-techniques-martiales.jpg'); background-size: cover; background-position: center 40%; display: grid; grid-template-columns: minmax(0, 760px); position: relative; overflow: hidden; padding-top: 78px; }
+  .hero::before, .hero::after { content: ''; position: absolute; border-radius: 50%; pointer-events: none; border: 1px solid rgba(255,255,255,0.06); }
+  .hero::before { width: 650px; height: 650px; top: -220px; right: -180px; }
+  .hero::after  { width: 450px; height: 450px; bottom: -130px; left: 35%; }
+  .hero-left { display: flex; flex-direction: column; justify-content: center; padding: 70px 48px 70px 80px; position: relative; z-index: 2; }
+  .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: .62rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.6); margin-bottom: 22px; }
+  .breadcrumb a { color: rgba(255,255,255,.6); text-decoration: none; transition: color .2s; }
+  .breadcrumb a:hover { color: var(--jaune); }
+  .hero-eyebrow { font-size: .62rem; letter-spacing: .28em; text-transform: uppercase; color: var(--jaune); margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
+  .hero-eyebrow::before { content: ''; width: 26px; height: 2px; background: var(--jaune); flex-shrink: 0; }
+  .hero h1 { font-size: clamp(2.2rem,4.4vw,4.4rem); line-height: 1.02; letter-spacing: .02em; color: var(--blanc); font-weight: 900; text-transform: uppercase; }
+  .hero h1 em { font-style: normal; color: var(--jaune); display: block; }
+  .hero-desc { font-size: 1.08rem; color: rgba(255,255,255,.9); max-width: 540px; margin: 24px 0 32px; line-height: 1.7; }
+  .hero-actions { display: flex; gap: 13px; flex-wrap: wrap; }
+  .hero-checks { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 28px; max-width: 600px; }
+  .hero-checks li { font-size: .9rem; color: rgba(255,255,255,.92); display: flex; align-items: center; gap: 8px; }
+  .hero-checks li::before { content: '✓'; color: var(--jaune); font-weight: 900; }
+  @keyframes fadeUp { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:translateY(0); } }
+  .anim { opacity:0; animation: fadeUp .65s ease forwards; }
+  .anim:nth-child(1){animation-delay:.08s}.anim:nth-child(2){animation-delay:.18s}.anim:nth-child(3){animation-delay:.28s}.anim:nth-child(4){animation-delay:.38s}.anim:nth-child(5){animation-delay:.48s}.anim:nth-child(6){animation-delay:.58s}
+
+  /* SECTIONS COMMUNES */
+  .sec { padding: 96px 80px; }
+  section[id] { scroll-margin-top: 72px; }
+  .sec-label { font-size: .62rem; letter-spacing: .26em; text-transform: uppercase; color: var(--rouge); display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .sec-label::before { content: ''; width: 20px; height: 2px; background: var(--rouge); flex-shrink: 0; }
+  .sec-title { font-size: clamp(2rem,3.2vw,3.2rem); letter-spacing: .02em; line-height: 1; color: var(--bleu); margin-bottom: 16px; font-weight: 900; text-transform: uppercase; }
+
+  /* BOUTONS */
+  .btn-blanc, .btn-helloasso { display: inline-flex; align-items: center; gap: 8px; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: 700; transition: all .2s; white-space: nowrap; }
+  .btn-blanc { color: var(--rouge); background: var(--blanc); }
+  .btn-blanc:hover { background: var(--jaune); transform: translateY(-2px); }
+  .btn-helloasso { color: var(--blanc); background: #6CB86A; border: 2px solid #6CB86A; }
+  .btn-helloasso:hover { background: #58a056; border-color: #58a056; transform: translateY(-2px); }
+  .btn-helloasso svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+  /* ESSAI */
+  .essai { background: var(--rouge); padding: 56px 80px; display: flex; align-items: center; justify-content: space-between; gap: 36px; flex-wrap: wrap; position: relative; overflow: hidden; }
+  .essai::after { content: ''; position: absolute; right: -80px; top: -80px; width: 260px; height: 260px; border-radius: 50%; border: 1px solid rgba(255,255,255,.12); pointer-events: none; }
+  .essai h3 { font-size: 2.3rem; letter-spacing: .05em; color: var(--blanc); line-height: 1; margin-bottom: 5px; font-weight: 900; }
+  .essai p { font-style: italic; color: rgba(255,255,255,.8); font-size: .97rem; }
+
+  /* FOOTER — identique au site principal */
+  footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; border-top: 3px solid var(--jaune); }
+  .ft-brand { display: flex; align-items: center; gap: 13px; text-decoration: none; }
+  .ft-brand img { width: 50px; height: 50px; object-fit: contain; border-radius: 50%; border: 2px solid rgba(255,255,255,.2); }
+  .ft-brand strong { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1.1rem; letter-spacing: .1em; color: var(--blanc); display: block; line-height: 1; }
+  .ft-brand span { font-family: 'Be Vietnam Pro', sans-serif; font-size: .68rem; letter-spacing: .2em; color: var(--jaune); text-transform: uppercase; margin-top: 3px; display: block; }
+  .ft-title { font-family: 'Be Vietnam Pro', sans-serif; font-size: .5rem; letter-spacing: .22em; text-transform: uppercase; color: var(--jaune); margin-bottom: 14px; }
+  .ft-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .ft-list a { font-family: 'Be Vietnam Pro'; font-size: .93rem; color: rgba(255,255,255,.55); text-decoration: none; font-style: italic; transition: color .2s; }
+  .ft-list a:hover { color: var(--blanc); }
+  .ft-copy { font-family: 'Be Vietnam Pro', sans-serif; font-size: .7rem; letter-spacing: .1em; color: rgba(255,255,255,.28); padding-top: 22px; line-height: 1.8; grid-column: 1/-1; text-align: center; border-top: 1px solid rgba(255,255,255,.1); }
+
+  /* ============ REFONTE : STYLE DE LA NOUVELLE ACCUEIL ============ */
+  .btn-jaune, .btn-outline-blanc, .btn-rouge, .btn-outline-bleu { display: inline-block; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: 700; transition: all .2s; }
+  .btn-jaune { color: var(--bleu); background: var(--jaune); border: 2px solid var(--jaune); }
+  .btn-jaune:hover { background: #d4a814; border-color: #d4a814; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+  .btn-outline-blanc { color: var(--blanc); border: 2px solid rgba(255,255,255,.35); }
+  .btn-outline-blanc:hover { border-color: var(--blanc); background: rgba(255,255,255,.1); }
+  .btn-rouge { color: var(--blanc); background: var(--rouge); border: 2px solid var(--rouge); }
+  .btn-rouge:hover { background: #a50d25; border-color: #a50d25; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(200,16,46,.25); }
+  .btn-outline-bleu { color: var(--bleu); border: 2px solid var(--bleu-mid); }
+  .btn-outline-bleu:hover { border-color: var(--bleu); background: var(--bleu-pale); }
+
+  /* SOMMAIRE — 8 domaines */
+  #sommaire { background: var(--gris-fond); padding-top: 64px; padding-bottom: 64px; }
+  .som-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 28px; }
+  .som-item { display: flex; align-items: center; gap: 16px; background: var(--blanc); border: 1px solid var(--bleu-mid); border-radius: 14px; padding: 18px 20px; text-decoration: none; transition: transform .25s, box-shadow .25s, border-color .25s; }
+  .som-item:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(27,58,140,.12); border-color: var(--rouge); }
+  .som-num { font-size: 1.6rem; font-weight: 900; color: var(--rouge); line-height: 1; flex-shrink: 0; min-width: 2.2ch; }
+  .som-txt strong { display: block; font-size: .92rem; font-weight: 800; color: var(--bleu); text-transform: uppercase; letter-spacing: .02em; line-height: 1.2; }
+  .som-txt span { display: block; font-size: .78rem; color: var(--texte-muted); font-style: italic; margin-top: 2px; }
+
+  /* EN-TÊTE DE BLOC (numéro + titre + nom vietnamien) */
+  .tq-head { display: flex; align-items: flex-start; gap: 18px; margin-bottom: 20px; }
+  .tq-num { font-size: 3.2rem; font-weight: 900; line-height: .9; color: var(--bleu-mid); flex-shrink: 0; }
+  .tq-name { font-size: clamp(1.5rem,2.2vw,2rem); font-weight: 900; color: var(--bleu); text-transform: uppercase; letter-spacing: .02em; line-height: 1.05; }
+  .tq-vn { display: block; font-size: .66rem; letter-spacing: .2em; text-transform: uppercase; color: var(--rouge); font-weight: 700; margin-top: 8px; }
+  .tq-text p { color: var(--texte-mid); font-size: 1.02rem; line-height: 1.8; margin-bottom: 16px; }
+  .tq-text p:last-child { margin-bottom: 0; }
+
+  /* LIGNES PHOTO + TEXTE */
+  .tq-row { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .tq-row + .tq-row { margin-top: 88px; }
+  .tq-row.rev .tq-photo { order: 2; }
+  .tq-photo { position: relative; border-radius: 16px; overflow: hidden; aspect-ratio: 4/3; box-shadow: 0 18px 40px rgba(27,58,140,.16); }
+  .tq-photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
+  .tq-photo:hover img { transform: scale(1.04); }
+  .tq-badge { position: absolute; left: 18px; bottom: 18px; background: var(--rouge); color: var(--blanc); border-radius: 10px; padding: 12px 16px; line-height: 1; box-shadow: 0 8px 22px rgba(0,0,0,.25); }
+  .tq-badge strong { display: block; font-size: 1.9rem; font-weight: 900; }
+  .tq-badge span { display: block; font-size: .58rem; letter-spacing: .16em; text-transform: uppercase; margin-top: 5px; }
+
+  /* 3 domaines des techniques de base */
+  .dom-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 22px 0; }
+  .dom { background: var(--bleu-pale); border-radius: 12px; padding: 16px 16px 18px; border-top: 3px solid var(--bleu); }
+  .dom:nth-child(2) { border-top-color: var(--rouge); }
+  .dom:nth-child(3) { border-top-color: var(--jaune); }
+  .dom h4 { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--bleu); font-weight: 800; margin-bottom: 6px; }
+  .dom p { font-size: .88rem; color: var(--texte-mid); line-height: 1.55; }
+
+  /* FORMES — cartes avec chiffres clés */
+  #formes { background: var(--gris-fond); }
+  .formes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 44px; }
+  .forme-card { background: var(--blanc); border: 1px solid var(--bleu-mid); border-top: 4px solid var(--bleu); border-radius: 16px; padding: 36px 34px; transition: transform .25s, box-shadow .25s, border-color .25s; }
+  .forme-card:hover { transform: translateY(-4px); box-shadow: 0 16px 38px rgba(27,58,140,.12); border-top-color: var(--rouge); }
+  .forme-stats { display: flex; flex-wrap: wrap; gap: 12px; margin: 4px 0 24px; }
+  .fs { flex: 1 1 90px; background: var(--bleu-pale); border-radius: 12px; padding: 14px 12px; text-align: center; }
+  .fs strong { display: block; font-size: 2rem; font-weight: 900; color: var(--bleu); line-height: 1; }
+  .fs span { display: block; font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; color: var(--texte-mid); margin-top: 6px; line-height: 1.35; }
+  .weapons { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .weapons span { font-size: .78rem; font-weight: 700; color: var(--bleu); background: var(--blanc); border: 1px solid var(--bleu-mid); border-radius: 999px; padding: 4px 14px; }
+
+  /* COMBAT — bandeau bleu foncé comme « Pourquoi le Vovinam ? » */
+  #combat { background: linear-gradient(135deg, #0f2260 0%, var(--bleu) 55%, #2a4fa8 100%); position: relative; overflow: hidden; }
+  #combat::after { content: ''; position: absolute; width: 520px; height: 520px; border-radius: 50%; border: 1px solid rgba(255,255,255,.07); right: -160px; top: -160px; pointer-events: none; }
+  #combat .sec-label { color: var(--jaune); }
+  #combat .sec-label::before { background: var(--jaune); }
+  #combat .sec-title { color: var(--blanc); }
+  #combat .tq-num { color: rgba(255,255,255,.18); }
+  #combat .tq-name { color: var(--blanc); }
+  #combat .tq-vn { color: var(--jaune); }
+  #combat .tq-text p { color: rgba(255,255,255,.84); }
+  #combat .tq-row { margin-top: 44px; }
+  #combat .tq-photo { box-shadow: 0 18px 44px rgba(0,0,0,.3); }
+  .gear { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 24px; }
+  .gear span { font-size: .78rem; font-weight: 600; color: var(--blanc); background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.22); border-radius: 999px; padding: 4px 14px; }
+  .lutte-card { position: relative; z-index: 1; margin-top: 56px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18); border-radius: 16px; backdrop-filter: blur(6px); padding: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .lutte-card .tq-photo { box-shadow: 0 14px 34px rgba(0,0,0,.3); }
+  .lutte-rule { position: absolute; left: 18px; bottom: 18px; background: var(--jaune); color: var(--bleu); border-radius: 10px; padding: 12px 16px; font-weight: 800; font-size: .95rem; line-height: 1.3; box-shadow: 0 8px 22px rgba(0,0,0,.25); }
+  .lutte-rule small { display: block; font-size: .6rem; letter-spacing: .16em; text-transform: uppercase; color: var(--rouge); margin-bottom: 4px; }
+
+  /* FORCE PHYSIQUE — 3 cartes */
+  #force { background: var(--blanc); }
+  .force-intro { max-width: 760px; }
+  .force-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+  .force-card { background: var(--gris-fond); border: 1px solid var(--bleu-mid); border-top: 4px solid var(--bleu); border-radius: 16px; padding: 30px 28px; transition: transform .25s, box-shadow .25s; }
+  .force-card:hover { transform: translateY(-4px); box-shadow: 0 14px 34px rgba(27,58,140,.12); border-top-color: var(--rouge); }
+  .force-card h3 { font-size: 1.05rem; font-weight: 900; color: var(--bleu); text-transform: uppercase; letter-spacing: .02em; margin-bottom: 10px; }
+  .force-card p { font-size: .94rem; color: var(--texte-mid); line-height: 1.7; }
+
+  /* VÕ ĐẠO — philosophie */
+  #vodao { background: var(--bleu-pale); display: grid; grid-template-columns: 1fr 1.25fr; gap: 64px; align-items: stretch; }
+  /* case bleue de la hauteur du texte, photo du salut en filigrane */
+  .vodao-quote { position: relative; overflow: hidden; isolation: isolate; align-self: stretch; display: flex; flex-direction: column; justify-content: flex-end; min-height: 420px; background: var(--bleu); color: var(--blanc); border-radius: 16px; padding: 40px 36px; box-shadow: 0 18px 40px rgba(27,58,140,.2); }
+  .vodao-quote::before { content: ''; position: absolute; inset: 0; z-index: -2; background: url('photo-salut-vovinam.jpg') center 30% / cover no-repeat; mix-blend-mode: luminosity; opacity: .45; }
+  .vodao-quote::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(27,58,140,.1) 0%, rgba(27,58,140,.55) 35%, rgba(14,30,84,.95) 70%); }
+  .vodao-quote .tq-vn { color: var(--jaune); margin: 0 0 14px; }
+  .vodao-title { font-size: 1.5rem; font-weight: 800; line-height: 1.3; text-transform: uppercase; letter-spacing: .01em; }
+  .vodao-title em { font-style: normal; color: var(--jaune); }
+  .vodao-bambou { position: absolute; top: 6px; right: 0; width: 150px; height: auto; color: var(--jaune); opacity: .8; z-index: 0; pointer-events: none; filter: drop-shadow(0 3px 8px rgba(14,30,84,.7)); -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent 92%); mask-image: linear-gradient(180deg, #000 55%, transparent 92%); }
+  .vodao-quote > :not(.vodao-bambou) { position: relative; z-index: 1; }
+  .vodao-ess { margin-top: 24px; display: grid; gap: 12px; }
+  .vodao-ess > div { border-left: 2px solid var(--jaune); padding: 2px 0 2px 14px; }
+  .vodao-ess dt { font-size: .6rem; letter-spacing: .16em; text-transform: uppercase; color: var(--jaune); font-weight: 700; }
+  .vodao-ess dt span { color: rgba(255,255,255,.6); font-weight: 500; margin-left: 6px; }
+  .vodao-ess dd { font-size: .95rem; color: rgba(255,255,255,.92); line-height: 1.45; margin-top: 2px; }
+  .vodao-devise { margin-top: 26px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.2); font-size: 1.15rem; font-weight: 900; text-transform: uppercase; letter-spacing: .02em; color: var(--blanc); line-height: 1.25; }
+  .vodao-devise small { display: block; font-size: .58rem; letter-spacing: .16em; color: rgba(255,255,255,.6); font-weight: 500; margin-top: 6px; }
+  #vodao .prof-vision { background: var(--blanc); border-left: 4px solid var(--rouge); padding: 24px 28px; border-radius: 14px; margin-top: 26px; }
+  #vodao .prof-vision p { font-style: italic; color: var(--bleu); font-size: 1.06rem; line-height: 1.7; margin: 0; }
+
+  /* bandeau essai */
+  .essai { border-radius: 0; }
+  .essai h3 { text-transform: uppercase; }
+
+  /* barre d'actions mobile */
+  .mbar { display: none; }
+
+  /* navigation : largeurs intermédiaires */
+  @media(max-width:1250px){
+    nav { padding: 12px 28px; }
+    .nav-links { gap: 16px; }
+    .nav-logo-text strong { font-size: 1rem; }
+    .nav-logo-text span { font-size: .66rem; }
+    .nav-cta { padding: 9px 14px; }
+    .som-grid { grid-template-columns: repeat(2, 1fr); }
+    .tq-row { gap: 44px; }
+    .lutte-card { gap: 32px; }
+    .dom-grid { grid-template-columns: 1fr; }
+  }
+  @media(min-width:901px) and (max-width:1060px){
+    .nav-links { gap: 11px; }
+    .nav-links a { font-size: .52rem; letter-spacing: .1em; }
+    .nav-logo-text span { display: none; }
+  }
+
+  /* MOBILE */
+  @media(max-width:900px){
+    nav{padding:11px 18px;}
+    .nav-links{display:none;}
+    .burger-btn{display:flex;}
+    .nav-mobile{display:block;}
+    .nav-logo-text strong{font-size:.85rem;}
+    .nav-logo-text span{white-space:nowrap;font-size:.6rem;}
+    /* mobile : photo en entier en haut, texte dessous sur fond bleu */
+    .hero{grid-template-columns:1fr;min-height:0;background:linear-gradient(180deg, rgba(14,30,84,0) calc(66px + 38vw), #0e1e54 calc(66px + 66vw)), url('photo-techniques-martiales.jpg') center 66px / 100% auto no-repeat, #0e1e54;}
+    .hero-left{padding:calc(66vw - 40px) 22px 30px;}
+    .hero-actions a{flex:1 1 100%;text-align:center;}
+    .hero-desc{font-size:1rem;}
+    .sec{padding:60px 22px;}
+    #sommaire{padding-top:48px;padding-bottom:48px;}
+    .som-grid{grid-template-columns:1fr;gap:10px;}
+    .som-item{padding:14px 16px;}
+    .tq-row{grid-template-columns:1fr;gap:28px;}
+    .tq-row + .tq-row{margin-top:60px;}
+    .tq-row.rev .tq-photo{order:0;}
+    .tq-num{font-size:2.5rem;}
+    .formes-grid{grid-template-columns:1fr;gap:20px;margin-top:28px;}
+    .forme-card{padding:28px 22px;}
+    .lutte-card{grid-template-columns:1fr;gap:24px;padding:16px 16px 26px;margin-top:40px;}
+    .lutte-card > div:last-child{padding:0 6px;}
+    .lutte-rule{left:10px;bottom:10px;padding:7px 10px;font-size:.74rem;border-radius:8px;}
+    .lutte-rule small{font-size:.5rem;margin-bottom:2px;}
+    .force-grid{grid-template-columns:1fr;gap:16px;margin-top:28px;}
+    .force-card{padding:24px 22px;}
+    #vodao{grid-template-columns:1fr;gap:32px;}
+    .vodao-quote{min-height:380px;padding:30px 24px;}
+    .vodao-title{font-size:1.25rem;}
+    .vodao-bambou{width:110px;opacity:.6;}
+    #vodao .prof-vision{padding:22px 20px;}
+    footer{grid-template-columns:1fr;padding:36px 22px;}
+    .essai{padding:36px 22px;flex-direction:column;align-items:flex-start;}
+    .essai .btn-blanc,.essai .btn-helloasso{width:100%;justify-content:center;}
+    body{padding-bottom:70px;}
+    .mbar{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:98;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-top:2px solid var(--bleu-mid);box-shadow:0 -6px 24px rgba(27,58,140,.12);}
+    .mbar a{display:flex;align-items:center;justify-content:center;gap:8px;border-radius:10px;font-family:'Be Vietnam Pro',sans-serif;font-weight:700;text-decoration:none;font-size:.8rem;padding:13px 10px;}
+    .mbar-call{flex:0 0 34%;color:var(--bleu);border:2px solid var(--bleu-mid);background:var(--blanc);}
+    .mbar-cta{flex:1;color:var(--blanc);background:var(--rouge);}
+  }
+
+  /* MENTIONS LÉGALES */
+  .legal-head { background: linear-gradient(135deg, #0f2260 0%, var(--bleu) 60%, #2a4fa8 100%); padding: 150px 80px 56px; border-bottom: 3px solid var(--jaune); }
+  .legal-head .breadcrumb { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.6); margin-bottom: 18px; }
+  .legal-head .breadcrumb a { color: rgba(255,255,255,.85); text-decoration: none; }
+  .legal-head h1 { font-family: 'Be Vietnam Pro', sans-serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 900; color: var(--blanc); text-transform: uppercase; line-height: 1.05; }
+  .legal-head p { color: rgba(255,255,255,.75); margin-top: 14px; max-width: 640px; }
+  .legal-body { max-width: 860px; margin: 0 auto; padding: 64px 24px 90px; }
+  .legal-body h2 { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1.35rem; font-weight: 900; color: var(--bleu); margin: 44px 0 14px; padding-top: 28px; border-top: 1px solid var(--bleu-mid); text-transform: uppercase; }
+  .legal-body h2:first-of-type { margin-top: 0; padding-top: 0; border-top: none; }
+  .legal-body p, .legal-body li { color: var(--texte-mid); font-size: 1rem; line-height: 1.75; }
+  .legal-body p { margin-bottom: 14px; }
+  .legal-body ul { margin: 0 0 14px 20px; }
+  .legal-body strong { color: var(--bleu); }
+  .legal-body a { color: var(--bleu-clair); }
+  .legal-id { list-style: none; margin: 0 0 14px; padding: 0; }
+  .legal-id li { display: grid; grid-template-columns: 220px 1fr; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--bleu-mid); }
+  .legal-id li > span:first-child { font-weight: 700; color: var(--bleu); }
+  .a-completer { background: #fff3b0; color: #6b5200; padding: 1px 8px; border-radius: 4px; font-weight: 700; font-size: .92em; }
+  .legal-maj { font-size: .86rem; color: var(--texte-muted); font-style: italic; margin-top: 36px; }
+  @media(max-width:900px){
+    .legal-head { padding: 118px 22px 40px; }
+    .legal-body { padding: 44px 22px 70px; }
+    .legal-id li { grid-template-columns: 1fr; gap: 2px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV — identique au site principal -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo-vdst.png" alt="Logo VDST Port-Marly">
+    <div class="nav-logo-text">
+      <strong>VDST Port-Marly</strong>
+      <span>Vovinam Việt Võ Đạo</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#facettes">Le Vovinam</a></li>
+    <li><a href="index.html#public">Horaires &amp; Tarifs</a></li>
+    <li><a href="index.html#galerie">Galerie</a></li>
+    <li><a href="index.html#actualites">Actualités</a></li>
+    <li><a href="index.html#calendrier">Calendrier</a></li>
+    <li><a href="index.html#philosophie">Philosophie</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Essai gratuit</a></li>
+    <li style="display:flex;gap:10px;align-items:center;">
+      <a href="https://www.facebook.com/vovinamportmarly" target="_blank" rel="noopener" style="color:var(--texte-mid);transition:color .2s;" title="Facebook">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/vovinamportmarly" target="_blank" rel="noopener" style="color:var(--texte-mid);transition:color .2s;" title="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
+    </li>
+  </ul>
+  <button class="burger-btn" id="burger-btn" aria-label="Ouvrir le menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+<div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+  <ul>
+    <li><a href="index.html#facettes">Le Vovinam</a></li>
+    <li><a href="index.html#public">Horaires &amp; Tarifs</a></li>
+    <li><a href="index.html#galerie">Galerie</a></li>
+    <li><a href="index.html#actualites">Actualités</a></li>
+    <li><a href="index.html#calendrier">Calendrier</a></li>
+    <li><a href="index.html#philosophie">Philosophie</a></li>
+    <li><a href="index.html#contact" class="nm-cta">Essai gratuit</a></li>
+    <li><a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener" class="nm-membre">Devenir membre</a></li>
+  </ul>
+  <div class="nm-socials">
+    <a href="https://www.facebook.com/vovinamportmarly" target="_blank" rel="noopener" title="Facebook">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/vovinamportmarly" target="_blank" rel="noopener" title="Instagram">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+    </a>
+  </div>
+</div>
+
+<!-- EN-TÊTE -->
+<header class="legal-head">
+  <p class="breadcrumb"><a href="index.html">Accueil</a> / Mentions légales</p>
+  <h1>Mentions légales</h1>
+  <p>Informations légales, données personnelles et cookies du site de l’association VDST Port-Marly.</p>
+</header>
+
+<!-- CONTENU -->
+<main class="legal-body">
+
+  <h2>Éditeur du site</h2>
+  <ul class="legal-id">
+    <li><span>Dénomination</span><span>VDST PORT-MARLY – VOVINAM VIET VO DAO (nom court : VDST Port-Marly)</span></li>
+    <li><span>Forme juridique</span><span>Association déclarée, régie par la loi du 1er juillet 1901</span></li>
+    <li><span>Objet</span><span>Pratiquer, développer et promouvoir sous toutes ses formes le Vovinam Việt Võ Đạo à Le Port-Marly et ses alentours</span></li>
+    <li><span>Siège social</span><span>4 rue de la Fontaine Saint Martin, 78560 Le Port-Marly</span></li>
+    <li><span>N° RNA</span><span>W783014035</span></li>
+    <li><span>SIREN / SIRET</span><span>105 764 971 / 105 764 971 00013 (siège)</span></li>
+    <li><span>Déclaration</span><span>Déclarée à la sous-préfecture de Saint-Germain-en-Laye le 28 avril 2026 (récépissé du 21 mai 2026), publiée au Journal officiel des associations du 26 mai 2026</span></li>
+    <li><span>Affiliation</span><span>Club membre du VDST France, affilié à la FFKDA</span></li>
+    <li><span>Directeur de la publication</span><span>Grégory Foiry, président de l’association</span></li>
+    <li><span>Site internet</span><span>vovinamportmarly.fr</span></li>
+    <li><span>Lieu des cours</span><span>Complexe sportif d’Artagnan, dojo (salle Athos), 78560 Le Port-Marly</span></li>
+    <li><span>Courriel</span><span><a href="mailto:vovinamportmarly@outlook.fr">vovinamportmarly@outlook.fr</a></span></li>
+    <li><span>Téléphone</span><span><a href="tel:+33661576884">06 61 57 68 84</a></span></li>
+  </ul>
+
+  <h2>Hébergement</h2>
+  <p>Le site est hébergé par <strong>GitHub Pages</strong>, service de GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.</p>
+
+  <h2>Propriété intellectuelle</h2>
+  <p>Les textes, photographies, vidéos et éléments graphiques de ce site sont la propriété de l’association VDST Port-Marly, ou utilisés avec l’accord de leurs auteurs. Toute reproduction, même partielle, sans autorisation préalable est interdite.</p>
+  <p>Les noms, logos et marques de tiers cités sur le site (fédérations, associations, partenaires) appartiennent à leurs propriétaires respectifs.</p>
+
+  <h2>Données personnelles</h2>
+  <p><strong>Formulaire de contact.</strong> Lorsque vous écrivez à l’association depuis le formulaire du site, les informations que vous saisissez (nom, adresse e-mail, objet et message) sont transmises par le service <strong>Formspree</strong> à l’association, dans le seul but de répondre à votre demande (séance d’essai, inscription, renseignements). Elles ne sont ni vendues ni cédées à des tiers.</p>
+  <p><strong>Conservation.</strong> Votre message est reçu dans la boîte e-mail de l’association, où il est conservé le temps nécessaire au traitement de votre demande. Il est ensuite supprimé, au plus tard trois ans après notre dernier échange. Si vous adhérez au club, les informations d’adhésion sont gérées sur HelloAsso.</p>
+  <p><strong>Adhésion en ligne.</strong> L’inscription et le paiement s’effectuent sur la plateforme <strong>HelloAsso</strong>, qui applique sa propre politique de confidentialité.</p>
+  <p><strong>Vos droits.</strong> Conformément au règlement général sur la protection des données (RGPD) et à la loi « Informatique et Libertés », vous disposez d’un droit d’accès, de rectification, d’effacement et d’opposition sur vos données. Pour l’exercer, écrivez à <a href="mailto:vovinamportmarly@outlook.fr">vovinamportmarly@outlook.fr</a>. Vous pouvez aussi saisir la CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener">cnil.fr</a>).</p>
+
+  <h2>Droit à l’image</h2>
+  <p>Conformément au règlement intérieur du club, chaque adhérent autorise la prise de photos et de vidéos de lui-même lors des entraînements, événements et compétitions organisés par l’association. Ces images peuvent être utilisées à des fins de promotion et de communication, y compris sur les réseaux sociaux et sur ce site. Pour demander le retrait d’une image, écrivez à <a href="mailto:vovinamportmarly@outlook.fr">vovinamportmarly@outlook.fr</a>.</p>
+
+  <h2>Cookies et contenus de tiers</h2>
+  <p>Le site ne dépose pas de cookies de suivi publicitaire. Certains contenus proviennent toutefois de services tiers, qui peuvent recevoir votre adresse IP et déposer leurs propres cookies :</p>
+  <ul>
+    <li>les <strong>vidéos YouTube</strong> intégrées dans la galerie (Google) ;</li>
+    <li>les <strong>polices de caractères</strong> chargées depuis Google Fonts.</li>
+  </ul>
+  <p>Vous pouvez à tout moment refuser ou supprimer ces cookies depuis les réglages de votre navigateur.</p>
+
+  <h2>Responsabilité</h2>
+  <p>L’association s’efforce de publier des informations exactes et à jour (horaires, tarifs, dates), mais ne peut garantir l’absence d’erreur. Les tarifs sont indicatifs et à confirmer lors de l’inscription. Les liens vers des sites externes (fédérations, HelloAsso, calendriers) sont fournis à titre d’information : l’association n’est pas responsable de leur contenu.</p>
+
+  <p class="legal-maj">Dernière mise à jour : octobre 2026.</p>
+</main>
+
+<!-- FOOTER — identique au site principal -->
+<footer>
+<div>
+  <a href="index.html" class="ft-brand"><img src="logo-vdst.png" alt="Logo"><div><strong>VDST Port-Marly</strong><span>Vovinam Việt Võ Đạo</span></div></a>
+  <div style="display:flex;gap:14px;margin-top:16px;align-items:center;">
+    <a href="https://www.facebook.com/vovinamportmarly" target="_blank" rel="noopener" style="color:rgba(255,255,255,.55);transition:color .2s;" title="Facebook">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/vovinamportmarly" target="_blank" rel="noopener" style="color:rgba(255,255,255,.55);transition:color .2s;" title="Instagram">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a href="https://www.youtube.com/@vovinamportmarly" target="_blank" rel="noopener" style="color:rgba(255,255,255,.55);transition:color .2s;" title="YouTube">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+    </a>
+  </div>
+  </div>
+  <div>
+    <p class="ft-title">Navigation</p>
+    <ul class="ft-list">
+      <li><a href="index.html#facettes">Le Vovinam</a></li>
+      <li><a href="index.html#public">Horaires &amp; Tarifs</a></li>
+      <li><a href="index.html#galerie">Galerie</a></li>
+      <li><a href="index.html#actualites">Actualités</a></li>
+      <li><a href="index.html#calendrier">Calendrier</a></li>
+      <li><a href="index.html#philosophie">Philosophie</a></li>
+      <li><a href="index.html#contact">Essai gratuit</a></li>
+    </ul>
+  </div>
+  <div>
+    <p class="ft-title">Liens utiles</p>
+    <ul class="ft-list">
+      <li><a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener" style="color:var(--jaune);font-weight:700;">🟢 Devenir membre — HelloAsso</a></li>
+      <li><a href="https://www.vdst.fr">VDST France</a></li>
+      <li><a href="https://www.vovinam-france.org">TCHL France</a></li>
+      <li><a href="https://www.ffkarate.fr/arts-martiaux-vietnamiens/">FFKDA-AMV</a></li>
+      <li><a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener">HelloAsso — Adhésion</a></li>
+      <li><a href="mentions-legales.html">Mentions légales</a></li>
+    </ul>
+  </div>
+  <p class="ft-copy">© 2026 VDST Port-Marly — vovinamportmarly.fr</p>
+</footer>
+
+<!-- BARRE D'ACTIONS MOBILE -->
+<div class="mbar">
+  <a href="tel:+33661576884" class="mbar-call" aria-label="Appeler le club"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Appeler</a>
+  <a href="index.html#contact" class="mbar-cta">Séance d'essai gratuite</a>
+</div>
+
+<script>
+  window.addEventListener('scroll', () => {
+    if (window.innerWidth > 1250) {
+      document.querySelector('nav').style.padding = window.scrollY > 60 ? '10px 60px' : '14px 60px';
+    }
+  });
+
+  // BURGER MENU
+  (function() {
+    const btn = document.getElementById('burger-btn');
+    const panel = document.getElementById('nav-mobile');
+
+    function closeMenu() {
+      btn.classList.remove('open');
+      panel.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      panel.setAttribute('aria-hidden', 'true');
+    }
+
+    function openMenu() {
+      btn.classList.add('open');
+      panel.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      panel.setAttribute('aria-hidden', 'false');
+    }
+
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      panel.classList.contains('open') ? closeMenu() : openMenu();
+    });
+    panel.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', closeMenu); });
+    document.addEventListener('click', function(e) {
+      if (!panel.contains(e.target) && !btn.contains(e.target)) closeMenu();
+    });
+    window.addEventListener('scroll', function() {
+      if (panel.classList.contains('open')) closeMenu();
+    }, { passive: true });
+  })();
+
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (en.isIntersecting) {
+        en.target.style.opacity = '1';
+        en.target.style.transform = 'translateY(0)';
+        obs.unobserve(en.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.som-item,.tq-row,.forme-card,.lutte-card,.force-card,.vodao-quote').forEach((el, i) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(16px)';
+    el.style.transition = `opacity .5s ease ${(i % 4) * .08}s, transform .5s ease ${(i % 4) * .08}s`;
+    obs.observe(el);
+  });
+</script>
+</body>
+</html>
