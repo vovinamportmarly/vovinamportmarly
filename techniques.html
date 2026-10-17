@@ -298,6 +298,12 @@
     .ft-title,.nm-cta,.nm-membre,.nav-mobile ul li a,.fs span,.sec-label,dt,dt span,.breadcrumb a,.breadcrumb span,.hero-eyebrow,.tq-badge,.lutte-rule small,.vodao-devise small{font-size:.66rem !important;}
     .breadcrumb a{display:inline-block;padding:8px 0;}
   }
+  .vodao-btns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; margin-top: 30px; }
+  .vodao-btns a { text-align: center; white-space: nowrap; font-size: clamp(.55rem,.9vw,.72rem); letter-spacing: .06em; padding: 15px 8px; }
+  @media(max-width:900px){
+    .vodao-btns{grid-template-columns:1fr;}
+    .vodao-btns a{display:block;width:100%;text-align:center;white-space:nowrap;font-size:clamp(.5rem,2.9vw,.68rem);letter-spacing:.04em;padding:15px 8px;}
+  }
 </style>
 </head>
 <body>
@@ -574,7 +580,7 @@
     <div class="prof-vision">
       <p>Le Võ Đạo ne s'apprend pas en un cours. Il se construit dans la durée, par la pratique, la réflexion et le respect des principes transmis par les maîtres qui ont précédé.</p>
     </div>
-    <div style="display:flex;gap:13px;flex-wrap:wrap;margin-top:30px;">
+    <div class="vodao-btns">
       <a href="index.html#philosophie" class="btn-rouge">Notre philosophie</a>
       <a href="grades.html" class="btn-outline-bleu">Le programme par ceinture →</a>
     </div>
