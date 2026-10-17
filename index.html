@@ -429,8 +429,8 @@
   .public-card:hover { transform: translateY(-5px); box-shadow: 0 16px 38px rgba(27,58,140,.14); }
   .public-card img { width: 100%; aspect-ratio: 16/10; object-fit: cover; object-position: center 30%; display: block; }
   .public-body { position: relative; padding: 26px 28px 30px; display: flex; flex-direction: column; flex: 1; }
-  .public-card .public-thumb { position: absolute; top: 26px; right: 28px; width: 104px; height: 104px; aspect-ratio: 1; object-fit: cover; object-position: center 30%; border-radius: 14px; box-shadow: 0 6px 18px rgba(27,58,140,.18); }
-  .public-card .public-age, .public-card .public-body > h3, .public-card .public-body > .public-born { max-width: calc(100% - 128px); }
+  .public-card .public-thumb { position: absolute; top: 26px; right: 28px; width: 158px; height: 105px; aspect-ratio: 3/2; object-fit: cover; object-position: center; border-radius: 16px; box-shadow: 0 6px 18px rgba(27,58,140,.18); }
+  .public-card .public-age, .public-card .public-body > h3, .public-card .public-body > .public-born { max-width: calc(100% - 184px); }
   .public-age { align-self: flex-start; font-family: 'Be Vietnam Pro', sans-serif; font-size: .62rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; color: var(--blanc); background: var(--rouge); padding: 5px 12px; border-radius: 999px; margin-bottom: 14px; }
   .public-body h3 { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1.7rem; font-weight: 900; color: var(--bleu); line-height: 1.1; margin-bottom: 6px; text-transform: uppercase; }
   .public-tags { font-size: .86rem; font-weight: 700; color: var(--rouge); letter-spacing: .04em; margin-bottom: 12px; }
@@ -536,8 +536,8 @@
     .why-num{font-size:2rem;}
     .why-cta .btn-jaune,.why-cta .btn-outline-blanc{width:100%;text-align:center;}
     .public-body{padding:22px 20px 26px;}
-    .public-card .public-thumb{top:22px;right:20px;width:84px;height:84px;border-radius:12px;}
-    .public-card .public-age,.public-card .public-body > h3,.public-card .public-body > .public-born{max-width:calc(100% - 100px);}
+    .public-card .public-thumb{top:22px;right:20px;width:108px;height:72px;border-radius:12px;}
+    .public-card .public-age,.public-card .public-body > h3,.public-card .public-body > .public-born{max-width:calc(100% - 128px);}
     .public-body .btn-rouge{align-self:stretch;text-align:center;}
     #facettes,#public,#pourquoi{padding:60px 22px;}
   }
@@ -693,17 +693,15 @@
 <!-- PUBLIC -->
 <section id="public" class="sec">
   <div class="sec-label">Horaires et tarifs</div>
-  <h2 class="sec-title">UN COURS<br>POUR CHACUN</h2>
-  <p class="public-intro">Débutant ou confirmé, petit ou grand : le Vovinam est un art martial pour tous les âges. Chacun progresse à son rythme, dans un cadre bienveillant et exigeant.</p>
+  <h2 class="sec-title">VENEZ ESSAYER,<br>QUAND VOUS VOULEZ</h2>
+  <p class="public-intro">Débutant ou confirmé, petit ou grand : chacun progresse à son rythme, dans un cadre bienveillant et exigeant. Les cours ont lieu au complexe sportif d’Artagnan, dans le dojo (salle Athos), au Port-Marly. Et la séance d’essai est gratuite et possible durant toute la saison : pas besoin d’attendre la rentrée.</p>
   <div class="public-grid">
     <article class="public-card">
       <div class="public-body">
-        <img class="public-thumb" src="photo-enfants.jpg" alt="Deux enfants en combat de Vovinam, avec casques et protections" loading="lazy">
+        <img class="public-thumb" src="vovinamenfant.jpg" alt="Enfants pratiquant le Vovinam en démonstration" loading="lazy">
         <span class="public-age">7 à 10 ans</span>
         <h3>Enfants</h3>
         <p class="public-born">Nés en 2016, 2017, 2018 et 2019</p>
-        <p class="public-tags">Motricité · Discipline · Confiance</p>
-        <p>Développer la coordination, le respect et la confiance en soi, dans une ambiance ludique et structurée.</p>
         <p class="public-slot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><strong>Mardi et Vendredi</strong> · 17h00 – 18h00**</span></p>
         <div class="public-price">
           <p class="tarif-price"><span class="tarif-num">300 €</span><span class="tarif-per">/ saison</span></p>
@@ -714,21 +712,15 @@
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Assurance incluse</span></li>
           </ul>
         </div>
-        <ul class="public-info">
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span><strong>Début des cours</strong> : Mardi 8 septembre 2026</span></li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Complexe sportif d'Artagnan, dojo (salle Athos)</span></li>
-        </ul>
         <a href="#contact" class="btn-rouge">Essayer gratuitement</a>
       </div>
     </article>
     <article class="public-card">
       <div class="public-body">
-        <img class="public-thumb" src="photo-adultes.jpg" alt="Deux pratiquants de Vovinam en travail au bâton" loading="lazy">
+        <img class="public-thumb" src="vovinamadultes.jpg" alt="Adultes pratiquant le Vovinam en démonstration" loading="lazy">
         <span class="public-age">À partir de 11 ans</span>
         <h3>Ados et Adultes</h3>
         <p class="public-born">Nés en 2015 et avant</p>
-        <p class="public-tags">Énergie · Technique · Progression</p>
-        <p>Se dépenser, se dépasser et progresser techniquement, jusqu'à la compétition si l'on le souhaite.</p>
         <p class="public-slot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><strong>Vendredi</strong> · 18h00 – 19h00</span></p>
         <div class="public-price">
           <p class="tarif-price"><span class="tarif-num">170 €</span><span class="tarif-per">/ saison</span></p>
@@ -739,10 +731,6 @@
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Assurance incluse</span></li>
           </ul>
         </div>
-        <ul class="public-info">
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span><strong>Début des cours</strong> : Vendredi 11 septembre 2026</span></li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Complexe sportif d'Artagnan, dojo (salle Athos)</span></li>
-        </ul>
         <a href="#contact" class="btn-rouge">Essayer gratuitement</a>
       </div>
     </article>
