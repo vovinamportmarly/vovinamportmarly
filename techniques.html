@@ -72,7 +72,7 @@
   .breadcrumb a:hover { color: var(--jaune); }
   .hero-eyebrow { font-size: .62rem; letter-spacing: .28em; text-transform: uppercase; color: var(--jaune); margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
   .hero-eyebrow::before { content: ''; width: 26px; height: 2px; background: var(--jaune); flex-shrink: 0; }
-  .hero h1 { font-size: clamp(2.2rem,4.4vw,4.4rem); line-height: 1.02; letter-spacing: .02em; color: var(--blanc); font-weight: 900; text-transform: uppercase; }
+  .hero h1 { font-size: clamp(2.2rem,4.2vw,4.2rem); line-height: 1.02; letter-spacing: .02em; color: var(--blanc); font-weight: 900; text-transform: uppercase; }
   .hero h1 em { font-style: normal; color: var(--jaune); display: block; }
   .hero-desc { font-size: 1.08rem; color: rgba(255,255,255,.9); max-width: 540px; margin: 24px 0 32px; line-height: 1.7; }
   .hero-actions { display: flex; gap: 13px; flex-wrap: wrap; }
@@ -291,6 +291,12 @@
     .mbar a{display:flex;align-items:center;justify-content:center;gap:8px;border-radius:10px;font-family:'Be Vietnam Pro',sans-serif;font-weight:700;text-decoration:none;font-size:.8rem;padding:13px 10px;}
     .mbar-call{flex:0 0 34%;color:var(--bleu);border:2px solid var(--bleu-mid);background:var(--blanc);}
     .mbar-cta{flex:1;color:var(--blanc);background:var(--rouge);}
+  }
+
+  /* LISIBILITÉ MOBILE : aucun texte sous ~10,5 px */
+  @media(max-width:900px){
+    .ft-title,.nm-cta,.nm-membre,.nav-mobile ul li a,.fs span,.sec-label,dt,dt span,.breadcrumb a,.breadcrumb span,.hero-eyebrow,.tq-badge,.lutte-rule small,.vodao-devise small{font-size:.66rem !important;}
+    .breadcrumb a{display:inline-block;padding:8px 0;}
   }
 </style>
 </head>
@@ -615,11 +621,10 @@
   <div>
     <p class="ft-title">Liens utiles</p>
     <ul class="ft-list">
-      <li><a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener" style="color:var(--jaune);font-weight:700;">🟢 Devenir membre — HelloAsso</a></li>
+      <li><a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener" style="color:var(--jaune);font-weight:700;">Devenir membre</a></li>
       <li><a href="https://www.vdst.fr">VDST France</a></li>
       <li><a href="https://www.vovinam-france.org">TCHL France</a></li>
       <li><a href="https://www.ffkarate.fr/arts-martiaux-vietnamiens/">FFKDA-AMV</a></li>
-      <li><a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener">HelloAsso — Adhésion</a></li>
       <li><a href="mentions-legales.html">Mentions légales</a></li>
     </ul>
   </div>

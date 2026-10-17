@@ -101,7 +101,7 @@
     gap: 10px; margin-bottom: 14px; font-weight: 700;
   }
   .page-title {
-    font-family: 'Be Vietnam Pro', sans-serif; font-size: 2.6rem;
+    font-family: 'Be Vietnam Pro', sans-serif; font-size: clamp(2.2rem,4.2vw,4.2rem);
     font-weight: 900; color: var(--blanc); line-height: 1.1;
     max-width: 760px; margin-bottom: 14px; text-transform: uppercase;
   }
@@ -150,7 +150,6 @@
     .nav-logo-text strong{font-size:.85rem;}
     .nav-logo-text span{white-space:nowrap;font-size:.6rem;}
     .page-header{padding:48px 22px 40px;}
-    .page-title{font-size:1.8rem;}
     .sec{padding:48px 22px 60px;}
     .actu-grid{grid-template-columns:1fr;}
     footer{grid-template-columns:1fr;padding:36px 22px;}
@@ -159,6 +158,12 @@
     .mbar a{display:flex;align-items:center;justify-content:center;gap:8px;border-radius:10px;font-family:'Be Vietnam Pro',sans-serif;font-weight:700;text-decoration:none;font-size:.8rem;padding:13px 10px;}
     .mbar-call{flex:0 0 34%;color:var(--bleu);border:2px solid var(--bleu-mid);background:var(--blanc);}
     .mbar-cta{flex:1;color:var(--blanc);background:var(--rouge);}
+  }
+
+  /* LISIBILITÉ MOBILE : aucun texte sous ~10,5 px */
+  @media(max-width:900px){
+    .ft-title,.nm-cta,.nm-membre,.nav-mobile ul li a,.actu-tag,.page-eyebrow,.actu-lire{font-size:.66rem !important;}
+    .actu-lire{display:inline-flex;align-items:center;min-height:36px;}
   }
 </style>
 </head>
@@ -316,11 +321,10 @@
   <div>
     <p class="ft-title">Liens utiles</p>
     <ul class="ft-list">
-      <li><a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener" style="color:var(--jaune);font-weight:700;">🟢 Devenir membre — HelloAsso</a></li>
+      <li><a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener" style="color:var(--jaune);font-weight:700;">Devenir membre</a></li>
       <li><a href="https://www.vdst.fr">VDST France</a></li>
       <li><a href="https://www.vovinam-france.org">TCHL France</a></li>
       <li><a href="https://www.ffkarate.fr/arts-martiaux-vietnamiens/">FFKDA-AMV</a></li>
-      <li><a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener">HelloAsso — Adhésion</a></li>
       <li><a href="mentions-legales.html">Mentions légales</a></li>
     </ul>
   </div>

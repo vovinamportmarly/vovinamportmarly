@@ -170,7 +170,7 @@
   .actu-more { margin-top: 40px; text-align: center; }
 
   /* CALENDRIER */
-  #calendrier { position: relative; overflow: hidden; background-color: var(--blanc); background-image: url('logo-amv-ffk.jpg'); background-repeat: no-repeat; background-size: 236px auto; background-position: right 80px top 90px; }
+  #calendrier { position: relative; overflow: hidden; background-color: var(--blanc); background-image: url('logo-amv-ffk.jpg'); background-repeat: no-repeat; background-size: 236px auto; background-position: right 80px top 40px; }
   #calendrier::before { content: none; }
   #calendrier > * { position: relative; z-index: 1; }
   .cal-intro { font-size: 1rem; color: var(--texte-mid); font-style: italic; margin-top: 44px; margin-bottom: 28px; max-width: 760px; }
@@ -544,7 +544,7 @@
     .why-grid{grid-template-columns:1fr;gap:14px;}
     .why-card{padding:22px 18px;}
     .why-num{font-size:2rem;}
-    .why-cta .btn-jaune{width:100%;text-align:center;}
+    .why-cta .btn-jaune{width:100%;text-align:center;white-space:nowrap;font-size:clamp(.5rem,2.9vw,.68rem);letter-spacing:.04em;padding:15px 8px;}
     .public-body{padding:22px 20px 26px;}
     .public-card .public-thumb{top:22px;right:20px;width:108px;height:72px;border-radius:12px;}
     .public-card .public-age,.public-card .public-body > h3,.public-card .public-body > .public-born{max-width:calc(100% - 128px);}
@@ -552,6 +552,12 @@
     #facettes,#public,#pourquoi{padding:26px 22px;}
     #facettes{padding-bottom:24px;}
     #vovinam{padding-top:26px;}
+  }
+
+  /* LISIBILITÉ MOBILE : aucun texte sous ~10,5 px */
+  @media(max-width:900px){
+    .ft-title,.nm-cta,.nm-membre,.nav-mobile ul li a,.sec-label,.actu-tag,.cal-level,.cal-card .cal-card-btn,.tchl-date b,.tchl-date .btn-helloasso,.public-age,.hero-eyebrow,.hero-stat-label,.philo-src,.pval-fr,.ci-text strong,.fg label,.actu-lire{font-size:.66rem !important;}
+    .actu-lire{display:inline-flex;align-items:center;min-height:36px;}
   }
 </style>
 </head>
@@ -760,8 +766,8 @@
     <!-- Colonne droite : Prêt à vous inscrire -->
     <div class="tar-bottom-right">
       <p class="tar-cta-title" style="font-family:'Be Vietnam Pro',sans-serif;font-size:1.3rem;letter-spacing:.02em;color:var(--bleu);line-height:1;margin-bottom:8px;font-weight:900;text-transform:uppercase;">Prêt à vous inscrire ?</p>
-      <p style="font-size:.95rem;color:var(--texte-mid);font-style:italic;margin-bottom:20px;">Adhésion en ligne rapide et sécurisée via HelloAsso — paiement par carte.</p>
-      <a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener" class="btn-helloasso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:14px;height:14px;"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Devenir membre sur HelloAsso</a>
+      <p style="font-size:.95rem;color:var(--texte-mid);font-style:italic;margin-bottom:20px;">Adhésion en ligne rapide et sécurisée — paiement par carte.</p>
+      <a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener" class="btn-helloasso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:14px;height:14px;"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Devenir membre</a>
     </div>
   </div>
   <div class="public-notes">
@@ -1113,11 +1119,10 @@
   <div>
     <p class="ft-title">Liens utiles</p>
     <ul class="ft-list">
-      <li><a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener" style="color:var(--jaune);font-weight:700;">🟢 Devenir membre — HelloAsso</a></li>
+      <li><a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener" style="color:var(--jaune);font-weight:700;">Devenir membre</a></li>
       <li><a href="https://www.vdst.fr">VDST France</a></li>
       <li><a href="https://www.vovinam-france.org">TCHL France</a></li>
       <li><a href="https://www.ffkarate.fr/arts-martiaux-vietnamiens/">FFKDA-AMV</a></li>
-      <li><a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener">HelloAsso — Adhésion</a></li>
       <li><a href="mentions-legales.html">Mentions légales</a></li>
     </ul>
   </div>

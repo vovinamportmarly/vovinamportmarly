@@ -233,11 +233,11 @@
   }
   .btn-retour {
     display: inline-flex; align-items: center; gap: 8px;
-    font-family: 'Be Vietnam Pro', sans-serif; font-size: .52rem;
-    letter-spacing: .14em; text-transform: uppercase;
+    font-family: 'Be Vietnam Pro', sans-serif; font-size: .62rem;
+    letter-spacing: .12em; text-transform: uppercase;
     color: var(--bleu); font-weight: 700; text-decoration: none;
     border: 2px solid var(--bleu-mid); padding: 12px 20px;
-    border-radius: 2px; transition: all .2s;
+    border-radius: 8px; transition: all .2s;
   }
   .btn-retour:hover { background: var(--bleu); color: var(--blanc); border-color: var(--bleu); }
   .btn-partager {
@@ -279,6 +279,12 @@
     footer{grid-template-columns:1fr;padding:36px 22px;}
     .article-media-block{flex-direction:column;}
     .article-media-img{width:100%;flex-basis:auto;}
+  }
+
+  /* LISIBILITÉ MOBILE : aucun texte sous ~10,5 px */
+  @media(max-width:900px){
+    .ft-title,.nm-cta,.nm-membre,.nav-mobile ul li a,.article-tag,.btn-retour{font-size:.66rem !important;}
+    .btn-retour{padding:14px 20px;}
   }
 </style>
 </head>
@@ -426,7 +432,7 @@
   <div>
     <p class="ft-title">Liens utiles</p>
     <ul class="ft-list">
-      <li><a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener" style="color:var(--jaune);font-weight:700;">🟢 Devenir membre — HelloAsso</a></li>
+      <li><a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener" style="color:var(--jaune);font-weight:700;">Devenir membre</a></li>
       <li><a href="https://www.vdst.fr">VDST France</a></li>
       <li><a href="https://www.vovinam-france.org">TCHL France</a></li>
       <li><a href="https://www.ffkarate.fr/arts-martiaux-vietnamiens/">FFKDA-AMV</a></li>

@@ -73,7 +73,7 @@
   .breadcrumb a:hover { color: var(--jaune); }
   .hero-eyebrow { font-family: 'Be Vietnam Pro', sans-serif; font-size: .56rem; letter-spacing: .28em; text-transform: uppercase; color: var(--jaune); margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
   .hero-eyebrow::before { content: ''; width: 26px; height: 2px; background: var(--jaune); flex-shrink: 0; }
-  .page-hero h1 { font-family: 'Be Vietnam Pro', sans-serif; font-size: clamp(2.2rem,4.2vw,4.6rem); line-height: .9; letter-spacing: .02em; color: var(--blanc); font-weight: 900; text-transform: uppercase; margin-bottom: 18px; }
+  .page-hero h1 { font-family: 'Be Vietnam Pro', sans-serif; font-size: clamp(2.2rem,4.2vw,4.2rem); line-height: .95; letter-spacing: .02em; color: var(--blanc); font-weight: 900; text-transform: uppercase; margin-bottom: 18px; }
   .page-hero h1 em { font-style: normal; color: var(--jaune); display: block; }
   .page-hero-desc { font-size: 1.05rem; color: rgba(255,255,255,.68); max-width: 540px; font-style: italic; line-height: 1.75; }
 
@@ -157,7 +157,7 @@
   .essai::after { content: ''; position: absolute; right: -80px; top: -80px; width: 260px; height: 260px; border-radius: 50%; border: 1px solid rgba(255,255,255,.12); pointer-events: none; }
   .essai h3 { font-family: 'Be Vietnam Pro', sans-serif; font-size: 2.3rem; letter-spacing: .05em; color: var(--blanc); line-height: 1; margin-bottom: 5px; font-weight: 900; }
   .essai p { font-style: italic; color: rgba(255,255,255,.72); font-size: .97rem; }
-  .btn-blanc { display: inline-block; font-family: 'Be Vietnam Pro', sans-serif; font-size: .6rem; letter-spacing: .14em; text-transform: uppercase; color: var(--rouge); background: var(--blanc); padding: 15px 34px; text-decoration: none; font-weight: 700; border-radius: 2px; transition: all .2s; white-space: nowrap; flex-shrink: 0; position: relative; z-index: 1; }
+  .btn-blanc { display: inline-block; font-family: 'Be Vietnam Pro', sans-serif; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--rouge); background: var(--blanc); padding: 15px 30px; text-decoration: none; font-weight: 700; border-radius: 8px; transition: all .2s; white-space: nowrap; flex-shrink: 0; position: relative; z-index: 1; }
   .btn-blanc:hover { background: var(--jaune); transform: translateY(-2px); }
 
   /* FOOTER — copié exactement du site principal */
@@ -209,6 +209,12 @@
     .mbar a{display:flex;align-items:center;justify-content:center;gap:8px;border-radius:10px;font-family:'Be Vietnam Pro',sans-serif;font-weight:700;text-decoration:none;font-size:.8rem;padding:13px 10px;}
     .mbar-call{flex:0 0 34%;color:var(--bleu);border:2px solid var(--bleu-mid);background:var(--blanc);}
     .mbar-cta{flex:1;color:var(--blanc);background:var(--rouge);}
+  }
+
+  /* LISIBILITÉ MOBILE : aucun texte sous ~10,5 px */
+  @media(max-width:900px){
+    .ft-title,.nm-cta,.nm-membre,.nav-mobile ul li a,.chap-num,.sec-label,.sec-sub,.hist-tl-title,.portrait-role,.portrait-dates,.hero-eyebrow,.hist-quote cite,.btn-blanc{font-size:.66rem !important;}
+    
   }
 </style>
 </head>
@@ -439,11 +445,10 @@
   <div>
     <p class="ft-title">Liens utiles</p>
     <ul class="ft-list">
-      <li><a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener" style="color:var(--jaune);font-weight:700;">🟢 Devenir membre — HelloAsso</a></li>
+      <li><a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener" style="color:var(--jaune);font-weight:700;">Devenir membre</a></li>
       <li><a href="https://www.vdst.fr">VDST France</a></li>
       <li><a href="https://www.vovinam-france.org">TCHL France</a></li>
       <li><a href="https://www.ffkarate.fr/arts-martiaux-vietnamiens/">FFKDA-AMV</a></li>
-      <li><a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener">HelloAsso — Adhésion</a></li>
       <li><a href="mentions-legales.html">Mentions légales</a></li>
     </ul>
   </div>
