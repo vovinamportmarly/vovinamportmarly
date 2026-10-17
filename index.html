@@ -418,7 +418,7 @@
   .facet-photo-2 { background-image: linear-gradient(90deg, rgba(14,30,84,.96) 0%, rgba(14,30,84,.88) 40%, rgba(14,30,84,.22) 100%), url('photo-techniques-martiales.jpg'); background-size: cover, 120% auto; background-position: center, 0% 65%; }
   .facet-photo-3 { background-image: linear-gradient(90deg, rgba(14,30,84,.96) 0%, rgba(14,30,84,.88) 40%, rgba(14,30,84,.22) 100%), url('photo-sport-combat.jpg'); background-size: cover, 130% auto; background-position: center, 24% 38%; }
   .facet-photo-3 p { max-width: 70%; }
-  .facet-more { margin-top: 36px; text-align: center; }
+  .facet-more { margin-top: 36px; display: flex; flex-wrap: wrap; justify-content: center; gap: 13px; }
   .facet-photo:hover { border-color: var(--jaune); }
   .facet-photo h3 { color: var(--blanc); }
   .facet-photo p { color: rgba(255,255,255,.93); max-width: 78%; }
@@ -454,7 +454,7 @@
   #pourquoi .sec-label { color: var(--jaune); }
   #pourquoi .sec-label::before { background: var(--jaune); }
   #pourquoi .sec-title { color: var(--blanc); }
-  .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 40px; }
+  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 40px; }
   .why-card { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18); border-radius: 14px; padding: 30px 26px; backdrop-filter: blur(6px); transition: all .25s; }
   .why-card:hover { background: rgba(255,255,255,.14); transform: translateY(-4px); }
   .why-num { font-family: 'Be Vietnam Pro', sans-serif; font-size: 2.6rem; font-weight: 900; color: var(--jaune); line-height: 1; display: block; margin-bottom: 14px; }
@@ -522,7 +522,8 @@
     .hero-stats{gap:22px;flex-wrap:wrap;}
     .facet-grid,.public-grid{grid-template-columns:1fr;}
     .vovinam-btns{grid-template-columns:1fr;}
-    .facet-more .btn-rouge{display:block;text-align:center;}
+    .facet-more{flex-direction:column;}
+    .facet-more a{display:block;text-align:center;}
     #calendrier{background-image:none;}
     .tchl{grid-template-columns:1fr;gap:24px;margin-top:44px;padding-top:36px;position:relative;}
     .tchl::before{content:'';position:absolute;inset:0;background:url('logo-tchl-france.png') no-repeat center 24px / 92% auto;opacity:.13;pointer-events:none;z-index:0;}
@@ -535,10 +536,10 @@
     .facet-photo-2{background-size:cover,auto 150%;background-position:center,60% 72%;}
     .facet-photo-3{background-size:cover,auto 125%;background-position:center,62% 18%;}
     .facet-photo-3 p{max-width:66%;}
-    .why-grid{grid-template-columns:1fr 1fr;gap:14px;}
+    .why-grid{grid-template-columns:1fr;gap:14px;}
     .why-card{padding:22px 18px;}
     .why-num{font-size:2rem;}
-    .why-cta .btn-jaune,.why-cta .btn-outline-blanc{width:100%;text-align:center;}
+    .why-cta .btn-jaune{width:100%;text-align:center;}
     .public-body{padding:22px 20px 26px;}
     .public-card .public-thumb{top:22px;right:20px;width:108px;height:72px;border-radius:12px;}
     .public-card .public-age,.public-card .public-body > h3,.public-card .public-body > .public-born{max-width:calc(100% - 128px);}
@@ -656,6 +657,7 @@
   </div>
   <div class="facet-more">
     <a href="techniques.html" class="btn-rouge">Découvrir tout ce que vous apprendrez</a>
+    <a href="grades.html" class="btn-outline-bleu">Le programme par ceinture →</a>
   </div>
 </section>
 
@@ -680,7 +682,7 @@
   </div>
   <div>
     <div class="sec-label">L'histoire…</div>
-    <h2 class="sec-title">QUI A CRÉÉ<br>LE VOVINAM&nbsp;?</h2>
+    <h2 class="sec-title">DU FONDATEUR<br>AU PROFESSEUR</h2>
     <p style="color:var(--texte-mid);margin-bottom:16px;font-size:1.02rem;">Le Vovinam Việt Võ Đạo est un art martial vietnamien fondé en 1938 par le Maître Fondateur Nguyễn Lộc. Il est une synthèse des arts martiaux traditionnels et millénaires du Vietnam.</p>
     <p style="color:var(--texte-mid);margin-bottom:16px;font-size:1.02rem;">Le Vovinam est un art martial très complet qui comprend notamment des techniques de percussion (coups de pieds, coups de poings, coups de coude, coups de genoux, tranchants de la main...). </p>
     <p style="color:var(--texte-mid);margin-bottom:16px;font-size:1.02rem;">Le Vovinam c'est aussi des techniques de self-défense (se défendre contre un étranglement, une saisie au corps, une saisie des poignets...), des projections (qui peuvent faire penser au Judo), de lutte vietnamienne, de clés articulaires (de bras de jambes) ou encore de ciseaux (coups de pieds sautés ou saisies au corps et à la tête avec les jambes).</p>
@@ -688,8 +690,7 @@
     <p style="color:var(--texte-mid);margin-bottom:24px;font-size:1.02rem;">Le Vovinam Việt Võ Đạo est aussi un sport avec ses compétitions techniques et combat nationales et internationales. Les combats sont réglementés et autorisent notamment les pieds-poings, les balayages, les projections et les ciseaux. Le club participe aux compétitions Vovinam et AMV de la fédération de karaté (FFKDA) qui est la fédération délégataire.</p>
     <div class="vovinam-btns">
       <a href="histoirevovinam.html" class="btn-rouge">L'histoire du Vovinam</a>
-      <a href="grades.html" class="btn-outline-bleu">Le programme par ceinture →</a>
-      <a href="professeur.html" class="btn-bleu">Notre professeur Thầy Grégory</a>
+      <a href="professeur.html" class="btn-outline-bleu">Notre professeur Thầy Grégory</a>
     </div>
   </div>
 </section>
@@ -765,17 +766,15 @@
 
 <!-- POURQUOI -->
 <section id="pourquoi" class="sec">
-  <div class="sec-label">Pourquoi le Vovinam ?</div>
-  <h2 class="sec-title">UN ART MARTIAL<br>QUI COUVRE TOUT</h2>
+  <div class="sec-label">Pourquoi nous rejoindre ?</div>
+  <h2 class="sec-title">TROIS BONNES RAISONS<br>DE VENIR ESSAYER</h2>
   <div class="why-grid">
-    <div class="why-card"><span class="why-num">01</span><h3>Complet</h3><p>Frappes, projections, lutte, clés, armes, self-défense : on ne tourne jamais en rond, il y a toujours quelque chose à apprendre.</p></div>
-    <div class="why-card"><span class="why-num">02</span><h3>Accessible</h3><p>Chacun progresse à son rythme, quels que soient son âge et sa condition physique de départ.</p></div>
-    <div class="why-card"><span class="why-num">03</span><h3>Convivial</h3><p>Un club à taille humaine, un professeur à l'écoute et des cours proches de chez vous, au Port-Marly.</p></div>
-    <div class="why-card"><span class="why-num">04</span><h3>Sans risque</h3><p>La première séance est offerte et sans engagement : venez sentir l'ambiance avant de vous décider.</p></div>
+    <div class="why-card"><span class="why-num">01</span><h3>Accessible</h3><p>Chacun progresse à son rythme, quels que soient son âge et sa condition physique de départ.</p></div>
+    <div class="why-card"><span class="why-num">02</span><h3>Convivial</h3><p>Un club à taille humaine, un professeur à l'écoute et des cours proches de chez vous, au Port-Marly.</p></div>
+    <div class="why-card"><span class="why-num">03</span><h3>Sans engagement</h3><p>La première séance est offerte et sans engagement : venez sentir l'ambiance avant de vous décider.</p></div>
   </div>
   <div class="why-cta">
     <a href="#contact" class="btn-jaune">Réserver ma séance d'essai gratuite</a>
-    <a href="#public" class="btn-outline-blanc">Voir les horaires</a>
   </div>
 </section>
 
