@@ -87,7 +87,9 @@
   .hero h1 em { font-style: normal; color: var(--jaune); display: block; font-weight: 900; font-size: .85em; }
   .hero h1 .h1-top { display: block; white-space: nowrap; margin-bottom: 8px; font-size: min(2.8rem, calc((50vw - 128px) / 15.6)); }
   .hero h1 .sub { font-size: 0.42em; color: rgba(255,255,255,.8); letter-spacing: .18em; display: block; margin-top: 12px; font-family: 'Be Vietnam Pro', sans-serif; font-weight: 600; text-transform: uppercase; line-height: 1.5; }
-  .hero-desc { font-size: 1.08rem; color: rgba(255,255,255,.9); max-width: 520px; margin: 26px 0 34px; line-height: 1.7; }
+  .hero-desc { font-size: 1.08rem; color: rgba(255,255,255,.9); max-width: 520px; margin: 10px 0 34px; line-height: 1.7; }
+  .hero-desc .hero-hook { color: var(--blanc); font-weight: 700; }
+  .hero-desc .hero-hook:first-child { display: block; margin-bottom: 18px; font-size: 1.3rem; line-height: 1.3; font-weight: 800; white-space: nowrap; }
   .hero-actions { display: flex; gap: 13px; flex-wrap: wrap; }
   .btn-jaune { display: inline-block; font-family: 'Be Vietnam Pro', sans-serif; font-size: .6rem; letter-spacing: .16em; text-transform: uppercase; color: var(--bleu); background: var(--jaune); padding: 13px 28px; text-decoration: none; font-weight: 700; border-radius: 2px; border: 2px solid var(--jaune); transition: all .2s; }
   .btn-jaune:hover { background: #d4a814; border-color: #d4a814; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
@@ -424,6 +426,7 @@
   /* pour qui ? */
   #public { background: var(--gris-fond); }
   .public-intro { font-size: 1.05rem; color: var(--texte-mid); max-width: 720px; margin-top: 8px; }
+  .public-intro strong { color: var(--bleu); font-weight: 800; }
   .public-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-top: 40px; }
   .public-card { background: var(--blanc); border: 1px solid var(--bleu-mid); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; transition: all .25s; }
   .public-card:hover { transform: translateY(-5px); box-shadow: 0 16px 38px rgba(27,58,140,.14); }
@@ -513,6 +516,7 @@
     .mbar-call{flex:0 0 34%;color:var(--bleu);border:2px solid var(--bleu-mid);background:var(--blanc);}
     .mbar-cta{flex:1;color:var(--blanc);background:var(--rouge);}
     .hero-desc{max-width:none;font-size:1rem;}
+    .hero-desc .hero-hook:first-child{font-size:min(1.3rem,calc((100vw - 44px) / 18.3));}
     .hero h1 .h1-top{font-size:min(1.7rem,calc((100vw - 44px) / 15.6));}
     .hero-checks{gap:6px 18px;}
     .hero-stats{gap:22px;flex-wrap:wrap;}
@@ -603,7 +607,7 @@
   <div class="hero-left">
     <p class="hero-eyebrow anim">VDST Port-Marly — Association sportive Loi 1901</p>
     <h1 class="anim"><span class="h1-top">LE VOVINAM – VIỆT VÕ ĐẠO</span><em>À PORT-MARLY</em></h1>
-    <p class="hero-desc anim">L'art martial vietnamien complet&nbsp;: apprenez à vous défendre, canalisez votre énergie et progressez à votre rythme. Self&#8209;défense, frappes pieds&#8209;poings, projections, lutte, armes traditionnelles… pour les enfants dès 7&nbsp;ans, les ados et les adultes, tous niveaux.</p>
+    <p class="hero-desc anim"><strong class="hero-hook">Un art martial vietnamien complet&nbsp;!</strong>Pratiqué dans plus de 70&nbsp;pays mais<br><strong class="hero-hook">rare dans les Yvelines.</strong><br>Apprenez à vous défendre, canalisez votre énergie, progressez à votre rythme.<br>Des frappes, des projections, de la lutte et du maniement d’armes traditionnelles.<br>Pour les enfants dès 7&nbsp;ans, les ados et les adultes, du débutant au confirmé&nbsp;: une séance suffit pour vous faire une idée.</p>
     <div class="hero-actions anim">
       <a href="#contact" class="btn-jaune">Séance d'essai gratuite</a>
       <a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener" class="btn-outline-blanc">Devenir membre</a>
@@ -694,7 +698,7 @@
 <section id="public" class="sec">
   <div class="sec-label">Horaires et tarifs</div>
   <h2 class="sec-title">VENEZ ESSAYER,<br>QUAND VOUS VOULEZ</h2>
-  <p class="public-intro">Débutant ou confirmé, petit ou grand : chacun progresse à son rythme, dans un cadre bienveillant et exigeant. Les cours ont lieu au complexe sportif d’Artagnan, dans le dojo (salle Athos), au Port-Marly. Et la séance d’essai est gratuite et possible durant toute la saison : pas besoin d’attendre la rentrée.</p>
+  <p class="public-intro">Débutant ou confirmé, petit ou grand : chacun progresse à son rythme, dans un cadre bienveillant et exigeant. Les cours ont lieu au <strong>complexe sportif d’Artagnan</strong>, dans le dojo (salle Athos), au Port-Marly. Et la <strong>séance d’essai est gratuite</strong> et possible durant toute la saison : pas besoin d’attendre la rentrée.</p>
   <div class="public-grid">
     <article class="public-card">
       <div class="public-body">
