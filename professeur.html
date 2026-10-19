@@ -277,6 +277,12 @@
     .ft-title,.nm-cta,.nm-membre,.nav-mobile ul li a,.palm-event,.palm-stat-label,.sec-label,.breadcrumb a,.breadcrumb span,.hero-eyebrow,.portrait-role,.prof-vision cite{font-size:.66rem !important;}
     .breadcrumb a{display:inline-block;padding:8px 0;}
   }
+  .essai-btns { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 12px; position: relative; z-index: 1; }
+  .essai .essai-btns a { min-height: 52px; display: flex; align-items: center; justify-content: center; text-align: center; white-space: nowrap; font-size: .72rem; letter-spacing: .12em; padding: 15px 30px; border-radius: 8px; font-weight: 700; }
+  @media(max-width:900px){
+    .essai .essai-btns{grid-auto-flow:row;grid-auto-columns:minmax(0,1fr);width:100%;}
+    .essai .essai-btns a{font-size:clamp(.5rem,2.9vw,.68rem);letter-spacing:.04em;padding:15px 8px;}
+  }
 </style>
 </head>
 <body>
@@ -538,7 +544,7 @@
 <!-- ESSAI -->
 <div class="essai">
   <div><h3>Première séance offerte</h3><p>Venez tester sans engagement — tenue souple de sport et une bouteille d'eau suffisent, aucun équipement requis.</p></div>
-  <div style="display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1;">
+  <div class="essai-btns">
     <a href="index.html#contact" class="btn-blanc">Je réserve mon essai →</a>
     <a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener" class="btn-helloasso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Devenir membre</a>
   </div>
