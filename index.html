@@ -454,17 +454,12 @@
   .public-body .btn-rouge { align-self: flex-start; }
 
   /* pourquoi le vovinam */
-  #pourquoi { background: linear-gradient(135deg, #0f2260 0%, var(--bleu) 55%, #2a4fa8 100%); }
-  #pourquoi .sec-label { color: var(--jaune); }
-  #pourquoi .sec-label::before { background: var(--jaune); }
-  #pourquoi .sec-title { color: var(--blanc); }
-  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 40px; }
-  .why-card { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18); border-radius: 14px; padding: 30px 26px; backdrop-filter: blur(6px); transition: all .25s; }
-  .why-card:hover { background: rgba(255,255,255,.14); transform: translateY(-4px); }
-  .why-num { font-family: 'Be Vietnam Pro', sans-serif; font-size: 2.6rem; font-weight: 900; color: var(--jaune); line-height: 1; display: block; margin-bottom: 14px; }
-  .why-card h3 { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--blanc); margin-bottom: 8px; text-transform: uppercase; }
-  .why-card p { font-size: .95rem; color: rgba(255,255,255,.82); line-height: 1.6; }
-  .why-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 44px; }
+  #pourquoi { background: var(--blanc); }
+  .why-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 34px; }
+  .why-card { background: var(--bleu-pale); border: 1px solid var(--bleu-mid); border-radius: 12px; padding: 20px 22px 22px; transition: transform .25s, box-shadow .25s; }
+  .why-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(27,58,140,.10); }
+  .why-card h3 { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1.05rem; font-weight: 800; color: var(--bleu); margin-bottom: 6px; text-transform: uppercase; letter-spacing: .02em; }
+  .why-card p { font-size: .92rem; color: var(--texte-mid); line-height: 1.6; }
 
   /* barre d'actions mobile */
   .mbar { display: none; }
@@ -543,9 +538,7 @@
     .facet-photo-3{background-size:cover,auto 125%;background-position:center,62% 18%;}
     .facet-photo-3 p{max-width:66%;}
     .why-grid{grid-template-columns:1fr;gap:14px;}
-    .why-card{padding:22px 18px;}
-    .why-num{font-size:2rem;}
-    .why-cta .btn-jaune{width:100%;text-align:center;white-space:nowrap;font-size:clamp(.5rem,2.9vw,.68rem);letter-spacing:.04em;padding:15px 8px;}
+    .why-card{padding:18px 16px;}
     .public-body{padding:22px 20px 26px;}
     .public-card .public-thumb{top:22px;right:20px;width:108px;height:72px;border-radius:12px;}
     .public-card .public-age,.public-card .public-body > h3,.public-card .public-body > .public-born{max-width:calc(100% - 128px);}
@@ -578,10 +571,10 @@
     .mob-collapse .philo-p + .mob-toggle{margin-top:14px;}
   }
   /* AVANT DE VENIR */
-  #avant { background: var(--blanc); }
+  #avant { background: var(--gris-fond); }
   .avant-intro { font-size: 1rem; color: var(--texte-mid); margin: 6px 0 26px; max-width: 640px; }
   .avant-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
-  .avant-card { background: var(--bleu-pale); border: 1px solid var(--bleu-mid); border-radius: 12px; padding: 18px 18px 20px; }
+  .avant-card { background: var(--blanc); border: 1px solid var(--bleu-mid); border-radius: 12px; padding: 18px 18px 20px; }
   .avant-card h3 { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1rem; font-weight: 800; color: var(--bleu); text-transform: uppercase; letter-spacing: .02em; margin-bottom: 4px; }
   .avant-card p { font-size: .9rem; color: var(--texte-mid); line-height: 1.55; }
   @media(max-width:1100px){ .avant-grid{grid-template-columns:repeat(2,minmax(0,1fr));} }
@@ -603,7 +596,7 @@
     .gal-cell:not(:first-child) .yt-title{display:none;}
     .gal-cell:not(:first-child) .yt-play{width:52px;height:37px;}
   }
-  .venir-card { margin-top: 14px; background: var(--bleu-pale); border: 1px solid var(--bleu-mid); border-radius: 12px; padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .venir-card { margin-top: 14px; background: var(--blanc); border: 1px solid var(--bleu-mid); border-radius: 12px; padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
   .venir-card h3 { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1rem; font-weight: 800; color: var(--bleu); text-transform: uppercase; letter-spacing: .02em; margin-bottom: 4px; }
   .venir-card p { font-size: .92rem; color: var(--texte-mid); line-height: 1.5; }
   .venir-card .btn-rouge { flex-shrink: 0; white-space: nowrap; }
@@ -639,6 +632,9 @@
     .essai { margin: 26px 18px; padding: 30px 22px; border-radius: 16px; }
     .essai h3 { font-size: 1.6rem; }
   }
+
+  /* COINS ARRONDIS (photos et cartes) */
+  .hist-portrait, .actu-card, .gal-cell, .pval, .tar-card, .img-ph { border-radius: 14px; }
 </style>
 </head>
 <body>
@@ -767,7 +763,7 @@
         <figcaption>Lê Sáng<span>Maître Patriarche</span></figcaption>
       </figure>
     </div>
-    <div style="position:relative;aspect-ratio:16/10;border-radius:4px;overflow:hidden;">
+    <div style="position:relative;aspect-ratio:16/10;border-radius:14px;overflow:hidden;">
       <img src="photo-principale.webp" alt="Vovinam Port-Marly — ciseaux volants" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" decoding="async">
       <div class="hist-caption">Đòn chân tấn công số 7<span>Technique de jambe n°&nbsp;7</span></div>
       <div class="logo-badge"><img src="logo-vdst.webp" alt="Logo" loading="lazy" decoding="async"></div>
@@ -862,6 +858,17 @@
   </div>
 </section>
 
+<!-- POURQUOI -->
+<section id="pourquoi" class="sec">
+  <div class="sec-label">Pourquoi nous rejoindre ?</div>
+  <h2 class="sec-title">TROIS BONNES RAISONS<br>DE VENIR ESSAYER</h2>
+  <div class="why-grid">
+    <div class="why-card"><h3>Accessible</h3><p>Chacun progresse à son rythme, quels que soient son âge et sa condition physique de départ.</p></div>
+    <div class="why-card"><h3>Convivial</h3><p>Un club à taille humaine, un professeur à l'écoute et des cours proches de chez vous, au Port-Marly.</p></div>
+    <div class="why-card"><h3>Sans engagement</h3><p>La première séance est offerte et sans engagement : venez sentir l'ambiance avant de vous décider.</p></div>
+  </div>
+</section>
+
 <!-- AVANT DE VENIR -->
 <section id="avant" class="sec">
   <div class="sec-label">Pratique</div>
@@ -876,20 +883,6 @@
   <div class="venir-card">
     <div><h3>Comment venir</h3><p>Complexe sportif d’Artagnan, dojo (salle Athos) — 78560 Le Port-Marly</p></div>
     <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Complexe+sportif+d%27Artagnan+78560+Le+Port-Marly" target="_blank" rel="noopener" class="btn-rouge">Itinéraire ↗</a>
-  </div>
-</section>
-
-<!-- POURQUOI -->
-<section id="pourquoi" class="sec">
-  <div class="sec-label">Pourquoi nous rejoindre ?</div>
-  <h2 class="sec-title">TROIS BONNES RAISONS<br>DE VENIR ESSAYER</h2>
-  <div class="why-grid">
-    <div class="why-card"><span class="why-num">01</span><h3>Accessible</h3><p>Chacun progresse à son rythme, quels que soient son âge et sa condition physique de départ.</p></div>
-    <div class="why-card"><span class="why-num">02</span><h3>Convivial</h3><p>Un club à taille humaine, un professeur à l'écoute et des cours proches de chez vous, au Port-Marly.</p></div>
-    <div class="why-card"><span class="why-num">03</span><h3>Sans engagement</h3><p>La première séance est offerte et sans engagement : venez sentir l'ambiance avant de vous décider.</p></div>
-  </div>
-  <div class="why-cta">
-    <a href="#contact" class="btn-jaune">Réserver ma séance d'essai gratuite</a>
   </div>
 </section>
 
@@ -1062,10 +1055,10 @@
   <span class="pval-viet">L'écusson et le drapeau</span>
   <span class="pval-fr" style="display:block;margin-bottom:14px;">-</span>
   <div style="display:flex;gap:16px;margin-bottom:16px;">
-    <div style="flex:1;aspect-ratio:1/1.1;border-radius:3px;overflow:hidden;border:1px solid var(--bleu-mid);background:var(--bleu-pale);display:flex;align-items:center;justify-content:center;">
+    <div style="flex:1;aspect-ratio:1/1.1;border-radius:12px;overflow:hidden;border:1px solid var(--bleu-mid);background:var(--bleu-pale);display:flex;align-items:center;justify-content:center;">
       <img src="ecusson-vovinam.webp" alt="Écusson Vovinam Việt Võ Đạo" style="width:100%;height:100%;object-fit:contain;padding:8px;" loading="lazy" decoding="async">
     </div>
-    <div style="flex:1;aspect-ratio:1/1.1;border-radius:3px;overflow:hidden;border:1px solid var(--bleu-mid);background:var(--bleu-pale);display:flex;align-items:center;justify-content:center;">
+    <div style="flex:1;aspect-ratio:1/1.1;border-radius:12px;overflow:hidden;border:1px solid var(--bleu-mid);background:var(--bleu-pale);display:flex;align-items:center;justify-content:center;">
       <img src="drapeau-vovinam.webp" alt="Drapeau Vovinam Việt Võ Đạo" style="width:100%;height:100%;object-fit:contain;padding:8px;" loading="lazy" decoding="async">
     </div>
   </div>
@@ -1160,7 +1153,7 @@
   <div class="sec-label">Formulaire</div>
   <h3 style="font-family:'Be Vietnam Pro',sans-serif;font-size:1.7rem;letter-spacing:.02em;color:var(--bleu);margin-bottom:22px;margin-top:4px;font-weight:900;text-transform:uppercase;">ÉCRIVEZ-NOUS</h3>
 
-  <div id="form-succes" style="display:none;background:var(--bleu-pale);border:1px solid var(--bleu-mid);border-radius:3px;padding:22px;text-align:center;margin-bottom:16px;">
+  <div id="form-succes" style="display:none;background:var(--bleu-pale);border:1px solid var(--bleu-mid);border-radius:12px;padding:22px;text-align:center;margin-bottom:16px;">
     <p style="font-family:'Be Vietnam Pro',sans-serif;font-size:1.1rem;color:var(--bleu);font-weight:700;margin-bottom:6px;">✅ Message envoyé !</p>
     <p style="color:var(--texte-mid);font-style:italic;font-size:.95rem;">Nous vous répondrons dans les plus brefs délais.</p>
   </div>
