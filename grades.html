@@ -300,25 +300,6 @@ body {
 .form-tag.duel { background: #fff0f2; color: var(--rouge); border-color: #f9cdd3; }
 .form-note { font-size: .75rem; color: var(--texte-muted); font-style: italic; margin-top: 8px; }
 
-/* Hoàng Đai styling */
-.grade-card.hoang-dai .grade-card-header { background: linear-gradient(90deg, #fef9e7, #fffbe8); }
-.grade-card.hoang-dai .grade-niveau { color: #8a6500; }
-.grade-card.hoang-dai .duree-badge { background: #fef9e7; color: #8a6500; }
-.grade-card.hoang-dai .col-title::before { background: #c8930a; }
-
-/* Hồng Đai styling */
-.grade-card.hong-dai .grade-card-header { background: linear-gradient(90deg, #fff0f2, #fff5f6); }
-.grade-card.hong-dai .grade-niveau { color: var(--rouge); }
-.grade-card.hong-dai .duree-badge { background: #fff0f2; color: var(--rouge); }
-.grade-card.hong-dai .col-title::before { background: var(--rouge); }
-
-/* Bạch Đai styling */
-.grade-card.bach-dai .grade-card-header { background: linear-gradient(90deg, #f5f5f5, #fff); }
-.grade-card.bach-dai .grade-niveau { color: #444; }
-.grade-card.bach-dai .duree-badge { background: #f0f0f0; color: #555; border: 1px solid #ddd; }
-.grade-card.bach-dai .col-title::before { background: #888; }
-.grade-card.bach-dai .form-tag { background: #f5f5f5; color: #555; border-color: #ddd; }
-
 /* Info box for advanced grades */
 .grade-col-info { padding: 20px 22px; }
 .grade-col-info p { font-size: .85rem; color: var(--texte-muted); font-style: italic; line-height: 1.6; }
@@ -343,14 +324,6 @@ body {
 }
 .vodao-list li::before { content: '◆'; color: var(--bleu); font-size: .45rem; flex-shrink: 0; margin-top: 5px; }
 .vodao-list.full li { width: 100%; }
-.grade-card.hoang-dai .grade-card-vodao { background: linear-gradient(90deg, #fefae8, #fffcf0); border-top-color: #e8d58a; }
-.grade-card.hoang-dai .vodao-title { color: #8a6500; }
-.grade-card.hoang-dai .vodao-title::before { background: #8a6500; }
-.grade-card.hoang-dai .vodao-list li::before { color: #c8930a; }
-.grade-card.hong-dai .grade-card-vodao { background: linear-gradient(90deg, #fff5f6, #fff8f9); border-top-color: #f9cdd3; }
-.grade-card.hong-dai .vodao-title { color: var(--rouge); }
-.grade-card.hong-dai .vodao-title::before { background: var(--rouge); }
-.grade-card.hong-dai .vodao-list li::before { color: var(--rouge); }
 
 /* FOOTER */
 footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; border-top: 3px solid var(--jaune); }
@@ -367,13 +340,6 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
 /* barre d'actions mobile */
 .mbar { display: none; }
 
-/* BARRE DES CEINTURES (sous le titre de la page) */
-.gbar { display: flex; background: var(--bleu); border-top: 3px solid var(--jaune); }
-.gbar-item { flex: 1; padding: 16px 22px; text-decoration: none; border-right: 1px solid rgba(255,255,255,.1); transition: background .2s; }
-.gbar-item:last-child { border-right: none; }
-.gbar-item:hover { background: rgba(255,255,255,.08); }
-.gbar-num { font-size: .44rem; letter-spacing: .22em; text-transform: uppercase; color: var(--jaune); display: block; margin-bottom: 3px; }
-.gbar-name { font-size: .82rem; color: rgba(255,255,255,.7); font-style: italic; display: block; line-height: 1.3; }
 
 
   /* navigation : largeurs intermédiaires */
@@ -397,7 +363,6 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
   .main { padding: 50px 20px 80px; }
   .intro-section { grid-template-columns: 1fr; gap: 36px; }
   .couleurs-grid { grid-template-columns: 1fr 1fr; }
-  .grade-card-header { grid-template-columns: 1fr 1fr; }
   .grade-card-body { grid-template-columns: 1fr; }
   .grade-col { border-right: none; border-bottom: 1px solid var(--bleu-mid); }
   .grade-col:last-child { border-bottom: none; }
@@ -407,10 +372,6 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
   .nav-links { display: none; }
   .burger-btn { display: flex; }
   .nav-mobile { display: block; }
-  .gbar { flex-wrap: wrap; }
-  .gbar-item { flex: 1 1 50%; border-bottom: 1px solid rgba(255,255,255,.1); padding: 14px 20px; }
-  .gbar-item:nth-child(2n) { border-right: none; }
-  .gbar-item:nth-last-child(-n+2) { border-bottom: none; }
   body { padding-bottom: 70px; }
   .mbar{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:98;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-top:2px solid var(--bleu-mid);box-shadow:0 -6px 24px rgba(27,58,140,.12);}
     .mbar a{display:flex;align-items:center;justify-content:center;gap:8px;border-radius:10px;font-family:'Be Vietnam Pro',sans-serif;font-weight:700;text-decoration:none;font-size:.8rem;padding:13px 10px;}
@@ -419,17 +380,164 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
 }
 @media (max-width: 600px) {
   .couleurs-grid { grid-template-columns: 1fr; }
-  .grade-card-header { grid-template-columns: 1fr; }
-  .grade-cell { border-right: none; border-bottom: 1px solid var(--bleu-mid); }
-  .grade-cell:last-child { border-bottom: none; }
-  .group-banner { flex-direction: column; align-items: flex-start; gap: 8px; }
 }
 
   /* LISIBILITÉ MOBILE : aucun texte sous ~10,5 px */
   @media(max-width:900px){
-    .ft-title,.nm-cta,.nm-membre,.nav-mobile ul li a,.label-xs,.col-title,.vodao-title,.gbar-num,.page-hero-eyebrow,.breadcrumb a,.breadcrumb .current,.belt-legend-title,.couleurs-section-title,.couleur-viet{font-size:.66rem !important;}
+    .ft-title,.nm-cta,.nm-membre,.nav-mobile ul li a,.label-xs,.col-title,.vodao-title,.page-hero-eyebrow,.breadcrumb a,.breadcrumb .current,.belt-legend-title,.couleurs-section-title,.couleur-viet{font-size:.66rem !important;}
     .breadcrumb a{display:inline-block;padding:8px 0;}
   }
+
+/* ============ REFONTE DU DESIGN (même univers que l'accueil) ============ */
+.sec-label { font-size: .62rem; letter-spacing: .26em; text-transform: uppercase; color: var(--rouge); display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-weight: 600; }
+.sec-label::before { content: ''; width: 20px; height: 2px; background: var(--rouge); flex-shrink: 0; }
+
+/* bandeau */
+.page-hero { min-height: 340px; }
+.page-hero::before { background: linear-gradient(100deg, rgba(14,30,84,.90) 0%, rgba(27,58,140,.62) 55%, rgba(46,91,184,.22) 100%); }
+.page-hero::after { display: none; }
+.page-hero-eyebrow { font-size: .72rem; font-weight: 600; letter-spacing: .22em; }
+.page-hero h1 { text-transform: uppercase; line-height: 1.02; }
+.page-hero-sub { font-style: normal; font-size: 1.05rem; color: rgba(255,255,255,.88); max-width: 620px; }
+.breadcrumb { font-size: .66rem; }
+
+/* navigation entre groupes (collée sous le menu) */
+.gnav { position: sticky; top: 78px; z-index: 90; background: rgba(255,255,255,.96); backdrop-filter: blur(12px); border-bottom: 1px solid var(--bleu-mid); box-shadow: 0 8px 24px rgba(27,58,140,.07); }
+.gnav-in { max-width: 1200px; margin: 0 auto; padding: 12px 60px; display: flex; gap: 10px; overflow-x: auto; scrollbar-width: none; }
+.gnav-in::-webkit-scrollbar { display: none; }
+.gnav a { display: inline-flex; align-items: center; gap: 9px; padding: 9px 18px; border-radius: 999px; border: 1.5px solid var(--bleu-mid); background: var(--blanc); color: var(--bleu); font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; white-space: nowrap; transition: all .2s; }
+.gnav a .dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+.gnav a:hover { border-color: var(--bleu); background: var(--bleu-pale); }
+.gnav a.active { background: var(--bleu); border-color: var(--bleu); color: var(--blanc); }
+
+/* page */
+.main { padding: 64px 60px 90px; }
+.intro-section { gap: 64px; margin-bottom: 64px; padding-bottom: 64px; }
+.intro-text h2 { font-size: clamp(2rem,3.2vw,3.4rem); text-transform: uppercase; letter-spacing: .02em; line-height: 1; margin-bottom: 22px; }
+.intro-text h2 span { color: var(--bleu); }
+.intro-text p { font-size: 1rem; line-height: 1.75; }
+.intro-belt-legend { gap: 12px; }
+.belt-legend-title { font-size: .62rem; font-weight: 600; letter-spacing: .22em; }
+.belt-item { background: var(--bleu-pale); border: 1px solid var(--bleu-mid); border-left-width: 5px; border-radius: 12px; padding: 14px 18px; }
+.belt-label { font-size: .95rem; }
+.belt-sub, .belt-titre { font-size: .8rem; }
+
+.couleurs-section { margin-bottom: 72px; padding-bottom: 64px; }
+.couleurs-section-title { font-size: .62rem; font-weight: 600; letter-spacing: .26em; }
+.couleurs-section h2 { font-size: clamp(2rem,3.2vw,3.4rem); letter-spacing: .02em; line-height: 1; margin-bottom: 32px; }
+.couleurs-grid { gap: 14px; }
+.couleur-card { border-radius: 14px; padding: 26px 24px; }
+.couleur-desc { font-size: .9rem; line-height: 1.65; }
+.couleur-viet { font-size: .66rem; }
+.belt-legend-title, .couleurs-section-title, .sec-label { font-size: .66rem; }
+
+/* groupes */
+.grade-group { margin-bottom: 72px; scroll-margin-top: 150px; }
+.g-depart { --accent: #aabbd8; --accent-bg: #f3f6fc; }
+.g-lam    { --accent: var(--bleu); --accent-bg: #eef3fb; }
+.g-hoang  { --accent: #e2b800; --accent-bg: #fffbe6; }
+.g-hong   { --accent: var(--rouge); --accent-bg: #fff3f5; }
+.g-bach   { --accent: #8a94a8; --accent-bg: #f5f6f8; }
+.group-banner { border-radius: 14px; padding: 22px 30px; margin-bottom: 22px; justify-content: space-between; gap: 20px; border-left-width: 0 !important; }
+.group-banner-title { font-size: clamp(1.3rem,2.2vw,1.9rem); letter-spacing: .02em; line-height: 1.05; text-transform: uppercase; }
+.group-banner-sub { font-size: .82rem; letter-spacing: .04em; opacity: .85; margin-top: 6px; }
+.group-banner.ceinture-depart { background: var(--bleu-pale); border: 1px solid var(--bleu-mid); }
+.gc-toggle { margin-left: auto; flex-shrink: 0; cursor: pointer; font-family: inherit; font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 9px 18px; border-radius: 999px; background: rgba(255,255,255,.16); color: var(--blanc); border: 1.5px solid rgba(255,255,255,.75); transition: all .2s; }
+.gc-toggle:hover { background: rgba(255,255,255,.3); }
+.ceinture-depart .gc-toggle, .ceinture-hoang .gc-toggle { color: var(--bleu); background: rgba(27,58,140,.06); border-color: rgba(27,58,140,.4); }
+.ceinture-depart .gc-toggle:hover, .ceinture-hoang .gc-toggle:hover { background: rgba(27,58,140,.14); }
+
+/* fiches de grade dépliables */
+.grades-grid { gap: 12px; }
+.grade-card { border-radius: 14px; border: 1px solid var(--bleu-mid); background: var(--blanc); box-shadow: none; animation: none; transform: none; }
+.grade-card:hover { transform: none; box-shadow: 0 10px 28px rgba(27,58,140,.10); }
+.grade-card[open] { border-color: var(--accent); box-shadow: 0 14px 34px rgba(27,58,140,.12); }
+.grade-card-header { position: relative; display: grid; grid-template-columns: minmax(0,1.15fr) minmax(0,1.25fr) auto minmax(0,1.1fr) 52px; align-items: center; gap: 0; cursor: pointer; list-style: none; background: var(--blanc); border-bottom: 0; padding: 4px 8px 4px 8px; transition: background .2s; }
+.grade-card-header::-webkit-details-marker { display: none; }
+.grade-card-header::marker { content: ''; }
+.grade-card-header::before { content: ''; position: absolute; left: 0; top: 10px; bottom: 10px; width: 5px; border-radius: 0 4px 4px 0; background: var(--accent); }
+.grade-card-header:hover { background: var(--accent-bg); }
+.grade-card[open] .grade-card-header { background: var(--accent-bg); }
+.grade-cell { padding: 14px 18px; border-right: 0; }
+.grade-cell:has(.duree-badge) { padding-left: 4px; padding-right: 22px; }
+.label-xs { font-size: .66rem; letter-spacing: .16em; margin-bottom: 5px; }
+.grade-niveau { font-size: 1.05rem; line-height: 1.15; }
+.grade-card .grade-niveau { color: var(--bleu); }
+.titre-fr { font-size: .98rem; line-height: 1.15; }
+.titre-viet, .titre-note { font-size: .74rem; }
+.duree-badge { background: var(--accent-bg); color: var(--bleu); border: 1px solid var(--bleu-mid); padding: 6px 14px; font-size: .78rem; }
+.gc-chevron { width: 34px; height: 34px; border-radius: 50%; background: var(--bleu-pale); position: relative; justify-self: center; transition: background .2s, transform .25s; }
+.gc-chevron::after { content: ''; position: absolute; left: 50%; top: 50%; width: 8px; height: 8px; border-right: 2.5px solid var(--bleu); border-bottom: 2.5px solid var(--bleu); transform: translate(-50%,-70%) rotate(45deg); }
+.grade-card:hover .gc-chevron { background: var(--bleu-mid); }
+.grade-card[open] .gc-chevron { background: var(--bleu); transform: rotate(180deg); }
+.grade-card[open] .gc-chevron::after { border-color: var(--blanc); }
+
+.grade-card-body { border-top: 1px solid var(--bleu-mid); }
+.grade-col { padding: 24px 28px; }
+.col-title { font-size: .66rem; font-weight: 600; letter-spacing: .18em; margin-bottom: 12px; }
+.col-title::before { background: var(--accent); }
+.techniques-list li { font-size: .92rem; padding: 7px 0; }
+.techniques-list li::before { color: var(--accent); }
+.form-tag { font-size: .78rem; padding: 5px 12px; }
+.grade-card-vodao { background: var(--accent-bg); border-top: 1px solid var(--bleu-mid); padding: 20px 28px; }
+.vodao-title { font-size: .66rem; font-weight: 700; letter-spacing: .18em; color: var(--bleu); }
+.vodao-title::before { background: var(--accent); }
+.vodao-list li { font-size: .9rem; }
+.vodao-list li::before { color: var(--accent); }
+.grade-col-info p { font-style: normal; font-size: .92rem; line-height: 1.7; color: var(--texte-mid); }
+.g-hoang .col-title, .g-hoang .vodao-title { color: #8a6500; }
+.g-hong .vodao-title { color: var(--rouge); }
+
+/* boutons et bande « première séance » (comme les autres pages) */
+.btn-blanc, .btn-helloasso { display: inline-flex; align-items: center; gap: 8px; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: 700; transition: all .2s; white-space: nowrap; }
+.btn-blanc { color: var(--rouge); background: var(--blanc); }
+.btn-blanc:hover { background: var(--jaune); transform: translateY(-2px); }
+.btn-helloasso { color: var(--blanc); background: #6CB86A; border: 2px solid #6CB86A; }
+.btn-helloasso:hover { background: #58a056; border-color: #58a056; transform: translateY(-2px); }
+.btn-helloasso svg { width: 14px; height: 14px; flex-shrink: 0; }
+.essai { background: var(--rouge); padding: 56px 80px; display: flex; align-items: center; justify-content: space-between; gap: 36px; flex-wrap: wrap; position: relative; overflow: hidden; }
+.essai::after { content: ''; position: absolute; right: -80px; top: -80px; width: 260px; height: 260px; border-radius: 50%; border: 1px solid rgba(255,255,255,.12); pointer-events: none; }
+.essai h3 { font-size: 2.3rem; letter-spacing: .05em; color: var(--blanc); line-height: 1; margin-bottom: 5px; font-weight: 900; text-transform: uppercase; }
+.essai p { font-style: italic; color: rgba(255,255,255,.8); font-size: .97rem; }
+.essai-btns { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 12px; position: relative; z-index: 1; }
+.essai .essai-btns a { min-height: 52px; display: flex; align-items: center; justify-content: center; text-align: center; white-space: nowrap; font-size: .72rem; letter-spacing: .12em; padding: 15px 30px; border-radius: 8px; font-weight: 700; }
+
+@media (max-width: 1100px) {
+  .grade-card-header { grid-template-columns: minmax(0,1fr) minmax(0,1.2fr) auto 52px; }
+  .grade-cell:nth-child(4) { grid-column: 1 / 4; padding-top: 0; }
+  .grade-cell:has(.duree-badge) { padding-left: 18px; }
+}
+@media (max-width: 900px) {
+  .gnav { top: 74px; }
+  .gnav-in { padding: 10px 18px; }
+  .gnav a { padding: 8px 14px; font-size: .66rem; }
+  .main { padding: 36px 20px 56px; }
+  .intro-section { gap: 30px; margin-bottom: 40px; padding-bottom: 40px; }
+  .couleurs-section { margin-bottom: 44px; padding-bottom: 40px; }
+  .couleurs-grid { gap: 12px; }
+  .grade-group { margin-bottom: 44px; scroll-margin-top: 130px; }
+  .group-banner { flex-wrap: wrap; padding: 18px 20px; }
+  .gc-toggle { margin-left: 0; padding: 8px 16px; }
+  .grade-card-header { grid-template-columns: minmax(0,1fr) auto 44px; gap: 2px 0; padding: 8px 6px 10px 6px; }
+  .grade-cell { padding: 4px 14px; }
+  .grade-cell:nth-child(1) { grid-column: 1 / 3; grid-row: 1; padding-top: 8px; }
+  .gc-chevron { grid-column: 3; grid-row: 1; }
+  .grade-cell:nth-child(2) { grid-column: 1 / -1; grid-row: 2; }
+  .grade-cell:nth-child(3) { grid-column: 1; grid-row: 3; padding-left: 14px; }
+  .grade-cell:nth-child(4) { grid-column: 2 / -1; grid-row: 3; padding: 4px 14px 4px 4px; }
+  .grade-cell .label-xs { display: none; }
+  .titre-note { display: none; }
+  .grade-cell .belt-display { flex-direction: row; align-items: center; gap: 12px; }
+  .grade-cell .belt-name { font-size: .72rem; line-height: 1.3; }
+  .grade-col { padding: 18px 18px; }
+  .grade-card-vodao { padding: 16px 18px; }
+  .vodao-list li { width: 100%; padding-right: 0; }
+  .essai { padding: 36px 22px; flex-direction: column; align-items: flex-start; }
+  .essai .essai-btns { grid-auto-flow: row; grid-auto-columns: minmax(0,1fr); width: 100%; }
+  .essai .essai-btns a { font-size: clamp(.5rem,2.9vw,.68rem); letter-spacing: .04em; padding: 15px 8px; }
+  .essai h3 { font-size: 1.9rem; }
+  footer { grid-template-columns: 1fr; gap: 28px; }
+}
 </style>
 </head>
 <body>
@@ -503,12 +611,15 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
   </div>
 </section>
 
-<!-- LES QUATRE GROUPES DE CEINTURES -->
-<div class="gbar">
-  <a href="#lam-dai" class="gbar-item"><span class="gbar-num">Niveau 01</span><span class="gbar-name">Lam Đai — ceinture bleue</span></a>
-  <a href="#hoang-dai" class="gbar-item"><span class="gbar-num">Niveau 02</span><span class="gbar-name">Hoàng Đai — ceinture jaune</span></a>
-  <a href="#hong-dai" class="gbar-item"><span class="gbar-num">Niveau 03</span><span class="gbar-name">Hồng Đai — maîtrise</span></a>
-  <a href="#bach-dai" class="gbar-item"><span class="gbar-num">Niveau 04</span><span class="gbar-name">Bạch Đai — ceinture blanche</span></a>
+<!-- NAVIGATION ENTRE LES GROUPES DE CEINTURES -->
+<div class="gnav" id="gnav">
+  <div class="gnav-in">
+    <a href="#depart"><span class="dot" style="background:#aabbd8"></span>Départ</a>
+    <a href="#lam-dai"><span class="dot" style="background:var(--bleu)"></span>Lam Đai</a>
+    <a href="#hoang-dai"><span class="dot" style="background:var(--jaune)"></span>Hoàng Đai</a>
+    <a href="#hong-dai"><span class="dot" style="background:var(--rouge)"></span>Hồng Đai</a>
+    <a href="#bach-dai"><span class="dot" style="background:#e6e6e6;border:1px solid #bbb"></span>Bạch Đai</a>
+  </div>
 </div>
 
 <!-- MAIN -->
@@ -517,6 +628,7 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
   <!-- INTRO -->
   <div class="intro-section">
     <div class="intro-text">
+      <div class="sec-label">Le parcours</div>
       <h2>Un parcours<br><span>structuré et progressif</span></h2>
       <p>
         Le Vovinam Việt Võ Đạo organise sa progression en ceintures colorées. Chaque couleur symbolise une étape de maîtrise technique et de développement personnel, fidèle à la philosophie du fondateur Nguyễn Lộc : <em>«&nbsp;Corps d'acier, cœur de bonté&nbsp;»</em>.
@@ -608,18 +720,19 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
   <!-- ═══════════════════════════════════════════
        CEINTURES DE DÉPART
        ═══════════════════════════════════════════ -->
-  <div class="grade-group">
-    <div class="section-header">
+  <div class="grade-group g-depart" id="depart">
+    <div class="group-banner ceinture-depart">
       <div>
-        <h2>Ceintures de <span>Départ</span></h2>
-        <p>Premiers pas dans la pratique · Fondations techniques · Titre : Élève (Võ Sinh)</p>
+        <div class="group-banner-title">Ceintures de Départ</div>
+        <div class="group-banner-sub">Premiers pas dans la pratique · Fondations techniques · Titre : Élève (Võ Sinh)</div>
       </div>
+      <button type="button" class="gc-toggle" data-open="Tout déplier" data-close="Tout replier" aria-expanded="false">Tout déplier</button>
     </div>
     <div class="grades-grid">
 
       <!-- TỰ VỆ -->
-      <div class="grade-card">
-        <div class="grade-card-header">
+      <details class="grade-card">
+        <summary class="grade-card-header">
           <div class="grade-cell">
             <span class="label-xs">Niveau — Trình Độ</span>
             <div class="grade-niveau">Lớp Tự Vệ</div>
@@ -645,7 +758,7 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
               <span class="titre-viet">Võ Sinh</span>
             </div>
           </div>
-        </div>
+        <span class="gc-chevron" aria-hidden="true"></span></summary>
         <div class="grade-card-body">
           <div class="grade-col">
             <div class="col-title">Techniques de base — Đòn Căn Bản</div>
@@ -670,11 +783,11 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
             <li>Mémorisation des 10 principes fondamentaux et compréhension générale</li>
           </ul>
         </div>
-      </div>
+      </details>
 
       <!-- NHẬP MÔN -->
-      <div class="grade-card">
-        <div class="grade-card-header">
+      <details class="grade-card">
+        <summary class="grade-card-header">
           <div class="grade-cell">
             <span class="label-xs">Niveau — Trình Độ</span>
             <div class="grade-niveau">Lớp Nhập Môn</div>
@@ -701,7 +814,7 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
               <span class="titre-note">Entrée officielle dans la discipline</span>
             </div>
           </div>
-        </div>
+        <span class="gc-chevron" aria-hidden="true"></span></summary>
         <div class="grade-card-body">
           <div class="grade-col">
             <div class="col-title">Techniques de base — Đòn Căn Bản</div>
@@ -725,7 +838,7 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
             <li>Aperçu du drapeau du fondateur de l'école</li>
           </ul>
         </div>
-      </div>
+      </details>
 
     </div>
   </div>
@@ -733,18 +846,19 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
   <!-- ═══════════════════════════════════════════
        LAM ĐAI — CEINTURE BLEUE
        ═══════════════════════════════════════════ -->
-  <div class="grade-group" id="lam-dai">
+  <div class="grade-group g-lam" id="lam-dai">
     <div class="group-banner ceinture-lam">
       <div>
         <div class="group-banner-title">LAM ĐAI — Ceinture Bleue</div>
         <div class="group-banner-sub">3 niveaux · 18 mois minimum · Titre : Disciple (Môn Sinh)</div>
       </div>
+      <button type="button" class="gc-toggle" data-open="Tout déplier" data-close="Tout replier" aria-expanded="false">Tout déplier</button>
     </div>
     <div class="grades-grid">
 
       <!-- LAM NHẤT -->
-      <div class="grade-card">
-        <div class="grade-card-header">
+      <details class="grade-card">
+        <summary class="grade-card-header">
           <div class="grade-cell">
             <span class="label-xs">Niveau — Trình Độ</span>
             <div class="grade-niveau">Lam Đai Đệ Nhất Cấp</div>
@@ -771,7 +885,7 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
               <span class="titre-note">1er niveau de la ceinture bleue</span>
             </div>
           </div>
-        </div>
+        <span class="gc-chevron" aria-hidden="true"></span></summary>
         <div class="grade-card-body">
           <div class="grade-col">
             <div class="col-title">Techniques de base — Đòn Căn Bản</div>
@@ -800,11 +914,11 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
             <li>Volonté, mode de pensée et esprit de progrès continu</li>
           </ul>
         </div>
-      </div>
+      </details>
 
       <!-- LAM NHỊ -->
-      <div class="grade-card">
-        <div class="grade-card-header">
+      <details class="grade-card">
+        <summary class="grade-card-header">
           <div class="grade-cell">
             <span class="label-xs">Niveau — Trình Độ</span>
             <div class="grade-niveau">Lam Đai Đệ Nhị Cấp</div>
@@ -831,7 +945,7 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
               <span class="titre-note">2e niveau de la ceinture bleue</span>
             </div>
           </div>
-        </div>
+        <span class="gc-chevron" aria-hidden="true"></span></summary>
         <div class="grade-card-body">
           <div class="grade-col">
             <div class="col-title">Techniques de base — Đòn Căn Bản</div>
@@ -860,11 +974,11 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
             <li>Comportement et attitudes du disciple Vovinam</li>
           </ul>
         </div>
-      </div>
+      </details>
 
       <!-- LAM TAM -->
-      <div class="grade-card">
-        <div class="grade-card-header">
+      <details class="grade-card">
+        <summary class="grade-card-header">
           <div class="grade-cell">
             <span class="label-xs">Niveau — Trình Độ</span>
             <div class="grade-niveau">Lam Đai Đệ Tam Cấp</div>
@@ -891,7 +1005,7 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
               <span class="titre-note">3e niveau — dernier de la ceinture bleue</span>
             </div>
           </div>
-        </div>
+        <span class="gc-chevron" aria-hidden="true"></span></summary>
         <div class="grade-card-body">
           <div class="grade-col">
             <div class="col-title">Techniques de base — Đòn Căn Bản</div>
@@ -920,7 +1034,7 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
             <li>Les 12 principes de conduite et de développement personnel du pratiquant Vovinam</li>
           </ul>
         </div>
-      </div>
+      </details>
 
     </div>
   </div>
@@ -928,18 +1042,19 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
   <!-- ═══════════════════════════════════════════
        HOÀNG ĐAI — CEINTURE JAUNE
        ═══════════════════════════════════════════ -->
-  <div class="grade-group" id="hoang-dai">
+  <div class="grade-group g-hoang" id="hoang-dai">
     <div class="group-banner ceinture-hoang">
       <div>
         <div class="group-banner-title">HOÀNG ĐAI — Ceinture Jaune</div>
         <div class="group-banner-sub">4 niveaux · 9 ans minimum · Titres : Disciple → Moniteur → Instructeur</div>
       </div>
+      <button type="button" class="gc-toggle" data-open="Tout déplier" data-close="Tout replier" aria-expanded="false">Tout déplier</button>
     </div>
     <div class="grades-grid">
 
       <!-- HOÀNG ĐAI -->
-      <div class="grade-card hoang-dai">
-        <div class="grade-card-header">
+      <details class="grade-card hoang-dai">
+        <summary class="grade-card-header">
           <div class="grade-cell">
             <span class="label-xs">Niveau — Trình Độ</span>
             <div class="grade-niveau">Hoàng Đai</div>
@@ -966,7 +1081,7 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
               <span class="titre-note">Entrée dans la ceinture jaune</span>
             </div>
           </div>
-        </div>
+        <span class="gc-chevron" aria-hidden="true"></span></summary>
         <div class="grade-card-body">
           <div class="grade-col">
             <div class="col-title">Techniques de base — Đòn Căn Bản</div>
@@ -994,11 +1109,11 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
             <li>Conception de l'amour et psychologie de la relation homme-femme selon le Võ Đạo</li>
           </ul>
         </div>
-      </div>
+      </details>
 
       <!-- HOÀNG ĐAI NHẤT -->
-      <div class="grade-card hoang-dai">
-        <div class="grade-card-header">
+      <details class="grade-card hoang-dai">
+        <summary class="grade-card-header">
           <div class="grade-cell">
             <span class="label-xs">Niveau — Trình Độ</span>
             <div class="grade-niveau">Hoàng Đai Đệ Nhất Cấp</div>
@@ -1025,7 +1140,7 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
               <span class="titre-note">Peut guider les débutants</span>
             </div>
           </div>
-        </div>
+        <span class="gc-chevron" aria-hidden="true"></span></summary>
         <div class="grade-card-body">
           <div class="grade-col">
             <div class="col-title">Techniques de base — Đòn Căn Bản</div>
@@ -1053,11 +1168,11 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
             <li>Notions générales de leadership et de commandement</li>
           </ul>
         </div>
-      </div>
+      </details>
 
       <!-- HOÀNG ĐAI NHỊ -->
-      <div class="grade-card hoang-dai">
-        <div class="grade-card-header">
+      <details class="grade-card hoang-dai">
+        <summary class="grade-card-header">
           <div class="grade-cell">
             <span class="label-xs">Niveau — Trình Độ</span>
             <div class="grade-niveau">Hoàng Đai Đệ Nhị Cấp</div>
@@ -1084,7 +1199,7 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
               <span class="titre-note">Enseigne les cours de manière autonome</span>
             </div>
           </div>
-        </div>
+        <span class="gc-chevron" aria-hidden="true"></span></summary>
         <div class="grade-card-body">
           <div class="grade-col">
             <div class="col-title">Techniques de base — Đòn Căn Bản</div>
@@ -1111,11 +1226,11 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
             <li>Orientation d'apprentissage et développement intégré selon le Vovinam (Cơ Phối Triển)</li>
           </ul>
         </div>
-      </div>
+      </details>
 
       <!-- HOÀNG ĐAI TAM -->
-      <div class="grade-card hoang-dai">
-        <div class="grade-card-header">
+      <details class="grade-card hoang-dai">
+        <summary class="grade-card-header">
           <div class="grade-cell">
             <span class="label-xs">Niveau — Trình Độ</span>
             <div class="grade-niveau">Hoàng Đai Đệ Tam Cấp</div>
@@ -1142,7 +1257,7 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
               <span class="titre-note">3e niveau — dernier de la ceinture jaune</span>
             </div>
           </div>
-        </div>
+        <span class="gc-chevron" aria-hidden="true"></span></summary>
         <div class="grade-card-body">
           <div class="grade-col">
             <div class="col-title">Techniques de base — Đòn Căn Bản</div>
@@ -1170,7 +1285,7 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
             <li>Exposé et analyse de l'idéologie du Vovinam Việt Võ Đạo</li>
           </ul>
         </div>
-      </div>
+      </details>
 
     </div>
   </div>
@@ -1178,18 +1293,19 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
   <!-- ═══════════════════════════════════════════
        HỒNG ĐAI — GRADES DE MAÎTRISE
        ═══════════════════════════════════════════ -->
-  <div class="grade-group" id="hong-dai">
+  <div class="grade-group g-hong" id="hong-dai">
     <div class="group-banner ceinture-hong">
       <div>
         <div class="group-banner-title">HỒNG ĐAI — Grades de Maîtrise</div>
         <div class="group-banner-sub">7 niveaux · 35+ ans de pratique · Titre : Maître (Võ Sư)</div>
       </div>
+      <button type="button" class="gc-toggle" data-open="Tout déplier" data-close="Tout replier" aria-expanded="false">Tout déplier</button>
     </div>
     <div class="grades-grid">
 
       <!-- CHUẨN HỒNG ĐAI -->
-      <div class="grade-card hong-dai">
-        <div class="grade-card-header">
+      <details class="grade-card hong-dai">
+        <summary class="grade-card-header">
           <div class="grade-cell">
             <span class="label-xs">Niveau — Trình Độ</span>
             <div class="grade-niveau">Chuẩn Hồng Đai</div>
@@ -1216,7 +1332,7 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
               <span class="titre-note">Maître — niveau préparatoire</span>
             </div>
           </div>
-        </div>
+        <span class="gc-chevron" aria-hidden="true"></span></summary>
         <div class="grade-card-body">
           <div class="grade-col">
             <div class="col-title">Techniques de base — Đòn Căn Bản</div>
@@ -1246,11 +1362,11 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
             <li>Les quatre axiomes fondamentaux de la révolution mentale</li>
           </ul>
         </div>
-      </div>
+      </details>
 
       <!-- HỒNG ĐAI NHẤT -->
-      <div class="grade-card hong-dai">
-        <div class="grade-card-header">
+      <details class="grade-card hong-dai">
+        <summary class="grade-card-header">
           <div class="grade-cell">
             <span class="label-xs">Niveau — Trình Độ</span>
             <div class="grade-niveau">Hồng Đai Đệ Nhất Cấp</div>
@@ -1277,7 +1393,7 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
               <span class="titre-note">1er degré de la ceinture rouge</span>
             </div>
           </div>
-        </div>
+        <span class="gc-chevron" aria-hidden="true"></span></summary>
         <div class="grade-card-body">
           <div class="grade-col">
             <div class="col-title">Techniques de base — Đòn Căn Bản</div>
@@ -1305,11 +1421,11 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
             <li>Le Vovinam Việt Võ Đạo face aux défis du monde contemporain</li>
           </ul>
         </div>
-      </div>
+      </details>
 
       <!-- HỒNG ĐAI NHỊ -->
-      <div class="grade-card hong-dai">
-        <div class="grade-card-header">
+      <details class="grade-card hong-dai">
+        <summary class="grade-card-header">
           <div class="grade-cell">
             <span class="label-xs">Niveau — Trình Độ</span>
             <div class="grade-niveau">Hồng Đai Đệ Nhị Cấp</div>
@@ -1336,7 +1452,7 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
               <span class="titre-note">2e degré de la ceinture rouge</span>
             </div>
           </div>
-        </div>
+        <span class="gc-chevron" aria-hidden="true"></span></summary>
         <div class="grade-card-body">
           <div class="grade-col">
             <div class="col-title">Techniques de base — Đòn Căn Bản</div>
@@ -1365,11 +1481,11 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
             <li>Le parcours du Vovinam : du Việt Võ Đạo vers le Nhân Võ Đạo — la voie martiale humaniste</li>
           </ul>
         </div>
-      </div>
+      </details>
 
       <!-- HỒNG ĐAI TAM -->
-      <div class="grade-card hong-dai">
-        <div class="grade-card-header">
+      <details class="grade-card hong-dai">
+        <summary class="grade-card-header">
           <div class="grade-cell">
             <span class="label-xs">Niveau — Trình Độ</span>
             <div class="grade-niveau">Hồng Đai Đệ Tam Cấp</div>
@@ -1396,18 +1512,18 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
               <span class="titre-note">3e degré de la ceinture rouge</span>
             </div>
           </div>
-        </div>
+        <span class="gc-chevron" aria-hidden="true"></span></summary>
         <div class="grade-card-body">
           <div class="grade-col-info" style="grid-column:1/-1;padding:22px;">
             <p style="font-size:.88rem;color:var(--texte-muted);font-style:italic;line-height:1.7;">
             </p>
           </div>
         </div>
-      </div>
+      </details>
 
       <!-- HỒNG ĐAI TỨ -->
-      <div class="grade-card hong-dai">
-        <div class="grade-card-header">
+      <details class="grade-card hong-dai">
+        <summary class="grade-card-header">
           <div class="grade-cell">
             <span class="label-xs">Niveau — Trình Độ</span>
             <div class="grade-niveau">Hồng Đai Đệ Tứ Cấp</div>
@@ -1434,18 +1550,18 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
               <span class="titre-note">4e degré de la ceinture rouge</span>
             </div>
           </div>
-        </div>
+        <span class="gc-chevron" aria-hidden="true"></span></summary>
         <div class="grade-card-body">
           <div class="grade-col-info" style="grid-column:1/-1;padding:22px;">
             <p style="font-size:.88rem;color:var(--texte-muted);font-style:italic;line-height:1.7;">
             </p>
           </div>
         </div>
-      </div>
+      </details>
 
       <!-- HỒNG ĐAI NGŨ -->
-      <div class="grade-card hong-dai">
-        <div class="grade-card-header">
+      <details class="grade-card hong-dai">
+        <summary class="grade-card-header">
           <div class="grade-cell">
             <span class="label-xs">Niveau — Trình Độ</span>
             <div class="grade-niveau">Hồng Đai Đệ Ngũ Cấp</div>
@@ -1472,18 +1588,18 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
               <span class="titre-note">5e degré de la ceinture rouge</span>
             </div>
           </div>
-        </div>
+        <span class="gc-chevron" aria-hidden="true"></span></summary>
         <div class="grade-card-body">
           <div class="grade-col-info" style="grid-column:1/-1;padding:22px;">
             <p style="font-size:.88rem;color:var(--texte-muted);font-style:italic;line-height:1.7;">
             </p>
           </div>
         </div>
-      </div>
+      </details>
 
       <!-- HỒNG ĐAI LỤC -->
-      <div class="grade-card hong-dai">
-        <div class="grade-card-header">
+      <details class="grade-card hong-dai">
+        <summary class="grade-card-header">
           <div class="grade-cell">
             <span class="label-xs">Niveau — Trình Độ</span>
             <div class="grade-niveau">Hồng Đai Đệ Lục Cấp</div>
@@ -1510,14 +1626,14 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
               <span class="titre-note">6e degré — dernier de la ceinture rouge</span>
             </div>
           </div>
-        </div>
+        <span class="gc-chevron" aria-hidden="true"></span></summary>
         <div class="grade-card-body">
           <div class="grade-col-info" style="grid-column:1/-1;padding:22px;">
             <p style="font-size:.88rem;color:var(--texte-muted);font-style:italic;line-height:1.7;">
             </p>
           </div>
         </div>
-      </div>
+      </details>
 
     </div>
   </div>
@@ -1525,20 +1641,21 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
   <!-- ═══════════════════════════════════════════
        BẠCH ĐAI — GRADE SUPRÊME
        ═══════════════════════════════════════════ -->
-  <div class="grade-group" id="bach-dai">
+  <div class="grade-group g-bach" id="bach-dai">
     <div class="group-banner ceinture-bach">
       <div>
         <div class="group-banner-title">BẠCH ĐAI — Ceinture Blanche</div>
         <div class="group-banner-sub">Sans limite de temps · Vô Định</div>
       </div>
+      <button type="button" class="gc-toggle" data-open="Tout déplier" data-close="Tout replier" aria-expanded="false">Tout déplier</button>
     </div>
 
 
     <div class="grades-grid">
 
       <!-- BẠCH ĐAI — CHÁNH CHƯỞNG QUẢN -->
-      <div class="grade-card bach-dai">
-        <div class="grade-card-header">
+      <details class="grade-card bach-dai">
+        <summary class="grade-card-header">
           <div class="grade-cell">
             <span class="label-xs">Niveau — Trình Độ</span>
             <div class="grade-niveau">Bạch Đai Chánh Chưởng Quản</div>
@@ -1565,7 +1682,7 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
               <span class="titre-note">Ceinture blanche avec un fil tricolore (bleu-jaune-rouge) centré, motif Âm Dương aux deux extrémités</span>
             </div>
           </div>
-        </div>
+        <span class="gc-chevron" aria-hidden="true"></span></summary>
         <div class="grade-card-body">
           <div class="grade-col-info" style="grid-column:1/-1;padding:22px;">
             <p style="font-size:.88rem;color:var(--texte-muted);font-style:italic;line-height:1.7;">
@@ -1575,11 +1692,11 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
             </p>
           </div>
         </div>
-      </div>
+      </details>
 
       <!-- BẠCH ĐAI — CHƯỞNG MÔN -->
-      <div class="grade-card bach-dai">
-        <div class="grade-card-header">
+      <details class="grade-card bach-dai">
+        <summary class="grade-card-header">
           <div class="grade-cell">
             <span class="label-xs">Niveau — Trình Độ</span>
             <div class="grade-niveau">Bạch Đai Chưởng Môn</div>
@@ -1606,7 +1723,7 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
               <span class="titre-note">Ceinture blanche avec 4 fils tricolores (bleu-noir-jaune-rouge) répartis uniformément sur toute la ceinture</span>
             </div>
           </div>
-        </div>
+        <span class="gc-chevron" aria-hidden="true"></span></summary>
         <div class="grade-card-body">
           <div class="grade-col-info" style="grid-column:1/-1;padding:22px;">
             <p style="font-size:.88rem;color:var(--texte-muted);font-style:italic;line-height:1.7;">
@@ -1619,7 +1736,7 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
             </p>
           </div>
         </div>
-      </div>
+      </details>
 
     </div>
   </div>
@@ -1636,6 +1753,14 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
   </div>
 
 </main>
+
+<div class="essai">
+  <div><h3>Première séance offerte</h3><p>Venez tester sans engagement — tenue souple de sport et une bouteille d'eau suffisent, aucun équipement requis.</p></div>
+  <div class="essai-btns">
+    <a href="index.html#contact" class="btn-blanc">Je réserve mon essai →</a>
+    <a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener" class="btn-helloasso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Devenir membre</a>
+  </div>
+</div>
 
 <!-- FOOTER -->
 <footer>
@@ -1740,6 +1865,30 @@ cards.forEach(card => {
   }
 });
 
+
+// NAVIGATION ENTRE GROUPES : lien actif selon la section visible
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.gnav a'));
+  var groups=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
+  function maj(){
+    var y=window.scrollY+170, cur=0;
+    groups.forEach(function(g,i){ if(g && g.offsetTop<=y) cur=i; });
+    if(window.scrollY<200) cur=-1;
+    links.forEach(function(a,i){ a.classList.toggle('active',i===cur); });
+    if(cur>=0){ var a=links[cur], box=a.parentNode; var l=a.offsetLeft-box.clientWidth/2+a.clientWidth/2; if(box.scrollWidth>box.clientWidth) box.scrollLeft=l; }
+  }
+  window.addEventListener('scroll',maj,{passive:true}); maj();
+})();
+
+// « Tout déplier / Tout replier » pour chaque groupe
+document.querySelectorAll('.gc-toggle').forEach(function(b){
+  b.addEventListener('click',function(){
+    var cards=b.closest('.grade-group').querySelectorAll('details.grade-card');
+    var open=b.getAttribute('aria-expanded')!=='true';
+    cards.forEach(function(c){ c.open=open; });
+    b.setAttribute('aria-expanded',open); b.textContent=open?b.dataset.close:b.dataset.open;
+  });
+});
 </script>
 
 </body>
