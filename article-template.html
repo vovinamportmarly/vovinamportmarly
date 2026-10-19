@@ -261,6 +261,75 @@
     .ft-title,.nm-cta,.nm-membre,.nav-mobile ul li a,.article-tag,.btn-retour{font-size:.66rem !important;}
     .btn-retour{padding:14px 20px;}
   }
+
+  /* ============ REFONTE DU DESIGN (même univers que l'accueil) ============ */
+  .article-page { padding-top: 78px; }
+  .article-header { background: linear-gradient(135deg, var(--bleu) 0%, var(--bleu-clair) 55%, #4A72C8 100%); padding: 50px 80px 100px; border-bottom: 0; position: relative; overflow: hidden; }
+  .article-header::before { content: ''; position: absolute; width: 650px; height: 650px; border-radius: 50%; border: 1px solid rgba(255,255,255,.07); top: -220px; right: -180px; pointer-events: none; }
+  .article-header > * { position: relative; z-index: 1; }
+  .article-back { display: flex; width: max-content; font-size: .66rem; font-weight: 600; color: rgba(255,255,255,.85); padding: 8px 16px; border: 1.5px solid rgba(255,255,255,.35); border-radius: 999px; margin-bottom: 26px; }
+  .article-back:hover { background: rgba(255,255,255,.14); }
+  .article-tag { display: block; width: max-content; font-size: .68rem; font-weight: 800; letter-spacing: .16em; background: var(--jaune); color: var(--bleu); padding: 5px 14px; border-radius: 999px; margin: 0 0 16px; }
+  .article-title { font-size: clamp(1.9rem,3.6vw,3.1rem); line-height: 1.08; max-width: 920px; text-transform: uppercase; letter-spacing: .01em; margin-bottom: 18px; }
+  .article-meta { font-size: .92rem; color: rgba(255,255,255,.82); }
+  .article-img, .article-img-placeholder { display: block; width: calc(100% - 160px); max-width: 980px; margin: -54px auto 0; border-radius: 18px; box-shadow: 0 18px 44px rgba(27,58,140,.20); position: relative; z-index: 2; }
+  .article-img { max-height: 480px; aspect-ratio: 16/9; object-fit: cover; }
+  .article-img-placeholder { display: flex; align-items: center; justify-content: center; height: auto; aspect-ratio: 16/6; background: var(--bleu-pale); border: 1px solid var(--bleu-mid); }
+  .article-body { padding: 48px 24px 48px; }
+  .article-body h2 { font-size: 1.55rem; text-transform: uppercase; letter-spacing: .02em; margin: 44px 0 16px; }
+  .article-body h2:first-child { margin-top: 0; }
+  .article-body h3 { font-size: 1.1rem; }
+  .article-body ul { list-style: none; margin: 0 0 24px; }
+  .article-body ul li { position: relative; padding-left: 26px; margin-bottom: 8px; }
+  .article-body ul li::before { content: '✓'; position: absolute; left: 0; color: var(--rouge); font-weight: 800; }
+  .article-body blockquote { border: 1px solid var(--bleu-mid); border-left: 5px solid var(--rouge); border-radius: 12px; padding: 20px 26px; }
+  .article-body img, .article-media-img { border-radius: 14px; }
+  .article-media-text { border: 1px solid var(--bleu-mid); border-left: 5px solid var(--rouge); border-radius: 12px; }
+  .article-footer-nav { padding: 28px 24px 36px; border-top: 1px solid var(--bleu-mid); }
+  .btn-retour, .btn-partager { min-height: 48px; font-size: .66rem; letter-spacing: .12em; padding: 12px 22px; border-radius: 8px; }
+  .btn-partager { font-weight: 700; }
+
+  /* à lire aussi */
+  .related { max-width: 760px; margin: 0 auto; padding: 8px 24px 64px; }
+  .related-title { font-size: .66rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--rouge); display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+  .related-title::before { content: ''; width: 20px; height: 2px; background: var(--rouge); }
+  .related-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .related-card { display: flex; flex-direction: column; gap: 6px; background: var(--bleu-pale); border: 1px solid var(--bleu-mid); border-radius: 14px; padding: 18px 20px; text-decoration: none; transition: transform .25s, box-shadow .25s, border-color .25s; }
+  .related-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(27,58,140,.10); border-color: var(--bleu-clair); }
+  .related-tag { font-size: .62rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--rouge); }
+  .related-name { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1rem; font-weight: 800; color: var(--bleu); line-height: 1.25; }
+  .related-date { font-size: .8rem; color: var(--texte-muted); }
+
+  /* bande « Première séance offerte » */
+  .essai .btn-blanc, .essai .btn-helloasso { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; transition: all .2s; }
+  .essai .btn-helloasso svg { width: 14px; height: 14px; flex-shrink: 0; }
+  .essai { position: relative; overflow: hidden; display: flex; align-items: center; justify-content: space-between; gap: 36px; flex-wrap: wrap; margin: 46px 80px; padding: 46px 54px; border-radius: 18px; background: linear-gradient(135deg, #0f2260 0%, var(--bleu) 55%, #2a4fa8 100%); box-shadow: 0 18px 44px rgba(27,58,140,.22); }
+  .essai::after { content: ''; position: absolute; right: -80px; top: -80px; width: 260px; height: 260px; border-radius: 50%; border: 1px solid rgba(255,255,255,.10); pointer-events: none; }
+  .essai h3 { font-family: 'Be Vietnam Pro', sans-serif; font-size: clamp(1.6rem,2.6vw,2.4rem); font-weight: 900; letter-spacing: .02em; line-height: 1.05; text-transform: uppercase; color: var(--blanc); margin-bottom: 8px; }
+  .essai p { color: rgba(255,255,255,.86); font-size: 1rem; }
+  .essai-btns { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 12px; position: relative; z-index: 1; }
+  .essai .essai-btns a { min-height: 52px; display: flex; align-items: center; justify-content: center; text-align: center; white-space: nowrap; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; padding: 15px 30px; border-radius: 8px; font-weight: 700; }
+  .essai .btn-blanc { background: var(--jaune); color: var(--bleu); border: 2px solid var(--jaune); }
+  .essai .btn-blanc:hover { background: #ffd84a; border-color: #ffd84a; }
+  .essai .btn-helloasso { background: transparent; color: var(--blanc); border: 2px solid rgba(255,255,255,.7); }
+  .essai .btn-helloasso:hover { background: rgba(255,255,255,.14); border-color: var(--blanc); }
+
+  @media(max-width:900px){
+    .article-page { padding-top: 66px; }
+    .article-header { padding: 32px 22px 84px; }
+    .article-img, .article-img-placeholder { width: calc(100% - 36px); margin-top: -46px; border-radius: 14px; }
+    .article-img-placeholder { aspect-ratio: 16/9; }
+    .article-body { padding: 32px 22px 36px; }
+    .article-media-block { flex-direction: column; }
+    .article-footer-nav { flex-direction: column; align-items: stretch; padding: 24px 22px 28px; }
+    .article-footer-nav a { justify-content: center; }
+    .related { padding: 4px 22px 48px; }
+    .related-grid { grid-template-columns: 1fr; }
+    .essai { margin: 26px 18px; padding: 30px 22px; border-radius: 16px; flex-direction: column; align-items: flex-start; }
+    .essai h3 { font-size: 1.6rem; }
+    .essai .essai-btns { grid-auto-flow: row; grid-auto-columns: minmax(0,1fr); width: 100%; }
+    .essai .essai-btns a { font-size: clamp(.5rem,2.9vw,.68rem); letter-spacing: .04em; padding: 15px 8px; }
+  }
 </style>
 </head>
 <body>
@@ -386,6 +455,15 @@
     </a>
   </div>
 
+</div>
+
+<!-- BANDE ESSAI -->
+<div class="essai">
+  <div><h3>Première séance offerte</h3><p>Venez tester sans engagement — tenue souple de sport et une bouteille d'eau suffisent, aucun équipement requis.</p></div>
+  <div class="essai-btns">
+    <a href="index.html#contact" class="btn-blanc">Je réserve mon essai →</a>
+    <a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener" class="btn-helloasso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Devenir membre</a>
+  </div>
 </div>
 
 <!-- FOOTER -->
