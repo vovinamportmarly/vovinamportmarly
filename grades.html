@@ -326,16 +326,6 @@ body {
 .vodao-list.full li { width: 100%; }
 
 /* FOOTER */
-footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; border-top: 3px solid var(--jaune); }
-.ft-brand { display: flex; align-items: center; gap: 13px; text-decoration: none; }
-.ft-brand img { width: 50px; height: 50px; object-fit: contain; border-radius: 50%; border: 2px solid rgba(255,255,255,.2); }
-.ft-brand strong { font-size: 1.1rem; letter-spacing: .1em; color: var(--blanc); display: block; line-height: 1; }
-.ft-brand span { font-size: .68rem; letter-spacing: .2em; color: var(--jaune); text-transform: uppercase; margin-top: 3px; display: block; }
-.ft-title { font-size: .5rem; letter-spacing: .22em; text-transform: uppercase; color: var(--jaune); margin-bottom: 14px; }
-.ft-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
-.ft-list a { font-size: .93rem; color: rgba(255,255,255,.55); text-decoration: none; transition: color .2s; }
-.ft-list a:hover { color: var(--blanc); }
-.ft-copy { font-size: .7rem; letter-spacing: .1em; color: rgba(255,255,255,.28); padding-top: 22px; line-height: 1.8; grid-column: 1/-1; text-align: center; border-top: 1px solid rgba(255,255,255,.1); }
 
 /* barre d'actions mobile */
 .mbar { display: none; }
@@ -366,7 +356,6 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
   .grade-card-body { grid-template-columns: 1fr; }
   .grade-col { border-right: none; border-bottom: 1px solid var(--bleu-mid); }
   .grade-col:last-child { border-bottom: none; }
-  footer { padding: 36px 24px; }
 }
 @media (max-width: 900px) {
   .nav-links { display: none; }
@@ -384,7 +373,6 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
 
   /* LISIBILITÉ MOBILE : aucun texte sous ~10,5 px */
   @media(max-width:900px){
-    .ft-title,.nm-cta,.nm-membre,.nav-mobile ul li a,.label-xs,.col-title,.vodao-title,.page-hero-eyebrow,.breadcrumb a,.breadcrumb .current,.belt-legend-title,.couleurs-section-title,.couleur-viet{font-size:.66rem !important;}
     .breadcrumb a{display:inline-block;padding:8px 0;}
   }
 
@@ -536,7 +524,6 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
   .essai .essai-btns { grid-auto-flow: row; grid-auto-columns: minmax(0,1fr); width: 100%; }
   .essai .essai-btns a { font-size: clamp(.5rem,2.9vw,.68rem); letter-spacing: .04em; padding: 15px 8px; }
   .essai h3 { font-size: 1.9rem; }
-  footer { grid-template-columns: 1fr; gap: 28px; }
 }
 
   /* BANDE « PREMIÈRE SÉANCE OFFERTE » : carte arrondie, dégradé bleu, boutons jaune et blanc */
@@ -551,6 +538,42 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
   @media(max-width:900px){
     .essai { margin: 26px 18px; padding: 30px 22px; border-radius: 16px; }
     .essai h3 { font-size: 1.6rem; }
+  }
+
+  /* Pied de page */
+  footer { background: var(--bleu); border-top: 3px solid var(--jaune); padding: 28px 80px 18px; font-family: 'Be Vietnam Pro', sans-serif; }
+  .ft-top { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 36px; }
+  .ft-id { display: flex; align-items: center; gap: 22px; }
+  .ft-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .ft-brand img { width: 42px; height: 42px; object-fit: contain; border-radius: 50%; border: 2px solid rgba(255,255,255,.2); }
+  .ft-brand strong { font-size: 1rem; letter-spacing: .1em; color: var(--blanc); display: block; line-height: 1; }
+  .ft-brand span { font-size: .66rem; letter-spacing: .16em; color: var(--jaune); text-transform: uppercase; margin-top: 4px; display: block; }
+  .ft-social { display: flex; gap: 8px; }
+  .ft-social a { width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(255,255,255,.22); color: rgba(255,255,255,.8); display: flex; align-items: center; justify-content: center; transition: background .2s, color .2s, border-color .2s; }
+  .ft-social a:hover { background: var(--jaune); border-color: var(--jaune); color: var(--bleu); }
+  .ft-social svg { width: 17px; height: 17px; }
+  .ft-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 22px; }
+  .ft-nav a, .ft-legal a { font-size: .84rem; color: rgba(255,255,255,.72); text-decoration: none; transition: color .2s; }
+  .ft-nav a:hover, .ft-legal a:hover { color: var(--blanc); }
+  .ft-cta { background: var(--jaune); color: var(--bleu); font-size: .8rem; font-weight: 800; text-decoration: none; padding: 11px 22px; border-radius: 999px; white-space: nowrap; transition: transform .2s; }
+  .ft-cta:hover { transform: translateY(-1px); }
+  .ft-bottom { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 22px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.12); }
+  .ft-copy { font-size: .74rem; color: rgba(255,255,255,.5); }
+  .ft-legal { display: flex; flex-wrap: wrap; gap: 6px 20px; }
+  .ft-legal a { font-size: .76rem; color: rgba(255,255,255,.5); }
+  @media(max-width:1200px){
+    .ft-top { grid-template-columns: 1fr auto; row-gap: 18px; }
+    .ft-nav { grid-column: 1/-1; order: 3; justify-content: flex-start; }
+  }
+  @media(max-width:900px){
+    footer { padding: 26px 22px 16px; }
+    .ft-top { grid-template-columns: 1fr; gap: 18px; }
+    .ft-id { flex-direction: column; align-items: flex-start; gap: 14px; }
+    .ft-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
+    .ft-nav a { font-size: .86rem; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+    .ft-cta { text-align: center; font-size: clamp(.7rem, 3.4vw, .85rem); padding: 13px 18px; }
+    .ft-bottom { flex-direction: column-reverse; align-items: flex-start; gap: 10px; margin-top: 18px; }
+    .ft-legal a { padding: 4px 0; }
   }
 </style>
 </head>
@@ -1778,43 +1801,35 @@ footer { background: var(--bleu); padding: 48px 80px; display: grid; grid-templa
 
 <!-- FOOTER -->
 <footer>
-<div>
-  <a href="index.html" class="ft-brand"><img src="logo-vdst.webp" alt="Logo" loading="lazy" decoding="async"><div><strong>VDST Port-Marly</strong><span>Vovinam Việt Võ Đạo</span></div></a>
-  <div style="display:flex;gap:14px;margin-top:16px;align-items:center;">
-    <a href="https://www.facebook.com/vovinamportmarly" target="_blank" rel="noopener" style="color:rgba(255,255,255,.55);transition:color .2s;" title="Facebook">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-    </a>
-    <a href="https://www.instagram.com/vovinamportmarly" target="_blank" rel="noopener" style="color:rgba(255,255,255,.55);transition:color .2s;" title="Instagram">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-    </a>
-    <a href="https://www.youtube.com/@vovinamportmarly" target="_blank" rel="noopener" style="color:rgba(255,255,255,.55);transition:color .2s;" title="YouTube">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
-    </a>
+  <div class="ft-top">
+    <div class="ft-id">
+      <a href="index.html" class="ft-brand"><img src="logo-vdst.webp" alt="Logo" loading="lazy" decoding="async"><div><strong>VDST Port-Marly</strong><span>Vovinam Việt Võ Đạo</span></div></a>
+      <div class="ft-social">
+        <a href="https://www.facebook.com/vovinamportmarly" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="https://www.instagram.com/vovinamportmarly" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.youtube.com/@vovinamportmarly" target="_blank" rel="noopener" title="YouTube" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#1B3A8C"/></svg></a>
+      </div>
+    </div>
+    <div class="ft-nav">
+      <a href="index.html#facettes">Le Vovinam</a>
+      <a href="index.html#public">Horaires et tarifs</a>
+      <a href="index.html#galerie">Galerie</a>
+      <a href="actualites.html">Actualités</a>
+      <a href="index.html#calendrier">Calendrier</a>
+      <a href="index.html#philosophie">Philosophie</a>
+      <a href="index.html#contact">Essai gratuit</a>
+    </div>
+    <a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener" class="ft-cta">Devenir membre</a>
   </div>
-</div>
-<div>
-  <p class="ft-title">Navigation</p>
-  <ul class="ft-list">
-      <li><a href="index.html#facettes">Le Vovinam</a></li>
-      <li><a href="index.html#public">Horaires et tarifs</a></li>
-      <li><a href="index.html#galerie">Galerie</a></li>
-      <li><a href="actualites.html">Actualités</a></li>
-      <li><a href="index.html#calendrier">Calendrier</a></li>
-      <li><a href="index.html#philosophie">Philosophie</a></li>
-      <li><a href="index.html#contact">Essai gratuit</a></li>
-    </ul>
-</div>
-<div>
-  <p class="ft-title">Liens utiles</p>
-  <ul class="ft-list">
-    <li><a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener" style="color:var(--jaune);font-weight:700;">Devenir membre</a></li>
-    <li><a href="https://www.vdst.fr">VDST France</a></li>
-    <li><a href="https://www.vovinam-france.org">TCHL France</a></li>
-    <li><a href="https://www.ffkarate.fr/arts-martiaux-vietnamiens/">FFKDA-AMV</a></li>
-    <li><a href="mentions-legales.html">Mentions légales</a></li>
-  </ul>
-</div>
-<p class="ft-copy">© 2026 VDST Port-Marly — vovinamportmarly.fr</p>
+  <div class="ft-bottom">
+    <p class="ft-copy">© 2026 VDST Port-Marly — vovinamportmarly.fr</p>
+    <div class="ft-legal">
+      <a href="https://www.vdst.fr">VDST France</a>
+      <a href="https://www.vovinam-france.org">TCHL France</a>
+      <a href="https://www.ffkarate.fr/arts-martiaux-vietnamiens/">FFKDA-AMV</a>
+      <a href="mentions-legales.html">Mentions légales</a>
+    </div>
+  </div>
 </footer>
 
 <!-- BARRE D'ACTIONS MOBILE -->
