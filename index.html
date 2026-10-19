@@ -577,6 +577,18 @@
     .mob-collapse.open .mob-toggle::after{content:' ▴';}
     .mob-collapse .philo-p + .mob-toggle{margin-top:14px;}
   }
+  /* AVANT DE VENIR */
+  #avant { background: var(--blanc); }
+  .avant-intro { font-size: 1rem; color: var(--texte-mid); margin: 6px 0 26px; max-width: 640px; }
+  .avant-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+  .avant-card { background: var(--bleu-pale); border: 1px solid var(--bleu-mid); border-radius: 12px; padding: 18px 18px 20px; }
+  .avant-card h3 { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1rem; font-weight: 800; color: var(--bleu); text-transform: uppercase; letter-spacing: .02em; margin-bottom: 4px; }
+  .avant-card p { font-size: .9rem; color: var(--texte-mid); line-height: 1.55; }
+  @media(max-width:1100px){ .avant-grid{grid-template-columns:repeat(2,minmax(0,1fr));} }
+  @media(max-width:900px){
+    .avant-grid{grid-template-columns:1fr;gap:12px;}
+    .avant-card{padding:16px;}
+  }
 </style>
 </head>
 <body>
@@ -797,6 +809,19 @@
     <p>Tarifs indicatifs à confirmer à l'inscription. Paiement en 3x sans frais possible. Chèques ANCV et coupons sport acceptés.</p>
     <p>* Pas de cours pendant les vacances scolaires.</p>
     <p>** Pour les enfants de 7 à 10 ans, ils peuvent être amenés par les animateurs du périscolaire après l'école. Nous contacter pour remplir l'autorisation parentale de sortie.</p>
+  </div>
+</section>
+
+<!-- AVANT DE VENIR -->
+<section id="avant" class="sec">
+  <div class="sec-label">Pratique</div>
+  <h2 class="sec-title">AVANT DE VENIR</h2>
+  <p class="avant-intro">Voici l’essentiel pour bien préparer votre première séance, et vous sentir à l’aise dès le premier cours.</p>
+  <div class="avant-grid">
+    <div class="avant-card"><div><h3>À prévoir</h3><p>Venez avec une tenue souple de sport pour l’essai (ensuite, ce sera le vo phuc, propre et en bon état) et pensez à votre bouteille d’eau pour bien vous hydrater pendant le cours.</p></div></div>
+    <div class="avant-card"><div><h3>Hygiène</h3><p>Par respect pour vos partenaires d’entraînement : ongles des mains et des pieds courts et propres, cheveux longs attachés, ni bijoux ni montre pendant la pratique.</p></div></div>
+    <div class="avant-card"><div><h3>Au dojo</h3><p>On laisse ses chaussures au bord du tatami et on range son téléphone pour profiter pleinement du cours.</p></div></div>
+    <div class="avant-card"><div><h3>Esprit du cours</h3><p>Ici, on cultive la ponctualité, l’écoute des consignes, la bienveillance et l’entraide.</p></div></div>
   </div>
 </section>
 
