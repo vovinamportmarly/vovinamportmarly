@@ -60,7 +60,7 @@
   /* HERO */
   .hero {
     min-height: 100vh;
-    background: linear-gradient(100deg, rgba(14,30,84,0.80) 0%, rgba(27,58,140,0.50) 46%, rgba(46,91,184,0.10) 100%), url('Groupe enfant.jpg');
+    background: linear-gradient(100deg, rgba(14,30,84,0.80) 0%, rgba(27,58,140,0.50) 46%, rgba(46,91,184,0.10) 100%), url('groupe-enfant.webp');
     background-size: cover;
     background-position: center top;
     display: grid; grid-template-columns: 1fr 1fr;
@@ -170,10 +170,10 @@
   .actu-more { margin-top: 40px; text-align: center; }
 
   /* CALENDRIER */
-  #calendrier { position: relative; overflow: hidden; background-color: var(--blanc); background-image: url('logo-amv-ffk.jpg'); background-repeat: no-repeat; background-size: 236px auto; background-position: right 80px top 40px; }
+  #calendrier { position: relative; overflow: hidden; background-color: var(--blanc); background-image: url('logo-amv-ffk.webp'); background-repeat: no-repeat; background-size: 236px auto; background-position: right 80px top 40px; }
   #calendrier::before { content: none; }
   #calendrier > * { position: relative; z-index: 1; }
-  .cal-intro { font-size: 1rem; color: var(--texte-mid); font-style: italic; margin-top: 44px; margin-bottom: 28px; max-width: 760px; }
+  .cal-intro { font-size: 1rem; color: var(--texte-mid); margin-top: 44px; margin-bottom: 28px; max-width: 760px; }
   .cal-card { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; background: var(--bleu-pale); border: 1px solid var(--bleu-mid); border-radius: 12px; padding: 16px 18px; }
   .cal-card-icon { display: none; }
   .cal-card-body { flex: 1; min-width: 0; }
@@ -234,13 +234,13 @@
   .philo-quote { padding-left: 28px; border-left: 3px solid var(--rouge); }
   blockquote { font-family: 'Be Vietnam Pro'; font-size: clamp(1.2rem,1.8vw,1.75rem); font-style: italic; color: var(--texte); line-height: 1.55; margin-bottom: 14px; }
   .philo-src { font-family: 'Be Vietnam Pro', sans-serif; font-size: .52rem; letter-spacing: .2em; text-transform: uppercase; color: var(--rouge); }
-  .philo-p { margin-top: 26px; font-size: .98rem; color: var(--texte-mid); font-style: italic; line-height: 1.7; }
+  .philo-p { margin-top: 26px; font-size: .98rem; color: var(--texte-mid); line-height: 1.7; }
   .philo-vals { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; }
   .pval { background: var(--blanc); border: 1px solid var(--bleu-mid); border-radius: 3px; padding: 22px 20px; transition: all .2s; }
   .pval:hover { border-color: var(--bleu); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(27,58,140,.1); }
   .pval-viet { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1.4rem; color: var(--bleu); line-height: 1; display: block; margin-bottom: 5px; font-weight: 900; }
   .pval-fr { font-family: 'Be Vietnam Pro', sans-serif; font-size: .5rem; letter-spacing: .16em; text-transform: uppercase; color: var(--texte-muted); display: block; margin-bottom: 7px; }
-  .pval-ex { font-size: .86rem; color: var(--texte-mid); font-style: italic; line-height: 1.5; }
+  .pval-ex { font-size: .86rem; color: var(--texte-mid); line-height: 1.5; }
   .pval-grid { grid-column:1/-1; display:grid; grid-template-columns:repeat(2,1fr); gap:14px; padding: 0 80px 60px; background: var(--gris-fond); }
   .public-price { margin: 4px 0 6px; padding-top: 16px; border-top: 1px solid var(--bleu-mid); }
   .public-price .tarif-list { margin-top: 14px; }
@@ -289,7 +289,7 @@
   .ft-brand span { font-family: 'Be Vietnam Pro', sans-serif; font-size: .68rem; letter-spacing: .2em; color: var(--jaune); text-transform: uppercase; margin-top: 3px; display: block; }
   .ft-title { font-family: 'Be Vietnam Pro', sans-serif; font-size: .5rem; letter-spacing: .22em; text-transform: uppercase; color: var(--jaune); margin-bottom: 14px; }
   .ft-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
-  .ft-list a { font-family: 'Be Vietnam Pro'; font-size: .93rem; color: rgba(255,255,255,.55); text-decoration: none; font-style: italic; transition: color .2s; }
+  .ft-list a { font-family: 'Be Vietnam Pro'; font-size: .93rem; color: rgba(255,255,255,.55); text-decoration: none; transition: color .2s; }
   .ft-list a:hover { color: var(--blanc); }
   .ft-copy { font-family: 'Be Vietnam Pro', sans-serif; font-size: .7rem; letter-spacing: .1em; color: rgba(255,255,255,.28); padding-top: 22px; line-height: 1.8; grid-column: 1/-1; text-align: center; border-top: 1px solid rgba(255,255,255,.1); }
 
@@ -417,9 +417,9 @@
   .facet h3 { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1.3rem; font-weight: 900; color: var(--bleu); margin-bottom: 10px; text-transform: uppercase; letter-spacing: .02em; }
   .facet p { font-size: .98rem; color: var(--texte-mid); line-height: 1.65; }
   /* carte avec photo de fond (self-défense) */
-  .facet-photo { position: relative; border-color: transparent; background-color: #0f2260; background-image: linear-gradient(90deg, rgba(14,30,84,.96) 0%, rgba(14,30,84,.88) 40%, rgba(14,30,84,.18) 100%), url('photo-self-defense-femme.jpg'); background-size: cover, 130% auto; background-position: center, 0% 16%; background-repeat: no-repeat; }
-  .facet-photo-2 { background-image: linear-gradient(90deg, rgba(14,30,84,.96) 0%, rgba(14,30,84,.88) 40%, rgba(14,30,84,.22) 100%), url('photo-techniques-martiales.jpg'); background-size: cover, 120% auto; background-position: center, 0% 65%; }
-  .facet-photo-3 { background-image: linear-gradient(90deg, rgba(14,30,84,.96) 0%, rgba(14,30,84,.88) 40%, rgba(14,30,84,.22) 100%), url('photo-sport-combat.jpg'); background-size: cover, 130% auto; background-position: center, 24% 38%; }
+  .facet-photo { position: relative; border-color: transparent; background-color: #0f2260; background-image: linear-gradient(90deg, rgba(14,30,84,.96) 0%, rgba(14,30,84,.88) 40%, rgba(14,30,84,.18) 100%), url('photo-self-defense-femme.webp'); background-size: cover, 130% auto; background-position: center, 0% 16%; background-repeat: no-repeat; }
+  .facet-photo-2 { background-image: linear-gradient(90deg, rgba(14,30,84,.96) 0%, rgba(14,30,84,.88) 40%, rgba(14,30,84,.22) 100%), url('photo-techniques-martiales.webp'); background-size: cover, 120% auto; background-position: center, 0% 65%; }
+  .facet-photo-3 { background-image: linear-gradient(90deg, rgba(14,30,84,.96) 0%, rgba(14,30,84,.88) 40%, rgba(14,30,84,.22) 100%), url('photo-sport-combat.webp'); background-size: cover, 130% auto; background-position: center, 24% 38%; }
   .facet-photo-3 p { max-width: 70%; }
   .facet-more { margin: 36px auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 13px; width: max-content; max-width: 100%; }
   .facet-more a { text-align: center; }
@@ -491,7 +491,7 @@
     .burger-btn{display:flex;}
     .nav-mobile{display:block;}
     .hero{grid-template-columns:minmax(0,1fr);}
-    .hero{background-image:linear-gradient(180deg, rgba(14,30,84,0.66) 0%, rgba(27,58,140,0.58) 100%), url('Groupe enfant.jpg');}
+    .hero{background-image:linear-gradient(180deg, rgba(14,30,84,0.66) 0%, rgba(27,58,140,0.58) 100%), url('groupe-enfant.webp');}
     .hero-left{padding:36px 22px 44px;min-width:0;}
     .hero-right{display:none;}
     .sec{padding:26px 22px;}
@@ -531,14 +531,14 @@
     .facet-more a{display:block;text-align:center;white-space:nowrap;font-size:clamp(.5rem,2.75vw,.68rem);letter-spacing:.04em;padding:15px 8px;}
     #calendrier{background-image:none;}
     .tchl{display:grid;grid-template-columns:1fr;gap:24px;margin-top:44px;padding-top:36px;position:relative;}
-    .tchl::before{content:'';position:absolute;inset:0;background:url('logo-tchl-france.png') no-repeat center 24px / 92% auto;opacity:.13;pointer-events:none;z-index:0;}
+    .tchl::before{content:'';position:absolute;inset:0;background:url('logo-tchl-france.webp') no-repeat center 24px / 92% auto;opacity:.13;pointer-events:none;z-index:0;}
     .tchl-body{position:relative;z-index:1;}
     .tchl-dates{grid-template-columns:1fr;}
     .tchl-date small::before{content:'· ';}
     .tchl-logo{display:none;}
     .br-mobile{display:inline;}
     .tchl-date .btn-helloasso{width:100%;justify-content:center;}
-    #calendrier::before{content:'';position:absolute;inset:0;background:url('logo-amv-ffk.jpg') no-repeat center 50px / 100% auto;opacity:.14;pointer-events:none;z-index:0;}
+    #calendrier::before{content:'';position:absolute;inset:0;background:url('logo-amv-ffk.webp') no-repeat center 50px / 100% auto;opacity:.14;pointer-events:none;z-index:0;}
     .facet-photo-2{background-size:cover,auto 150%;background-position:center,60% 72%;}
     .facet-photo-3{background-size:cover,auto 125%;background-position:center,62% 18%;}
     .facet-photo-3 p{max-width:66%;}
@@ -589,6 +589,20 @@
     .avant-grid{grid-template-columns:1fr;gap:12px;}
     .avant-card{padding:16px;}
   }
+  /* Vidéos : image cliquable, la vidéo ne se charge qu'au clic */
+  .gal-cell .yt-facade { position: relative; display: block; width: 100%; height: 100%; padding: 0; border: 0; background: #000; cursor: pointer; overflow: hidden; }
+  .gal-cell .yt-facade img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .35s ease, opacity .25s; }
+  .gal-cell .yt-facade:hover img { transform: scale(1.04); opacity: .9; }
+  .gal-cell .yt-play { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 68px; height: 48px; filter: drop-shadow(0 3px 10px rgba(0,0,0,.45)); transition: transform .2s; }
+  .gal-cell .yt-facade:hover .yt-play { transform: translate(-50%,-50%) scale(1.1); }
+  .gal-cell .yt-title { position: absolute; left: 0; right: 0; top: 0; padding: 12px 14px 26px; text-align: left; font-family: 'Be Vietnam Pro', sans-serif; font-size: .82rem; font-weight: 700; color: #fff; background: linear-gradient(to bottom, rgba(0,0,0,.65), rgba(0,0,0,0)); }
+  .gal-cell iframe { display: block; width: 100%; height: 100%; border: 0; }
+  @media(max-width:900px){
+    .gal-cell{aspect-ratio:16/10;}
+    .gal-cell:first-child{grid-column:1/-1;aspect-ratio:16/9;}
+    .gal-cell:not(:first-child) .yt-title{display:none;}
+    .gal-cell:not(:first-child) .yt-play{width:52px;height:37px;}
+  }
 </style>
 </head>
 <body>
@@ -596,7 +610,7 @@
 <!-- NAV -->
 <nav>
   <a href="#accueil" class="nav-logo">
-    <img src="logo-vdst.png" alt="Logo VDST Port-Marly">
+    <img src="logo-vdst.webp" alt="Logo VDST Port-Marly">
     <div class="nav-logo-text">
       <strong>VDST Port-Marly</strong>
       <span>Vovinam Việt Võ Đạo</span>
@@ -669,7 +683,7 @@
   <div class="hero-right">
     <div class="hero-card">
       <div class="hero-card-logo">
-        <img src="logo-vdst.png" alt="Logo VDST">
+        <img src="logo-vdst.webp" alt="Logo VDST">
         <div><strong>VDST Port-Marly</strong><span style="font-size:.72rem;">Vovinam Việt Võ Đạo</span></div>
       </div>
       <div class="hero-card-title">— Planning des cours</div>
@@ -709,18 +723,18 @@
   <div class="vovinam-imgs">
     <div class="img-duo">
       <figure class="hist-portrait">
-        <img src="Sang%20To%20Nguyen%20Loc%203%3A4%20copie.jpg" alt="Nguyễn Lộc, Maître Fondateur du Vovinam">
+        <img src="nguyen-loc-3-4.webp" alt="Nguyễn Lộc, Maître Fondateur du Vovinam" loading="lazy" decoding="async">
         <figcaption>Nguyễn Lộc<span>Maître Fondateur</span></figcaption>
       </figure>
       <figure class="hist-portrait">
-        <img src="VSCM%20Le%20Sang%203%3A4%20copie.jpg" alt="Lê Sáng, Maître Patriarche du Vovinam">
+        <img src="le-sang-3-4.webp" alt="Lê Sáng, Maître Patriarche du Vovinam" loading="lazy" decoding="async">
         <figcaption>Lê Sáng<span>Maître Patriarche</span></figcaption>
       </figure>
     </div>
     <div style="position:relative;aspect-ratio:16/10;border-radius:4px;overflow:hidden;">
-      <img src="photo-principale.jpg" alt="Vovinam Port-Marly — ciseaux volants" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <img src="photo-principale.webp" alt="Vovinam Port-Marly — ciseaux volants" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" decoding="async">
       <div class="hist-caption">Đòn chân tấn công số 7<span>Technique de jambe n°&nbsp;7</span></div>
-      <div class="logo-badge"><img src="logo-vdst.png" alt="Logo"></div>
+      <div class="logo-badge"><img src="logo-vdst.webp" alt="Logo" loading="lazy" decoding="async"></div>
     </div>
   </div>
   <div>
@@ -751,7 +765,7 @@
   <div class="public-grid">
     <article class="public-card">
       <div class="public-body">
-        <img class="public-thumb" src="vovinamenfant.jpg" alt="Enfants pratiquant le Vovinam en démonstration" loading="lazy">
+        <img class="public-thumb" src="vovinamenfant.webp" alt="Enfants pratiquant le Vovinam en démonstration" loading="lazy">
         <span class="public-age">7 à 10 ans</span>
         <h3>Enfants</h3>
         <p class="public-born">Nés en 2016, 2017, 2018 et 2019</p>
@@ -770,7 +784,7 @@
     </article>
     <article class="public-card">
       <div class="public-body">
-        <img class="public-thumb" src="vovinamadultes.jpg" alt="Adultes pratiquant le Vovinam en démonstration" loading="lazy">
+        <img class="public-thumb" src="vovinamadultes.webp" alt="Adultes pratiquant le Vovinam en démonstration" loading="lazy">
         <span class="public-age">À partir de 11 ans</span>
         <h3>Ados et Adultes</h3>
         <p class="public-born">Nés en 2015 et avant</p>
@@ -846,29 +860,19 @@
   <div class="gal-grid">
 
     <!-- Grande cellule gauche — 2 lignes -->
-    <div class="gal-cell" style="background:#000;">
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/HlyY7O6SBMw?si=ps6-9QEB5p08_m6G" title="Vovinam Port-Marly" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:block;"></iframe>
-    </div>
+    <div class="gal-cell"><button type="button" class="yt-facade" data-yt="HlyY7O6SBMw" data-title="Vovinam Port-Marly" aria-label="Lire la vidéo : Vovinam Port-Marly"><img src="https://i.ytimg.com/vi/HlyY7O6SBMw/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-title">Vovinam Port-Marly</span><span class="yt-play"><svg viewBox="0 0 68 48" width="68" height="48" aria-hidden="true"><path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.2 34 .2 34 .2S12.8.2 7.5 1.7a8.5 8.5 0 0 0-6 6C0 13 0 24 0 24s0 11 1.5 16.3a8.5 8.5 0 0 0 6 6C12.8 47.8 34 47.8 34 47.8s21.2 0 26.5-1.5a8.5 8.5 0 0 0 6-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#c8102e"/><path d="M45 24 27 14v20z" fill="#fff"/></svg></span></button></div>
 
     <!-- Cellule haut droite 1 -->
-    <div class="gal-cell" style="background:#000;">
-      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZVH49dKJ1uw?si=JSI1pj2sTjzLs60L" title="Vovinam Port-Marly — Cours adultes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:block;"></iframe>
-    </div>
+    <div class="gal-cell"><button type="button" class="yt-facade" data-yt="ZVH49dKJ1uw" data-title="Vovinam Port-Marly — Cours adultes" aria-label="Lire la vidéo : Vovinam Port-Marly — Cours adultes"><img src="https://i.ytimg.com/vi/ZVH49dKJ1uw/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-title">Vovinam Port-Marly — Cours adultes</span><span class="yt-play"><svg viewBox="0 0 68 48" width="68" height="48" aria-hidden="true"><path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.2 34 .2 34 .2S12.8.2 7.5 1.7a8.5 8.5 0 0 0-6 6C0 13 0 24 0 24s0 11 1.5 16.3a8.5 8.5 0 0 0 6 6C12.8 47.8 34 47.8 34 47.8s21.2 0 26.5-1.5a8.5 8.5 0 0 0 6-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#c8102e"/><path d="M45 24 27 14v20z" fill="#fff"/></svg></span></button></div>
 
     <!-- Cellule haut droite 2 -->
-    <div class="gal-cell" style="background:#000;">
-      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/k2idDlTaEek?si=giCdtlbSMShDGrme" title="Vovinam Port-Marly — Cours enfants" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:block;"></iframe>
-    </div>
+    <div class="gal-cell"><button type="button" class="yt-facade" data-yt="k2idDlTaEek" data-title="Vovinam Port-Marly — Cours enfants" aria-label="Lire la vidéo : Vovinam Port-Marly — Cours enfants"><img src="https://i.ytimg.com/vi/k2idDlTaEek/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-title">Vovinam Port-Marly — Cours enfants</span><span class="yt-play"><svg viewBox="0 0 68 48" width="68" height="48" aria-hidden="true"><path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.2 34 .2 34 .2S12.8.2 7.5 1.7a8.5 8.5 0 0 0-6 6C0 13 0 24 0 24s0 11 1.5 16.3a8.5 8.5 0 0 0 6 6C12.8 47.8 34 47.8 34 47.8s21.2 0 26.5-1.5a8.5 8.5 0 0 0 6-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#c8102e"/><path d="M45 24 27 14v20z" fill="#fff"/></svg></span></button></div>
 
     <!-- Cellule bas droite 1 -->
-    <div class="gal-cell" style="background:#000;">
-      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/QGjnpeMUFz0?si=n1HX7_HPY_E3hnQB" title="Vovinam Port-Marly — Ciseaux volants" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:block;"></iframe>
-    </div>
+    <div class="gal-cell"><button type="button" class="yt-facade" data-yt="QGjnpeMUFz0" data-title="Vovinam Port-Marly — Ciseaux volants" aria-label="Lire la vidéo : Vovinam Port-Marly — Ciseaux volants"><img src="https://i.ytimg.com/vi/QGjnpeMUFz0/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-title">Vovinam Port-Marly — Ciseaux volants</span><span class="yt-play"><svg viewBox="0 0 68 48" width="68" height="48" aria-hidden="true"><path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.2 34 .2 34 .2S12.8.2 7.5 1.7a8.5 8.5 0 0 0-6 6C0 13 0 24 0 24s0 11 1.5 16.3a8.5 8.5 0 0 0 6 6C12.8 47.8 34 47.8 34 47.8s21.2 0 26.5-1.5a8.5 8.5 0 0 0 6-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#c8102e"/><path d="M45 24 27 14v20z" fill="#fff"/></svg></span></button></div>
 
     <!-- Cellule bas droite 2 -->
-    <div class="gal-cell" style="background:#000;">
-      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/PINP5xlCAF0?si=cWgGzHc1uBHmUuJP" title="Vovinam Port-Marly — Stage national" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:block;"></iframe>
-    </div>
+    <div class="gal-cell"><button type="button" class="yt-facade" data-yt="PINP5xlCAF0" data-title="Vovinam Port-Marly — Stage national" aria-label="Lire la vidéo : Vovinam Port-Marly — Stage national"><img src="https://i.ytimg.com/vi/PINP5xlCAF0/hqdefault.jpg" alt="" loading="lazy" decoding="async"><span class="yt-title">Vovinam Port-Marly — Stage national</span><span class="yt-play"><svg viewBox="0 0 68 48" width="68" height="48" aria-hidden="true"><path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.2 34 .2 34 .2S12.8.2 7.5 1.7a8.5 8.5 0 0 0-6 6C0 13 0 24 0 24s0 11 1.5 16.3a8.5 8.5 0 0 0 6 6C12.8 47.8 34 47.8 34 47.8s21.2 0 26.5-1.5a8.5 8.5 0 0 0 6-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#c8102e"/><path d="M45 24 27 14v20z" fill="#fff"/></svg></span></button></div>
 
   </div>
 </section>
@@ -879,7 +883,7 @@
   <div class="actu-grid">
     <!-- Article 1 -->
     <div class="actu-card">
-      <img src="marlyportain-couverture.jpg" alt="Couverture du magazine Le Marlyportain n°89, septembre 2026" class="actu-img" style="object-position: top;">
+      <img src="marlyportain-couverture.webp" alt="Couverture du magazine Le Marlyportain n°89, septembre 2026" class="actu-img" style="object-position: top;" loading="lazy" decoding="async">
       <div class="actu-body">
         <div class="actu-tag">Presse</div>
         <h3 class="actu-title">Le club dans le magazine de la ville de Port-Marly</h3>
@@ -979,7 +983,7 @@
       </ul>
       <p class="tchl-note">Dates et lieux prévisionnels, susceptibles d'évoluer. Source : vovinam-france.org</p>
     </div>
-    <div class="tchl-logo"><img src="logo-tchl-france.png" alt="Logo du TCHL France — Tổng Cục Huấn Luyện Môn Phái Vovinam Việt Võ Đạo" loading="lazy"></div>
+    <div class="tchl-logo"><img src="logo-tchl-france.webp" alt="Logo du TCHL France — Tổng Cục Huấn Luyện Môn Phái Vovinam Việt Võ Đạo" loading="lazy"></div>
   </div>
 </section>
 <!-- PHILOSOPHIE -->
@@ -1019,10 +1023,10 @@
   <span class="pval-fr" style="display:block;margin-bottom:14px;">-</span>
   <div style="display:flex;gap:16px;margin-bottom:16px;">
     <div style="flex:1;aspect-ratio:1/1.1;border-radius:3px;overflow:hidden;border:1px solid var(--bleu-mid);background:var(--bleu-pale);display:flex;align-items:center;justify-content:center;">
-      <img src="ecusson-vovinam.png" alt="Écusson Vovinam Việt Võ Đạo" style="width:100%;height:100%;object-fit:contain;padding:8px;">
+      <img src="ecusson-vovinam.webp" alt="Écusson Vovinam Việt Võ Đạo" style="width:100%;height:100%;object-fit:contain;padding:8px;" loading="lazy" decoding="async">
     </div>
     <div style="flex:1;aspect-ratio:1/1.1;border-radius:3px;overflow:hidden;border:1px solid var(--bleu-mid);background:var(--bleu-pale);display:flex;align-items:center;justify-content:center;">
-      <img src="drapeau-vovinam.png" alt="Drapeau Vovinam Việt Võ Đạo" style="width:100%;height:100%;object-fit:contain;padding:8px;">
+      <img src="drapeau-vovinam.webp" alt="Drapeau Vovinam Việt Võ Đạo" style="width:100%;height:100%;object-fit:contain;padding:8px;" loading="lazy" decoding="async">
     </div>
   </div>
   <p class="pval-ex">L'écusson et le drapeau du Vovinam ont quatre couleurs :<br>– le <strong style="color:var(--bleu);">bleu</strong> qui indique l'élément de am, il représente la mer et l'espoir <br>– le <strong style="color:var(--rouge);">rouge</strong> qui indique l'élément de duong, il représente le feu et la volonté invincible <br>– le <strong style="color:#b89000;">jaune</strong> qui représente l'honneur et le triomphe <br>– le blanc qui représente la chasteté et la sagesse.<br><br>
@@ -1145,7 +1149,7 @@
 <!-- FOOTER -->
 <footer>
 <div>
-  <a href="#accueil" class="ft-brand"><img src="logo-vdst.png" alt="Logo"><div><strong>VDST Port-Marly</strong><span>Vovinam Việt Võ Đạo</span></div></a>
+  <a href="#accueil" class="ft-brand"><img src="logo-vdst.webp" alt="Logo" loading="lazy" decoding="async"><div><strong>VDST Port-Marly</strong><span>Vovinam Việt Võ Đạo</span></div></a>
   <div style="display:flex;gap:14px;margin-top:16px;align-items:center;">
     <a href="https://www.facebook.com/vovinamportmarly" target="_blank" rel="noopener" style="color:rgba(255,255,255,.55);transition:color .2s;" title="Facebook">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -1302,6 +1306,18 @@
       var box=b.closest('.mob-collapse'); var open=box.classList.toggle('open');
       b.setAttribute('aria-expanded',open); b.textContent=open?b.dataset.less:b.dataset.more;
       if(!open){ box.scrollIntoView({block:'center',behavior:'smooth'}); }
+    });
+  });
+</script>
+<script>
+  document.querySelectorAll('.yt-facade').forEach(function(b){
+    b.addEventListener('click',function(){
+      var f=document.createElement('iframe');
+      f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.yt+'?autoplay=1&rel=0';
+      f.title=b.dataset.title; f.allowFullscreen=true;
+      f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      f.setAttribute('referrerpolicy','strict-origin-when-cross-origin');
+      b.replaceWith(f);
     });
   });
 </script>

@@ -62,7 +62,7 @@
   .nm-socials a:hover { color: var(--bleu); }
 
   /* HERO — même construction que la page Professeur */
-  .hero { min-height: 92vh; background: linear-gradient(100deg, rgba(14,30,84,0.92) 0%, rgba(27,58,140,0.74) 46%, rgba(46,91,184,0.30) 100%), url('photo-techniques-martiales.jpg'); background-size: cover; background-position: center 40%; display: grid; grid-template-columns: minmax(0, 760px); position: relative; overflow: hidden; padding-top: 78px; }
+  .hero { min-height: 92vh; background: linear-gradient(100deg, rgba(14,30,84,0.92) 0%, rgba(27,58,140,0.74) 46%, rgba(46,91,184,0.30) 100%), url('photo-techniques-martiales-l.webp'); background-size: cover; background-position: center 40%; display: grid; grid-template-columns: minmax(0, 760px); position: relative; overflow: hidden; padding-top: 78px; }
   .hero::before, .hero::after { content: ''; position: absolute; border-radius: 50%; pointer-events: none; border: 1px solid rgba(255,255,255,0.06); }
   .hero::before { width: 650px; height: 650px; top: -220px; right: -180px; }
   .hero::after  { width: 450px; height: 450px; bottom: -130px; left: 35%; }
@@ -112,7 +112,7 @@
   .ft-brand span { font-family: 'Be Vietnam Pro', sans-serif; font-size: .68rem; letter-spacing: .2em; color: var(--jaune); text-transform: uppercase; margin-top: 3px; display: block; }
   .ft-title { font-family: 'Be Vietnam Pro', sans-serif; font-size: .5rem; letter-spacing: .22em; text-transform: uppercase; color: var(--jaune); margin-bottom: 14px; }
   .ft-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
-  .ft-list a { font-family: 'Be Vietnam Pro'; font-size: .93rem; color: rgba(255,255,255,.55); text-decoration: none; font-style: italic; transition: color .2s; }
+  .ft-list a { font-family: 'Be Vietnam Pro'; font-size: .93rem; color: rgba(255,255,255,.55); text-decoration: none; transition: color .2s; }
   .ft-list a:hover { color: var(--blanc); }
   .ft-copy { font-family: 'Be Vietnam Pro', sans-serif; font-size: .7rem; letter-spacing: .1em; color: rgba(255,255,255,.28); padding-top: 22px; line-height: 1.8; grid-column: 1/-1; text-align: center; border-top: 1px solid rgba(255,255,255,.1); }
 
@@ -207,7 +207,7 @@
   #vodao { background: var(--bleu-pale); display: grid; grid-template-columns: 1fr 1.25fr; gap: 64px; align-items: stretch; }
   /* case bleue de la hauteur du texte, photo du salut en filigrane */
   .vodao-quote { position: relative; overflow: hidden; isolation: isolate; align-self: stretch; display: flex; flex-direction: column; justify-content: flex-end; min-height: 420px; background: var(--bleu); color: var(--blanc); border-radius: 16px; padding: 40px 36px; box-shadow: 0 18px 40px rgba(27,58,140,.2); }
-  .vodao-quote::before { content: ''; position: absolute; inset: 0; z-index: -2; background: url('photo-salut-vovinam.jpg') center 30% / cover no-repeat; mix-blend-mode: luminosity; opacity: .45; }
+  .vodao-quote::before { content: ''; position: absolute; inset: 0; z-index: -2; background: url('photo-salut-vovinam.webp') center 30% / cover no-repeat; mix-blend-mode: luminosity; opacity: .45; }
   .vodao-quote::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(27,58,140,.1) 0%, rgba(27,58,140,.55) 35%, rgba(14,30,84,.95) 70%); }
   .vodao-quote .tq-vn { color: var(--jaune); margin: 0 0 14px; }
   .vodao-title { font-size: 1.5rem; font-weight: 800; line-height: 1.3; text-transform: uppercase; letter-spacing: .01em; }
@@ -258,7 +258,7 @@
     .nav-logo-text strong{font-size:.85rem;}
     .nav-logo-text span{white-space:nowrap;font-size:.6rem;}
     /* mobile : photo en entier en haut, texte dessous sur fond bleu */
-    .hero{grid-template-columns:1fr;min-height:0;background:linear-gradient(180deg, rgba(14,30,84,0) calc(66px + 38vw), #0e1e54 calc(66px + 66vw)), url('photo-techniques-martiales.jpg') center 66px / 100% auto no-repeat, #0e1e54;}
+    .hero{grid-template-columns:1fr;min-height:0;background:linear-gradient(180deg, rgba(14,30,84,0) calc(66px + 38vw), #0e1e54 calc(66px + 66vw)), url('photo-techniques-martiales-l.webp') center 66px / 100% auto no-repeat, #0e1e54;}
     .hero-left{padding:calc(66vw - 40px) 22px 30px;}
     .hero-actions a{flex:1 1 100%;text-align:center;}
     .hero-desc{font-size:1rem;}
@@ -317,7 +317,7 @@
 <!-- NAV — identique au site principal -->
 <nav>
   <a href="index.html" class="nav-logo">
-    <img src="logo-vdst.png" alt="Logo VDST Port-Marly">
+    <img src="logo-vdst.webp" alt="Logo VDST Port-Marly">
     <div class="nav-logo-text">
       <strong>VDST Port-Marly</strong>
       <span>Vovinam Việt Võ Đạo</span>
@@ -407,7 +407,7 @@
 <section id="fondamentaux" class="sec">
   <div class="tq-row" id="bases">
     <div class="tq-photo">
-      <img src="photo-tarif-adultes.jpg" alt="Élèves travaillant les frappes de base en position">
+      <img src="photo-tarif-adultes.webp" alt="Élèves travaillant les frappes de base en position" loading="lazy" decoding="async">
     </div>
     <div>
       <div class="sec-label">Les fondamentaux</div>
@@ -426,7 +426,7 @@
 
   <div class="tq-row rev" id="techniques-base">
     <div class="tq-photo">
-      <img src="photo-techniques-armes.jpg" alt="Deux pratiquants travaillant une technique au bâton (Côn)">
+      <img src="photo-techniques-armes.webp" alt="Deux pratiquants travaillant une technique au bâton (Côn)" loading="lazy" decoding="async">
       <div class="tq-badge"><strong>300+</strong><span>Techniques</span></div>
     </div>
     <div>
@@ -509,13 +509,13 @@
       </div>
     </div>
     <div class="tq-photo">
-      <img src="photo-sport-combat.jpg" alt="Combat pied-poing en compétition de Vovinam">
+      <img src="photo-sport-combat.webp" alt="Combat pied-poing en compétition de Vovinam" loading="lazy" decoding="async">
     </div>
   </div>
 
   <div class="lutte-card" id="lutte">
     <div class="tq-photo">
-      <img src="photo-lutte-vietnamienne.jpg" alt="Deux pratiquants en saisie de lutte vietnamienne sur le tapis">
+      <img src="photo-lutte-vietnamienne.webp" alt="Deux pratiquants en saisie de lutte vietnamienne sur le tapis" loading="lazy" decoding="async">
       <div class="lutte-rule"><small>Pour l'emporter</small>Dos à terre, ventre au ciel</div>
     </div>
     <div>
@@ -605,7 +605,7 @@
 <!-- FOOTER — identique au site principal -->
 <footer>
 <div>
-  <a href="index.html" class="ft-brand"><img src="logo-vdst.png" alt="Logo"><div><strong>VDST Port-Marly</strong><span>Vovinam Việt Võ Đạo</span></div></a>
+  <a href="index.html" class="ft-brand"><img src="logo-vdst.webp" alt="Logo" loading="lazy" decoding="async"><div><strong>VDST Port-Marly</strong><span>Vovinam Việt Võ Đạo</span></div></a>
   <div style="display:flex;gap:14px;margin-top:16px;align-items:center;">
     <a href="https://www.facebook.com/vovinamportmarly" target="_blank" rel="noopener" style="color:rgba(255,255,255,.55);transition:color .2s;" title="Facebook">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
