@@ -222,6 +222,20 @@
     .essai .essai-btns{grid-auto-flow:row;grid-auto-columns:minmax(0,1fr);width:100%;}
     .essai .essai-btns a{font-size:clamp(.5rem,2.9vw,.68rem);letter-spacing:.04em;padding:15px 8px;}
   }
+
+  /* BANDE « PREMIÈRE SÉANCE OFFERTE » : carte arrondie, dégradé bleu, boutons jaune et blanc */
+  .essai { margin: 46px 80px; padding: 46px 54px; border-radius: 18px; background: linear-gradient(135deg, #0f2260 0%, var(--bleu) 55%, #2a4fa8 100%); box-shadow: 0 18px 44px rgba(27,58,140,.22); }
+  .essai::after { border-color: rgba(255,255,255,.10); }
+  .essai h3 { font-family: 'Be Vietnam Pro', sans-serif; font-size: clamp(1.6rem,2.6vw,2.4rem); font-weight: 900; letter-spacing: .02em; line-height: 1.05; text-transform: uppercase; margin-bottom: 8px; }
+  .essai p { font-style: normal; color: rgba(255,255,255,.86); font-size: 1rem; }
+  .essai .btn-blanc { background: var(--jaune); color: var(--bleu); border: 2px solid var(--jaune); }
+  .essai .btn-blanc:hover { background: #ffd84a; border-color: #ffd84a; }
+  .essai .btn-helloasso { background: transparent; color: var(--blanc); border: 2px solid rgba(255,255,255,.7); }
+  .essai .btn-helloasso:hover { background: rgba(255,255,255,.14); border-color: var(--blanc); }
+  @media(max-width:900px){
+    .essai { margin: 26px 18px; padding: 30px 22px; border-radius: 16px; }
+    .essai h3 { font-size: 1.6rem; }
+  }
 </style>
 </head>
 <body>
