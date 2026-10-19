@@ -568,6 +568,15 @@
   }
   @media(max-width:350px){ .sec-title,.tchl-title{font-size:1.65rem;} }
   .hero-l1 { display: block; }
+  /* Textes dépliables sur mobile */
+  .mob-toggle { display: none; }
+  @media(max-width:900px){
+    .mob-collapse:not(.open) .mob-more{display:none;}
+    .mob-toggle{display:block;width:100%;text-align:center;margin:4px 0 18px;padding:12px 0;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--bleu);background:transparent;border:0;border-top:1px solid var(--bleu-mid);border-bottom:1px solid var(--bleu-mid);border-radius:0;}
+    .mob-toggle::after{content:' ▾';}
+    .mob-collapse.open .mob-toggle::after{content:' ▴';}
+    .mob-collapse .philo-p + .mob-toggle{margin-top:14px;}
+  }
 </style>
 </head>
 <body>
@@ -707,9 +716,14 @@
     <h2 class="sec-title">DU FONDATEUR<br>AU PROFESSEUR</h2>
     <p style="color:var(--texte-mid);margin-bottom:16px;font-size:1.02rem;">Le Vovinam Việt Võ Đạo est un art martial vietnamien fondé en 1938 par le Maître Fondateur Nguyễn Lộc. Il est une synthèse des arts martiaux traditionnels et millénaires du Vietnam.</p>
     <p style="color:var(--texte-mid);margin-bottom:16px;font-size:1.02rem;">Le Vovinam est un art martial très complet qui comprend notamment des techniques de percussion (coups de pieds, coups de poings, coups de coude, coups de genoux, tranchants de la main...). </p>
+    <div class="mob-collapse">
+    <div class="mob-more">
     <p style="color:var(--texte-mid);margin-bottom:16px;font-size:1.02rem;">Le Vovinam c'est aussi des techniques de self-défense (se défendre contre un étranglement, une saisie au corps, une saisie des poignets...), des projections (qui peuvent faire penser au Judo), de lutte vietnamienne, de clés articulaires (de bras de jambes) ou encore de ciseaux (coups de pieds sautés ou saisies au corps et à la tête avec les jambes).</p>
     <p style="color:var(--texte-mid);margin-bottom:16px;font-size:1.02rem;">Nous pratiquons également des armes courantes comme le couteau poignard (đao găm) ou le pistolet (súng ngắn) et des armes traditionnelles comme l'épée (kiếm), le sabre large (Đao), le bâton long (Côn), la hallebarde (Đại Đao), la règle en bois (tay thước) ou l'éventail(Quật)...</p>
     <p style="color:var(--texte-mid);margin-bottom:24px;font-size:1.02rem;">Le Vovinam Việt Võ Đạo est aussi un sport avec ses compétitions techniques et combat nationales et internationales. Les combats sont réglementés et autorisent notamment les pieds-poings, les balayages, les projections et les ciseaux. Le club participe aux compétitions Vovinam et AMV de la fédération de karaté (FFKDA) qui est la fédération délégataire.</p>
+    </div>
+    <button type="button" class="mob-toggle" aria-expanded="false" data-more="Lire la suite" data-less="Réduire">Lire la suite</button>
+    </div>
     <div class="vovinam-btns">
       <a href="histoirevovinam.html" class="btn-rouge">L'histoire du Vovinam</a>
       <a href="professeur.html" class="btn-outline-bleu">Notre professeur Thầy Grégory</a>
@@ -952,8 +966,10 @@
   <blockquote>«ÊTRE FORT POUR ÊTRE UTILE»</blockquote>
   <p class="philo-src">La devise du Vovinam Việt Võ Đạo</p>
 </div>
+<div class="mob-collapse">
 <p class="philo-p">
-  <span class="pval-viet">Les 10 principes Fondamentaux :</span>
+  <span class="pval-viet">Les 10 principes fondamentaux&nbsp;:</span>
+  <span class="mob-more">
   1 - Le pratiquant de Việt Võ Đạo s'engage à atteindre le plus haut niveau de l'art afin de servir son peuple et l'humanité.<br>
   2 - Le pratiquant de Việt Võ Đạo s'engage avec loyauté à faire rayonner le Vovinam et à former une jeunesse engagée, prête à se donner au service des autres.<br>
   3 - Le pratiquant de Việt Võ Đạo cultive l'unité, le respect envers ses aînés et la bienveillance envers ses camarades de pratique.<br>
@@ -964,7 +980,11 @@
   8 - Le pratiquant de Việt Võ Đạo forge une volonté d'acier et cherche à progresser par lui-même.<br>
   9 - Le pratiquant de Việt Võ Đạo fait preuve de lucidité, de courage dans l'adversité et d'ingéniosité dans ses actes.<br>
   10 - Le pratiquant de Việt Võ Đạo a confiance en lui, se surpasse, reste humble et bienveillant, et se remet en question pour progresser.
+
+  </span>
 </p>
+<button type="button" class="mob-toggle" aria-expanded="false" data-more="Voir les 10 principes" data-less="Masquer les principes">Voir les 10 principes</button>
+</div>
   </div>   
   <div>
     <div class="sec-label" style="margin-bottom:18px;">Les essentiels</div>
@@ -1249,6 +1269,15 @@
       btn.textContent = 'Envoyer le message';
       btn.disabled = false;
     }
+  });
+</script>
+<script>
+  document.querySelectorAll('.mob-toggle').forEach(function(b){
+    b.addEventListener('click',function(){
+      var box=b.closest('.mob-collapse'); var open=box.classList.toggle('open');
+      b.setAttribute('aria-expanded',open); b.textContent=open?b.dataset.less:b.dataset.more;
+      if(!open){ box.scrollIntoView({block:'center',behavior:'smooth'}); }
+    });
   });
 </script>
 </body>
