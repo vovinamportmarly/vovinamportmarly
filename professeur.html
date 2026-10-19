@@ -91,7 +91,8 @@
   .sec-title { font-size: clamp(2rem,3.2vw,3.2rem); letter-spacing: .02em; line-height: 1; color: var(--bleu); margin-bottom: 16px; font-weight: 900; text-transform: uppercase; }
 
   /* PRÉSENTATION */
-  #presentation { background: var(--blanc); display: grid; grid-template-columns: 340px 1fr; gap: 72px; align-items: start; }
+  #presentation { background: var(--blanc); }
+  .pres-grid { display: grid; grid-template-columns: 340px 1fr; gap: 72px; align-items: start; }
   .portrait-wrap { position: sticky; top: 104px; }
   .portrait-img { border-radius: 14px 14px 0 0; overflow: hidden; border: 2px solid var(--bleu-mid); border-bottom: none; aspect-ratio: 3/4; background: var(--bleu-pale); }
   .portrait-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
@@ -241,7 +242,7 @@
     .palm-stat-num{font-size:2.2rem;}
     .prof-vision{padding:22px 20px;}
     .sec{padding:60px 22px;}
-    #presentation{grid-template-columns:1fr;gap:36px;}
+    .pres-grid{grid-template-columns:1fr;gap:36px;}
     .portrait-wrap{position:static;max-width:340px;}
     .timeline::before{left:7px;}
     .tl-item{grid-template-columns:1fr;gap:8px;padding-left:30px;}
@@ -334,6 +335,28 @@
     .mob-toggle::after { content: ' ▾'; }
     .mob-collapse.open .mob-toggle::after { content: ' ▴'; }
   }
+
+  /* photos de la présentation */
+  .prof-photos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 44px; }
+  .prof-photo figcaption .credit { display: block; margin-top: 4px; font-size: .76rem; color: var(--texte-muted); }
+  @media(max-width:1100px){ .prof-photos { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media(min-width:901px){ .prof-photos .mob-collapse, .prof-photos .mob-more { display: contents; } }
+  .prof-photo { margin: 0; background: var(--bleu-pale); border: 1px solid var(--bleu-mid); border-radius: 14px; overflow: hidden; }
+  .prof-photo img { display: block; width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+  .prof-photo figcaption { padding: 14px 18px 18px; font-size: .88rem; line-height: 1.55; color: var(--texte-mid); }
+  .prof-photo figcaption strong { display: block; color: var(--bleu); font-weight: 800; margin-bottom: 3px; }
+  @media(max-width:900px){
+    .prof-photos { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 28px; }
+    .prof-photos .mob-collapse { display: block; }
+    .prof-photos .mob-more { display: grid; gap: 14px; }
+    .prof-photo img { aspect-ratio: 16/10; }
+    .prof-photos .mob-toggle { margin: 4px 0 0; }
+  }
+
+  /* titres de la présentation */
+  .prof-intro .prof-h { font-size: .68rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--rouge); display: flex; align-items: center; gap: 10px; margin: 30px 0 12px; }
+  .prof-intro .prof-h::before { content: ''; width: 20px; height: 2px; background: var(--rouge); }
+  .prof-intro strong { color: var(--bleu); font-weight: 700; }
 </style>
 </head>
 <body>
@@ -421,6 +444,7 @@
 
 <!-- PRÉSENTATION -->
 <section id="presentation" class="sec">
+  <div class="pres-grid">
   <div class="portrait-wrap">
     <div class="portrait-img">
       <img src="professeur-plan-americain.webp" alt="Grégory Foiry, professeur du VDST Port-Marly" loading="lazy" decoding="async">
@@ -434,13 +458,50 @@
     <div class="sec-label">Présentation</div>
     <div class="prof-intro">
       <p>Grégory débute le Vovinam à l'âge de 10 ans, en septembre 1995, à Emerainville, sous la direction de Võ Sư Albert Gouillon (6e Đẳng). Depuis, il n'a jamais cessé de pratiquer, d'enseigner et de se former, en France comme au Vietnam.</p>
+
+      <h3 class="prof-h">Sa formation</h3>
+      <p>Farid Aounallah lui a fait découvrir le Vietnam et l'a accompagné dans sa formation jusqu'au 2e Đẳng. Ensuite, c'est Frédéric Frah qui l'a aidé à progresser. Son premier séjour au Vietnam remonte à octobre 2005 : à chacun de ses voyages, il retourne s'entraîner au Tổ đường de Hô Chi Minh-Ville, sous la supervision de Võ Sư Nguyễn Văn Sen, membre du <a href="histoirevovinam.html#conseil">Conseil des Maîtres dirigeants</a> de l'école.</p>
+
+      <h3 class="prof-h">Ses clubs</h3>
+      <p>En 2007, à 22 ans et déjà titulaire du brevet d'État (option métiers de la forme), il ouvre son premier club, l'IVVP, dans l'est parisien. Après sa fermeture en 2020, à la suite du Covid, il s'installe à Port-Marly en 2021. Il apprécie la ville et le dojo propose des créneaux disponibles : en 2026, il y ouvre le VDST Port-Marly.</p>
+
+      <h3 class="prof-h">Sa façon d'enseigner</h3>
+      <p>Dans ses cours, il tient au <strong>respect</strong>, à l'<strong>écoute des consignes</strong> et à la <strong>bienveillance</strong> entre les pratiquants. Si un élève a une question, il fait son possible pour lui répondre : il enseigne en pédagogue, comme un professionnel du sport.</p>
       <p>Coach sportif de profession, il s'appuie sur ses connaissances en anatomie, biomécanique et pédagogie pour offrir un enseignement de qualité, adapté à chacun, de l'enfant à l'adulte.</p>
+
+      <h3 class="prof-h">Deux diplômes, une même exigence</h3>
+      <p>En 2025, il obtient le diplôme de <strong>Hồng Đai Đệ Nhất Cấp (5e Đẳng)</strong>, reconnu par le Hội Đồng Võ Sư Chưởng Quản, à l'issue d'un examen passé aux Lilas et organisé par cette instance. Le diplôme et la ceinture lui sont remis lors de la 65e cérémonie de commémoration du fondateur, organisée par le TCHL France.</p>
+      <p>En juin 2026, il passe aussi son <strong>5e Dang d'État</strong> avec la FFKDA. Il tient à être irréprochable sur deux plans : le plan traditionnel, avec le respect de l'école et de ses instances, et celui des règles de son pays, la France.</p>
       <p>Il est l'un des membres fondateurs du <a href="https://vovinam-france.org" target="_blank" rel="noopener">TCHL France</a>, dont il occupe actuellement le poste de secrétaire général élu au bureau.</p>
     </div>
     <div class="prof-vision">
       <blockquote>«&nbsp;30 ans de pratique m'ont appris une chose : la technique sans les valeurs ne tient pas. Mon objectif est que chaque élève, petit ou grand, progresse à son rythme, prenne confiance en lui et reparte avec les deux. Le Vovinam m'a énormément apporté. Je prends soin de le transmettre avec la même exigence et le même respect.&nbsp;»</blockquote>
       <cite>Võ Sư Grégory</cite>
     </div>  </div>
+  </div>
+  <div class="prof-photos">
+    <figure class="prof-photo">
+      <img src="albert-gouillon-en-action.webp" alt="Võ Sư Albert Gouillon exécutant un coup de pied sauté en démonstration" loading="lazy" decoding="async">
+      <figcaption><strong>Võ Sư Albert Gouillon en action</strong>Premier professeur de Grégory, à Emerainville.</figcaption>
+    </figure>
+    <figure class="prof-photo">
+      <img src="albert-gouillon-frederic-frah.webp" alt="Võ Sư Albert Gouillon et Frédéric Frah, debout sur une plage, en tenue de Vovinam" loading="lazy" decoding="async" style="object-position:center 18%;">
+      <figcaption><strong>Võ Sư Albert Gouillon et Frédéric Frah</strong>Vers 1997 ou 1998.</figcaption>
+    </figure>
+    <div class="mob-collapse">
+    <div class="mob-more">
+    <figure class="prof-photo">
+      <img src="sejour-vietnam-2005-to-duong.webp" alt="Grégory, Võ Sư Nguyễn Văn Sen et Farid Aounallah au Tổ đường de Hô Chi Minh-Ville en octobre 2005" loading="lazy" decoding="async">
+      <figcaption><strong>Octobre 2005 — premier séjour au Vietnam</strong>Au Tổ đường de Hô Chi Minh-Ville : Grégory (2e en partant de la gauche), Võ Sư Nguyễn Văn Sen (4e) et Farid Aounallah (5e).</figcaption>
+    </figure>
+    <figure class="prof-photo">
+      <img src="remise-diplome-5e-dang-2025.webp" alt="Grégory, debout à côté de Võ Sư Sen assis, lors de la remise des diplômes de la 65e cérémonie de commémoration du fondateur en 2025" loading="lazy" decoding="async">
+      <figcaption><strong>2025 — Remise du diplôme de 5e Đẳng</strong>65e cérémonie de commémoration du fondateur, organisée par le TCHL France. Grégory, debout, est à côté de Võ Sư Sen, assis. <span class="credit">Photo : Pikminh Photography.</span></figcaption>
+    </figure>
+    </div>
+    <button type="button" class="mob-toggle" aria-expanded="false" data-more="Voir toutes les photos" data-less="Réduire">Voir toutes les photos</button>
+    </div>
+  </div>
 </section>
 
 <!-- PARCOURS -->
@@ -471,7 +532,7 @@
     </div>
     <div class="tl-item tl-same">
       <span class="tl-year"></span>
-      <div class="tl-body"><h3>Octobre 2005 — Premier séjour au Vietnam</h3><p>En octobre 2005, il part pour la première fois au Vietnam, berceau du Vovinam, pour se former auprès de Võ Sư Nguyen Van Sen (9e Đẳng). Il est accompagné de Farid Aounallah et d'autres pratiquants des clubs d'Emerainville et de Noisiel. Au programme&nbsp;: deux semaines d'entraînement intensif, à raison de 4&nbsp;heures par jour.</p>
+      <div class="tl-body"><h3>Octobre 2005 — Premier séjour au Vietnam</h3><p>En octobre 2005, il part pour la première fois au Vietnam, berceau du Vovinam, pour se former auprès de Võ Sư Nguyễn Văn Sen (9e Đẳng). Il est accompagné de Farid Aounallah et d'autres pratiquants des clubs d'Emerainville et de Noisiel. Au programme&nbsp;: deux semaines d'entraînement intensif, à raison de 4&nbsp;heures par jour.</p>
       </div>
     </div>
     <div class="tl-item">
