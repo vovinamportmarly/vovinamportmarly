@@ -603,6 +603,28 @@
     .gal-cell:not(:first-child) .yt-title{display:none;}
     .gal-cell:not(:first-child) .yt-play{width:52px;height:37px;}
   }
+  .venir-card { margin-top: 14px; background: var(--bleu-pale); border: 1px solid var(--bleu-mid); border-radius: 12px; padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .venir-card h3 { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1rem; font-weight: 800; color: var(--bleu); text-transform: uppercase; letter-spacing: .02em; margin-bottom: 4px; }
+  .venir-card p { font-size: .92rem; color: var(--texte-mid); line-height: 1.5; }
+  .venir-card .btn-rouge { flex-shrink: 0; white-space: nowrap; }
+  @media(max-width:900px){
+    .venir-card{flex-direction:column;align-items:stretch;gap:14px;padding:16px;}
+    .venir-card .btn-rouge{display:block;text-align:center;}
+  }
+  /* Actualités compactes sur mobile : une ligne par article */
+  @media(max-width:900px){
+    #actualites .actu-grid{gap:12px;margin-top:28px;}
+    #actualites .actu-card{flex-direction:row;position:relative;min-height:104px;}
+    #actualites .actu-img,#actualites .actu-img-ph{width:104px;height:auto;aspect-ratio:auto;flex-shrink:0;align-self:stretch;object-fit:cover;}
+    #actualites .actu-img-ph svg{width:30px;height:30px;}
+    #actualites .actu-body{padding:12px 14px;justify-content:center;}
+    #actualites .actu-tag{margin-bottom:4px;}
+    #actualites .actu-title{font-size:.95rem;margin-bottom:4px;}
+    #actualites .actu-date{margin-bottom:0;font-size:.76rem;}
+    #actualites .actu-excerpt{display:none;}
+    #actualites .actu-footer{margin-top:4px;}
+    #actualites .actu-lire::after{content:'';position:absolute;inset:0;}
+  }
 </style>
 </head>
 <body>
@@ -836,6 +858,10 @@
     <div class="avant-card"><div><h3>Hygiène</h3><p>Par respect pour vos partenaires d’entraînement : ongles des mains et des pieds courts et propres, cheveux longs attachés, ni bijoux ni montre pendant la pratique.</p></div></div>
     <div class="avant-card"><div><h3>Au dojo</h3><p>On laisse ses chaussures au bord du tatami et on range son téléphone pour profiter pleinement du cours.</p></div></div>
     <div class="avant-card"><div><h3>Esprit du cours</h3><p>Ici, on cultive la ponctualité, l’écoute des consignes, la bienveillance et l’entraide.</p></div></div>
+  </div>
+  <div class="venir-card">
+    <div><h3>Comment venir</h3><p>Complexe sportif d’Artagnan, dojo (salle Athos) — 78560 Le Port-Marly</p></div>
+    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Complexe+sportif+d%27Artagnan+78560+Le+Port-Marly" target="_blank" rel="noopener" class="btn-rouge">Itinéraire ↗</a>
   </div>
 </section>
 
