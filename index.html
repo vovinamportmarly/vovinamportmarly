@@ -60,7 +60,7 @@
   /* HERO */
   .hero {
     min-height: 100vh;
-    background: linear-gradient(100deg, rgba(14,30,84,0.90) 0%, rgba(27,58,140,0.74) 46%, rgba(46,91,184,0.34) 100%), url('Groupe enfant.jpg');
+    background: linear-gradient(100deg, rgba(14,30,84,0.80) 0%, rgba(27,58,140,0.50) 46%, rgba(46,91,184,0.10) 100%), url('Groupe enfant.jpg');
     background-size: cover;
     background-position: center top;
     display: grid; grid-template-columns: 1fr 1fr;
@@ -78,7 +78,7 @@
     padding: 80px 48px 80px 80px; position: relative; z-index: 2;
   }
   .hero-eyebrow {
-    font-family: 'Be Vietnam Pro', sans-serif; font-size: .56rem; letter-spacing: .28em;
+    font-family: 'Be Vietnam Pro', sans-serif; font-size: .82rem; font-weight: 600; letter-spacing: .22em;
     text-transform: uppercase; color: var(--jaune); margin-bottom: 18px;
     display: flex; align-items: center; gap: 10px;
   }
@@ -491,6 +491,7 @@
     .burger-btn{display:flex;}
     .nav-mobile{display:block;}
     .hero{grid-template-columns:minmax(0,1fr);}
+    .hero{background-image:linear-gradient(180deg, rgba(14,30,84,0.66) 0%, rgba(27,58,140,0.58) 100%), url('Groupe enfant.jpg');}
     .hero-left{padding:36px 22px 44px;min-width:0;}
     .hero-right{display:none;}
     .sec{padding:26px 22px;}
@@ -566,6 +567,7 @@
     .essai .essai-btns a{font-size:clamp(.5rem,2.9vw,.68rem);letter-spacing:.04em;padding:15px 8px;}
   }
   @media(max-width:350px){ .sec-title,.tchl-title{font-size:1.65rem;} }
+  .hero-l1 { display: block; }
 </style>
 </head>
 <body>
@@ -626,9 +628,9 @@
 <!-- HERO -->
 <section class="hero" id="accueil">
   <div class="hero-left">
-    <p class="hero-eyebrow anim">VDST Port-Marly — Association sportive Loi 1901</p>
+    <p class="hero-eyebrow anim">Association sportive Loi 1901</p>
     <h1 class="anim"><span class="h1-top">LE VOVINAM – VIỆT VÕ ĐẠO</span><em>À PORT-MARLY</em></h1>
-    <p class="hero-desc anim"><strong class="hero-hook">Un art martial vietnamien complet&nbsp;!</strong>Pratiqué dans plus de 70&nbsp;pays mais<br><strong class="hero-hook">rare dans les Yvelines.</strong><br>Apprenez à vous défendre, canalisez votre énergie, progressez à votre rythme.<br>Des frappes, des projections, de la lutte et du maniement d’armes traditionnelles.<br>Pour les enfants dès 7&nbsp;ans, les ados et les adultes, du débutant au confirmé&nbsp;: une séance suffit pour vous faire une idée.</p>
+    <p class="hero-desc anim"><strong class="hero-hook">Un art martial vietnamien complet&nbsp;!</strong><span class="hero-l1">Pratiqué dans plus de 70&nbsp;pays,</span><strong class="hero-hook">et maintenant près de chez vous,<br class="br-mobile"> dans les Yvelines.</strong><br>Apprenez à vous défendre, canalisez votre énergie, progressez à votre rythme.<br>Des frappes, des projections, de la lutte et du maniement d’armes traditionnelles.<br>Pour les enfants dès 7&nbsp;ans, les ados et les adultes, du débutant au confirmé&nbsp;: une séance suffit pour vous faire une idée.</p>
     <div class="hero-actions anim">
       <a href="#contact" class="btn-jaune">Séance d'essai gratuite</a>
       <a href="https://www.helloasso.com/associations/vdst-port-marly-vovinam-viet-vo-dao/adhesions/2026-2027-vovinam" target="_blank" rel="noopener" class="btn-outline-blanc">Devenir membre</a>
