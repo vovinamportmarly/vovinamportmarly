@@ -240,6 +240,85 @@
   /* COINS ARRONDIS (photos et cartes) */
   .portrait-img, .photo-ancienne-frame { border-radius: 14px 14px 0 0; }
   .portrait-caption, .photo-ancienne-caption { border-radius: 0 0 14px 14px; }
+
+  /* ============ REFONTE DU DESIGN (même univers que l'accueil) ============ */
+  /* bandeau */
+  .page-hero { min-height: 360px; }
+  .page-hero-inner { padding: 52px 80px 56px; }
+  .breadcrumb { font-size: .66rem; color: rgba(255,255,255,.6); margin-bottom: 18px; }
+  .breadcrumb a { color: rgba(255,255,255,.75); }
+  .breadcrumb span:last-child { color: var(--jaune); }
+  .hero-eyebrow { font-size: .72rem; font-weight: 600; letter-spacing: .22em; }
+  .page-hero h1 { line-height: 1.02; }
+  .page-hero-desc { font-style: normal; font-size: 1.08rem; color: rgba(255,255,255,.88); max-width: 620px; }
+
+  /* navigation entre chapitres (collée sous le menu) */
+  .gnav { position: sticky; top: 78px; z-index: 90; background: rgba(255,255,255,.96); backdrop-filter: blur(12px); border-bottom: 1px solid var(--bleu-mid); box-shadow: 0 8px 24px rgba(27,58,140,.07); }
+  .gnav-in { margin: 0 auto; padding: 12px 80px; display: flex; gap: 10px; overflow-x: auto; scrollbar-width: none; }
+  .gnav-in::-webkit-scrollbar { display: none; }
+  .gnav a { display: inline-flex; align-items: center; gap: 9px; padding: 9px 18px; border-radius: 999px; border: 1.5px solid var(--bleu-mid); background: var(--blanc); color: var(--bleu); font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; white-space: nowrap; transition: all .2s; }
+  .gnav a b { color: var(--rouge); font-weight: 800; }
+  .gnav a:hover { border-color: var(--bleu); background: var(--bleu-pale); }
+  .gnav a.active { background: var(--bleu); border-color: var(--bleu); color: var(--blanc); }
+  .gnav a.active b { color: var(--jaune); }
+
+  /* chapitres */
+  #origines, #fondation, #le-sang { padding: 56px 80px; scroll-margin-top: 150px; }
+  .origines-grid, .fondation-grid, .lesang-grid { gap: 56px; }
+  .sec-label { font-size: .62rem; font-weight: 600; }
+  .sec-sub { font-size: .9rem; letter-spacing: .02em; text-transform: none; font-weight: 600; color: var(--texte-muted); margin-bottom: 26px; }
+  .hist-text { max-width: 780px; }
+  .hist-text p { font-size: 1.02rem; }
+
+  /* citation */
+  .hist-quote { margin: 30px 0; padding: 22px 26px; border: 1px solid var(--bleu-mid); border-left: 5px solid var(--rouge); background: var(--bleu-pale); border-radius: 12px; max-width: 780px; }
+  .hist-quote blockquote { font-size: 1.1rem; }
+  .hist-quote cite { font-size: .66rem; font-weight: 600; letter-spacing: .14em; }
+
+  /* dates clés en carte */
+  .hist-timeline { max-width: 780px; margin-top: 36px; padding: 24px 28px 20px; border: 1px solid var(--bleu-mid); border-radius: 14px; background: var(--blanc); }
+  #le-sang .hist-timeline { background: var(--bleu-pale); }
+  .hist-tl-title { font-size: .66rem; font-weight: 700; letter-spacing: .18em; color: var(--bleu); margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+  .hist-tl-title::before { content: ''; width: 20px; height: 2px; background: var(--rouge); }
+  .hist-tl-item { position: relative; gap: 18px; padding: 10px 0 10px 22px; border-bottom: 0; border-left: 2px solid var(--bleu-mid); margin-left: 5px; }
+  .hist-tl-item::before { content: ''; position: absolute; left: -7px; top: 16px; width: 12px; height: 12px; border-radius: 50%; background: var(--blanc); border: 3px solid var(--rouge); }
+  .hist-tl-year { min-width: 52px; font-size: 1.05rem; }
+  .hist-tl-text { font-style: normal; font-size: .95rem; }
+
+  /* portraits */
+  .portrait-wrap, .photo-ancienne { top: 150px; }
+  .portrait-role { font-size: .62rem; font-weight: 600; }
+  .portrait-dates { font-size: .62rem; }
+
+  /* boutons de fin de page */
+  .hist-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; margin-top: 34px; max-width: 780px; }
+  .hist-links a { display: flex; align-items: center; justify-content: center; text-align: center; white-space: nowrap; font-family: 'Be Vietnam Pro', sans-serif; font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; padding: 15px 10px; border-radius: 8px; min-height: 52px; transition: all .2s; }
+  .hist-links .btn-rouge { background: var(--rouge); color: var(--blanc); border: 2px solid var(--rouge); }
+  .hist-links .btn-rouge:hover { background: #a50d25; border-color: #a50d25; transform: translateY(-2px); }
+  .hist-links .btn-outline-bleu { background: var(--blanc); color: var(--bleu); border: 2px solid var(--bleu-mid); }
+  .hist-links .btn-outline-bleu:hover { border-color: var(--bleu); background: var(--bleu-pale); }
+
+  /* textes dépliables sur mobile */
+  .mob-toggle { display: none; }
+
+  @media(max-width:900px){
+    .page-hero { min-height: 0; }
+    .page-hero-inner { padding: 36px 22px 36px; }
+    .gnav { top: 74px; }
+    .gnav-in { padding: 10px 18px; }
+    .gnav a { padding: 8px 14px; font-size: .66rem; }
+    #origines, #fondation, #le-sang { padding: 30px 22px; scroll-margin-top: 130px; }
+    .origines-grid, .fondation-grid, .lesang-grid { gap: 26px; }
+    .portrait-wrap, .photo-ancienne { max-width: 320px; margin: 0 auto; }
+    .hist-quote { padding: 18px 18px; }
+    .hist-timeline { padding: 20px 18px 16px; }
+    .hist-links { grid-template-columns: 1fr; }
+    .hist-links a { font-size: clamp(.5rem,2.9vw,.68rem); letter-spacing: .04em; }
+    .mob-collapse:not(.open) .mob-more { display: none; }
+    .mob-toggle { display: block; width: 100%; text-align: center; margin: 4px 0 18px; padding: 12px 0; cursor: pointer; font-family: 'Be Vietnam Pro', sans-serif; font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--bleu); background: transparent; border: 0; border-top: 1px solid var(--bleu-mid); border-bottom: 1px solid var(--bleu-mid); border-radius: 0; }
+    .mob-toggle::after { content: ' ▾'; }
+    .mob-collapse.open .mob-toggle::after { content: ' ▴'; }
+  }
 </style>
 </head>
 <body>
@@ -302,14 +381,19 @@
 <!-- HERO -->
 <div class="page-hero" id="accueil">
   <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Accueil</a><span>›</span><span>Histoire du Vovinam</span></div>
     <p class="hero-eyebrow">Art martial vietnamien — Depuis 1938</p>
     <h1>L'HISTOIRE DU<em>VOVINAM VIỆT VÕ ĐẠO</em></h1>
     <p class="page-hero-desc">Des arts martiaux millénaires du Vietnam à une discipline pratiquée dans plus de 60 pays — l'histoire d'un peuple, d'un fondateur et d'une vision.</p>
   </div>
-  <div class="chap-bar">
-    <a href="#origines" class="chap-item"><span class="chap-num">Chapitre 01</span><span class="chap-label">Origines &amp; Võ cổ truyền</span></a>
-    <a href="#fondation" class="chap-item"><span class="chap-num">Chapitre 02</span><span class="chap-label">Nguyễn Lộc — 1938</span></a>
-    <a href="#le-sang" class="chap-item"><span class="chap-num">Chapitre 03</span><span class="chap-label">Lê Sáng, le successeur</span></a>
+</div>
+
+<!-- NAVIGATION ENTRE LES CHAPITRES -->
+<div class="gnav" id="gnav">
+  <div class="gnav-in">
+    <a href="#origines"><b>01</b>Origines &amp; Võ cổ truyền</a>
+    <a href="#fondation"><b>02</b>Nguyễn Lộc — 1938</a>
+    <a href="#le-sang"><b>03</b>Lê Sáng, le successeur</a>
   </div>
 </div>
 
@@ -331,8 +415,13 @@
       <div class="hist-text">
         <p>Le Vietnam est un pays qui s'est construit dans la résistance. Face aux invasions chinoises, à la colonisation française et aux guerres du XX<sup>e</sup> siècle, son peuple a développé une culture martiale enracinée dans le quotidien — se battre n'était pas un sport, c'était une nécessité de survie.</p>
         <p>De cette histoire est né le <em>Võ cổ truyền</em>, l'ensemble des arts martiaux traditionnels vietnamiens. Pas un système unique et centralisé, mais une mosaïque de styles régionaux, transmis de maître à disciple dans la confidentialité, ce qui en fait un patrimoine à la fois riche et diversifié. On y trouve la lutte villageoise, les frappes à mains nues, les projections, et le maniement des armes traditionnelles comme le bâton ou le sabre.</p>
+      <div class="mob-collapse">
+      <div class="mob-more">
         <p>La géographie a façonné les styles : au Nord, plus exposé aux invasions, les arts martiaux sont codifiés et travaillés en formes complexes ; au Centre et au Sud, ils sont plus directs, influencés par les cultures Cham et Khmer.</p>
         <p>Dans ce paysage, la province de <strong>Sơn Tây</strong> occupe une place à part — ancienne capitale royale, carrefour de fleuves et de cultures. C'est là que naît en 1912 Nguyễn Lộc, le fondateur du Vovinam. Il grandit dans un Vietnam sous occupation française depuis le traité de 1884, au sein d'une jeunesse qui cherche à la fois à résister et à se réinventer. C'est sur ce terreau — patrimonial, politique et humain — qu'il va construire un art martial nouveau.</p>
+      </div>
+      <button type="button" class="mob-toggle" aria-expanded="false" data-more="Lire la suite" data-less="Réduire">Lire la suite</button>
+      </div>
       </div>
     </div>
   </div>
@@ -349,8 +438,13 @@
         <p>Nguyễn Lộc grandit à Hanoï sous occupation française. Il aurait pu, comme beaucoup de jeunes de sa génération, se laisser emporter par l'occidentalisation qui transformait alors la société vietnamienne. Il choisit autre chose. Il appelle ça la <em>Cách mạng tâm thân</em> — la révolution du corps et de l'esprit. Pas une révolution politique, mais une voie personnelle : construire un corps fort et un caractère droit pour servir quelque chose de plus grand que soi.</p>
         <p>À partir de là, il étudie les arts martiaux existants. Il observe ce qui fonctionne, ce qui correspond à la morphologie et à la psychologie vietnamienne. Il prend les arts martiaux et la lutte traditionnelle vietnamienne comme base, et construit quelque chose de nouveau. En 1938, il juge son système suffisamment abouti pour l'enseigner. Discrètement d'abord, à une poignée d'amis au 65, rue Gia Long à Hanoï.</p>
         <p>En automne 1939, il sort de l'ombre. Une démonstration publique au Grand Théâtre de Hanoï. Le public est conquis, le bouche-à-oreille fait le reste. Dès le début 1940, les cours s'ouvrent officiellement à l'École normale de Hanoï, à l'invitation du docteur Đặng Vũ Hỷ. Les jeunes affluent — étudiants, fonctionnaires, ouvriers. Le Vovinam leur offre non seulement des techniques efficaces, mais une éthique.</p>
+      <div class="mob-collapse">
+      <div class="mob-more">
         <p>En 1942, les autorités coloniales françaises ferment les cours après des affrontements entre étudiants vietnamiens et français. Nguyễn Lộc continue dans la clandestinité, enseigne chez lui rue Chancheaume. En 1945, quand le Japon renverse l'administration française, le Vovinam retrouve sa liberté. Nguyễn Lộc forme des unités de défense nationale, envoie ses élèves dans toutes les provinces du Nord.</p>
         <p>Après la partition du pays en 1954, il descend à Saïgon avec peu de monde. Il recommence presque à zéro, ouvre un dojo rue Thủ Khoa Huân. La maladie le rattrape fin 1957. Il confie la direction des cours à son premier disciple, Lê Sáng. Le 29 avril 1960, il meurt à 48 ans.</p>
+      </div>
+      <button type="button" class="mob-toggle" aria-expanded="false" data-more="Lire la suite" data-less="Réduire">Lire la suite</button>
+      </div>
       </div>
       <div class="hist-quote">
         <blockquote>« Continuer à développer le Vovinam, et former une jeunesse animée par les valeurs du võ đạo — non seulement pour le Vietnam, mais pour l'humanité entière. »</blockquote>
@@ -406,6 +500,8 @@
         <p>Lê Sáng est né en 1920 à Hanoï, d'une famille originaire de Thanh Hóa. Enfant, il a des problèmes aux jambes. Sa mère lui conseille de pratiquer un art martial pour se renforcer. En 1940, il entre dans la classe de Nguyễn Lộc à l'École normale. Il a du talent, de la régularité, et une capacité de travail peu commune. En quelques années, il devient le principal assistant de son maître.</p>
         <p>Après la mort de Nguyễn Lộc, il prend les rênes. Ce n'est pas une succession facile. Entre 1961 et 1963, le régime de Ngô Đình Diệm interdit toutes les écoles d'arts martiaux. Lê Sáng survit en se cachant dans des salles de classe privées, gérant une plantation de caoutchouc à Buôn Ma Thuột en attendant que les conditions changent. Quand le régime tombe en novembre 1963, il revient immédiatement à Saïgon.</p>
         <p>En 1964, il rouvre le Centre de formation Vovinam (<em>Trung tâm Huấn luyện Vovinam</em>) au 61, rue Vĩnh Viễn. Il rédige le Règlement de la discipline (<em>Qui lệ</em>), structure le programme de formation sur plusieurs niveaux, définit un système de grades par couleur de ceinture, et formule les <strong>Dix principes (<em>điều tâm niệm</em>) du pratiquant</strong> qui sont des engagements moraux aussi importants que les techniques.</p>
+      <div class="mob-collapse">
+      <div class="mob-more">
         <p>À partir de 1966, il obtient du ministère de l'Éducation l'introduction du Vovinam dans les lycées publics de Saïgon dans le cadre du programme <em>Học đường mới</em>. En quelques années, des dizaines d'établissements dans tout le Sud ouvrent des sections.</p>
         <p>Après 1975, le pays unifié traverse des années difficiles. Lê Sáng reprend le travail dans des conditions bien plus contraintes, reconstituant les clubs un par un, formant de nouvelles générations. Il vivra seul, sans famille propre, consacrant tout à la discipline. Il écrit, compose des poèmes — une âme d'artiste dans un corps de combattant. Il révise et enrichit le système technique jusqu'à un âge avancé.</p>
         <p>Le 31 mars 2010, quelques mois avant sa disparition, Chưởng môn Lê Sáng prit soin d'assurer la continuité et la gouvernance du Vovinam en instituant deux organes distincts.</p>
@@ -413,6 +509,9 @@
         <p>De l'autre, le <em>Hội Đồng Võ Sư Chưởng Quản</em> (Conseil des Maîtres Dirigeants de l'École), annoncé publiquement le 24 août 2010 au <em>Tổ đường</em>. Cet organe assume la direction spirituelle et administrative du style au Vietnam.</p>
         <p>En créant ces deux structures complémentaires avant de rejoindre le fondateur Nguyễn Lộc dans la voie de l'éternité, Chưởng môn Lê Sáng garantissait que ni la diaspora ni le pays d'origine ne seraient laissés sans cadre directeur légitime.</p>
         <p>Le 27 septembre 2010, il meurt à 91 ans, quelques semaines avant que le Vovinam fasse son entrée aux Jeux d'Asie du Sud-Est à Jakarta.</p>
+      </div>
+      <button type="button" class="mob-toggle" aria-expanded="false" data-more="Lire la suite" data-less="Réduire">Lire la suite</button>
+      </div>
       </div>
       <div class="hist-timeline">
         <p class="hist-tl-title">Dates clés</p>
@@ -424,6 +523,10 @@
         <div class="hist-tl-item"><span class="hist-tl-year">1973</span><span class="hist-tl-text">Premiers pratiquants en France — début de l'internationalisation</span></div>
         <div class="hist-tl-item"><span class="hist-tl-year">2010</span><span class="hist-tl-text">31 mars — Création officielle du Hội Đồng Võ Sư Tương Trợ Hải Ngoại (diaspora) et annonce du Hội Đồng Võ Sư Chưởng Quản (Vietnam) le 24 août</span></div>
         <div class="hist-tl-item"><span class="hist-tl-year">2010</span><span class="hist-tl-text">27 septembre — Décès à 91 ans, quelques semaines avant les SEA Games de Jakarta</span></div>
+      </div>
+      <div class="hist-links">
+        <a href="grades.html" class="btn-rouge">Le système de grades</a>
+        <a href="professeur.html" class="btn-outline-bleu">Notre professeur</a>
       </div>
     </div>
   </div>
@@ -545,6 +648,27 @@
     el.style.transform = 'translateY(16px)';
     el.style.transition = `opacity .5s ease ${i*.06}s, transform .5s ease ${i*.06}s`;
     obs.observe(el);
+  });
+
+  // NAVIGATION ENTRE CHAPITRES : lien actif selon la section visible
+  (function(){
+    var links=[].slice.call(document.querySelectorAll('.gnav a'));
+    var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
+    function maj(){
+      var y=window.scrollY+190, cur=-1;
+      secs.forEach(function(g,i){ if(g && g.offsetTop<=y) cur=i; });
+      links.forEach(function(a,i){ a.classList.toggle('active',i===cur); });
+    }
+    window.addEventListener('scroll',maj,{passive:true}); maj();
+  })();
+
+  // Textes dépliables (mobile)
+  document.querySelectorAll('.mob-toggle').forEach(function(b){
+    b.addEventListener('click',function(){
+      var box=b.closest('.mob-collapse'); var open=box.classList.toggle('open');
+      b.setAttribute('aria-expanded',open); b.textContent=open?b.dataset.less:b.dataset.more;
+      if(!open){ box.scrollIntoView({block:'center',behavior:'smooth'}); }
+    });
   });
 </script>
 </body>
