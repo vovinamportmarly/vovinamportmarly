@@ -320,6 +320,35 @@
     .mob-toggle::after { content: ' ▾'; }
     .mob-collapse.open .mob-toggle::after { content: ' ▴'; }
   }
+
+  /* chapitre 04 : le Conseil des Maîtres */
+  #conseil { padding: 56px 80px; background: var(--gris-fond); scroll-margin-top: 150px; }
+  .conseil-head { margin-bottom: 8px; }
+  .conseil-photo { margin: 6px 0 40px; max-width: 1100px; }
+  .conseil-photo img { display: block; width: 100%; height: auto; border-radius: 18px; box-shadow: 0 18px 44px rgba(27,58,140,.18); }
+  .conseil-photo figcaption { margin-top: 14px; font-size: .88rem; line-height: 1.6; color: var(--texte-mid); }
+  .conseil-photo figcaption strong { display: block; color: var(--bleu); font-weight: 800; margin-bottom: 2px; }
+  .conseil-photo figcaption span { display: block; margin-top: 4px; font-size: .78rem; color: var(--texte-muted); }
+  .membre-card.autres p { font-size: .88rem; }
+  .conseil-grid { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 56px; align-items: start; }
+  .conseil-side { position: sticky; top: 150px; }
+  .conseil-side .membres-titre { margin-top: 0; }
+  .membres-titre { font-size: .66rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--rouge); display: flex; align-items: center; gap: 10px; margin: 34px 0 14px; }
+  .membres-titre::before { content: ''; width: 20px; height: 2px; background: var(--rouge); }
+  .membres-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .membre-card { background: var(--blanc); border: 1px solid var(--bleu-mid); border-radius: 14px; padding: 20px 22px 22px; }
+  .membre-card.chef { grid-column: 1 / -1; border-left: 5px solid var(--rouge); background: var(--bleu-pale); }
+  .membre-role { display: block; font-size: .66rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--rouge); margin-bottom: 6px; }
+  .membre-card h3 { font-family: 'Be Vietnam Pro', sans-serif; font-size: 1.15rem; font-weight: 900; color: var(--bleu); text-transform: uppercase; letter-spacing: .02em; line-height: 1.15; margin-bottom: 6px; }
+  .membre-card p { font-size: .92rem; color: var(--texte-mid); line-height: 1.55; }
+  .hist-sources { max-width: 780px; margin-top: 18px; font-size: .8rem; color: var(--texte-muted); line-height: 1.6; }
+  @media(max-width:900px){
+    #conseil { padding: 30px 22px; scroll-margin-top: 130px; }
+    .conseil-grid { grid-template-columns: 1fr; gap: 26px; }
+    .conseil-side { position: static; }
+    .membres-grid { grid-template-columns: 1fr; }
+    .membre-card { padding: 18px 18px 20px; }
+  }
 </style>
 </head>
 <body>
@@ -395,6 +424,7 @@
     <a href="#origines"><b>01</b>Origines &amp; Võ cổ truyền</a>
     <a href="#fondation"><b>02</b>Nguyễn Lộc — 1938</a>
     <a href="#le-sang"><b>03</b>Lê Sáng, le successeur</a>
+    <a href="#conseil"><b>04</b>Le Conseil des Maîtres</a>
   </div>
 </div>
 
@@ -530,6 +560,83 @@
         <a href="professeur.html" class="btn-outline-bleu">Notre professeur</a>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 4 : LE CONSEIL DES MAÎTRES ==================== -->
+<section id="conseil">
+  <div class="conseil-head">
+    <div class="sec-label">Depuis 2010</div>
+    <h2 class="sec-title">LE CONSEIL DES MAÎTRES<br>DIRIGEANTS</h2>
+    <p class="sec-sub">Hội Đồng Võ Sư Chưởng Quản — la direction actuelle de l'école</p>
+  </div>
+
+  <figure class="conseil-photo">
+    <img src="conseil-vo-su-chuong-quan-2024.webp" alt="Les membres du Hội Đồng Võ Sư Chưởng Quản réunis au Tổ đường, le 11 mai 2024" loading="lazy" decoding="async">
+    <figcaption>
+      <strong>Le Conseil des Maîtres Dirigeants au Tổ đường, le 11 mai 2024.</strong>
+      De gauche à droite : Võ Thành Lâm, Vũ Văn Điền, Võ Văn Tuấn, Nguyễn Văn Sáng (aussi cité Nguyễn Văn Vang), Trần Văn Mỹ (Chánh Chưởng Quản, ceinture blanche), Nguyễn Văn Sen, Nguyễn Chánh Tứ, Nguyễn Hoàng Hiệp et Võ Hữu Lý.
+      <span>Photo : Nguyễn Tiến Khoa, club Vovinam Sư Vạn Hạnh — publiée sur le blog Học Võ Vovinam.</span>
+    </figcaption>
+  </figure>
+
+  <div class="conseil-grid">
+    <div class="conseil-main">
+      <div class="hist-text">
+        <p>Depuis 2010, le Vovinam n'a plus de <em>Chưởng Môn</em>. L'école est dirigée par le <em>Hội Đồng Võ Sư Chưởng Quản</em>, le Conseil des Maîtres Dirigeants de l'École. D'après son règlement, publié par Lê Sáng le 31 mars 2010, c'est l'organe le plus élevé de l'école : il la dirige selon ses 3 buts et ses 5 principes directeurs. Son chef porte le titre de <strong>Chánh Chưởng Quản</strong>.</p>
+        <p>Lê Sáng a nommé le Grand Maître <strong>Nguyễn Văn Chiếu</strong> (1949 – 2020) premier Chánh Chưởng Quản, chargé de diriger l'école au Vietnam et à l'étranger. En parallèle, il a créé le Conseil des Maîtres d'Entraide à l'Étranger, composé au départ de cinq membres, pour relier les activités de l'école hors du Vietnam.</p>
+      <div class="mob-collapse">
+      <div class="mob-more">
+        <p>Après le décès de Nguyễn Văn Chiếu, le 4 février 2020, le Conseil a perdu deux autres membres : Mai Văn Hiệp (1952 – 2021) et Nguyễn Tôn Khoa (1950 – 2022). Il ne comptait plus que six membres : Nguyễn Văn Sen, Nguyễn Văn Sáng, Trần Văn Mỹ, Võ Văn Tuấn, Trần Đa et Nguyễn Chánh Tứ. Malgré de nombreuses réunions pendant quatre ans, aucun nouveau Chánh Chưởng Quản n'avait pu être élu.</p>
+        <p>En avril 2024, le Conseil s'est renforcé. Le 3 avril, ses six membres ont élu trois membres titulaires, <strong>Vũ Văn Điền</strong>, <strong>Võ Hữu Lý</strong> et <strong>Võ Thành Lâm</strong>, ainsi qu'un membre suppléant, <strong>Nguyễn Hoàng Hiệp</strong>. Le 28 avril, réuni au Tổ đường, il a élu au scrutin secret, par 9 voix sur 9, <strong>Võ Sư Trần Văn Mỹ</strong> comme Chánh Chưởng Quản. Cinq anciens de l'école avaient été invités pour surveiller le vote.</p>
+        <p>L'élection a été annoncée officiellement le 11 mai 2024, lors de la cérémonie du 64e anniversaire de la disparition du Fondateur Nguyễn Lộc. Né le 22 décembre 1951, Trần Văn Mỹ pratique le Vovinam depuis 1965, au dojo du 61 rue Vĩnh Viễn, sous la direction de Lê Sáng. Hồng Đai Đệ Tứ Cấp, il était Chánh Sự permanent du Conseil depuis juin 2022, et il est aussi vice-président de la Fédération mondiale de Vovinam. Il porte désormais la ceinture de grand dirigeant de l'école : blanche, avec trois fils bleu, jaune et rouge au centre.</p>
+      </div>
+      <button type="button" class="mob-toggle" aria-expanded="false" data-more="Lire la suite" data-less="Réduire">Lire la suite</button>
+      </div>
+      </div>
+
+      <div class="hist-timeline">
+        <p class="hist-tl-title">Dates clés</p>
+        <div class="hist-tl-item"><span class="hist-tl-year">2010</span><span class="hist-tl-text">31 mars — Lê Sáng publie le règlement du Hội Đồng Võ Sư Chưởng Quản et nomme Nguyễn Văn Chiếu Chánh Chưởng Quản</span></div>
+        <div class="hist-tl-item"><span class="hist-tl-year">2010</span><span class="hist-tl-text">27 septembre — Décès de Lê Sáng, le dernier Chưởng Môn</span></div>
+        <div class="hist-tl-item"><span class="hist-tl-year">2015</span><span class="hist-tl-text">Nguyễn Văn Chiếu reçoit la ceinture blanche de chef de l'école</span></div>
+        <div class="hist-tl-item"><span class="hist-tl-year">2020</span><span class="hist-tl-text">4 février — Décès de Nguyễn Văn Chiếu</span></div>
+        <div class="hist-tl-item"><span class="hist-tl-year">2024</span><span class="hist-tl-text">3 avril — Trois membres titulaires et un suppléant rejoignent le Conseil</span></div>
+        <div class="hist-tl-item"><span class="hist-tl-year">2024</span><span class="hist-tl-text">28 avril — Trần Văn Mỹ est élu Chánh Chưởng Quản, à l'unanimité</span></div>
+        <div class="hist-tl-item"><span class="hist-tl-year">2024</span><span class="hist-tl-text">11 mai — Annonce officielle au Tổ đường, lors de l'hommage à Nguyễn Lộc</span></div>
+      </div>
+      <p class="hist-sources">Sources : notice officielle du Hội Đồng Võ Sư Chưởng Quản du 11 mai 2024 (n° 02/TB/HĐVSCQ/2024), publiée sur le blog Học Võ Vovinam ; page vietnamienne de Wikipédia sur le Vovinam ; site Vovinam Việt Võ Đạo Italia (page consacrée au Grand Maître Nguyễn Văn Chiếu).</p>
+    </div>
+
+    <aside class="conseil-side">
+      <p class="membres-titre">Autour du Chánh Chưởng Quản</p>
+      <div class="membres-grid">
+        <div class="membre-card chef">
+          <span class="membre-role">Chánh Chưởng Quản</span>
+          <h3>Trần Văn Mỹ</h3>
+          <p>Chef de l'école depuis 2024. Hồng Đai Đệ Tứ Cấp.</p>
+        </div>
+        <div class="membre-card">
+          <span class="membre-role">Chánh Vụ Lễ Nghi – Kỹ Thuật</span>
+          <h3>Nguyễn Văn Sen</h3>
+          <p>Responsable du cérémonial et de la technique. Hồng Đai Đệ Ngũ Cấp.</p>
+        </div>
+        <div class="membre-card">
+          <span class="membre-role">Chánh Vụ Khảo Thí – Kiểm Tra</span>
+          <h3>Nguyễn Văn Sáng</h3>
+          <p>Responsable des examens et du contrôle. Hồng Đai Đệ Ngũ Cấp.</p>
+        </div>
+        <div class="membre-card">
+          <span class="membre-role">Chánh Sự</span>
+          <h3>Nguyễn Chánh Tứ</h3>
+          <p>Membre du Conseil, en qualité de Chánh Sự. Hồng Đai Đệ Tứ Cấp.</p>
+        </div>
+        <div class="membre-card autres">
+          <span class="membre-role">Autres membres</span>
+          <p>Võ Văn Tuấn, Trần Đa, Vũ Văn Điền, Võ Hữu Lý et Võ Thành Lâm, ainsi que Nguyễn Hoàng Hiệp, membre suppléant.</p>
+        </div>
+      </div>
+    </aside>
   </div>
 </section>
 
